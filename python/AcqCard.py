@@ -10,8 +10,7 @@ import pyqtgraph as pg
 
 import math
 
-#from set_to_user_friendly_QLineEdit import set_to_user_friendly_QLineEdit
-from user_friendly_QLineEdit import user_friendly_QLineEdit
+from set_to_user_friendly_QLineEdit import set_to_user_friendly_QLineEdit
 from outputs_parameters import outputs_parameters
 
 import traceback
@@ -67,7 +66,7 @@ class AcqCard(QtWidgets.QMainWindow):
 		if ready == 0:
 			timeToNextCall = 10 #ms
 			print('Data not yet ready, re-checking in {} ms'.format(timeToNextCall))
-			set_to_user_friendly_QLineEdit.timerDataUpdate.singleShot(timeToNextCall, self.timer_getDataFromZynq)
+			self.timerDataUpdate.singleShot(timeToNextCall, self.timer_getDataFromZynq)
 
 		elif ready == 1:
 			self.label_status.setText('Status : Transferring')
@@ -126,12 +125,20 @@ class AcqCard(QtWidgets.QMainWindow):
 
 
 	def initUI(self):
+		# set QLineEdit to user_friendly:
+		#Is it clean to do it this way??
+		self.lineEdit_numberOfPoints_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_numberOfPoints)
+		self.lineEdit_timeAcq_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_timeAcq)
+		self.lineEdit_numberOfWaveform_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_numberOfWaveform)
+		self.lineEdit_savePath_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_savePath)
+
 		# Connect function to buttons
 		self.pushButton_stopAcq.clicked.connect(self.stopAcquisition)
 		self.pushButton_singleAcq.clicked.connect(lambda : self.start_acquisition(continuous = 0))
 		self.pushButton_continuousAcq.clicked.connect(self.start_continuous)
 		
-		# self.lineEdit_numberOfPoints = set_to_user_friendly_QLineEdit(self.lineEdit_numberOfPoints) #Is it clean to do it this way??
+
+
 		self.lineEdit_numberOfPoints.returnPressed.connect(self.changeNumberOfPoints)
 
 		# self.lineEdit_timeAcq = set_to_user_friendly_QLineEdit(self.lineEdit_timeAcq)
@@ -144,7 +151,9 @@ class AcqCard(QtWidgets.QMainWindow):
 		self.checkBox_timeDomainDisplay.clicked.connect(self.changePlotLayout)
 		self.checkBox_FrequencyDomainDisplay.clicked.connect(self.changePlotLayout)
 
+
 		self.lineEdit_numberOfWaveform.returnPressed.connect(self.changeNumberOfWaveform)
+		
 
 		self.pushButton_saveWaveform.clicked.connect(self.saveData)
 		self.pushButton_browsePath.clicked.connect(self.browsePath)
@@ -268,7 +277,12 @@ class AcqCard(QtWidgets.QMainWindow):
 
 			
 		self.numberOfPoints = numberOfPoints		
+		
+		self.lineEdit_timeAcq.blockSignals(True)
 		self.lineEdit_timeAcq.setText('{:.3e}'.format(numberOfPoints/self.fs))
+		self.lineEdit_timeAcq.blockSignals(False)
+
+
 		self.dev.write_Zynq_AXI_register_uint32(self.N_BYTES_REG, 2*numberOfPoints*np.sum(self.channelValid))
 
 
@@ -281,9 +295,10 @@ class AcqCard(QtWidgets.QMainWindow):
 				numberOfPoints = round(float(self.lineEdit_timeAcq.text())*self.fs)
 			except ValueError:
 				numberOfPoints = self.numberOfPoints
-				
-			self.lineEdit_numberOfPoints.setText(str(numberOfPoints))
-
+			
+		self.lineEdit_numberOfPoints.blockSignals(True)	
+		self.lineEdit_numberOfPoints.setText(str(numberOfPoints))
+		self.lineEdit_numberOfPoints.blockSignals(False)
 		self.changeNumberOfPoints()
 
 

@@ -2,6 +2,7 @@ from PyQt5 import QtGui, Qt, QtCore, QtWidgets, uic
 
 import sys
 import time
+from set_to_user_friendly_QLineEdit import set_to_user_friendly_QLineEdit
 
 import numpy as np
 
@@ -27,6 +28,11 @@ class outputs_parameters(QtGui.QWidget):
 
 
 	def initUI(self):
+
+		self.lineEdit_freqOut1_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_freqOut1)
+		self.lineEdit_freqOut2_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_freqOut2)
+
+
 		self.checkBox_onoffOut1.clicked.connect(self.onOffOut1)
 		self.lineEdit_freqOut1.returnPressed.connect(self.frequencyChangedOut1)
 		self.horizontalSlider_freqOut1.valueChanged.connect(self.slidersChangedOut1)
