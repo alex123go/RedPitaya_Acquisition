@@ -17,7 +17,6 @@ PRIORITY:
 Others : 
 	python
 		- better format for fft : window + ylabel + linear vs logy + ...
-		- change lineEdit to user_friendly_QLineEdit (black background when editing)
 		- when opening outputs window, upload internal data (frequence and on/off)
 
 	FPGA
