@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_2.srcs/sources_1/new/datamover_ctrl.vhd" \
+"../../../../project_2.srcs/sim_1/new/datamover_ctrl_testbench.vhd" \
+
+# Do not sort compile order
+nosort

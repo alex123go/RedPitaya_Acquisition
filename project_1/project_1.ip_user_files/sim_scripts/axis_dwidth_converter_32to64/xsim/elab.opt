@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L axis_infrastructure_v1_1_0 -L axis_register_slice_v1_1_19 -L axis_dwidth_converter_v1_1_18 -L xil_defaultlib -L xilinx_vip -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot axis_dwidth_converter_32to64 xil_defaultlib.axis_dwidth_converter_32to64 xil_defaultlib.glbl -log elaborate.log

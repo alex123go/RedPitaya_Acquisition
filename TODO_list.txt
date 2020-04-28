@@ -1,0 +1,27 @@
+PRIORITY:
+	linux :
+		- Build new linux image with more DDR3 allocated to dma : 
+		currently : last 32MB for dma : addr 0x1E00_0000 to 0x1FFF_FFFF 
+		(https://github.com/pavel-demin/red-pitaya-notes/issues/719¸)
+
+	python:
+		- acquire data in another process (to avoid high latency in GUI's acquire event)
+		- make sure there is no unnecessary copy of data_in, which might slow the program
+
+	c: monitor-tcp:
+		- add offset to map_base_dma
+			from    : send(connfd, map_base_dma, pPacketReadDDR->number_of_bytes, 0);
+			to (??) : send(connfd, map_base_dma+offset, pPacketReadDDR->number_of_bytes, 0);
+
+
+Others : 
+	python
+		- better format for fft : window + ylabel + linear vs logy + ...
+		- change lineEdit to user_friendly_QLineEdit (black background when editing)
+		- when opening outputs window, upload internal data (frequence and on/off)
+
+	FPGA
+		- why is DAC output 1V instead of 0V when DDS turn off?
+		- Add trigger on data input -- fill ddr3 continuously (circular buffer) until trigger condition. After condition, record Npts_total-Npts_beforeTrigger. Then, send data along with trigger position offset
+
+

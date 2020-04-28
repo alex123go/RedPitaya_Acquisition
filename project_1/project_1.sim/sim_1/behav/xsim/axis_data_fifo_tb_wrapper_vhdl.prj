@@ -1,0 +1,8 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_1.ip_user_files/bd/axis_data_fifo_tb/ip/axis_data_fifo_tb_c_counter_binary_0_0/sim/axis_data_fifo_tb_c_counter_binary_0_0.vhd" \
+"../../../../project_1.ip_user_files/bd/axis_data_fifo_tb/sim/axis_data_fifo_tb.vhd" \
+"../../../../project_1.srcs/sources_1/bd/axis_data_fifo_tb/hdl/axis_data_fifo_tb_wrapper.vhd" \
+
+# Do not sort compile order
+nosort

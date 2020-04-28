@@ -1,0 +1,9 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../project_6_averager.srcs/sources_1/bd/design_1/ipshared/ec67/hdl" --include "../../../../project_6_averager.srcs/sources_1/bd/design_1/ipshared/2d50/hdl" --include "../../../../project_6_averager.srcs/sources_1/bd/design_1/ipshared/4fba" --include "../../../../project_6_averager.srcs/sources_1/bd/design_1/ipshared/8713/hdl" --include "D:/Programs/Vivado/2019.2/data/xilinx_vip/include" \
+"../../../../project_6_averager.ip_user_files/bd/design_2/ip/design_2_xlconcat_0_0/sim/design_2_xlconcat_0_0.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

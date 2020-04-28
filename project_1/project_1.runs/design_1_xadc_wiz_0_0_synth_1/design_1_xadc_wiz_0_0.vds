@@ -1,0 +1,1003 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Tue Apr 21 19:32:56 2020
+# Process ID: 31460
+# Current directory: D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_xadc_wiz_0_0_synth_1
+# Command line: vivado.exe -log design_1_xadc_wiz_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_xadc_wiz_0_0.tcl
+# Log file: D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_xadc_wiz_0_0_synth_1/design_1_xadc_wiz_0_0.vds
+# Journal file: D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_xadc_wiz_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_1_xadc_wiz_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0'.
+WARNING: [IP_Flow 19-2207] Repository 'd:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0' already exists; ignoring attempt to add it again.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0'.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Synology/SynologyDrive/RedPitaya/IP/Data_throughput_DDR_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Synology/SynologyDrive/RedPitaya/DataMover_throughput/ip_repo/DataReader_through_RAM_1.0'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Vivado/2019.1/data/ip'.
+Command: synth_design -top design_1_xadc_wiz_0_0 -part xc7z010clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
+INFO: [Device 21-403] Loading part xc7z010clg400-1
+INFO: Launching helper process for spawning children vivado processes
+INFO: Helper process launched with PID 19364 
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:07 . Memory (MB): peak = 714.617 ; gain = 176.797
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0.vhd:111]
+	Parameter C_INSTANCE bound to: design_1_xadc_wiz_0_0_axi_xadc - type: string 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_INTR bound to: 1 - type: integer 
+	Parameter C_SIM_MONITOR_FILE bound to: design.txt - type: string 
+INFO: [Synth 8-3491] module 'design_1_xadc_wiz_0_0_axi_xadc' declared at 'd:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_axi_xadc.vhd:143' bound to instance 'U0' of component 'design_1_xadc_wiz_0_0_axi_xadc' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_axi_xadc' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_axi_xadc.vhd:243]
+	Parameter C_INSTANCE bound to: design_1_xadc_wiz_0_0_axi_xadc - type: string 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_INCLUDE_INTR bound to: 1 - type: integer 
+	Parameter C_SIM_MONITOR_FILE bound to: design.txt - type: string 
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_axi_lite_ipif' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_axi_lite_ipif.vhd:241]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 32'b00000000000000000000001111111111 
+	Parameter C_USE_WSTRB bound to: 1 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 64 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000111111100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000010000000000000000000000000000001000000000000000000000000000000000001 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_slave_attachment' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_slave_attachment.vhd:227]
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000111111100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000010000000000000000000000000000001000000000000000000000000000000000001 
+	Parameter C_IPIF_ABUS_WIDTH bound to: 11 - type: integer 
+	Parameter C_IPIF_DBUS_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 1023 - type: integer 
+	Parameter C_USE_WSTRB bound to: 1 - type: integer 
+	Parameter C_DPHASE_TIMEOUT bound to: 64 - type: integer 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_address_decoder' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_address_decoder.vhd:176]
+	Parameter C_BUS_AWIDTH bound to: 10 - type: integer 
+	Parameter C_S_AXI_MIN_SIZE bound to: 1023 - type: integer 
+	Parameter C_ARD_ADDR_RANGE_ARRAY bound to: 384'b000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000000111110000000000000000000000000000000000000000000000000000000001000000000000000000000000000000000000000000000000000000000000000111111100000000000000000000000000000000000000000000000000000010000000000000000000000000000000000000000000000000000000000000001111111111 
+	Parameter C_ARD_NUM_CE_ARRAY bound to: 96'b000000000000000000000000000010000000000000000000000000000001000000000000000000000000000000000001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 5 - type: integer 
+	Parameter C_AW bound to: 10 - type: integer 
+	Parameter C_BAR bound to: 10'b0000000000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 3 - type: integer 
+	Parameter C_BAR bound to: 3'b000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized0' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized1' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 3 - type: integer 
+	Parameter C_BAR bound to: 3'b001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized1' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized2' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 3 - type: integer 
+	Parameter C_BAR bound to: 3'b010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized2' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized3' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 3 - type: integer 
+	Parameter C_BAR bound to: 3'b011 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized3' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized4' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 3 - type: integer 
+	Parameter C_BAR bound to: 3'b100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized4' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized5' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 3 - type: integer 
+	Parameter C_BAR bound to: 3'b101 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized5' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized6' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 3 - type: integer 
+	Parameter C_BAR bound to: 3'b110 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized6' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized7' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 3 - type: integer 
+	Parameter C_AW bound to: 3 - type: integer 
+	Parameter C_BAR bound to: 3'b111 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized7' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized8' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 10 - type: integer 
+	Parameter C_BAR bound to: 10'b0001000000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized8' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized9' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized9' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized10' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized10' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized11' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized11' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized12' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0011 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized12' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized13' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized13' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized14' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0101 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized14' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized15' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0110 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized15' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized16' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b0111 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized16' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized17' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized17' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized18' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1001 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized18' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized19' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1010 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized19' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized20' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1011 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized20' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized21' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1100 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized21' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized22' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1101 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized22' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized23' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1110 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized23' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized24' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 4 - type: integer 
+	Parameter C_AW bound to: 4 - type: integer 
+	Parameter C_BAR bound to: 4'b1111 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized24' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized25' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+	Parameter C_AB bound to: 1 - type: integer 
+	Parameter C_AW bound to: 10 - type: integer 
+	Parameter C_BAR bound to: 10'b1000000000 
+	Parameter C_FAMILY bound to: nofamily - type: string 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_pselect_f__parameterized25' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_pselect_f.vhd:167]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_address_decoder' (2#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_address_decoder.vhd:176]
+INFO: [Synth 8-226] default block is never used [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_slave_attachment.vhd:381]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_slave_attachment' (3#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_slave_attachment.vhd:227]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_axi_lite_ipif' (4#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/axi_lite_ipif_v1_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_axi_lite_ipif.vhd:241]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter CE_NUMBERS bound to: 9 - type: integer 
+	Parameter IP_INTR_NUM bound to: 17 - type: integer 
+	Parameter C_SIM_MONITOR_FILE bound to: design.txt - type: string 
+	Parameter MUX_ADDR_NO bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'design_1_xadc_wiz_0_0_xadc_core_drp' declared at 'd:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_xadc_core_drp.vhd:141' bound to instance 'AXI_XADC_CORE_I' of component 'design_1_xadc_wiz_0_0_xadc_core_drp' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_axi_xadc.vhd:705]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_xadc_core_drp' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_xadc_core_drp.vhd:194]
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 11 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_FAMILY bound to: virtex7 - type: string 
+	Parameter CE_NUMBERS bound to: 9 - type: integer 
+	Parameter IP_INTR_NUM bound to: 17 - type: integer 
+	Parameter C_SIM_MONITOR_FILE bound to: design.txt - type: string 
+	Parameter MUX_ADDR_NO bound to: 5 - type: integer 
+	Parameter INIT_40 bound to: 16'b0000000000000000 
+	Parameter INIT_41 bound to: 16'b1000000100000000 
+	Parameter INIT_42 bound to: 16'b0000010000000000 
+	Parameter INIT_43 bound to: 16'b0000000000000000 
+	Parameter INIT_44 bound to: 16'b0000000000000000 
+	Parameter INIT_45 bound to: 16'b0000000000000000 
+	Parameter INIT_46 bound to: 16'b0000000000000000 
+	Parameter INIT_47 bound to: 16'b0000000000000000 
+	Parameter INIT_48 bound to: 16'b0000100000000000 
+	Parameter INIT_49 bound to: 16'b0000001100000011 
+	Parameter INIT_4A bound to: 16'b0000000000000000 
+	Parameter INIT_4B bound to: 16'b0000000000000000 
+	Parameter INIT_4C bound to: 16'b0000000000000000 
+	Parameter INIT_4D bound to: 16'b0000000000000000 
+	Parameter INIT_4E bound to: 16'b0000000000000000 
+	Parameter INIT_4F bound to: 16'b0000000000000000 
+	Parameter INIT_50 bound to: 16'b1011010111101101 
+	Parameter INIT_51 bound to: 16'b0101011111100100 
+	Parameter INIT_52 bound to: 16'b1010000101000111 
+	Parameter INIT_53 bound to: 16'b1100101000110011 
+	Parameter INIT_54 bound to: 16'b1010100100111010 
+	Parameter INIT_55 bound to: 16'b0101001011000110 
+	Parameter INIT_56 bound to: 16'b1001010101010101 
+	Parameter INIT_57 bound to: 16'b1010111001001110 
+	Parameter INIT_58 bound to: 16'b0101100110011001 
+	Parameter INIT_59 bound to: 16'b0101010101010101 
+	Parameter INIT_5A bound to: 16'b1001100110011001 
+	Parameter INIT_5B bound to: 16'b0110101010101010 
+	Parameter INIT_5C bound to: 16'b0101000100010001 
+	Parameter INIT_5D bound to: 16'b0101000100010001 
+	Parameter INIT_5E bound to: 16'b1001000111101011 
+	Parameter INIT_5F bound to: 16'b0110011001100110 
+	Parameter IS_CONVSTCLK_INVERTED bound to: 1'b0 
+	Parameter IS_DCLK_INVERTED bound to: 1'b0 
+	Parameter SIM_DEVICE bound to: ZYNQ - type: string 
+	Parameter SIM_MONITOR_FILE bound to: design.txt - type: string 
+INFO: [Synth 8-113] binding component instance 'XADC_INST' to cell 'XADC' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_xadc_core_drp.vhd:977]
+WARNING: [Synth 8-6014] Unused sequential element convst_reg_input_reg was removed.  [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_xadc_core_drp.vhd:506]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_xadc_core_drp' (5#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_xadc_core_drp.vhd:194]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_soft_reset' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:142]
+	Parameter C_SIPIF_DWIDTH bound to: 32 - type: integer 
+	Parameter C_RESET_WIDTH bound to: 16 - type: integer 
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'RST_FLOPS' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:273]
+	Parameter INIT bound to: 1'b0 
+	Parameter IS_CE_INVERTED bound to: 1'b0 
+	Parameter IS_C_INVERTED bound to: 1'b0 
+	Parameter IS_D_INVERTED bound to: 1'b0 
+	Parameter IS_R_INVERTED bound to: 1'b0 
+	Parameter IS_S_INVERTED bound to: 1'b0 
+INFO: [Synth 8-113] binding component instance 'FF_WRACK' to cell 'FDRSE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:296]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_soft_reset' (6#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/proc_common_v3_30_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_soft_reset.vhd:142]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0_interrupt_control' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_interrupt_control.vhd:240]
+	Parameter C_NUM_CE bound to: 16 - type: integer 
+	Parameter C_NUM_IPIF_IRPT_SRC bound to: 1 - type: integer 
+	Parameter C_IP_INTR_MODE_ARRAY bound to: 544'b0000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101000000000000000000000000000001010000000000000000000000000000010100000000000000000000000000000101 
+	Parameter C_INCLUDE_DEV_PENCODER bound to: 0 - type: bool 
+	Parameter C_INCLUDE_DEV_ISC bound to: 0 - type: bool 
+	Parameter C_IPIF_DWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_interrupt_control' (7#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_interrupt_control.vhd:240]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0_axi_xadc' (8#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_axi_xadc.vhd:243]
+INFO: [Synth 8-256] done synthesizing module 'design_1_xadc_wiz_0_0' (9#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0.vhd:111]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[1]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[2]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[3]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[4]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[5]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[6]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[7]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[8]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[9]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[10]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[11]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[12]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[13]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_Data[14]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_BE[1]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_BE[2]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Bus2IP_BE[3]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[1]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[2]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[3]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[4]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[5]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[6]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[9]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[11]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[12]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[13]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[14]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_RdCE[15]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[1]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[2]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[3]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[4]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[5]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[6]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[9]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[11]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[12]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[13]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[14]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port Interrupt_WrCE[15]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port IPIF_Reg_Interrupts[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port IPIF_Reg_Interrupts[1]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_interrupt_control has unconnected port IPIF_Lvl_Interrupts[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[1]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[2]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[3]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[4]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[5]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[6]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[7]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[8]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[9]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[10]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[11]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[12]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[13]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[14]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[15]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[16]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[17]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[18]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[19]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[20]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[21]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[22]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[23]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[24]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[25]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[26]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_Data[27]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_BE[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_BE[1]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_soft_reset has unconnected port Bus2IP_BE[2]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_RdCE[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_RdCE[5]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_RdCE[6]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_RdCE[7]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_WrCE[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_WrCE[5]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_WrCE[6]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_WrCE[7]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Addr[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Addr[1]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Addr[9]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Addr[10]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[0]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[1]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[2]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[3]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[4]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[5]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[6]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[7]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[8]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[9]
+WARNING: [Synth 8-3331] design design_1_xadc_wiz_0_0_xadc_core_drp has unconnected port Bus2IP_Data[10]
+INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:44 ; elapsed = 00:00:46 . Memory (MB): peak = 829.883 ; gain = 292.063
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 829.883 ; gain = 292.063
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 829.883 ; gain = 292.063
+---------------------------------------------------------------------------------
+INFO: [Netlist 29-17] Analyzing 18 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0.xdc] for cell 'U0'
+Parsing XDC File [D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_xadc_wiz_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_xadc_wiz_0_0_synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 900.055 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 17 instances were transformed.
+  FDRSE => FDRSE (FDRE, LUT4, VCC): 17 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.071 . Memory (MB): peak = 911.242 ; gain = 11.188
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 911.242 ; gain = 373.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z010clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 911.242 ; gain = 373.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for U0. (constraint file  D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_xadc_wiz_0_0_synth_1/dont_touch.xdc, line 9).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:58 . Memory (MB): peak = 911.242 ; gain = 373.422
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'state_reg' in module 'design_1_xadc_wiz_0_0_slave_attachment'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                 sm_idle |                             0010 |                               00
+                 sm_read |                             1000 |                               01
+                sm_write |                             0100 |                               10
+                 sm_resp |                             0001 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'state_reg' using encoding 'one-hot' in module 'design_1_xadc_wiz_0_0_slave_attachment'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:56 ; elapsed = 00:01:00 . Memory (MB): peak = 911.242 ; gain = 373.422
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---XORs : 
+	   2 Input      1 Bit         XORs := 17    
++---Registers : 
+	               32 Bit    Registers := 2     
+	               17 Bit    Registers := 1     
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 124   
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   4 Input     18 Bit        Muxes := 1     
+	   2 Input     10 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 53    
+	   3 Input      1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Hierarchical Component Statistics 
+---------------------------------------------------------------------------------
+Hierarchical RTL Component report 
+Module design_1_xadc_wiz_0_0_pselect_f 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized8 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized0 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized1 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized2 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized3 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized4 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized5 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized6 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized7 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized9 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized10 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized11 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized12 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized13 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized14 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized15 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized16 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized17 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized18 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized19 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized20 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized21 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized22 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized23 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_pselect_f__parameterized24 
+Detailed RTL Component Info : 
++---Muxes : 
+	   2 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_address_decoder 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 29    
+Module design_1_xadc_wiz_0_0_slave_attachment 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      7 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 1     
+	                7 Bit    Registers := 1     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 3     
++---Muxes : 
+	   2 Input     10 Bit        Muxes := 1     
+	   4 Input      4 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 6     
+	   2 Input      2 Bit        Muxes := 2     
+	   2 Input      1 Bit        Muxes := 3     
+Module design_1_xadc_wiz_0_0_xadc_core_drp 
+Detailed RTL Component Info : 
++---Registers : 
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 1     
+	                9 Bit    Registers := 1     
+	                1 Bit    Registers := 20    
++---Muxes : 
+	   4 Input     18 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 5     
+	   3 Input      1 Bit        Muxes := 1     
+Module design_1_xadc_wiz_0_0_soft_reset 
+Detailed RTL Component Info : 
++---Registers : 
+	                1 Bit    Registers := 2     
+Module design_1_xadc_wiz_0_0_interrupt_control 
+Detailed RTL Component Info : 
++---XORs : 
+	   2 Input      1 Bit         XORs := 17    
++---Registers : 
+	               17 Bit    Registers := 1     
+	                1 Bit    Registers := 56    
++---Muxes : 
+	   2 Input     32 Bit        Muxes := 3     
+	   2 Input      1 Bit        Muxes := 19    
+Module design_1_xadc_wiz_0_0_axi_xadc 
+Detailed RTL Component Info : 
++---Registers : 
+	               32 Bit    Registers := 1     
+	                1 Bit    Registers := 14    
+---------------------------------------------------------------------------------
+Finished RTL Hierarchical Component Statistics
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 80 (col length:40)
+BRAMs: 120 (col length: RAMB18 40 RAMB36 20)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+Warning: Parallel synthesis criteria is not met 
+INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[15].GEN_POS_EDGE_DETECT.irpt_dly1_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly1_reg' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_interrupt_control.vhd:638]
+INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[15].GEN_POS_EDGE_DETECT.irpt_dly2_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly2_reg' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_interrupt_control.vhd:639]
+INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[16].GEN_POS_EDGE_DETECT.irpt_dly1_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly1_reg' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_interrupt_control.vhd:638]
+INFO: [Synth 8-4471] merging register 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[16].GEN_POS_EDGE_DETECT.irpt_dly2_reg' into 'INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I/DO_IRPT_INPUT[14].GEN_POS_EDGE_DETECT.irpt_dly2_reg' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/interrupt_control_v2_01_a/hdl/src/vhdl/design_1_xadc_wiz_0_0_interrupt_control.vhd:639]
+INFO: [Synth 8-4471] merging register 'bus2ip_reset_active_high_reg' into 'AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/rst_reg' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_axi_xadc.vhd:653]
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[13]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[12]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[12]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[11]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[11]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[10]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[10]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[9]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[9]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[8]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[8]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[7]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[7]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[6]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[6]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[5]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[5]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[4]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[4]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[3]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[3]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[2]'
+INFO: [Synth 8-3886] merging instance 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[2]' (FDR) to 'U0/INTR_CTRLR_GEN_I.ip2bus_data_int_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\INTR_CTRLR_GEN_I.ip2bus_data_int_reg[1] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rresp_i_reg[0] )
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[18]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[19]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[19]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[20]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[20]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[21]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[21]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[22]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[22]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[23]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[23]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[24]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[24]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[25]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[25]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[26]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[26]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[27]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[27]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[28]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[28]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[29]'
+INFO: [Synth 8-3886] merging instance 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[29]' (FDRE) to 'U0/AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_rdata_i_reg[30]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/\AXI_LITE_IPIF_I/I_SLAVE_ATTACHMENT/s_axi_bresp_i_reg[0] )
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:59 ; elapsed = 00:01:04 . Memory (MB): peak = 911.242 ; gain = 373.422
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:11 ; elapsed = 00:01:17 . Memory (MB): peak = 911.242 ; gain = 373.422
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:18 . Memory (MB): peak = 915.547 ; gain = 377.727
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:01:13 ; elapsed = 00:01:19 . Memory (MB): peak = 915.547 ; gain = 377.727
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 917.531 ; gain = 379.711
+---------------------------------------------------------------------------------
+
+Report Check Netlist: 
++------+------------------+-------+---------+-------+------------------+
+|      |Item              |Errors |Warnings |Status |Description       |
++------+------------------+-------+---------+-------+------------------+
+|1     |multi_driven_nets |      0|        0|Passed |Multi driven nets |
++------+------------------+-------+---------+-------+------------------+
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:17 ; elapsed = 00:01:22 . Memory (MB): peak = 917.531 ; gain = 379.711
+---------------------------------------------------------------------------------
+
+Report RTL Partitions: 
++-+--------------+------------+----------+
+| |RTL Partition |Replication |Instances |
++-+--------------+------------+----------+
++-+--------------+------------+----------+
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 917.531 ; gain = 379.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 917.531 ; gain = 379.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 917.531 ; gain = 379.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 917.531 ; gain = 379.711
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     2|
+|2     |LUT2 |    35|
+|3     |LUT3 |    25|
+|4     |LUT4 |    19|
+|5     |LUT5 |    54|
+|6     |LUT6 |    61|
+|7     |XADC |     1|
+|8     |FDRE |   206|
+|9     |FDSE |    31|
++------+-----+------+
+
+Report Instance Areas: 
++------+-------------------------------------------+----------------------------------------+------+
+|      |Instance                                   |Module                                  |Cells |
++------+-------------------------------------------+----------------------------------------+------+
+|1     |top                                        |                                        |   434|
+|2     |  U0                                       |design_1_xadc_wiz_0_0_axi_xadc          |   434|
+|3     |    AXI_LITE_IPIF_I                        |design_1_xadc_wiz_0_0_axi_lite_ipif     |   190|
+|4     |      I_SLAVE_ATTACHMENT                   |design_1_xadc_wiz_0_0_slave_attachment  |   190|
+|5     |        I_DECODER                          |design_1_xadc_wiz_0_0_address_decoder   |   133|
+|6     |    AXI_XADC_CORE_I                        |design_1_xadc_wiz_0_0_xadc_core_drp     |    79|
+|7     |    \INTR_CTRLR_GEN_I.INTERRUPT_CONTROL_I  |design_1_xadc_wiz_0_0_interrupt_control |    96|
+|8     |    SOFT_RESET_I                           |design_1_xadc_wiz_0_0_soft_reset        |    36|
++------+-------------------------------------------+----------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 917.531 ; gain = 379.711
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 16 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:28 ; elapsed = 00:01:18 . Memory (MB): peak = 917.531 ; gain = 298.352
+Synthesis Optimization Complete : Time (s): cpu = 00:01:17 ; elapsed = 00:01:23 . Memory (MB): peak = 917.531 ; gain = 379.711
+INFO: [Project 1-571] Translating synthesized netlist
+INFO: [Netlist 29-17] Analyzing 1 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 929.629 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+144 Infos, 103 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:01:25 ; elapsed = 00:01:53 . Memory (MB): peak = 929.629 ; gain = 638.359
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 929.629 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_xadc_wiz_0_0_synth_1/design_1_xadc_wiz_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_xadc_wiz_0_0, cache-ID = f4320f88eba0f8bf
+INFO: [Coretcl 2-1174] Renamed 7 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 929.629 ; gain = 0.000
+WARNING: [Constraints 18-5210] No constraints selected for write.
+Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
+INFO: [Common 17-1381] The checkpoint 'D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_xadc_wiz_0_0_synth_1/design_1_xadc_wiz_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_1_xadc_wiz_0_0_utilization_synth.rpt -pb design_1_xadc_wiz_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Apr 21 19:35:03 2020...

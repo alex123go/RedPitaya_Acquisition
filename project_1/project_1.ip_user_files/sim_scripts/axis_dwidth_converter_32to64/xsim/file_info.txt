@@ -1,0 +1,2 @@
+axis_dwidth_converter_32to64.v,verilog,xil_defaultlib,../../../ip/axis_dwidth_converter_32to64/sim/axis_dwidth_converter_32to64.v,incdir="$ref_dir/../../../ipstatic/hdl"incdir="../../../ipstatic/hdl"
+glbl.v,Verilog,xil_defaultlib,glbl.v
