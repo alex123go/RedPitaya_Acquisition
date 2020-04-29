@@ -5,7 +5,7 @@ PRIORITY:
 		(https://github.com/pavel-demin/red-pitaya-notes/issues/719¸)
 
 	python:
-		- acquire data in another process (to avoid high latency in GUI's acquire event)
+		- Change the way to plot data : graphicsView is very slow and unresponsive when data_length > 1e6
 		- make sure there is no unnecessary copy of data_in, which might slow the program
 
 	c: monitor-tcp:
@@ -17,7 +17,6 @@ PRIORITY:
 Others : 
 	python
 		- better format for fft : window + ylabel + linear vs logy + ...
-		- change lineEdit to user_friendly_QLineEdit (black background when editing)
 		- when opening outputs window, upload internal data (frequence and on/off)
 
 	FPGA
