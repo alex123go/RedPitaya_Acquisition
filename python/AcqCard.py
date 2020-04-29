@@ -10,6 +10,8 @@ import pyqtgraph as pg
 
 import math
 
+from Worker import Worker
+
 from set_to_user_friendly_QLineEdit import set_to_user_friendly_QLineEdit
 from outputs_parameters import outputs_parameters
 
@@ -51,6 +53,10 @@ class AcqCard(QtWidgets.QMainWindow):
 
 		self.timerDataUpdate = Qt.QTimer(self)
 
+		self.threadpool = QtCore.QThreadPool()
+		print("Multithreading with maximum %d threads" % self.threadpool.maxThreadCount())
+		self.threadRunning = False
+
 
 		self.initUI()
 		self.verifyPath()
@@ -58,33 +64,78 @@ class AcqCard(QtWidgets.QMainWindow):
 
 
 	def timerTemperatureUpdate(self):
-		ZynqTempInDegC = self.readZynqTemperature()
-		self.label_RPTemperature.setText('Zynq temperature (max 85 °C operating): %.2f °C' % ZynqTempInDegC)
+		if self.threadRunning == False:
+			ZynqTempInDegC = self.readZynqTemperature()
+			self.label_RPTemperature.setText('Zynq temperature (max 85 °C operating): %.2f °C' % ZynqTempInDegC)
+		else:
+			self.label_RPTemperature.setText('Zynq temperature (max 85 °C operating): Can''t update temperature while transfering ddr')
 
-	def timer_getDataFromZynq(self):
+	def getDataFromZynq_thread(self):
+		worker = Worker(self.getDataFromZynq) # Any other args, kwargs are passed to the run function
+		worker.signals.finished.connect(self.thread_complete)
+		worker.signals.progress.connect(self.progressStatus_update)
+		
+		# Execute
+		self.threadRunning = True
+		self.threadpool.start(worker) 
+
+
+
+	def thread_complete (self):
+		self.threadRunning = False
+		self.label_status.setText('Status : Idle')
+
+		# Restart another acquisition if checkBox.isChecked()
+		if self.continuousDataAcquisition:
+			 #resend start acq
+			if self.checkBox_numberOfWaveform.isChecked(): # if checked, re-start acquisition N-1 times
+				self.numberRemaining = self.numberRemaining - 1
+				if self.numberRemaining > 0:
+					self.start_acquisition(continuous = 1)
+			else: # if unchecked, always re-start acquisition
+				self.start_acquisition(continuous = 1)
+
+
+	def progressStatus_update (self, status):
+		self.label_status.setText('Status : {}'.format(status))
+
+	# This function is called in a thread (by getDataFromZynq_thread) to avoid crashing the GUI
+	def getDataFromZynq(self, progress_callback):
+		bVerbose = True
+		bVerboseTiming = False
+
 		ready = self.dev.read_Zynq_AXI_register_uint32(self.STATUS_REG)
-		if ready == 0:
-			timeToNextCall = 10 #ms
-			print('Data not yet ready, re-checking in {} ms'.format(timeToNextCall))
-			self.timerDataUpdate.singleShot(timeToNextCall, self.timer_getDataFromZynq)
+		while ready == 0:
+			if bVerbose:
+				print('Data not yet ready')
+			time.sleep(10/1000)
+			ready = self.dev.read_Zynq_AXI_register_uint32(self.STATUS_REG)
 
-		elif ready == 1:
-			self.label_status.setText('Status : Transferring')
-			self.repaint()
-			totalNumberOfPoints = int(self.numberOfPoints * np.sum(self.channelValid))
+		if ready != 1: #ready != 0 and != 1, therefore, error on acquisition
+			if bVerbose:
+				print('Warning, there was an error the acquisition... Further debugging needed')
+			progress_callback.emit('Error')
+		
+		else: # data ready
+
+			##########################################################
+			#Transferring
+			progress_callback.emit('Transferring')
 			time_start = time.clock()
+			totalNumberOfPoints = int(self.numberOfPoints * np.sum(self.channelValid))
 			self.data_in_bin = self.dev.read_Zynq_ddr(address_offset = 0, number_of_bytes=totalNumberOfPoints*2)
-			print("read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.clock()-time_start)))
-
 
 			self.data_in_bin = np.fromstring(self.data_in_bin, dtype=np.int16)
 			self.data_in_volt = self.data_in_bin / 2**15
+
+			if bVerboseTiming:
+				print("transfer read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.clock()-time_start)))
 			
-			self.label_status.setText('Status : Plotting')
-			self.repaint()
 
-
-
+			##########################################################
+			#Plotting
+			progress_callback.emit('Plotting')
+			time_start = time.clock()
 			if np.sum(self.channelValid) == 2: 
 				#dual channel mode 
 				# odd  element => channel 0
@@ -101,27 +152,17 @@ class AcqCard(QtWidgets.QMainWindow):
 				self.plot_timeDomain(self.data_in_volt, channel = self.channelValid.index(1))
 				self.plot_frequencyDomain(self.data_in_volt, channel = self.channelValid.index(1))
 
+			if bVerboseTiming:
+				print("plotting read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.clock()-time_start)))
+
+			##########################################################
+			#Saving
 			if self.checkBox_autoSaveOnAcq.isChecked():
-				self.label_status.setText('Status : Saving')
-				self.repaint()
+				progress_callback.emit('Saving')
+				time_start = time.clock()
 				self.saveData()
-
-
-			self.label_status.setText('Status : Idle')
-			self.repaint()
-
-			if self.continuousDataAcquisition:
-				 #resend start acq
-				if self.checkBox_numberOfWaveform.isChecked(): # if checked, re-start acquisition N-1 times
-					self.numberRemaining = self.numberRemaining - 1
-					if self.numberRemaining > 0:
-						self.start_acquisition(continuous = 1)
-				else: # if unchecked, always re-start acquisition
-					self.start_acquisition(continuous = 1)
-				
-
-		else:
-			print('Warning, there was an error the acquisition... Further debugging needed')
+				if bVerboseTiming:
+					print("saving read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.clock()-time_start)))
 
 
 	def initUI(self):
@@ -209,10 +250,10 @@ class AcqCard(QtWidgets.QMainWindow):
 		totalNumberOfPoints = self.numberOfPoints * np.sum(self.channelValid)
 
 		timeToWait_in_ms = totalNumberOfPoints/self.fs*1000
-		print('time to wait : {}ms'.format(timeToWait_in_ms))
+		#print('time to wait : {}ms'.format(timeToWait_in_ms))
+		
 		self.label_status.setText('Status : Acquisition')
-
-		self.timerDataUpdate.singleShot(int(timeToWait_in_ms)+1, self.timer_getDataFromZynq)
+		self.timerDataUpdate.singleShot(int(timeToWait_in_ms)+1, self.getDataFromZynq_thread)
 
 
 	def stopAcquisition(self):
@@ -259,7 +300,9 @@ class AcqCard(QtWidgets.QMainWindow):
 	def changeNumberOfPoints(self):
 		if self.lineEdit_numberOfPoints.text().upper() == 'MAX':
 			numberOfPoints = int(self.MAXPOINTS/np.sum(self.channelValid))
+			self.lineEdit_numberOfPoints.blockSignals(True)
 			self.lineEdit_numberOfPoints.setText(str(numberOfPoints))
+			self.lineEdit_numberOfPoints.blockSignals(False)
 		else:
 			try:
 				numberOfPoints = int(float(self.lineEdit_numberOfPoints.text()))
@@ -289,7 +332,9 @@ class AcqCard(QtWidgets.QMainWindow):
 
 	def changeTimeAcqLength(self):
 		if self.lineEdit_timeAcq.text().upper() == 'MAX':
+			self.lineEdit_numberOfPoints.blockSignals(True)
 			self.lineEdit_numberOfPoints.setText('MAX')
+			self.lineEdit_numberOfPoints.blockSignals(False)
 		else:
 			try:
 				numberOfPoints = round(float(self.lineEdit_timeAcq.text())*self.fs)
