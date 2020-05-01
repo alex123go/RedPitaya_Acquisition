@@ -6,7 +6,7 @@ from set_to_user_friendly_QLineEdit import set_to_user_friendly_QLineEdit
 
 import numpy as np
 
-class outputs_parameters(QtGui.QWidget):
+class outputs_parameters(QtWidgets.QWidget):
 
 	fs = 125e6
 	
@@ -101,7 +101,6 @@ class outputs_parameters(QtGui.QWidget):
 
 
 	def sendFrequency(self, frequency, channel):
-		print('sendFrequency')
 		self.dev.write_Zynq_AXI_register_uint32(self.DDS_FREQ_REG[channel], frequency/self.fs * 2**32)
 
 

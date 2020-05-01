@@ -15,7 +15,7 @@ from Worker import Worker
 from set_to_user_friendly_QLineEdit import set_to_user_friendly_QLineEdit
 from outputs_parameters import outputs_parameters
 
-import traceback
+from catch_exception import *
 
 
 
@@ -121,7 +121,7 @@ class AcqCard(QtWidgets.QMainWindow):
 			##########################################################
 			#Transferring
 			progress_callback.emit('Transferring')
-			time_start = time.clock()
+			time_start = time.process_time()
 			totalNumberOfPoints = int(self.numberOfPoints * np.sum(self.channelValid))
 			self.data_in_bin = self.dev.read_Zynq_ddr(address_offset = 0, number_of_bytes=totalNumberOfPoints*2)
 
@@ -129,13 +129,13 @@ class AcqCard(QtWidgets.QMainWindow):
 			self.data_in_volt = self.data_in_bin / 2**15
 
 			if bVerboseTiming:
-				print("transfer read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.clock()-time_start)))
+				print("transfer read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
 			
 
 			##########################################################
 			#Plotting
 			progress_callback.emit('Plotting')
-			time_start = time.clock()
+			time_start = time.process_time()
 			if np.sum(self.channelValid) == 2: 
 				#dual channel mode 
 				# odd  element => channel 0
@@ -153,16 +153,16 @@ class AcqCard(QtWidgets.QMainWindow):
 				self.plot_frequencyDomain(self.data_in_volt, channel = self.channelValid.index(1))
 
 			if bVerboseTiming:
-				print("plotting read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.clock()-time_start)))
+				print("plotting read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
 
 			##########################################################
 			#Saving
 			if self.checkBox_autoSaveOnAcq.isChecked():
 				progress_callback.emit('Saving')
-				time_start = time.clock()
+				time_start = time.process_time()
 				self.saveData()
 				if bVerboseTiming:
-					print("saving read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.clock()-time_start)))
+					print("saving read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
 
 
 	def initUI(self):
@@ -213,14 +213,16 @@ class AcqCard(QtWidgets.QMainWindow):
 		numColors = len(colors_list)
 
 
-	def changePlotLayout(self):
-		# create plot items
+	def changePlotLayout(self, state = None): #state is not use, but QCheckBox.clicked.connect return state, which sometime cause an exception
 		self.graphicsView.clear()
 		row = 0
 		if self.checkBox_timeDomainDisplay.isChecked():
 			self.qpltItem_time = self.graphicsView.addPlot(title='Time Domain', row=row, col=0)
 			self.qpltItem_time.setLabel('left', 'Voltage [V]')#, color='red', size=30)
 			self.qpltItem_time.setLabel('bottom', 'Time [s]')#, color='red', size=30)
+			# self.qpltItem_time.setClipToView(True)
+			self.qpltItem_time.setDownsampling(ds=10, auto=True, mode='peak') #subsample, mean, peak
+
 			self.timeCurve = []
 			self.timeCurve.append(self.qpltItem_time.plot(pen='b'))
 			self.timeCurve.append(self.qpltItem_time.plot(pen='r'))
@@ -230,6 +232,9 @@ class AcqCard(QtWidgets.QMainWindow):
 			self.qpltItem_freq = self.graphicsView.addPlot(title='Frequency Domain', row=row, col=0)
 			#self.qpltItem_freq.setLabel('left', 'Power (to change)')#, color='red', size=30)
 			self.qpltItem_freq.setLabel('bottom', 'Frequency [MHz]')#, color='red', size=30)
+			# self.qpltItem_freq.setClipToView(True)
+			self.qpltItem_freq.setDownsampling(ds=10, auto=True, mode='peak') #subsample, mean, peak
+
 			self.freqCurve = []
 			self.freqCurve.append(self.qpltItem_freq.plot(pen='b'))
 			self.freqCurve.append(self.qpltItem_freq.plot(pen='r'))
@@ -442,7 +447,7 @@ class AcqCard(QtWidgets.QMainWindow):
 		# See Xilinx document UG480 chapter 2 for conversion factors
 		# we use 2**16 instead of 2**12 for the denominator because the codes are "MSB-aligned" in the register (equivalent to a multiplication by 2**4)
 		xadc_temperature_code_to_degC    = lambda x: x*503.975/2.**16-273.15
-		# time_start = time.clock()
+		# time_start = time.process_time()
 		# average 10 readings because otherwise they are quite noisy:
 		# this reading loop takes just 2 ms for 10 readings at the moment so there is no real cost
 		N_average = 10.
@@ -452,7 +457,7 @@ class AcqCard(QtWidgets.QMainWindow):
 			reg_avg += float(reg)
 			
 		reg_avg = float(reg_avg)/N_average
-		# print("elapsed = %f" % (time.clock()-time_start))
+		# print("elapsed = %f" % (time.process_time()-time_start))
 		ZynqTempInDegC = xadc_temperature_code_to_degC(  reg_avg  )
 		return ZynqTempInDegC
 
