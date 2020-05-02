@@ -113,7 +113,7 @@ class AcqCard(QtWidgets.QMainWindow):
 
 		if ready != 1: #ready != 0 and != 1, therefore, error on acquisition
 			if bVerbose:
-				print('Warning, there was an error the acquisition... Further debugging needed')
+				print('Warning, there was an error the acquisition... Further debugging needed \n Possible causes : not enough points or too much')
 			progress_callback.emit('Error')
 		
 		else: # data ready
@@ -313,7 +313,9 @@ class AcqCard(QtWidgets.QMainWindow):
 				numberOfPoints = int(float(self.lineEdit_numberOfPoints.text()))
 			except ValueError:
 				numberOfPoints = self.numberOfPoints
+				self.lineEdit_timeAcq.blockSignals(True)
 				self.lineEdit_numberOfPoints.setText(str(numberOfPoints))
+				self.lineEdit_timeAcq.blockSignals(False)
 
 			
 			numberOfPoints_constraint = self.constraintNumber(numberOfPoints, 0, self.MAXPOINTS/np.sum(self.channelValid))
