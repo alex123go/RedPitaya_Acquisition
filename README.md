@@ -13,5 +13,5 @@ This platform is based on a portion of jddes' Frequency Comb DPLL and on a porti
 Note: you can also use the noGUIVersion.py to acquire and save data without GUI and plotting.
 
 
-#Software versions
+# Software versions
 This project was compile with Vivado 2019.1 (available for free with the WebPack license). The GUI was made for users with WinPython-64bit-3.6.1.0Qt5 ( https://sourceforge.net/projects/winpython/files/WinPython_3.6/3.6.1.0/ )
