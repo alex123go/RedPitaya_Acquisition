@@ -230,8 +230,8 @@ class AcqCard(QtWidgets.QMainWindow):
 
 		if self.checkBox_FrequencyDomainDisplay.isChecked():
 			self.qpltItem_freq = self.graphicsView.addPlot(title='Frequency Domain', row=row, col=0)
-			#self.qpltItem_freq.setLabel('left', 'Power (to change)')#, color='red', size=30)
-			self.qpltItem_freq.setLabel('bottom', 'Frequency [MHz]')#, color='red', size=30)
+			self.qpltItem_freq.setLabel('left', 'Power [dB]')
+			self.qpltItem_freq.setLabel('bottom', 'Frequency [MHz]')
 			# self.qpltItem_freq.setClipToView(True)
 			self.qpltItem_freq.setDownsampling(ds=10, auto=True, mode='peak') #subsample, mean, peak
 
@@ -276,13 +276,15 @@ class AcqCard(QtWidgets.QMainWindow):
 			self.timeCurve[channel].setData(time_axis,data_in)
 
 	def plot_frequencyDomain(self, data_in, channel = 0):
+		# Do we want to multiply data_in with a window?
+		# Do we want to remove DC (mean) component 
 		if self.checkBox_FrequencyDomainDisplay.isChecked():
 			self.freqCurve[channel].clear()
 			N_fft = 2**(int(np.ceil(np.log2(len(data_in)))))
 			frequency_axis = np.linspace(0, (N_fft-1)/float(N_fft)*self.fs, N_fft)
 			last_index_shown = int(np.round(len(frequency_axis)/2))
 			spc = np.abs(np.fft.fft(data_in, N_fft))
-			spc = 10*np.log10(spc + 1e-12) # -> dB (1e-12 to avoid log10(0))
+			spc = 20*np.log10(spc + 1e-12) # -> dB (1e-12 to avoid log10(0))
 
 			self.freqCurve[channel].setData(frequency_axis[0:last_index_shown]/1e6, spc[0:last_index_shown])
 
