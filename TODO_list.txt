@@ -5,7 +5,6 @@ PRIORITY:
 		(https://github.com/pavel-demin/red-pitaya-notes/issues/719¸)
 
 	python:
-		- Change the way to plot data : graphicsView is very slow and unresponsive when data_length > 1e6
 		- make sure there is no unnecessary copy of data_in, which might slow the program
 
 	c: monitor-tcp:
@@ -17,7 +16,8 @@ PRIORITY:
 Others : 
 	python
 		- better format for fft : window + ylabel + linear vs logy + ...
-		- when opening outputs window, upload internal data (frequence and on/off)
+		- when clicking frequency (or time), add the subplot and plot actual data (do not erase actual data)
+		- change behaviour when changing channel
 
 	FPGA
 		- why is DAC output 1V instead of 0V when DDS turn off?

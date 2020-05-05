@@ -6,7 +6,7 @@ from set_to_user_friendly_QLineEdit import set_to_user_friendly_QLineEdit
 
 import numpy as np
 
-class outputs_parameters(QtGui.QWidget):
+class outputs_parameters(QtWidgets.QWidget):
 
 	fs = 125e6
 	
@@ -21,10 +21,34 @@ class outputs_parameters(QtGui.QWidget):
 
 		uic.loadUi("Outputs_parameters.ui", self)
 
-
+		self.loadInternalParameters()
 		self.initUI()
 		self.show()
 
+
+	def loadInternalParameters(self):
+		onOffOut1_value = self.dev.read_Zynq_AXI_register_uint32(self.DDS_ONOFF_REG[0])
+		onOffOut2_value = self.dev.read_Zynq_AXI_register_uint32(self.DDS_ONOFF_REG[1])
+		freqOut1_value = self.getFrequency(channel = 0)
+		freqOut2_value = self.getFrequency(channel = 1)
+
+		# onOff Out1
+		self.checkBox_onoffOut1.setChecked(onOffOut1_value)
+
+		# onOff Out2
+		self.checkBox_onoffOut2.setChecked(onOffOut2_value)
+
+		# freq Out1
+		self.lineEdit_freqOut1.setText('{:.1e}'.format(freqOut1_value))
+		numberOfStep = 1 + self.horizontalSlider_freqOut1.maximum()
+		posCursor = int( freqOut1_value/(self.fs/2) * numberOfStep )
+		self.horizontalSlider_freqOut1.setValue(posCursor)
+
+		# freq Out2
+		self.lineEdit_freqOut2.setText('{:.1e}'.format(freqOut2_value))
+		numberOfStep = 1 + self.horizontalSlider_freqOut2.maximum()
+		posCursor = int( freqOut2_value/(self.fs/2) * numberOfStep )
+		self.horizontalSlider_freqOut2.setValue(posCursor)
 
 
 	def initUI(self):
@@ -101,8 +125,12 @@ class outputs_parameters(QtGui.QWidget):
 
 
 	def sendFrequency(self, frequency, channel):
-		print('sendFrequency')
 		self.dev.write_Zynq_AXI_register_uint32(self.DDS_FREQ_REG[channel], frequency/self.fs * 2**32)
+
+	def getFrequency(self, channel):
+		freq_in_int = self.dev.read_Zynq_AXI_register_uint32(self.DDS_FREQ_REG[channel])
+		freq_in_Hz = freq_in_int/2**32 * self.fs
+		return freq_in_Hz
 
 
 ################################################################

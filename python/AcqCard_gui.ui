@@ -307,7 +307,7 @@
             <string>write &quot;max&quot; to set to maximum number of points</string>
            </property>
            <property name="text">
-            <string>10e3</string>
+            <string>10e4</string>
            </property>
           </widget>
          </item>
