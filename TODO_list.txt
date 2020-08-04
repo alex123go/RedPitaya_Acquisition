@@ -1,16 +1,6 @@
 PRIORITY:
-	linux :
-		- Build new linux image with more DDR3 allocated to dma : 
-		currently : last 32MB for dma : addr 0x1E00_0000 to 0x1FFF_FFFF 
-		(https://github.com/pavel-demin/red-pitaya-notes/issues/719¸)
-
 	python:
 		- make sure there is no unnecessary copy of data_in, which might slow the program
-
-	c: monitor-tcp:
-		- add offset to map_base_dma
-			from    : send(connfd, map_base_dma, pPacketReadDDR->number_of_bytes, 0);
-			to (??) : send(connfd, map_base_dma+offset, pPacketReadDDR->number_of_bytes, 0);
 
 
 Others : 

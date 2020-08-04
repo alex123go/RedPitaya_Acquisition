@@ -2,11 +2,11 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Apr 27 16:20:49 2020
-# Process ID: 30676
-# Current directory: D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/impl_1
+# Start of session at: Tue Aug  4 10:58:39 2020
+# Process ID: 13872
+# Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/impl_1
 # Command line: vivado.exe -log design_1_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_1_wrapper.tcl -notrace
-# Log file: D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/impl_1/design_1_wrapper.vdi
-# Journal file: D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/impl_1\vivado.jou
+# Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/impl_1/design_1_wrapper.vdi
+# Journal file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/impl_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_wrapper.tcl -notrace

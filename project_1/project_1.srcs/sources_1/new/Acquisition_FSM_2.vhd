@@ -32,8 +32,7 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity Acquisition_FSM_2 is
-    Generic( start_address : unsigned(32-1 downto 0) := x"1E000000";
-             BYTES_PER_TX : unsigned(23-1 downto 0) := "000" & x"0_0200";
+    Generic( BYTES_PER_TX : unsigned(23-1 downto 0) := "000" & x"0_0200";
              FIFO_THRESHOLD : integer := 100);
     
     Port ( clk : in STD_LOGIC;
@@ -46,6 +45,8 @@ entity Acquisition_FSM_2 is
            reset_ACQ : out STD_LOGIC;
            
            FIFO_S2MM_data_count : in STD_LOGIC_VECTOR(32-1 downto 0);
+           
+           start_address : in unsigned(32-1 downto 0);
            
            m_axis_s2mm_cmd_tdata : out STD_LOGIC_VECTOR(72-1 downto 0);
            m_axis_s2mm_cmd_tvalid : out STD_LOGIC;
@@ -238,7 +239,7 @@ s_axis_s2mm_sts_tready <= '1';
 error_ACQ <= error_ACQ_int;
 data_tvalid <= data_tvalid_int;
 
-m_axis_s2mm_cmd_tdata <= x"00" & std_logic_vector(unsigned(start_address) + s2mm_addr) & "000000001" & std_logic_vector(BYTES_PER_TX);
+m_axis_s2mm_cmd_tdata <= x"00" & std_logic_vector(start_address + s2mm_addr) & "000000001" & std_logic_vector(BYTES_PER_TX);
 
 
 end Behavioral;

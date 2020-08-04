@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Thu Apr 23 15:32:19 2020
+-- Date        : Tue Aug  4 10:57:00 2020
 -- Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_Acquisition_top_0_0_sim_netlist.vhdl
@@ -27,7 +27,8 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2 is
     number_bytes : in STD_LOGIC_VECTOR ( 23 downto 0 );
     s_axis_s2mm_sts_tvalid : in STD_LOGIC;
     s_axis_s2mm_sts_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 29 downto 0 )
+    FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 29 downto 0 );
+    start_address : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2;
 
@@ -118,14 +119,49 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal in7 : STD_LOGIC;
   signal in8 : STD_LOGIC_VECTOR ( 31 downto 8 );
   signal in9 : STD_LOGIC_VECTOR ( 31 downto 8 );
-  signal \^m_axis_s2mm_cmd_tdata\ : STD_LOGIC_VECTOR ( 23 downto 0 );
   signal \m_axis_s2mm_cmd_tdata0_carry__0_i_1_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__0_i_2_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__0_i_3_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__0_i_4_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__0_n_0\ : STD_LOGIC;
   signal \m_axis_s2mm_cmd_tdata0_carry__0_n_1\ : STD_LOGIC;
   signal \m_axis_s2mm_cmd_tdata0_carry__0_n_2\ : STD_LOGIC;
   signal \m_axis_s2mm_cmd_tdata0_carry__0_n_3\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__1_i_1_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__1_i_2_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__1_i_3_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__1_i_4_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__1_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__1_n_1\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__1_n_2\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__1_n_3\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__2_i_1_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__2_i_2_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__2_i_3_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__2_i_4_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__2_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__2_n_1\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__2_n_2\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__2_n_3\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__3_i_1_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__3_i_2_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__3_i_3_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__3_i_4_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__3_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__3_n_1\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__3_n_2\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__3_n_3\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__4_i_1_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__4_i_2_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__4_i_3_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__4_i_4_n_0\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__4_n_1\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__4_n_2\ : STD_LOGIC;
+  signal \m_axis_s2mm_cmd_tdata0_carry__4_n_3\ : STD_LOGIC;
   signal m_axis_s2mm_cmd_tdata0_carry_i_1_n_0 : STD_LOGIC;
   signal m_axis_s2mm_cmd_tdata0_carry_i_2_n_0 : STD_LOGIC;
   signal m_axis_s2mm_cmd_tdata0_carry_i_3_n_0 : STD_LOGIC;
+  signal m_axis_s2mm_cmd_tdata0_carry_i_4_n_0 : STD_LOGIC;
   signal m_axis_s2mm_cmd_tdata0_carry_n_0 : STD_LOGIC;
   signal m_axis_s2mm_cmd_tdata0_carry_n_1 : STD_LOGIC;
   signal m_axis_s2mm_cmd_tdata0_carry_n_2 : STD_LOGIC;
@@ -138,7 +174,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal \reset_counter_reg_n_0_[1]\ : STD_LOGIC;
   signal \reset_counter_reg_n_0_[2]\ : STD_LOGIC;
   signal \reset_counter_reg_n_0_[3]\ : STD_LOGIC;
-  signal s2mm_addr : STD_LOGIC_VECTOR ( 31 downto 24 );
+  signal s2mm_addr : STD_LOGIC_VECTOR ( 31 downto 8 );
   signal \s2mm_addr0_carry__0_n_0\ : STD_LOGIC;
   signal \s2mm_addr0_carry__0_n_1\ : STD_LOGIC;
   signal \s2mm_addr0_carry__0_n_2\ : STD_LOGIC;
@@ -163,7 +199,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal s2mm_addr0_carry_n_1 : STD_LOGIC;
   signal s2mm_addr0_carry_n_2 : STD_LOGIC;
   signal s2mm_addr0_carry_n_3 : STD_LOGIC;
-  signal \s2mm_addr[23]_i_1_n_0\ : STD_LOGIC;
+  signal \s2mm_addr[31]_i_1_n_0\ : STD_LOGIC;
   signal s2mm_addr_1 : STD_LOGIC_VECTOR ( 31 downto 8 );
   signal \s2mm_fsm_state1_inferred__1/i__carry__0_n_0\ : STD_LOGIC;
   signal \s2mm_fsm_state1_inferred__1/i__carry__0_n_1\ : STD_LOGIC;
@@ -227,7 +263,8 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal start_old : STD_LOGIC;
   signal \^status_out\ : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal \NLW_bytes_sent0_carry__4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
-  signal \NLW_m_axis_s2mm_cmd_tdata0_carry__0_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
+  signal NLW_m_axis_s2mm_cmd_tdata0_carry_O_UNCONNECTED : STD_LOGIC_VECTOR ( 0 to 0 );
+  signal \NLW_m_axis_s2mm_cmd_tdata0_carry__4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_s2mm_addr0_carry__4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   signal \NLW_s2mm_fsm_state1_inferred__1/i__carry_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_s2mm_fsm_state1_inferred__1/i__carry__0_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
@@ -288,7 +325,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   attribute SOFT_HLUTNM of \s2mm_addr[20]_i_1\ : label is "soft_lutpair27";
   attribute SOFT_HLUTNM of \s2mm_addr[21]_i_1\ : label is "soft_lutpair21";
   attribute SOFT_HLUTNM of \s2mm_addr[22]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \s2mm_addr[23]_i_2\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \s2mm_addr[23]_i_1\ : label is "soft_lutpair18";
   attribute SOFT_HLUTNM of \s2mm_addr[24]_i_1\ : label is "soft_lutpair21";
   attribute SOFT_HLUTNM of \s2mm_addr[25]_i_1\ : label is "soft_lutpair15";
   attribute SOFT_HLUTNM of \s2mm_addr[26]_i_1\ : label is "soft_lutpair20";
@@ -296,11 +333,10 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   attribute SOFT_HLUTNM of \s2mm_addr[28]_i_1\ : label is "soft_lutpair12";
   attribute SOFT_HLUTNM of \s2mm_addr[29]_i_1\ : label is "soft_lutpair8";
   attribute SOFT_HLUTNM of \s2mm_addr[30]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \s2mm_addr[31]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \s2mm_addr[31]_i_2\ : label is "soft_lutpair9";
   attribute SOFT_HLUTNM of \s2mm_addr[8]_i_1\ : label is "soft_lutpair29";
   attribute SOFT_HLUTNM of \s2mm_addr[9]_i_1\ : label is "soft_lutpair27";
 begin
-  m_axis_s2mm_cmd_tdata(23 downto 0) <= \^m_axis_s2mm_cmd_tdata\(23 downto 0);
   status_out(1 downto 0) <= \^status_out\(1 downto 0);
 ADC1_converter_i_1: unisim.vcomponents.LUT1
     generic map(
@@ -1454,59 +1490,314 @@ m_axis_s2mm_cmd_tdata0_carry: unisim.vcomponents.CARRY4
       CO(1) => m_axis_s2mm_cmd_tdata0_carry_n_2,
       CO(0) => m_axis_s2mm_cmd_tdata0_carry_n_3,
       CYINIT => '0',
-      DI(3 downto 1) => s2mm_addr(27 downto 25),
-      DI(0) => '0',
-      O(3 downto 0) => \^m_axis_s2mm_cmd_tdata\(19 downto 16),
+      DI(3 downto 0) => start_address(3 downto 0),
+      O(3 downto 1) => m_axis_s2mm_cmd_tdata(3 downto 1),
+      O(0) => NLW_m_axis_s2mm_cmd_tdata0_carry_O_UNCONNECTED(0),
       S(3) => m_axis_s2mm_cmd_tdata0_carry_i_1_n_0,
       S(2) => m_axis_s2mm_cmd_tdata0_carry_i_2_n_0,
       S(1) => m_axis_s2mm_cmd_tdata0_carry_i_3_n_0,
-      S(0) => s2mm_addr(24)
+      S(0) => m_axis_s2mm_cmd_tdata0_carry_i_4_n_0
     );
 \m_axis_s2mm_cmd_tdata0_carry__0\: unisim.vcomponents.CARRY4
      port map (
       CI => m_axis_s2mm_cmd_tdata0_carry_n_0,
-      CO(3) => \NLW_m_axis_s2mm_cmd_tdata0_carry__0_CO_UNCONNECTED\(3),
+      CO(3) => \m_axis_s2mm_cmd_tdata0_carry__0_n_0\,
       CO(2) => \m_axis_s2mm_cmd_tdata0_carry__0_n_1\,
       CO(1) => \m_axis_s2mm_cmd_tdata0_carry__0_n_2\,
       CO(0) => \m_axis_s2mm_cmd_tdata0_carry__0_n_3\,
       CYINIT => '0',
-      DI(3 downto 1) => B"000",
-      DI(0) => s2mm_addr(28),
-      O(3 downto 0) => \^m_axis_s2mm_cmd_tdata\(23 downto 20),
-      S(3 downto 1) => s2mm_addr(31 downto 29),
-      S(0) => \m_axis_s2mm_cmd_tdata0_carry__0_i_1_n_0\
+      DI(3 downto 0) => start_address(7 downto 4),
+      O(3 downto 0) => m_axis_s2mm_cmd_tdata(7 downto 4),
+      S(3) => \m_axis_s2mm_cmd_tdata0_carry__0_i_1_n_0\,
+      S(2) => \m_axis_s2mm_cmd_tdata0_carry__0_i_2_n_0\,
+      S(1) => \m_axis_s2mm_cmd_tdata0_carry__0_i_3_n_0\,
+      S(0) => \m_axis_s2mm_cmd_tdata0_carry__0_i_4_n_0\
     );
-\m_axis_s2mm_cmd_tdata0_carry__0_i_1\: unisim.vcomponents.LUT1
+\m_axis_s2mm_cmd_tdata0_carry__0_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"6"
     )
         port map (
-      I0 => s2mm_addr(28),
+      I0 => start_address(7),
+      I1 => s2mm_addr(15),
       O => \m_axis_s2mm_cmd_tdata0_carry__0_i_1_n_0\
     );
-m_axis_s2mm_cmd_tdata0_carry_i_1: unisim.vcomponents.LUT1
+\m_axis_s2mm_cmd_tdata0_carry__0_i_2\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"6"
     )
         port map (
-      I0 => s2mm_addr(27),
+      I0 => start_address(6),
+      I1 => s2mm_addr(14),
+      O => \m_axis_s2mm_cmd_tdata0_carry__0_i_2_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__0_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(5),
+      I1 => s2mm_addr(13),
+      O => \m_axis_s2mm_cmd_tdata0_carry__0_i_3_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__0_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(4),
+      I1 => s2mm_addr(12),
+      O => \m_axis_s2mm_cmd_tdata0_carry__0_i_4_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__1\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m_axis_s2mm_cmd_tdata0_carry__0_n_0\,
+      CO(3) => \m_axis_s2mm_cmd_tdata0_carry__1_n_0\,
+      CO(2) => \m_axis_s2mm_cmd_tdata0_carry__1_n_1\,
+      CO(1) => \m_axis_s2mm_cmd_tdata0_carry__1_n_2\,
+      CO(0) => \m_axis_s2mm_cmd_tdata0_carry__1_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => start_address(11 downto 8),
+      O(3 downto 0) => m_axis_s2mm_cmd_tdata(11 downto 8),
+      S(3) => \m_axis_s2mm_cmd_tdata0_carry__1_i_1_n_0\,
+      S(2) => \m_axis_s2mm_cmd_tdata0_carry__1_i_2_n_0\,
+      S(1) => \m_axis_s2mm_cmd_tdata0_carry__1_i_3_n_0\,
+      S(0) => \m_axis_s2mm_cmd_tdata0_carry__1_i_4_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__1_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(11),
+      I1 => s2mm_addr(19),
+      O => \m_axis_s2mm_cmd_tdata0_carry__1_i_1_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__1_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(10),
+      I1 => s2mm_addr(18),
+      O => \m_axis_s2mm_cmd_tdata0_carry__1_i_2_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__1_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(9),
+      I1 => s2mm_addr(17),
+      O => \m_axis_s2mm_cmd_tdata0_carry__1_i_3_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__1_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(8),
+      I1 => s2mm_addr(16),
+      O => \m_axis_s2mm_cmd_tdata0_carry__1_i_4_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__2\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m_axis_s2mm_cmd_tdata0_carry__1_n_0\,
+      CO(3) => \m_axis_s2mm_cmd_tdata0_carry__2_n_0\,
+      CO(2) => \m_axis_s2mm_cmd_tdata0_carry__2_n_1\,
+      CO(1) => \m_axis_s2mm_cmd_tdata0_carry__2_n_2\,
+      CO(0) => \m_axis_s2mm_cmd_tdata0_carry__2_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => start_address(15 downto 12),
+      O(3 downto 0) => m_axis_s2mm_cmd_tdata(15 downto 12),
+      S(3) => \m_axis_s2mm_cmd_tdata0_carry__2_i_1_n_0\,
+      S(2) => \m_axis_s2mm_cmd_tdata0_carry__2_i_2_n_0\,
+      S(1) => \m_axis_s2mm_cmd_tdata0_carry__2_i_3_n_0\,
+      S(0) => \m_axis_s2mm_cmd_tdata0_carry__2_i_4_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__2_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(15),
+      I1 => s2mm_addr(23),
+      O => \m_axis_s2mm_cmd_tdata0_carry__2_i_1_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__2_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(14),
+      I1 => s2mm_addr(22),
+      O => \m_axis_s2mm_cmd_tdata0_carry__2_i_2_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__2_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(13),
+      I1 => s2mm_addr(21),
+      O => \m_axis_s2mm_cmd_tdata0_carry__2_i_3_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__2_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(12),
+      I1 => s2mm_addr(20),
+      O => \m_axis_s2mm_cmd_tdata0_carry__2_i_4_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__3\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m_axis_s2mm_cmd_tdata0_carry__2_n_0\,
+      CO(3) => \m_axis_s2mm_cmd_tdata0_carry__3_n_0\,
+      CO(2) => \m_axis_s2mm_cmd_tdata0_carry__3_n_1\,
+      CO(1) => \m_axis_s2mm_cmd_tdata0_carry__3_n_2\,
+      CO(0) => \m_axis_s2mm_cmd_tdata0_carry__3_n_3\,
+      CYINIT => '0',
+      DI(3 downto 0) => start_address(19 downto 16),
+      O(3 downto 0) => m_axis_s2mm_cmd_tdata(19 downto 16),
+      S(3) => \m_axis_s2mm_cmd_tdata0_carry__3_i_1_n_0\,
+      S(2) => \m_axis_s2mm_cmd_tdata0_carry__3_i_2_n_0\,
+      S(1) => \m_axis_s2mm_cmd_tdata0_carry__3_i_3_n_0\,
+      S(0) => \m_axis_s2mm_cmd_tdata0_carry__3_i_4_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__3_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(19),
+      I1 => s2mm_addr(27),
+      O => \m_axis_s2mm_cmd_tdata0_carry__3_i_1_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__3_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(18),
+      I1 => s2mm_addr(26),
+      O => \m_axis_s2mm_cmd_tdata0_carry__3_i_2_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__3_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(17),
+      I1 => s2mm_addr(25),
+      O => \m_axis_s2mm_cmd_tdata0_carry__3_i_3_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__3_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(16),
+      I1 => s2mm_addr(24),
+      O => \m_axis_s2mm_cmd_tdata0_carry__3_i_4_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__4\: unisim.vcomponents.CARRY4
+     port map (
+      CI => \m_axis_s2mm_cmd_tdata0_carry__3_n_0\,
+      CO(3) => \NLW_m_axis_s2mm_cmd_tdata0_carry__4_CO_UNCONNECTED\(3),
+      CO(2) => \m_axis_s2mm_cmd_tdata0_carry__4_n_1\,
+      CO(1) => \m_axis_s2mm_cmd_tdata0_carry__4_n_2\,
+      CO(0) => \m_axis_s2mm_cmd_tdata0_carry__4_n_3\,
+      CYINIT => '0',
+      DI(3) => '0',
+      DI(2 downto 0) => start_address(22 downto 20),
+      O(3 downto 0) => m_axis_s2mm_cmd_tdata(23 downto 20),
+      S(3) => \m_axis_s2mm_cmd_tdata0_carry__4_i_1_n_0\,
+      S(2) => \m_axis_s2mm_cmd_tdata0_carry__4_i_2_n_0\,
+      S(1) => \m_axis_s2mm_cmd_tdata0_carry__4_i_3_n_0\,
+      S(0) => \m_axis_s2mm_cmd_tdata0_carry__4_i_4_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__4_i_1\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(23),
+      I1 => s2mm_addr(31),
+      O => \m_axis_s2mm_cmd_tdata0_carry__4_i_1_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__4_i_2\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(22),
+      I1 => s2mm_addr(30),
+      O => \m_axis_s2mm_cmd_tdata0_carry__4_i_2_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__4_i_3\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(21),
+      I1 => s2mm_addr(29),
+      O => \m_axis_s2mm_cmd_tdata0_carry__4_i_3_n_0\
+    );
+\m_axis_s2mm_cmd_tdata0_carry__4_i_4\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(20),
+      I1 => s2mm_addr(28),
+      O => \m_axis_s2mm_cmd_tdata0_carry__4_i_4_n_0\
+    );
+m_axis_s2mm_cmd_tdata0_carry_i_1: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(3),
+      I1 => s2mm_addr(11),
       O => m_axis_s2mm_cmd_tdata0_carry_i_1_n_0
     );
-m_axis_s2mm_cmd_tdata0_carry_i_2: unisim.vcomponents.LUT1
+m_axis_s2mm_cmd_tdata0_carry_i_2: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"6"
     )
         port map (
-      I0 => s2mm_addr(26),
+      I0 => start_address(2),
+      I1 => s2mm_addr(10),
       O => m_axis_s2mm_cmd_tdata0_carry_i_2_n_0
     );
-m_axis_s2mm_cmd_tdata0_carry_i_3: unisim.vcomponents.LUT1
+m_axis_s2mm_cmd_tdata0_carry_i_3: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"6"
     )
         port map (
-      I0 => s2mm_addr(25),
+      I0 => start_address(1),
+      I1 => s2mm_addr(9),
       O => m_axis_s2mm_cmd_tdata0_carry_i_3_n_0
+    );
+m_axis_s2mm_cmd_tdata0_carry_i_4: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(0),
+      I1 => s2mm_addr(8),
+      O => m_axis_s2mm_cmd_tdata0_carry_i_4_n_0
+    );
+\m_axis_s2mm_cmd_tdata[40]_INST_0\: unisim.vcomponents.LUT2
+    generic map(
+      INIT => X"6"
+    )
+        port map (
+      I0 => start_address(0),
+      I1 => s2mm_addr(8),
+      O => m_axis_s2mm_cmd_tdata(0)
     );
 m_axis_s2mm_cmd_tvalid_reg: unisim.vcomponents.FDCE
      port map (
@@ -1628,12 +1919,12 @@ s2mm_addr0_carry: unisim.vcomponents.CARRY4
       CO(0) => s2mm_addr0_carry_n_3,
       CYINIT => '0',
       DI(3 downto 2) => B"00",
-      DI(1) => \^m_axis_s2mm_cmd_tdata\(1),
+      DI(1) => s2mm_addr(9),
       DI(0) => '0',
       O(3 downto 0) => in9(11 downto 8),
-      S(3 downto 2) => \^m_axis_s2mm_cmd_tdata\(3 downto 2),
+      S(3 downto 2) => s2mm_addr(11 downto 10),
       S(1) => s2mm_addr0_carry_i_1_n_0,
-      S(0) => \^m_axis_s2mm_cmd_tdata\(0)
+      S(0) => s2mm_addr(8)
     );
 \s2mm_addr0_carry__0\: unisim.vcomponents.CARRY4
      port map (
@@ -1645,7 +1936,7 @@ s2mm_addr0_carry: unisim.vcomponents.CARRY4
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
       O(3 downto 0) => in9(15 downto 12),
-      S(3 downto 0) => \^m_axis_s2mm_cmd_tdata\(7 downto 4)
+      S(3 downto 0) => s2mm_addr(15 downto 12)
     );
 \s2mm_addr0_carry__1\: unisim.vcomponents.CARRY4
      port map (
@@ -1657,7 +1948,7 @@ s2mm_addr0_carry: unisim.vcomponents.CARRY4
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
       O(3 downto 0) => in9(19 downto 16),
-      S(3 downto 0) => \^m_axis_s2mm_cmd_tdata\(11 downto 8)
+      S(3 downto 0) => s2mm_addr(19 downto 16)
     );
 \s2mm_addr0_carry__2\: unisim.vcomponents.CARRY4
      port map (
@@ -1669,7 +1960,7 @@ s2mm_addr0_carry: unisim.vcomponents.CARRY4
       CYINIT => '0',
       DI(3 downto 0) => B"0000",
       O(3 downto 0) => in9(23 downto 20),
-      S(3 downto 0) => \^m_axis_s2mm_cmd_tdata\(15 downto 12)
+      S(3 downto 0) => s2mm_addr(23 downto 20)
     );
 \s2mm_addr0_carry__3\: unisim.vcomponents.CARRY4
      port map (
@@ -1700,7 +1991,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
       INIT => X"1"
     )
         port map (
-      I0 => \^m_axis_s2mm_cmd_tdata\(1),
+      I0 => s2mm_addr(9),
       O => s2mm_addr0_carry_i_1_n_0
     );
 \s2mm_addr[10]_i_1\: unisim.vcomponents.LUT2
@@ -1820,17 +2111,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
       I1 => in9(22),
       O => s2mm_addr_1(22)
     );
-\s2mm_addr[23]_i_1\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\,
-      I1 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[1]\,
-      I2 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[0]\,
-      O => \s2mm_addr[23]_i_1_n_0\
-    );
-\s2mm_addr[23]_i_2\: unisim.vcomponents.LUT2
+\s2mm_addr[23]_i_1\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
@@ -1902,7 +2183,17 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
       I1 => in9(30),
       O => s2mm_addr_1(30)
     );
-\s2mm_addr[31]_i_1\: unisim.vcomponents.LUT2
+\s2mm_addr[31]_i_1\: unisim.vcomponents.LUT3
+    generic map(
+      INIT => X"FE"
+    )
+        port map (
+      I0 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\,
+      I1 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[1]\,
+      I2 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[0]\,
+      O => \s2mm_addr[31]_i_1_n_0\
+    );
+\s2mm_addr[31]_i_2\: unisim.vcomponents.LUT2
     generic map(
       INIT => X"8"
     )
@@ -1932,119 +2223,119 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
 \s2mm_addr_reg[10]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(10),
-      Q => \^m_axis_s2mm_cmd_tdata\(2)
+      Q => s2mm_addr(10)
     );
 \s2mm_addr_reg[11]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(11),
-      Q => \^m_axis_s2mm_cmd_tdata\(3)
+      Q => s2mm_addr(11)
     );
 \s2mm_addr_reg[12]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(12),
-      Q => \^m_axis_s2mm_cmd_tdata\(4)
+      Q => s2mm_addr(12)
     );
 \s2mm_addr_reg[13]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(13),
-      Q => \^m_axis_s2mm_cmd_tdata\(5)
+      Q => s2mm_addr(13)
     );
 \s2mm_addr_reg[14]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(14),
-      Q => \^m_axis_s2mm_cmd_tdata\(6)
+      Q => s2mm_addr(14)
     );
 \s2mm_addr_reg[15]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(15),
-      Q => \^m_axis_s2mm_cmd_tdata\(7)
+      Q => s2mm_addr(15)
     );
 \s2mm_addr_reg[16]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(16),
-      Q => \^m_axis_s2mm_cmd_tdata\(8)
+      Q => s2mm_addr(16)
     );
 \s2mm_addr_reg[17]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(17),
-      Q => \^m_axis_s2mm_cmd_tdata\(9)
+      Q => s2mm_addr(17)
     );
 \s2mm_addr_reg[18]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(18),
-      Q => \^m_axis_s2mm_cmd_tdata\(10)
+      Q => s2mm_addr(18)
     );
 \s2mm_addr_reg[19]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(19),
-      Q => \^m_axis_s2mm_cmd_tdata\(11)
+      Q => s2mm_addr(19)
     );
 \s2mm_addr_reg[20]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(20),
-      Q => \^m_axis_s2mm_cmd_tdata\(12)
+      Q => s2mm_addr(20)
     );
 \s2mm_addr_reg[21]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(21),
-      Q => \^m_axis_s2mm_cmd_tdata\(13)
+      Q => s2mm_addr(21)
     );
 \s2mm_addr_reg[22]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(22),
-      Q => \^m_axis_s2mm_cmd_tdata\(14)
+      Q => s2mm_addr(22)
     );
 \s2mm_addr_reg[23]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(23),
-      Q => \^m_axis_s2mm_cmd_tdata\(15)
+      Q => s2mm_addr(23)
     );
 \s2mm_addr_reg[24]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(24),
       Q => s2mm_addr(24)
@@ -2052,7 +2343,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
 \s2mm_addr_reg[25]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(25),
       Q => s2mm_addr(25)
@@ -2060,7 +2351,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
 \s2mm_addr_reg[26]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(26),
       Q => s2mm_addr(26)
@@ -2068,7 +2359,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
 \s2mm_addr_reg[27]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(27),
       Q => s2mm_addr(27)
@@ -2076,7 +2367,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
 \s2mm_addr_reg[28]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(28),
       Q => s2mm_addr(28)
@@ -2084,7 +2375,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
 \s2mm_addr_reg[29]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(29),
       Q => s2mm_addr(29)
@@ -2092,7 +2383,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
 \s2mm_addr_reg[30]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(30),
       Q => s2mm_addr(30)
@@ -2100,7 +2391,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
 \s2mm_addr_reg[31]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(31),
       Q => s2mm_addr(31)
@@ -2108,18 +2399,18 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
 \s2mm_addr_reg[8]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(8),
-      Q => \^m_axis_s2mm_cmd_tdata\(0)
+      Q => s2mm_addr(8)
     );
 \s2mm_addr_reg[9]\: unisim.vcomponents.FDCE
      port map (
       C => clk,
-      CE => \s2mm_addr[23]_i_1_n_0\,
+      CE => \s2mm_addr[31]_i_1_n_0\,
       CLR => reset_ACQ_i_2_n_0,
       D => s2mm_addr_1(9),
-      Q => \^m_axis_s2mm_cmd_tdata\(1)
+      Q => s2mm_addr(9)
     );
 \s2mm_fsm_state1_inferred__1/i__carry\: unisim.vcomponents.CARRY4
      port map (
@@ -5691,6 +5982,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top is
     ADC1_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     ADC2_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    start_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
     reset_ACQ : out STD_LOGIC;
     status_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axis_tvalid : out STD_LOGIC;
@@ -5703,8 +5995,6 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top is
     s_axis_s2mm_sts_tready : out STD_LOGIC;
     s_axis_s2mm_sts_tvalid : in STD_LOGIC
   );
-  attribute start_address : integer;
-  attribute start_address of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top : entity is 503316480;
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top is
@@ -5719,6 +6009,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal m_axis_tvalid_ADC2 : STD_LOGIC;
   signal \^reset_acq\ : STD_LOGIC;
   signal s_axis_tvalid : STD_LOGIC;
+  signal \^start_address\ : STD_LOGIC_VECTOR ( 31 downto 0 );
   signal NLW_ADC1_2_converter_s_axis_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_ADC1_converter_s_axis_tready_UNCONNECTED : STD_LOGIC;
   signal NLW_ADC2_converter_s_axis_tready_UNCONNECTED : STD_LOGIC;
@@ -5735,6 +6026,7 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   attribute DowngradeIPIdentifiedWarnings of ADC2_converter : label is "yes";
   attribute X_CORE_INFO of ADC2_converter : label is "axis_dwidth_converter_v1_1_18_axis_dwidth_converter,Vivado 2019.1";
 begin
+  \^start_address\(31 downto 0) <= start_address(31 downto 0);
   m_axis_s2mm_cmd_tdata(71) <= \<const0>\;
   m_axis_s2mm_cmd_tdata(70) <= \<const0>\;
   m_axis_s2mm_cmd_tdata(69) <= \<const0>\;
@@ -5744,14 +6036,7 @@ begin
   m_axis_s2mm_cmd_tdata(65) <= \<const0>\;
   m_axis_s2mm_cmd_tdata(64) <= \<const0>\;
   m_axis_s2mm_cmd_tdata(63 downto 40) <= \^m_axis_s2mm_cmd_tdata\(63 downto 40);
-  m_axis_s2mm_cmd_tdata(39) <= \<const0>\;
-  m_axis_s2mm_cmd_tdata(38) <= \<const0>\;
-  m_axis_s2mm_cmd_tdata(37) <= \<const0>\;
-  m_axis_s2mm_cmd_tdata(36) <= \<const0>\;
-  m_axis_s2mm_cmd_tdata(35) <= \<const0>\;
-  m_axis_s2mm_cmd_tdata(34) <= \<const0>\;
-  m_axis_s2mm_cmd_tdata(33) <= \<const0>\;
-  m_axis_s2mm_cmd_tdata(32) <= \<const0>\;
+  m_axis_s2mm_cmd_tdata(39 downto 32) <= \^start_address\(7 downto 0);
   m_axis_s2mm_cmd_tdata(31) <= \<const0>\;
   m_axis_s2mm_cmd_tdata(30) <= \<const0>\;
   m_axis_s2mm_cmd_tdata(29) <= \<const0>\;
@@ -5832,6 +6117,7 @@ ADC_FSM: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
       s_axis_s2mm_sts_tdata(7 downto 0) => s_axis_s2mm_sts_tdata(7 downto 0),
       s_axis_s2mm_sts_tvalid => s_axis_s2mm_sts_tvalid,
       s_axis_tvalid => s_axis_tvalid,
+      start_address(23 downto 0) => \^start_address\(31 downto 8),
       start_sig => start_sig,
       status_out(1 downto 0) => status_out(1 downto 0)
     );
@@ -6638,6 +6924,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     ADC1_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     ADC2_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    start_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
     reset_ACQ : out STD_LOGIC;
     status_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axis_tvalid : out STD_LOGIC;
@@ -6663,8 +6950,6 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix;
 
 architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
-  attribute start_address : integer;
-  attribute start_address of U0 : label is 503316480;
   attribute x_interface_info : string;
   attribute x_interface_info of clk : signal is "xilinx.com:signal:clock:1.0 clk CLK";
   attribute x_interface_parameter : string;
@@ -6705,6 +6990,7 @@ U0: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
       s_axis_s2mm_sts_tdata(7 downto 0) => s_axis_s2mm_sts_tdata(7 downto 0),
       s_axis_s2mm_sts_tready => s_axis_s2mm_sts_tready,
       s_axis_s2mm_sts_tvalid => s_axis_s2mm_sts_tvalid,
+      start_address(31 downto 0) => start_address(31 downto 0),
       start_sig => start_sig,
       status_out(1 downto 0) => status_out(1 downto 0)
     );

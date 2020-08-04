@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Apr 27 16:17:22 2020" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Aug  4 10:55:40 2020" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="bd_afc3" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -24,6 +24,11 @@
     <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="External_Ports_aresetn">
       <CONNECTIONS>
         <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="aux_reset_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" LEFT="3" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_awid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="s_axi_awid"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" LEFT="31" NAME="S00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_awaddr">
@@ -104,6 +109,11 @@
     <PORT DIR="O" NAME="S00_AXI_wready" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_wready">
       <CONNECTIONS>
         <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="s_axi_wready"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="O" LEFT="3" NAME="S00_AXI_bid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_bid">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="s_axi_bid"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="O" LEFT="1" NAME="S00_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_bresp">
@@ -223,7 +233,7 @@
       <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
       <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
       <PARAMETER NAME="FREQ_HZ" VALUE="200000000"/>
-      <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+      <PARAMETER NAME="ID_WIDTH" VALUE="4"/>
       <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
       <PARAMETER NAME="AWUSER_WIDTH" VALUE="4"/>
       <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
@@ -252,6 +262,7 @@
       <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
       <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
       <PORTMAPS>
+        <PORTMAP LOGICAL="AWID" PHYSICAL="S00_AXI_awid"/>
         <PORTMAP LOGICAL="AWADDR" PHYSICAL="S00_AXI_awaddr"/>
         <PORTMAP LOGICAL="AWLEN" PHYSICAL="S00_AXI_awlen"/>
         <PORTMAP LOGICAL="AWSIZE" PHYSICAL="S00_AXI_awsize"/>
@@ -268,6 +279,7 @@
         <PORTMAP LOGICAL="WLAST" PHYSICAL="S00_AXI_wlast"/>
         <PORTMAP LOGICAL="WVALID" PHYSICAL="S00_AXI_wvalid"/>
         <PORTMAP LOGICAL="WREADY" PHYSICAL="S00_AXI_wready"/>
+        <PORTMAP LOGICAL="BID" PHYSICAL="S00_AXI_bid"/>
         <PORTMAP LOGICAL="BRESP" PHYSICAL="S00_AXI_bresp"/>
         <PORTMAP LOGICAL="BVALID" PHYSICAL="S00_AXI_bvalid"/>
         <PORTMAP LOGICAL="BREADY" PHYSICAL="S00_AXI_bready"/>
@@ -1699,8 +1711,8 @@
         <PARAMETER NAME="C_IS_CASCADED" VALUE="0"/>
         <PARAMETER NAME="C_ENABLE_PIPELINING" VALUE="0x1"/>
         <PARAMETER NAME="C_NUM_SEG" VALUE="1"/>
-        <PARAMETER NAME="C_SEG_BASE_ADDR_ARRAY" VALUE="0x000000001e000000"/>
-        <PARAMETER NAME="C_SEG_SIZE_ARRAY" VALUE="0x00000019"/>
+        <PARAMETER NAME="C_SEG_BASE_ADDR_ARRAY" VALUE="0x0000000000000000"/>
+        <PARAMETER NAME="C_SEG_SIZE_ARRAY" VALUE="0x0000001d"/>
         <PARAMETER NAME="C_SEG_SEP_ROUTE_ARRAY" VALUE="0x0000000000000000"/>
         <PARAMETER NAME="C_SEG_SUPPORTS_READ_ARRAY" VALUE="0x1"/>
         <PARAMETER NAME="C_SEG_SUPPORTS_WRITE_ARRAY" VALUE="0x1"/>
@@ -1710,7 +1722,7 @@
         <PARAMETER NAME="C_MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_MSC_ROUTE_ARRAY" VALUE="0b1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="C_ID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="C_ID_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_S_AWUSER_WIDTH" VALUE="4"/>
@@ -1737,7 +1749,7 @@
         <PARAMETER NAME="MSC_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="NUM_MSC" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="ID_WIDTH" VALUE="4"/>
         <PARAMETER NAME="RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="S_ARUSER_WIDTH" VALUE="0"/>
@@ -1754,8 +1766,8 @@
         <PARAMETER NAME="NUM_READ_OUTSTANDING" VALUE="2"/>
         <PARAMETER NAME="SINGLE_ISSUING" VALUE="0"/>
         <PARAMETER NAME="SUPPORTS_NARROW" VALUE="0"/>
-        <PARAMETER NAME="SEG000_BASE_ADDR" VALUE="0x000000001E000000"/>
-        <PARAMETER NAME="SEG000_SIZE" VALUE="25"/>
+        <PARAMETER NAME="SEG000_BASE_ADDR" VALUE="0x0000000000000000"/>
+        <PARAMETER NAME="SEG000_SIZE" VALUE="29"/>
         <PARAMETER NAME="SEG000_SEP_ROUTE" VALUE="0b0000000000000000000000000000000000000000000000000000000000000000"/>
         <PARAMETER NAME="SEG000_SUPPORTS_READ" VALUE="1"/>
         <PARAMETER NAME="SEG000_SUPPORTS_WRITE" VALUE="1"/>
@@ -3624,6 +3636,11 @@
             <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_awid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_awid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_afc3_imp" PORT="S00_AXI_awid"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="31" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_afc3_imp" PORT="S00_AXI_awaddr"/>
@@ -3704,6 +3721,11 @@
             <CONNECTION INSTANCE="bd_afc3_imp" PORT="S00_AXI_wready"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="O" LEFT="3" NAME="s_axi_bid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="bd_afc3_imp" PORT="S00_AXI_bid"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_afc3_imp" PORT="S00_AXI_bresp"/>
@@ -3717,6 +3739,11 @@
         <PORT DIR="I" NAME="s_axi_bready" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_s_axi_bready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="bd_afc3_imp" PORT="S00_AXI_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="m_axi_awid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_awid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="s_axi_awid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="m_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_awaddr">
@@ -3804,6 +3831,11 @@
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="3" NAME="m_axi_bid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="s_axi_bid"/>
+          </CONNECTIONS>
+        </PORT>
         <PORT DIR="I" LEFT="1" NAME="m_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_bresp">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_transaction_regulator" PORT="s_axi_bresp"/>
@@ -3830,7 +3862,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="200000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="4"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="4"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
@@ -3859,6 +3891,7 @@
           <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="s_axi_awid"/>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
             <PORTMAP LOGICAL="AWLEN" PHYSICAL="s_axi_awlen"/>
             <PORTMAP LOGICAL="AWSIZE" PHYSICAL="s_axi_awsize"/>
@@ -3875,6 +3908,7 @@
             <PORTMAP LOGICAL="WLAST" PHYSICAL="s_axi_wlast"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="s_axi_bid"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>
             <PORTMAP LOGICAL="BREADY" PHYSICAL="s_axi_bready"/>
@@ -3884,7 +3918,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="200000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="4"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="1024"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
@@ -3913,6 +3947,7 @@
           <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="m_axi_awid"/>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="m_axi_awaddr"/>
             <PORTMAP LOGICAL="AWLEN" PHYSICAL="m_axi_awlen"/>
             <PORTMAP LOGICAL="AWSIZE" PHYSICAL="m_axi_awsize"/>
@@ -3930,6 +3965,7 @@
             <PORTMAP LOGICAL="WUSER" PHYSICAL="m_axi_wuser"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="m_axi_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="m_axi_wready"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="m_axi_bid"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="m_axi_bresp"/>
             <PORTMAP LOGICAL="BUSER" PHYSICAL="m_axi_buser"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="m_axi_bvalid"/>
@@ -5260,7 +5296,7 @@
         <PARAMETER NAME="C_SEP_ROUTE_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_RDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="C_WDATA_WIDTH" VALUE="64"/>
-        <PARAMETER NAME="C_S_ID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="C_S_ID_WIDTH" VALUE="4"/>
         <PARAMETER NAME="C_M_ID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_ADDR_WIDTH" VALUE="32"/>
         <PARAMETER NAME="C_SUPPORTS_READ_DEADLOCK" VALUE="0"/>
@@ -5278,7 +5314,7 @@
         <PARAMETER NAME="MEP_IDENTIFIER" VALUE="0"/>
         <PARAMETER NAME="MEP_IDENTIFIER_WIDTH" VALUE="1"/>
         <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
-        <PARAMETER NAME="S_ID_WIDTH" VALUE="0"/>
+        <PARAMETER NAME="S_ID_WIDTH" VALUE="4"/>
         <PARAMETER NAME="M_ID_WIDTH" VALUE="1"/>
         <PARAMETER NAME="WDATA_WIDTH" VALUE="64"/>
         <PARAMETER NAME="RDATA_WIDTH" VALUE="64"/>
@@ -5303,6 +5339,11 @@
         <PORT DIR="I" NAME="aresetn" SIGIS="rst" SIGNAME="clk_map_psr_aclk_interconnect_aresetn">
           <CONNECTIONS>
             <CONNECTION INSTANCE="clk_map_psr_aclk" PORT="interconnect_aresetn"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="3" NAME="s_axi_awid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_awid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="m_axi_awid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="31" NAME="s_axi_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_awaddr">
@@ -5388,6 +5429,11 @@
         <PORT DIR="O" NAME="s_axi_wready" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_wready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="m_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="s_axi_bid" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_bid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="s00_entry_pipeline_s00_mmu" PORT="m_axi_bid"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="1" NAME="s_axi_bresp" RIGHT="0" SIGIS="undef" SIGNAME="s00_entry_pipeline_s00_mmu_m_axi_bresp">
@@ -5528,7 +5574,7 @@
           <PARAMETER NAME="DATA_WIDTH" VALUE="64"/>
           <PARAMETER NAME="PROTOCOL" VALUE="AXI4"/>
           <PARAMETER NAME="FREQ_HZ" VALUE="200000000"/>
-          <PARAMETER NAME="ID_WIDTH" VALUE="0"/>
+          <PARAMETER NAME="ID_WIDTH" VALUE="4"/>
           <PARAMETER NAME="ADDR_WIDTH" VALUE="32"/>
           <PARAMETER NAME="AWUSER_WIDTH" VALUE="1024"/>
           <PARAMETER NAME="ARUSER_WIDTH" VALUE="0"/>
@@ -5557,6 +5603,7 @@
           <PARAMETER NAME="WUSER_BITS_PER_BYTE" VALUE="0"/>
           <PARAMETER NAME="INSERT_VIP" VALUE="0"/>
           <PORTMAPS>
+            <PORTMAP LOGICAL="AWID" PHYSICAL="s_axi_awid"/>
             <PORTMAP LOGICAL="AWADDR" PHYSICAL="s_axi_awaddr"/>
             <PORTMAP LOGICAL="AWLEN" PHYSICAL="s_axi_awlen"/>
             <PORTMAP LOGICAL="AWSIZE" PHYSICAL="s_axi_awsize"/>
@@ -5574,6 +5621,7 @@
             <PORTMAP LOGICAL="WUSER" PHYSICAL="s_axi_wuser"/>
             <PORTMAP LOGICAL="WVALID" PHYSICAL="s_axi_wvalid"/>
             <PORTMAP LOGICAL="WREADY" PHYSICAL="s_axi_wready"/>
+            <PORTMAP LOGICAL="BID" PHYSICAL="s_axi_bid"/>
             <PORTMAP LOGICAL="BRESP" PHYSICAL="s_axi_bresp"/>
             <PORTMAP LOGICAL="BUSER" PHYSICAL="s_axi_buser"/>
             <PORTMAP LOGICAL="BVALID" PHYSICAL="s_axi_bvalid"/>

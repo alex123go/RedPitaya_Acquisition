@@ -14,6 +14,7 @@ import RP_PLL
 
 from AcqCard import AcqCard
 
+import socket
 import pdb
 import traceback
 
@@ -21,6 +22,10 @@ import traceback
 
 class controller(object):
 	"""docstring for controller"""
+
+	FIRMWARE_VERSION_ADDRESS  = 0x000F_0000 # offset of 0x8000_0000
+	EXPECTED_FIRMWARE_VERSION = 0xADC0_0001
+
 	def __init__(self):
 		super(controller, self).__init__()
 
@@ -40,15 +45,52 @@ class controller(object):
 
 		self.initialConfigUI()
 
+	def findMostLikelyLANBroadcastIPAddress(self):
+		# list all possible IPv4 addresses and choose the most likely candidate for the subnet on which the red pitaya is
+		# heuristics used:
+		#   -prefer if the address starts with 192.168
+		#   -choose the subnet that has the lowest third byte: eg if there are both 192.168.1.10 and 192.168.2.10, chooose 129.168.1.10 as the correct one
+		addrCandidate = '192.168.0.255'
+
+		try:
+			listAddr = socket.getaddrinfo(socket.gethostname(), None)
+			min_third_byte = 255
+
+			for addr_tuple in listAddr:
+				(family, _, _, _, sockaddr) = addr_tuple
+				if family == socket.AF_INET:
+					# this is IPv4
+					print('IP candidate: %s' % sockaddr[0])
+					third_byte = int(sockaddr[0].split('.')[2])
+					if third_byte <= min_third_byte:
+						min_third_byte = third_byte
+						addrCandidate = sockaddr[0]
+			print('Chosen local IP: %s' % addrCandidate)
+
+		except Exception as e:
+			print("findMostLikelyLANBroadcastIPAddress():Exception trying to find correct broadcast automatically.")
+			#pass
+
+		# Take this machine's IP address and transform into broadcast address for the whole subnet (change last byte to 255)
+		addrSplit = addrCandidate.split('.')
+		addrSplit[3] = '255'
+		strBroadCastAddress = '.'.join(addrSplit)
+
+		print('Chosen broadcast IP: %s' % strBroadCastAddress)
+
+		return strBroadCastAddress
+
 
 
 	def initialConfigUI(self):
 
 		devices_data = {} # Possibilité de mettre un dictionnaire avec mac address et nom du Red Pitaya (qui peut aussi faire le lien avec un fichier de config et une couleur de background du gui)
+
+		strBroadcastAddress = self.findMostLikelyLANBroadcastIPAddress()
 							
 		strFPGAFirmware=r'AcqCard.bit'
 		strCPUFirmware=u'../ZynqFolder/monitor-tcp/monitor-tcp'
-		self.initial_config = initialConfiguration(self.dev, devices_data=devices_data, strFPGAFirmware=strFPGAFirmware, strCPUFirmware=strCPUFirmware)
+		self.initial_config = initialConfiguration(self.dev, devices_data=devices_data, strBroadcastAddress=strBroadcastAddress, strFPGAFirmware=strFPGAFirmware, strCPUFirmware=strCPUFirmware)
 	
 		# we should pause here because of app.exec_() inside self.initial_config, but it doesn't
 		# reset preferences to default in spyder 3.6 solved the problem
@@ -75,6 +117,11 @@ class controller(object):
 			try:
 
 				self.dev.OpenTCPConnection(self.ip_addr, 5000)
+				FIRMWARE_VERSION = self.dev.read_Zynq_AXI_register_uint32(self.FIRMWARE_VERSION_ADDRESS)
+				# FIRMWARE_VERSION = self.EXPECTED_FIRMWARE_VERSION
+				print('FIRMWARE_VERSION = {}'.format(hex(FIRMWARE_VERSION)))
+
+				
 				self.main_window = AcqCard(self.dev)  
 				self.main_window.show()
 				self.app.exec_()

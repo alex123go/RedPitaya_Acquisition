@@ -59,7 +59,7 @@
 
 static bool app_exit = false;
 pid_t parent_pid;
-bool bVerbose = false; // this allows enabling lots of debugging messages. currently not available unless the code is recompiled
+bool bVerbose = true; // this allows enabling lots of debugging messages. currently not available unless the code is recompiled
 
 // Packet formats definitions
 #pragma pack(push)
@@ -71,6 +71,20 @@ typedef struct binary_packet_read_ddr_t {
 	uint32_t start_address;
 	uint32_t number_of_bytes;
 } binary_packet_read_ddr_t;
+
+uint32_t magic_bytes_write_ddr = 0xABCD1222;
+typedef struct binary_packet_write_ddr_t {
+	uint32_t magic_bytes;	// 0xABCD1222
+	uint32_t start_address;
+	uint32_t number_of_bytes;
+} binary_packet_write_ddr_t;
+
+uint32_t magic_bytes_write_file_to_ddr = 0xABCD1223;
+typedef struct binary_packet_write_file_to_ddr_t {
+	uint32_t magic_bytes;	// 0xABCD1223
+	uint32_t reserved1;		// unused
+	uint32_t reserved2;		// unused
+} binary_packet_write_file_to_ddr_t;
 
 uint32_t magic_bytes_write_reg = 0xABCD1233;
 typedef struct binary_packet_write_reg_t {
@@ -130,6 +144,14 @@ typedef struct binary_packet_reboot_monitor_t {
 } binary_packet_reboot_monitor_t;
 
 
+uint32_t magic_bytes_read_buffer2 = 0xABCD1240;
+typedef struct binary_packet_read_buffer2_t {
+	uint32_t magic_bytes;	// 0xABCD1235
+	uint32_t start_address;
+	uint32_t number_of_points;	
+} binary_packet_read_buffer2_t;
+
+
 
 #pragma pack(pop)
 
@@ -159,9 +181,10 @@ int fd_dev_mem = -1;
 uint32_t FPGA_MEMORY_START_XADC = 0x80000000UL;
 void* map_base_xadc = (void*)(-1);
 
-#define MAP_SIZE_DMA (1UL<<25) //DMA from FPGA_MEMORY_START_DMA to 0x1FFFFFFFUL (for 1E000000 to 1FFFFFFF => 2^25-1 = 32MB)
+//#define MAP_SIZE_DMA (1UL<<25) //DMA from FPGA_MEMORY_START_DMA to 0x1FFFFFFFUL (for 1E000000 to 1FFFFFFF => 2^25-1 = 32MB)
+#define MAP_SIZE_DMA (0x18000000UL) //DMA from FPGA_MEMORY_START_DMA to 0x1FFFFFFFUL (for 08000000 to 1FFFFFFF => 0x1800_0000 = 2^28+2^27-1 = 384MB)
 #define MAP_MASK_DMA (MAP_SIZE_DMA - 1)
-uint32_t FPGA_MEMORY_START_DMA = 0x1E000000UL;
+uint32_t FPGA_MEMORY_START_DMA = 0x08000000UL;
 void* map_base_dma = (void*)(-1);
 
 
@@ -258,6 +281,7 @@ void write_value(unsigned long a_addr, int a_type, unsigned long a_value) {
 #define LOGGER_BUFFER_SIZE (1UL<<15)
 #define LOGGER_BASE_ADDR 0x00100000UL
 #define LOGGER_DATA_OFFSET  (1UL<<19)
+#define LOGGER_DATA_OFFSET2  (7UL<<19)
 #define LOGGER_START_WRITE_OFFSET  0x1004UL
 
 int16_t data_buffer[LOGGER_BUFFER_SIZE];
@@ -293,6 +317,21 @@ void acq_GetDataFromLogger(uint32_t* size, int16_t* buffer_in)
     }
     if (bVerbose)
     	printf("buffer_in[0] = %hd\n", buffer_in[0]);
+}
+
+void acq_GetDataFromLogger2(uint32_t* size, int16_t* buffer_in)
+{
+    *size = MIN(*size, LOGGER_BUFFER_SIZE);
+
+    const volatile uint32_t* raw_buffer = (uint32_t*)((char*)map_base + LOGGER_BASE_ADDR + LOGGER_DATA_OFFSET2);
+    //const volatile uint32_t* raw_buffer = (uint32_t*)((char*)map_base + OSC_BASE_ADDR + OSC_CHB_OFFSET);
+
+    printf("acq_GetDataFromLogger2: reading %u points, starting from address 0x%lX\n", *size, LOGGER_BASE_ADDR + LOGGER_DATA_OFFSET2);
+
+    for (uint32_t i = 0; i < (*size); ++i) {
+        buffer_in[i] = (raw_buffer[i % LOGGER_BUFFER_SIZE]);
+    }
+    printf("buffer_in[0] = %hd\n", buffer_in[0]);
 }
 
 
@@ -762,6 +801,10 @@ static int handleConnection(int connfd) {
 
     size_t iRequiredBytes = sizeof(message_magic_bytes);	// to start, we only need 4 bytes before starting to parse out the message.
 
+    //variable used for handling "writing to ddr3" messages
+    bool bHaveWriteDDRHeader = false;   
+    struct binary_packet_write_ddr_t * pPacketWriteDDR;
+
     // Variables used for handling "write file" messages
     bool bHaveFileWriteHeader = false;
     struct binary_packet_write_file_t * pPacketWriteFile;
@@ -956,6 +999,73 @@ static int handleConnection(int connfd) {
 	        		}
 
 	        	
+	        	} else if (message_magic_bytes == magic_bytes_read_buffer2) {
+
+	        		iRequiredBytes = sizeof(binary_packet_read_buffer2_t);
+	        		if (msg_end >= iRequiredBytes) {
+		        		
+		        		struct binary_packet_read_buffer2_t * pPacketReadBuffer;
+		        		pPacketReadBuffer = (binary_packet_read_buffer2_t*) message_buff;
+
+
+
+		        		if (bVerbose)
+		        			printf("Received a buffer read packet.\n");
+		        		if (bVerbose)
+		        			printf("pPacketReadBuffer->start_address = 0x%X (hex) (currently unused)\n", pPacketReadBuffer->start_address);
+		        		if (bVerbose)
+		        			printf("pPacketReadBuffer->number_of_points = %u (decimal)\n", pPacketReadBuffer->number_of_points);
+
+		        		// do an acquisition
+		        		if (bVerbose)// 
+		        			printf("running acquisition...\n");
+					    struct timespec time_start, time_end;
+					    // clock_gettime(CLOCK_REALTIME, &time_start);
+					    // stuff to be timed would go here
+
+		        		//acq_MinimumSetup();
+		        		//acq_LoggerStartWrite();
+					    // clock_gettime(CLOCK_REALTIME, &time_end);
+					    if (bVerbose)// 
+					    	printf("acq_MinimumSetup(), elapsed = %d seconds + %ld ms\n", (int)(time_end.tv_sec-time_start.tv_sec), (long int)(time_end.tv_nsec-time_start.tv_nsec)/1000000);
+
+		        		// this should contain the actual data, note that the writing has surely wrapped and the start/end of the data run will be random in the dataset
+		        		// TODO: sync with the end of the acquisition in the buffer.
+		        		clock_gettime(CLOCK_REALTIME, &time_start);
+		        		uint32_t acq_size = MIN(LOGGER_BUFFER_SIZE, pPacketReadBuffer->number_of_points);
+		        		if (bVerbose)// 
+		        			printf("acquisition completed, grabbing %u points from 2nd buffer....\n", acq_size);
+		        		//acq_GetDataRawV2_CHA(0, &acq_size, data_buffer);
+		        		acq_GetDataFromLogger2(&acq_size, data_buffer);
+					    clock_gettime(CLOCK_REALTIME, &time_end);
+					    if (bVerbose)
+					    	printf("getdata elapsed = %d seconds + %ld ns\n", (int)(time_end.tv_sec-time_start.tv_sec), (long int)(time_end.tv_nsec-time_start.tv_nsec));
+		        		// for (int k=100; k<140; k++)
+
+		        		// dump this into the TCP socket:
+		        		if (bVerbose)// 
+		        			printf("before socket send()\n");
+		        		clock_gettime(CLOCK_REALTIME, &time_start);
+		        		send(connfd, data_buffer, (size_t)acq_size*sizeof(int16_t), 0);
+					    clock_gettime(CLOCK_REALTIME, &time_end);
+					    if (bVerbose)
+					    	printf("send() elapsed = %d seconds + %ld ns\n", (int)(time_end.tv_sec-time_start.tv_sec), (long int)(time_end.tv_nsec-time_start.tv_nsec));
+		        		if (bVerbose)
+		        			printf("socket send() complete\n");
+
+
+		        		// reset our message parsing state variables
+		        		bytes_consumed = sizeof(binary_packet_read_buffer2_t);
+		        		bHaveMagicBytes = false;
+		        		iRequiredBytes = sizeof(message_magic_bytes);
+	        		} else {
+	        			if (bVerbose)
+	        				printf("Received a buffer read packet, but we have not received the full packet yet.\n");
+
+	        		}
+
+	        	////////////////////////////////////////////////////////////
+	        	// Run a software control loop (integrator only) to lock a laser on the flank of an absorption line
 	        	} else if (message_magic_bytes == magic_bytes_read_ddr)
         			{
 		        		iRequiredBytes = sizeof(binary_packet_read_ddr_t);
@@ -964,7 +1074,7 @@ static int handleConnection(int connfd) {
 				        		struct binary_packet_read_ddr_t * pPacketReadDDR;
 				        		pPacketReadDDR = (binary_packet_read_ddr_t*) message_buff;
 				        		printf("Received a DDR read packet.\n");
-				        		printf("Start_address (not yet active) = 0x%X (hex)\n", pPacketReadDDR->start_address);
+				        		printf("Start_address   = 0x%X (hex)\n", pPacketReadDDR->start_address);
 				        		printf("Number_of_bytes = %u (decimal)\n", pPacketReadDDR->number_of_bytes);
 				        		fflush(stdout);
 
@@ -972,7 +1082,7 @@ static int handleConnection(int connfd) {
 				        		clock_gettime(CLOCK_REALTIME, &time_start);
 
 				        		// TODO: add offset to map_base_dma
-				        		send(connfd, map_base_dma, pPacketReadDDR->number_of_bytes, 0);
+				        		send(connfd, ((char*)map_base_dma + (pPacketReadDDR->start_address*sizeof(char) )), pPacketReadDDR->number_of_bytes, 0);
 
 				        		clock_gettime(CLOCK_REALTIME, &time_end);
 					    		printf("getdata elapsed = %d seconds + %ld ns\n", (int)(time_end.tv_sec-time_start.tv_sec), (long int)(time_end.tv_nsec-time_start.tv_nsec));
@@ -989,11 +1099,80 @@ static int handleConnection(int connfd) {
 				        		iRequiredBytes = sizeof(message_magic_bytes);
 
 	        				}
-        				else 
-        					{
-	        					printf("Received a register write packet, but we have not received the full packet yet.\n");
-	        				}
         			}
+        			else if (message_magic_bytes == magic_bytes_write_ddr)
+        			{
+		        		if(!bHaveWriteDDRHeader)
+		        		{
+		        			iRequiredBytes = sizeof(binary_packet_write_ddr_t);
+		        			printf("iRequiredBytes = %u. Size of packet header", iRequiredBytes);
+		        			if (msg_end >= iRequiredBytes) 
+		        			{
+		        				bHaveWriteDDRHeader = true;
+				        		pPacketWriteDDR = (binary_packet_write_ddr_t*) message_buff;
+
+				        		printf("Received a DDR write packet.\n");
+				        		printf("Start_address  = 0x%X (hex)\n", pPacketWriteDDR->start_address);
+				        		printf("Number_of_bytes                = %u (decimal)\n", pPacketWriteDDR->number_of_bytes);
+
+				        		iRequiredBytes = sizeof(binary_packet_write_ddr_t) + pPacketWriteDDR->number_of_bytes;
+			        			printf("iRequiredBytes                 = %u\n", iRequiredBytes);
+		        			}
+		        		}
+
+		        		if(bHaveWriteDDRHeader)
+		        		{
+		        			// we know how long the total message needs to be, so we just wait to have received everything.
+		        			if (msg_end >= iRequiredBytes)
+		        			{
+		        				printf("All bytes received.\n Copying %u bytes to ddr3", pPacketWriteDDR->number_of_bytes);
+		        				printf("msg_end = %u, iRequiredBytes = %u\n", msg_end, iRequiredBytes);
+		        				
+		        				// copy message_buff to ddr3
+		        				memcpy(((char*)map_base_dma + pPacketWriteDDR->start_address*sizeof(char)), (void*)(message_buff+sizeof(binary_packet_write_ddr_t)) , pPacketWriteDDR->number_of_bytes);
+
+		        				// reset our message parsing state variables
+				        		bHaveWriteDDRHeader = false;
+				        		bytes_consumed = iRequiredBytes;
+				        		bHaveMagicBytes = false;
+				        		iRequiredBytes = sizeof(message_magic_bytes);
+		        			}
+		        		}
+        			}
+    			else if (message_magic_bytes == magic_bytes_write_file_to_ddr)
+    			{
+    				iRequiredBytes = sizeof(binary_packet_write_file_to_ddr_t);
+		        	if (msg_end >= iRequiredBytes) 
+		        	{
+		        		file_pointer = fopen("/opt/data.dat", "rb");
+	        			
+	        			if (!file_pointer)
+						{
+							if (bVerbose)
+								printf("Error opening file '/opt/data.dat'. No contents written to ddr.");
+						} else {
+							// seek file begining
+							fseek(file_pointer, 0, SEEK_SET);
+							// copy file contents to ddr3
+							size_t size = fread(map_base_dma, 1, MAP_SIZE_DMA ,file_pointer); // will read MAP_SIZE_DMA bytes or until it reaches EOF
+
+							fclose(file_pointer);
+							file_pointer = NULL;
+						}
+
+						// reset our message parsing state variables
+		        		bHaveWriteDDRHeader = false;
+		        		bytes_consumed = iRequiredBytes;
+		        		bHaveMagicBytes = false;
+		        		iRequiredBytes = sizeof(message_magic_bytes);
+
+		        	}
+
+
+    			}
+
+
+
     			////////////////////////////////////////////////////////////
 	        	// Run a software control loop (integrator only) to lock a laser on the flank of an absorption line
 	        	else if (message_magic_bytes == magic_bytes_flank_servo)
@@ -1365,6 +1544,8 @@ int main(int argc, char *argv[])
 	    {
 	        printf("Failed to bind the socket (%s), retrying in 1000 ms...\n", strerror(errno));
 	        perror("Failed to bind the socket");
+	        int option = 1;
+	        setsockopt(listenfd,SOL_SOCKET,(SO_REUSEPORT | SO_REUSEADDR),(char*)&option,sizeof(option));
 	        usleep(1000000);	// 1 sec
 	        iRetries++;
 	        //return (EXIT_FAILURE);

@@ -1,0 +1,52 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 70 -defaultsOSRD
+preplace port M00_AXI -pg 1 -lvl 6 -x 1840 -y 560 -defaultsOSRD
+preplace port S_AXI1 -pg 1 -lvl 0 -x 0 -y 350 -defaultsOSRD
+preplace port S_AXI2 -pg 1 -lvl 0 -x 0 -y 530 -defaultsOSRD
+preplace port m_axis_s2mm_cmdsts_awclk -pg 1 -lvl 0 -x 0 -y 380 -defaultsOSRD
+preplace port resetn -pg 1 -lvl 0 -x 0 -y 560 -defaultsOSRD
+preplace port m_axi_s2mm_aclk -pg 1 -lvl 0 -x 0 -y 460 -defaultsOSRD
+preplace port aresetn -pg 1 -lvl 0 -x 0 -y 630 -defaultsOSRD
+preplace portBus ADC1_data -pg 1 -lvl 0 -x 0 -y 260 -defaultsOSRD
+preplace portBus ADC2_data -pg 1 -lvl 0 -x 0 -y 290 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 3 -x 970 -y 390 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 1 -x 180 -y 90 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 5 -x 1690 -y 560 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 1 -x 180 -y 370 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 3 -x 970 -y 230 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 3 -x 970 -y 490 -defaultsOSRD
+preplace inst axi_gpio_2 -pg 1 -lvl 1 -x 180 -y 550 -defaultsOSRD
+preplace inst axi_datamover_0 -pg 1 -lvl 4 -x 1350 -y 560 -defaultsOSRD
+preplace inst Acquisition_top_0 -pg 1 -lvl 2 -x 570 -y 230 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 470 330 410 810 610 NJ
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 2 30 180 N
+preplace netloc ADCs_wrapper_0_adc_a 1 0 2 NJ 260 NJ
+preplace netloc ADCs_wrapper_0_adc_b 1 0 2 40J 280 NJ
+preplace netloc Acquisition_top_0_reset_ACQ 1 2 1 800 220n
+preplace netloc clk_wiz_0_clk_out2 1 0 5 NJ 460 NJ 460 820 560 1140 420 1560J
+preplace netloc axi_gpio_0_gpio_io_o 1 1 1 350 80n
+preplace netloc axi_gpio_0_gpio2_io_o 1 1 1 320 120n
+preplace netloc aresetn_1 1 0 5 NJ 630 NJ 630 820J 600 1150 430 1550J
+preplace netloc axi_gpio_1_gpio_io_o 1 1 1 340 200n
+preplace netloc Acquisition_top_0_status_out 1 1 2 NJ 400 770
+preplace netloc axis_data_fifo_0_axis_wr_data_count 1 1 3 370 380 780J 110 1120
+preplace netloc axi_gpio_2_gpio_io_o 1 1 1 350 320n
+preplace netloc xlconstant_1_dout 1 3 1 1130J 390n
+preplace netloc xlconstant_2_dout 1 3 1 1120J 490n
+preplace netloc Conn1 1 0 1 NJ 70
+preplace netloc Conn4 1 0 1 NJ 530
+preplace netloc Conn3 1 0 1 NJ 350
+preplace netloc Conn2 1 5 1 N 560
+preplace netloc axis_data_fifo_0_M_AXIS 1 3 1 1160 170n
+preplace netloc axi_datamover_0_M_AXI_S2MM 1 4 1 N 540
+preplace netloc axi_datamover_0_M_AXIS_S2MM_STS 1 1 4 360 690 NJ 690 NJ 690 1540
+preplace netloc Acquisition_top_0_m_axis_s2mm_cmd 1 2 2 790 550 NJ
+preplace netloc Acquisition_top_0_m_axis 1 2 1 N 200
+levelinfo -pg 1 0 180 570 970 1350 1690 1840
+pagesize -pg 1 -db -bbox -sgen -230 0 1950 700
+"
+}
+0

@@ -10,7 +10,7 @@
     <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci">
       <FileInfo>
         <Attr Name="Library" Val="xil_defaultlib"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Synology/SynologyDrive/RedPitaya/DataMover_throughput/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../Synology/SynologyDrive/RedPitaya/DataMover_throughput/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci"/>
         <Attr Name="ImportTime" Val="0"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>
@@ -27,7 +27,7 @@
     <File Path="$PSRCDIR/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci">
       <FileInfo>
         <Attr Name="Library" Val="xil_defaultlib"/>
-        <Attr Name="ImportPath" Val="$PPRDIR/../../../Synology/SynologyDrive/RedPitaya/DataMover_throughput/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci"/>
+        <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../Synology/SynologyDrive/RedPitaya/DataMover_throughput/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0.xci"/>
         <Attr Name="ImportTime" Val="0"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="implementation"/>

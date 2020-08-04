@@ -10,8 +10,8 @@ class outputs_parameters(QtWidgets.QWidget):
 
 	fs = 125e6
 	
-	DDS_FREQ_REG          = [0x000C_0000, 0x000C_0008]
-	DDS_ONOFF_REG         = [0x000D_0000, 0x000D_0008]
+	DDS_FREQ_REG          = [0x000D_0000, 0x000D_0008]
+	DDS_ONOFF_REG         = [0x000E_0000, 0x000E_0008]
 
 
 	def __init__(self, dev = None):

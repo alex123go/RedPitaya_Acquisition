@@ -1,0 +1,37 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 370 -defaultsOSRD
+preplace port S_AXI1 -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port aclk -pg 1 -lvl 0 -x 0 -y 400 -defaultsOSRD
+preplace port s_axi_aresetn -pg 1 -lvl 0 -x 0 -y 430 -defaultsOSRD
+preplace portBus data_out -pg 1 -lvl 4 -x 1090 -y 190 -defaultsOSRD
+preplace portBus data_out1 -pg 1 -lvl 4 -x 1090 -y 90 -defaultsOSRD
+preplace portBus gpio_io_o -pg 1 -lvl 4 -x 1090 -y 310 -defaultsOSRD
+preplace portBus gpio2_io_o -pg 1 -lvl 4 -x 1090 -y 350 -defaultsOSRD
+preplace inst DDS_output_div_by_2_0 -pg 1 -lvl 3 -x 920 -y 190 -defaultsOSRD
+preplace inst DDS_output_div_by_2_1 -pg 1 -lvl 3 -x 920 -y 90 -defaultsOSRD
+preplace inst dds_compiler_0 -pg 1 -lvl 2 -x 550 -y 410 -defaultsOSRD
+preplace inst dds_compiler_1 -pg 1 -lvl 2 -x 550 -y 80 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 170 -y 90 -defaultsOSRD
+preplace inst axi_gpio_4 -pg 1 -lvl 3 -x 920 -y 320 -defaultsOSRD
+preplace inst axi_gpio_3 -pg 1 -lvl 1 -x 170 -y 410 -defaultsOSRD
+preplace netloc dds_compiler_0_m_axis_data_tdata1 1 2 1 750J 190n
+preplace netloc dds_compiler_1_m_axis_data_tdata 1 2 1 NJ 90
+preplace netloc axi_gpio_2_gpio_io_o 1 1 1 N 400
+preplace netloc axi_gpio_2_gpio2_io_o 1 1 1 310 70n
+preplace netloc dds_compiler_0_m_axis_data_tdata 1 3 1 NJ 190
+preplace netloc DDS_output_div_by_2_1_data_out 1 3 1 NJ 90
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 30 290 330 320 NJ
+preplace netloc xlconstant_0_dout 1 1 1 320 90n
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 3 20 500 NJ 500 760
+preplace netloc axi_gpio_3_gpio_io_o 1 3 1 NJ 310
+preplace netloc axi_gpio_3_gpio2_io_o 1 3 1 NJ 350
+preplace netloc ps7_0_axi_periph_M03_AXI 1 0 1 20J 370n
+preplace netloc Conn1 1 0 3 NJ 300 NJ 300 NJ
+levelinfo -pg 1 0 170 550 920 1090
+pagesize -pg 1 -db -bbox -sgen -130 -10 1240 510
+"
+}
+0

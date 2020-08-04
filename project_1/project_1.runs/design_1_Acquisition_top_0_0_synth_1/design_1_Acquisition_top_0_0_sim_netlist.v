@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Apr 23 15:32:19 2020
+// Date        : Tue Aug  4 10:57:00 2020
 // Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_Acquisition_top_0_0_sim_netlist.v
@@ -24,7 +24,8 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
     number_bytes,
     s_axis_s2mm_sts_tvalid,
     s_axis_s2mm_sts_tdata,
-    FIFO_S2MM_data_count);
+    FIFO_S2MM_data_count,
+    start_address);
   output reset_ACQ;
   output m_axis_s2mm_cmd_tvalid;
   output [1:0]status_out;
@@ -37,6 +38,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
   input s_axis_s2mm_sts_tvalid;
   input [7:0]s_axis_s2mm_sts_tdata;
   input [29:0]FIFO_S2MM_data_count;
+  input [23:0]start_address;
 
   wire [29:0]FIFO_S2MM_data_count;
   wire \FSM_onehot_s2mm_fsm_state[0]_i_1_n_0 ;
@@ -128,12 +130,48 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
   wire [31:8]in9;
   wire [23:0]m_axis_s2mm_cmd_tdata;
   wire m_axis_s2mm_cmd_tdata0_carry__0_i_1_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__0_i_2_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__0_i_3_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__0_i_4_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__0_n_0;
   wire m_axis_s2mm_cmd_tdata0_carry__0_n_1;
   wire m_axis_s2mm_cmd_tdata0_carry__0_n_2;
   wire m_axis_s2mm_cmd_tdata0_carry__0_n_3;
+  wire m_axis_s2mm_cmd_tdata0_carry__1_i_1_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__1_i_2_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__1_i_3_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__1_i_4_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__1_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__1_n_1;
+  wire m_axis_s2mm_cmd_tdata0_carry__1_n_2;
+  wire m_axis_s2mm_cmd_tdata0_carry__1_n_3;
+  wire m_axis_s2mm_cmd_tdata0_carry__2_i_1_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__2_i_2_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__2_i_3_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__2_i_4_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__2_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__2_n_1;
+  wire m_axis_s2mm_cmd_tdata0_carry__2_n_2;
+  wire m_axis_s2mm_cmd_tdata0_carry__2_n_3;
+  wire m_axis_s2mm_cmd_tdata0_carry__3_i_1_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__3_i_2_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__3_i_3_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__3_i_4_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__3_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__3_n_1;
+  wire m_axis_s2mm_cmd_tdata0_carry__3_n_2;
+  wire m_axis_s2mm_cmd_tdata0_carry__3_n_3;
+  wire m_axis_s2mm_cmd_tdata0_carry__4_i_1_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__4_i_2_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__4_i_3_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__4_i_4_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry__4_n_1;
+  wire m_axis_s2mm_cmd_tdata0_carry__4_n_2;
+  wire m_axis_s2mm_cmd_tdata0_carry__4_n_3;
   wire m_axis_s2mm_cmd_tdata0_carry_i_1_n_0;
   wire m_axis_s2mm_cmd_tdata0_carry_i_2_n_0;
   wire m_axis_s2mm_cmd_tdata0_carry_i_3_n_0;
+  wire m_axis_s2mm_cmd_tdata0_carry_i_4_n_0;
   wire m_axis_s2mm_cmd_tdata0_carry_n_0;
   wire m_axis_s2mm_cmd_tdata0_carry_n_1;
   wire m_axis_s2mm_cmd_tdata0_carry_n_2;
@@ -150,7 +188,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
   wire \reset_counter_reg_n_0_[2] ;
   wire \reset_counter_reg_n_0_[3] ;
   wire resetn;
-  wire [31:24]s2mm_addr;
+  wire [31:8]s2mm_addr;
   wire s2mm_addr0_carry__0_n_0;
   wire s2mm_addr0_carry__0_n_1;
   wire s2mm_addr0_carry__0_n_2;
@@ -175,7 +213,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
   wire s2mm_addr0_carry_n_1;
   wire s2mm_addr0_carry_n_2;
   wire s2mm_addr0_carry_n_3;
-  wire \s2mm_addr[23]_i_1_n_0 ;
+  wire \s2mm_addr[31]_i_1_n_0 ;
   wire [31:8]s2mm_addr_1;
   wire \s2mm_fsm_state1_inferred__1/i__carry__0_n_0 ;
   wire \s2mm_fsm_state1_inferred__1/i__carry__0_n_1 ;
@@ -238,12 +276,14 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
   wire [7:0]s_axis_s2mm_sts_tdata;
   wire s_axis_s2mm_sts_tvalid;
   wire s_axis_tvalid;
+  wire [23:0]start_address;
   wire start_new;
   wire start_old;
   wire start_sig;
   wire [1:0]status_out;
   wire [3:3]NLW_bytes_sent0_carry__4_CO_UNCONNECTED;
-  wire [3:3]NLW_m_axis_s2mm_cmd_tdata0_carry__0_CO_UNCONNECTED;
+  wire [0:0]NLW_m_axis_s2mm_cmd_tdata0_carry_O_UNCONNECTED;
+  wire [3:3]NLW_m_axis_s2mm_cmd_tdata0_carry__4_CO_UNCONNECTED;
   wire [3:3]NLW_s2mm_addr0_carry__4_CO_UNCONNECTED;
   wire [3:0]\NLW_s2mm_fsm_state1_inferred__1/i__carry_O_UNCONNECTED ;
   wire [3:0]\NLW_s2mm_fsm_state1_inferred__1/i__carry__0_O_UNCONNECTED ;
@@ -1100,36 +1140,194 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
        (.CI(1'b0),
         .CO({m_axis_s2mm_cmd_tdata0_carry_n_0,m_axis_s2mm_cmd_tdata0_carry_n_1,m_axis_s2mm_cmd_tdata0_carry_n_2,m_axis_s2mm_cmd_tdata0_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({s2mm_addr[27:25],1'b0}),
-        .O(m_axis_s2mm_cmd_tdata[19:16]),
-        .S({m_axis_s2mm_cmd_tdata0_carry_i_1_n_0,m_axis_s2mm_cmd_tdata0_carry_i_2_n_0,m_axis_s2mm_cmd_tdata0_carry_i_3_n_0,s2mm_addr[24]}));
+        .DI(start_address[3:0]),
+        .O({m_axis_s2mm_cmd_tdata[3:1],NLW_m_axis_s2mm_cmd_tdata0_carry_O_UNCONNECTED[0]}),
+        .S({m_axis_s2mm_cmd_tdata0_carry_i_1_n_0,m_axis_s2mm_cmd_tdata0_carry_i_2_n_0,m_axis_s2mm_cmd_tdata0_carry_i_3_n_0,m_axis_s2mm_cmd_tdata0_carry_i_4_n_0}));
   CARRY4 m_axis_s2mm_cmd_tdata0_carry__0
        (.CI(m_axis_s2mm_cmd_tdata0_carry_n_0),
-        .CO({NLW_m_axis_s2mm_cmd_tdata0_carry__0_CO_UNCONNECTED[3],m_axis_s2mm_cmd_tdata0_carry__0_n_1,m_axis_s2mm_cmd_tdata0_carry__0_n_2,m_axis_s2mm_cmd_tdata0_carry__0_n_3}),
+        .CO({m_axis_s2mm_cmd_tdata0_carry__0_n_0,m_axis_s2mm_cmd_tdata0_carry__0_n_1,m_axis_s2mm_cmd_tdata0_carry__0_n_2,m_axis_s2mm_cmd_tdata0_carry__0_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,1'b0,s2mm_addr[28]}),
-        .O(m_axis_s2mm_cmd_tdata[23:20]),
-        .S({s2mm_addr[31:29],m_axis_s2mm_cmd_tdata0_carry__0_i_1_n_0}));
-  LUT1 #(
-    .INIT(2'h1)) 
+        .DI(start_address[7:4]),
+        .O(m_axis_s2mm_cmd_tdata[7:4]),
+        .S({m_axis_s2mm_cmd_tdata0_carry__0_i_1_n_0,m_axis_s2mm_cmd_tdata0_carry__0_i_2_n_0,m_axis_s2mm_cmd_tdata0_carry__0_i_3_n_0,m_axis_s2mm_cmd_tdata0_carry__0_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h6)) 
     m_axis_s2mm_cmd_tdata0_carry__0_i_1
-       (.I0(s2mm_addr[28]),
+       (.I0(start_address[7]),
+        .I1(s2mm_addr[15]),
         .O(m_axis_s2mm_cmd_tdata0_carry__0_i_1_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__0_i_2
+       (.I0(start_address[6]),
+        .I1(s2mm_addr[14]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__0_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__0_i_3
+       (.I0(start_address[5]),
+        .I1(s2mm_addr[13]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__0_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__0_i_4
+       (.I0(start_address[4]),
+        .I1(s2mm_addr[12]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__0_i_4_n_0));
+  CARRY4 m_axis_s2mm_cmd_tdata0_carry__1
+       (.CI(m_axis_s2mm_cmd_tdata0_carry__0_n_0),
+        .CO({m_axis_s2mm_cmd_tdata0_carry__1_n_0,m_axis_s2mm_cmd_tdata0_carry__1_n_1,m_axis_s2mm_cmd_tdata0_carry__1_n_2,m_axis_s2mm_cmd_tdata0_carry__1_n_3}),
+        .CYINIT(1'b0),
+        .DI(start_address[11:8]),
+        .O(m_axis_s2mm_cmd_tdata[11:8]),
+        .S({m_axis_s2mm_cmd_tdata0_carry__1_i_1_n_0,m_axis_s2mm_cmd_tdata0_carry__1_i_2_n_0,m_axis_s2mm_cmd_tdata0_carry__1_i_3_n_0,m_axis_s2mm_cmd_tdata0_carry__1_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__1_i_1
+       (.I0(start_address[11]),
+        .I1(s2mm_addr[19]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__1_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__1_i_2
+       (.I0(start_address[10]),
+        .I1(s2mm_addr[18]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__1_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__1_i_3
+       (.I0(start_address[9]),
+        .I1(s2mm_addr[17]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__1_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__1_i_4
+       (.I0(start_address[8]),
+        .I1(s2mm_addr[16]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__1_i_4_n_0));
+  CARRY4 m_axis_s2mm_cmd_tdata0_carry__2
+       (.CI(m_axis_s2mm_cmd_tdata0_carry__1_n_0),
+        .CO({m_axis_s2mm_cmd_tdata0_carry__2_n_0,m_axis_s2mm_cmd_tdata0_carry__2_n_1,m_axis_s2mm_cmd_tdata0_carry__2_n_2,m_axis_s2mm_cmd_tdata0_carry__2_n_3}),
+        .CYINIT(1'b0),
+        .DI(start_address[15:12]),
+        .O(m_axis_s2mm_cmd_tdata[15:12]),
+        .S({m_axis_s2mm_cmd_tdata0_carry__2_i_1_n_0,m_axis_s2mm_cmd_tdata0_carry__2_i_2_n_0,m_axis_s2mm_cmd_tdata0_carry__2_i_3_n_0,m_axis_s2mm_cmd_tdata0_carry__2_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__2_i_1
+       (.I0(start_address[15]),
+        .I1(s2mm_addr[23]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__2_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__2_i_2
+       (.I0(start_address[14]),
+        .I1(s2mm_addr[22]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__2_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__2_i_3
+       (.I0(start_address[13]),
+        .I1(s2mm_addr[21]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__2_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__2_i_4
+       (.I0(start_address[12]),
+        .I1(s2mm_addr[20]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__2_i_4_n_0));
+  CARRY4 m_axis_s2mm_cmd_tdata0_carry__3
+       (.CI(m_axis_s2mm_cmd_tdata0_carry__2_n_0),
+        .CO({m_axis_s2mm_cmd_tdata0_carry__3_n_0,m_axis_s2mm_cmd_tdata0_carry__3_n_1,m_axis_s2mm_cmd_tdata0_carry__3_n_2,m_axis_s2mm_cmd_tdata0_carry__3_n_3}),
+        .CYINIT(1'b0),
+        .DI(start_address[19:16]),
+        .O(m_axis_s2mm_cmd_tdata[19:16]),
+        .S({m_axis_s2mm_cmd_tdata0_carry__3_i_1_n_0,m_axis_s2mm_cmd_tdata0_carry__3_i_2_n_0,m_axis_s2mm_cmd_tdata0_carry__3_i_3_n_0,m_axis_s2mm_cmd_tdata0_carry__3_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__3_i_1
+       (.I0(start_address[19]),
+        .I1(s2mm_addr[27]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__3_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__3_i_2
+       (.I0(start_address[18]),
+        .I1(s2mm_addr[26]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__3_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__3_i_3
+       (.I0(start_address[17]),
+        .I1(s2mm_addr[25]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__3_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__3_i_4
+       (.I0(start_address[16]),
+        .I1(s2mm_addr[24]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__3_i_4_n_0));
+  CARRY4 m_axis_s2mm_cmd_tdata0_carry__4
+       (.CI(m_axis_s2mm_cmd_tdata0_carry__3_n_0),
+        .CO({NLW_m_axis_s2mm_cmd_tdata0_carry__4_CO_UNCONNECTED[3],m_axis_s2mm_cmd_tdata0_carry__4_n_1,m_axis_s2mm_cmd_tdata0_carry__4_n_2,m_axis_s2mm_cmd_tdata0_carry__4_n_3}),
+        .CYINIT(1'b0),
+        .DI({1'b0,start_address[22:20]}),
+        .O(m_axis_s2mm_cmd_tdata[23:20]),
+        .S({m_axis_s2mm_cmd_tdata0_carry__4_i_1_n_0,m_axis_s2mm_cmd_tdata0_carry__4_i_2_n_0,m_axis_s2mm_cmd_tdata0_carry__4_i_3_n_0,m_axis_s2mm_cmd_tdata0_carry__4_i_4_n_0}));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__4_i_1
+       (.I0(start_address[23]),
+        .I1(s2mm_addr[31]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__4_i_1_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__4_i_2
+       (.I0(start_address[22]),
+        .I1(s2mm_addr[30]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__4_i_2_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__4_i_3
+       (.I0(start_address[21]),
+        .I1(s2mm_addr[29]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__4_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry__4_i_4
+       (.I0(start_address[20]),
+        .I1(s2mm_addr[28]),
+        .O(m_axis_s2mm_cmd_tdata0_carry__4_i_4_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
     m_axis_s2mm_cmd_tdata0_carry_i_1
-       (.I0(s2mm_addr[27]),
+       (.I0(start_address[3]),
+        .I1(s2mm_addr[11]),
         .O(m_axis_s2mm_cmd_tdata0_carry_i_1_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT2 #(
+    .INIT(4'h6)) 
     m_axis_s2mm_cmd_tdata0_carry_i_2
-       (.I0(s2mm_addr[26]),
+       (.I0(start_address[2]),
+        .I1(s2mm_addr[10]),
         .O(m_axis_s2mm_cmd_tdata0_carry_i_2_n_0));
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT2 #(
+    .INIT(4'h6)) 
     m_axis_s2mm_cmd_tdata0_carry_i_3
-       (.I0(s2mm_addr[25]),
+       (.I0(start_address[1]),
+        .I1(s2mm_addr[9]),
         .O(m_axis_s2mm_cmd_tdata0_carry_i_3_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    m_axis_s2mm_cmd_tdata0_carry_i_4
+       (.I0(start_address[0]),
+        .I1(s2mm_addr[8]),
+        .O(m_axis_s2mm_cmd_tdata0_carry_i_4_n_0));
+  LUT2 #(
+    .INIT(4'h6)) 
+    \m_axis_s2mm_cmd_tdata[40]_INST_0 
+       (.I0(start_address[0]),
+        .I1(s2mm_addr[8]),
+        .O(m_axis_s2mm_cmd_tdata[0]));
   FDCE m_axis_s2mm_cmd_tvalid_reg
        (.C(clk),
         .CE(1'b1),
@@ -1218,30 +1416,30 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
        (.CI(1'b0),
         .CO({s2mm_addr0_carry_n_0,s2mm_addr0_carry_n_1,s2mm_addr0_carry_n_2,s2mm_addr0_carry_n_3}),
         .CYINIT(1'b0),
-        .DI({1'b0,1'b0,m_axis_s2mm_cmd_tdata[1],1'b0}),
+        .DI({1'b0,1'b0,s2mm_addr[9],1'b0}),
         .O(in9[11:8]),
-        .S({m_axis_s2mm_cmd_tdata[3:2],s2mm_addr0_carry_i_1_n_0,m_axis_s2mm_cmd_tdata[0]}));
+        .S({s2mm_addr[11:10],s2mm_addr0_carry_i_1_n_0,s2mm_addr[8]}));
   CARRY4 s2mm_addr0_carry__0
        (.CI(s2mm_addr0_carry_n_0),
         .CO({s2mm_addr0_carry__0_n_0,s2mm_addr0_carry__0_n_1,s2mm_addr0_carry__0_n_2,s2mm_addr0_carry__0_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(in9[15:12]),
-        .S(m_axis_s2mm_cmd_tdata[7:4]));
+        .S(s2mm_addr[15:12]));
   CARRY4 s2mm_addr0_carry__1
        (.CI(s2mm_addr0_carry__0_n_0),
         .CO({s2mm_addr0_carry__1_n_0,s2mm_addr0_carry__1_n_1,s2mm_addr0_carry__1_n_2,s2mm_addr0_carry__1_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(in9[19:16]),
-        .S(m_axis_s2mm_cmd_tdata[11:8]));
+        .S(s2mm_addr[19:16]));
   CARRY4 s2mm_addr0_carry__2
        (.CI(s2mm_addr0_carry__1_n_0),
         .CO({s2mm_addr0_carry__2_n_0,s2mm_addr0_carry__2_n_1,s2mm_addr0_carry__2_n_2,s2mm_addr0_carry__2_n_3}),
         .CYINIT(1'b0),
         .DI({1'b0,1'b0,1'b0,1'b0}),
         .O(in9[23:20]),
-        .S(m_axis_s2mm_cmd_tdata[15:12]));
+        .S(s2mm_addr[23:20]));
   CARRY4 s2mm_addr0_carry__3
        (.CI(s2mm_addr0_carry__2_n_0),
         .CO({s2mm_addr0_carry__3_n_0,s2mm_addr0_carry__3_n_1,s2mm_addr0_carry__3_n_2,s2mm_addr0_carry__3_n_3}),
@@ -1259,7 +1457,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
   LUT1 #(
     .INIT(2'h1)) 
     s2mm_addr0_carry_i_1
-       (.I0(m_axis_s2mm_cmd_tdata[1]),
+       (.I0(s2mm_addr[9]),
         .O(s2mm_addr0_carry_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
@@ -1352,17 +1550,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[22]),
         .O(s2mm_addr_1[22]));
-  LUT3 #(
-    .INIT(8'hFE)) 
-    \s2mm_addr[23]_i_1 
-       (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
-        .I1(\FSM_onehot_s2mm_fsm_state_reg_n_0_[1] ),
-        .I2(\FSM_onehot_s2mm_fsm_state_reg_n_0_[0] ),
-        .O(\s2mm_addr[23]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    \s2mm_addr[23]_i_2 
+    \s2mm_addr[23]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[23]),
         .O(s2mm_addr_1[23]));
@@ -1415,10 +1606,17 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[30]),
         .O(s2mm_addr_1[30]));
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \s2mm_addr[31]_i_1 
+       (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
+        .I1(\FSM_onehot_s2mm_fsm_state_reg_n_0_[1] ),
+        .I2(\FSM_onehot_s2mm_fsm_state_reg_n_0_[0] ),
+        .O(\s2mm_addr[31]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
-    \s2mm_addr[31]_i_1 
+    \s2mm_addr[31]_i_2 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[31]),
         .O(s2mm_addr_1[31]));
@@ -1438,148 +1636,148 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .O(s2mm_addr_1[9]));
   FDCE \s2mm_addr_reg[10] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[10]),
-        .Q(m_axis_s2mm_cmd_tdata[2]));
+        .Q(s2mm_addr[10]));
   FDCE \s2mm_addr_reg[11] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[11]),
-        .Q(m_axis_s2mm_cmd_tdata[3]));
+        .Q(s2mm_addr[11]));
   FDCE \s2mm_addr_reg[12] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[12]),
-        .Q(m_axis_s2mm_cmd_tdata[4]));
+        .Q(s2mm_addr[12]));
   FDCE \s2mm_addr_reg[13] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[13]),
-        .Q(m_axis_s2mm_cmd_tdata[5]));
+        .Q(s2mm_addr[13]));
   FDCE \s2mm_addr_reg[14] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[14]),
-        .Q(m_axis_s2mm_cmd_tdata[6]));
+        .Q(s2mm_addr[14]));
   FDCE \s2mm_addr_reg[15] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[15]),
-        .Q(m_axis_s2mm_cmd_tdata[7]));
+        .Q(s2mm_addr[15]));
   FDCE \s2mm_addr_reg[16] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[16]),
-        .Q(m_axis_s2mm_cmd_tdata[8]));
+        .Q(s2mm_addr[16]));
   FDCE \s2mm_addr_reg[17] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[17]),
-        .Q(m_axis_s2mm_cmd_tdata[9]));
+        .Q(s2mm_addr[17]));
   FDCE \s2mm_addr_reg[18] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[18]),
-        .Q(m_axis_s2mm_cmd_tdata[10]));
+        .Q(s2mm_addr[18]));
   FDCE \s2mm_addr_reg[19] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[19]),
-        .Q(m_axis_s2mm_cmd_tdata[11]));
+        .Q(s2mm_addr[19]));
   FDCE \s2mm_addr_reg[20] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[20]),
-        .Q(m_axis_s2mm_cmd_tdata[12]));
+        .Q(s2mm_addr[20]));
   FDCE \s2mm_addr_reg[21] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[21]),
-        .Q(m_axis_s2mm_cmd_tdata[13]));
+        .Q(s2mm_addr[21]));
   FDCE \s2mm_addr_reg[22] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[22]),
-        .Q(m_axis_s2mm_cmd_tdata[14]));
+        .Q(s2mm_addr[22]));
   FDCE \s2mm_addr_reg[23] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[23]),
-        .Q(m_axis_s2mm_cmd_tdata[15]));
+        .Q(s2mm_addr[23]));
   FDCE \s2mm_addr_reg[24] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[24]),
         .Q(s2mm_addr[24]));
   FDCE \s2mm_addr_reg[25] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[25]),
         .Q(s2mm_addr[25]));
   FDCE \s2mm_addr_reg[26] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[26]),
         .Q(s2mm_addr[26]));
   FDCE \s2mm_addr_reg[27] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[27]),
         .Q(s2mm_addr[27]));
   FDCE \s2mm_addr_reg[28] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[28]),
         .Q(s2mm_addr[28]));
   FDCE \s2mm_addr_reg[29] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[29]),
         .Q(s2mm_addr[29]));
   FDCE \s2mm_addr_reg[30] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[30]),
         .Q(s2mm_addr[30]));
   FDCE \s2mm_addr_reg[31] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[31]),
         .Q(s2mm_addr[31]));
   FDCE \s2mm_addr_reg[8] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[8]),
-        .Q(m_axis_s2mm_cmd_tdata[0]));
+        .Q(s2mm_addr[8]));
   FDCE \s2mm_addr_reg[9] 
        (.C(clk),
-        .CE(\s2mm_addr[23]_i_1_n_0 ),
+        .CE(\s2mm_addr[31]_i_1_n_0 ),
         .CLR(reset_ACQ_i_2_n_0),
         .D(s2mm_addr_1[9]),
-        .Q(m_axis_s2mm_cmd_tdata[1]));
+        .Q(s2mm_addr[9]));
   CARRY4 \s2mm_fsm_state1_inferred__1/i__carry 
        (.CI(1'b0),
         .CO({\s2mm_fsm_state1_inferred__1/i__carry_n_0 ,\s2mm_fsm_state1_inferred__1/i__carry_n_1 ,\s2mm_fsm_state1_inferred__1/i__carry_n_2 ,\s2mm_fsm_state1_inferred__1/i__carry_n_3 }),
@@ -1772,7 +1970,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .Q(start_old));
 endmodule
 
-(* start_address = "503316480" *) 
 module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
    (clk,
     resetn,
@@ -1782,6 +1979,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
     ADC1_data,
     ADC2_data,
     FIFO_S2MM_data_count,
+    start_address,
     reset_ACQ,
     status_out,
     m_axis_tvalid,
@@ -1801,6 +1999,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
   input [15:0]ADC1_data;
   input [15:0]ADC2_data;
   input [31:0]FIFO_S2MM_data_count;
+  input [31:0]start_address;
   output reset_ACQ;
   output [1:0]status_out;
   output m_axis_tvalid;
@@ -1836,6 +2035,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
   wire [7:0]s_axis_s2mm_sts_tdata;
   wire s_axis_s2mm_sts_tvalid;
   wire s_axis_tvalid;
+  wire [31:0]start_address;
   wire start_sig;
   wire [1:0]status_out;
   wire NLW_ADC1_2_converter_s_axis_tready_UNCONNECTED;
@@ -1851,14 +2051,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
   assign m_axis_s2mm_cmd_tdata[65] = \<const0> ;
   assign m_axis_s2mm_cmd_tdata[64] = \<const0> ;
   assign m_axis_s2mm_cmd_tdata[63:40] = \^m_axis_s2mm_cmd_tdata [63:40];
-  assign m_axis_s2mm_cmd_tdata[39] = \<const0> ;
-  assign m_axis_s2mm_cmd_tdata[38] = \<const0> ;
-  assign m_axis_s2mm_cmd_tdata[37] = \<const0> ;
-  assign m_axis_s2mm_cmd_tdata[36] = \<const0> ;
-  assign m_axis_s2mm_cmd_tdata[35] = \<const0> ;
-  assign m_axis_s2mm_cmd_tdata[34] = \<const0> ;
-  assign m_axis_s2mm_cmd_tdata[33] = \<const0> ;
-  assign m_axis_s2mm_cmd_tdata[32] = \<const0> ;
+  assign m_axis_s2mm_cmd_tdata[39:32] = start_address[7:0];
   assign m_axis_s2mm_cmd_tdata[31] = \<const0> ;
   assign m_axis_s2mm_cmd_tdata[30] = \<const0> ;
   assign m_axis_s2mm_cmd_tdata[29] = \<const0> ;
@@ -1939,6 +2132,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
         .s_axis_s2mm_sts_tdata(s_axis_s2mm_sts_tdata),
         .s_axis_s2mm_sts_tvalid(s_axis_s2mm_sts_tvalid),
         .s_axis_tvalid(s_axis_tvalid),
+        .start_address(start_address[31:8]),
         .start_sig(start_sig),
         .status_out(status_out));
   GND GND
@@ -5032,6 +5226,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     ADC1_data,
     ADC2_data,
     FIFO_S2MM_data_count,
+    start_address,
     reset_ACQ,
     status_out,
     m_axis_tvalid,
@@ -5051,6 +5246,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   input [15:0]ADC1_data;
   input [15:0]ADC2_data;
   input [31:0]FIFO_S2MM_data_count;
+  input [31:0]start_address;
   (* x_interface_info = "xilinx.com:signal:reset:1.0 reset_ACQ RST" *) (* x_interface_parameter = "XIL_INTERFACENAME reset_ACQ, POLARITY ACTIVE_LOW, INSERT_VIP 0" *) output reset_ACQ;
   output [1:0]status_out;
   (* x_interface_info = "xilinx.com:interface:axis:1.0 m_axis TVALID" *) (* x_interface_parameter = "XIL_INTERFACENAME m_axis, TDATA_NUM_BYTES 8, TDEST_WIDTH 0, TID_WIDTH 0, TUSER_WIDTH 0, HAS_TREADY 1, HAS_TSTRB 0, HAS_TKEEP 0, HAS_TLAST 0, FREQ_HZ 125000000, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, LAYERED_METADATA undef, INSERT_VIP 0" *) output m_axis_tvalid;
@@ -5080,10 +5276,10 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire [7:0]s_axis_s2mm_sts_tdata;
   wire s_axis_s2mm_sts_tready;
   wire s_axis_s2mm_sts_tvalid;
+  wire [31:0]start_address;
   wire start_sig;
   wire [1:0]status_out;
 
-  (* start_address = "503316480" *) 
   decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top U0
        (.ADC1_data(ADC1_data),
         .ADC2_data(ADC2_data),
@@ -5102,6 +5298,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .s_axis_s2mm_sts_tdata(s_axis_s2mm_sts_tdata),
         .s_axis_s2mm_sts_tready(s_axis_s2mm_sts_tready),
         .s_axis_s2mm_sts_tvalid(s_axis_s2mm_sts_tvalid),
+        .start_address(start_address),
         .start_sig(start_sig),
         .status_out(status_out));
 endmodule

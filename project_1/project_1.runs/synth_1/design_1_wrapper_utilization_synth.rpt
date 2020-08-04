@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Mon Apr 27 16:20:42 2020
+| Date         : Tue Aug  4 10:58:31 2020
 | Host         : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -167,11 +167,13 @@ Table of Contents
 | design_1_clk_wiz_0_0             |    1 |
 | design_1_axis_data_fifo_0_0      |    1 |
 | design_1_axi_smc_0               |    1 |
+| design_1_axi_gpio_4_0            |    1 |
 | design_1_axi_gpio_3_0            |    1 |
+| design_1_axi_gpio_2_1            |    1 |
 | design_1_axi_gpio_2_0            |    1 |
 | design_1_axi_gpio_1_0            |    1 |
 | design_1_axi_gpio_0_0            |    1 |
-| design_1_axi_datamover_0_0       |    1 |
+| design_1_axi_datamover_0_1       |    1 |
 | design_1_auto_pc_0               |    1 |
 | design_1_DDS_output_div_by_2_0_1 |    1 |
 | design_1_DDS_output_div_by_2_0_0 |    1 |

@@ -63,6 +63,7 @@ ENTITY design_1_Acquisition_top_0_0 IS
     ADC1_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     ADC2_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     FIFO_S2MM_data_count : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    start_address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     reset_ACQ : OUT STD_LOGIC;
     status_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     m_axis_tvalid : OUT STD_LOGIC;
@@ -81,9 +82,6 @@ ARCHITECTURE design_1_Acquisition_top_0_0_arch OF design_1_Acquisition_top_0_0 I
   ATTRIBUTE DowngradeIPIdentifiedWarnings : STRING;
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_1_Acquisition_top_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT Acquisition_top IS
-    GENERIC (
-      start_address : UNSIGNED((32 - 1) DOWNTO 0)
-    );
     PORT (
       clk : IN STD_LOGIC;
       resetn : IN STD_LOGIC;
@@ -93,6 +91,7 @@ ARCHITECTURE design_1_Acquisition_top_0_0_arch OF design_1_Acquisition_top_0_0 I
       ADC1_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       ADC2_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       FIFO_S2MM_data_count : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      start_address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       reset_ACQ : OUT STD_LOGIC;
       status_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       m_axis_tvalid : OUT STD_LOGIC;
@@ -111,7 +110,7 @@ ARCHITECTURE design_1_Acquisition_top_0_0_arch OF design_1_Acquisition_top_0_0 I
   ATTRIBUTE CHECK_LICENSE_TYPE : STRING;
   ATTRIBUTE CHECK_LICENSE_TYPE OF design_1_Acquisition_top_0_0_arch : ARCHITECTURE IS "design_1_Acquisition_top_0_0,Acquisition_top,{}";
   ATTRIBUTE CORE_GENERATION_INFO : STRING;
-  ATTRIBUTE CORE_GENERATION_INFO OF design_1_Acquisition_top_0_0_arch: ARCHITECTURE IS "design_1_Acquisition_top_0_0,Acquisition_top,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Acquisition_top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED,start_address=0x1E000000}";
+  ATTRIBUTE CORE_GENERATION_INFO OF design_1_Acquisition_top_0_0_arch: ARCHITECTURE IS "design_1_Acquisition_top_0_0,Acquisition_top,{x_ipProduct=Vivado 2019.1,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=Acquisition_top,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=MIXED}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_1_Acquisition_top_0_0_arch: ARCHITECTURE IS "module_ref";
   ATTRIBUTE X_INTERFACE_INFO : STRING;
@@ -136,9 +135,6 @@ ARCHITECTURE design_1_Acquisition_top_0_0_arch OF design_1_Acquisition_top_0_0 I
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : Acquisition_top
-    GENERIC MAP (
-      start_address => X"1E000000"
-    )
     PORT MAP (
       clk => clk,
       resetn => resetn,
@@ -148,6 +144,7 @@ BEGIN
       ADC1_data => ADC1_data,
       ADC2_data => ADC2_data,
       FIFO_S2MM_data_count => FIFO_S2MM_data_count,
+      start_address => start_address,
       reset_ACQ => reset_ACQ,
       status_out => status_out,
       m_axis_tvalid => m_axis_tvalid,

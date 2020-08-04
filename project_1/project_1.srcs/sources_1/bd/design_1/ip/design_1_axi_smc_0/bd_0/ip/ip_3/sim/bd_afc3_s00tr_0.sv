@@ -56,6 +56,7 @@
 module bd_afc3_s00tr_0 (
   aclk,
   aresetn,
+  s_axi_awid,
   s_axi_awaddr,
   s_axi_awlen,
   s_axi_awsize,
@@ -73,6 +74,7 @@ module bd_afc3_s00tr_0 (
   s_axi_wuser,
   s_axi_wvalid,
   s_axi_wready,
+  s_axi_bid,
   s_axi_bresp,
   s_axi_buser,
   s_axi_bvalid,
@@ -108,6 +110,8 @@ input wire aclk;
 (* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME RST, POLARITY ACTIVE_LOW, INSERT_VIP 0, TYPE INTERCONNECT" *)
 (* X_INTERFACE_INFO = "xilinx.com:signal:reset:1.0 RST RST" *)
 input wire aresetn;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWID" *)
+input wire [3 : 0] s_axi_awid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWADDR" *)
 input wire [31 : 0] s_axi_awaddr;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI AWLEN" *)
@@ -142,13 +146,15 @@ input wire [1023 : 0] s_axi_wuser;
 input wire s_axi_wvalid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI WREADY" *)
 output wire s_axi_wready;
+(* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BID" *)
+output wire [3 : 0] s_axi_bid;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BRESP" *)
 output wire [1 : 0] s_axi_bresp;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BUSER" *)
 output wire [1023 : 0] s_axi_buser;
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BVALID" *)
 output wire s_axi_bvalid;
-(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, BRIDGES M_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 0, ADDR_WIDTH 32, AWUSER_WIDTH 1024, ARUSER_WIDTH 0, WUSER_WIDTH 1024, RUSER_WIDTH 0, BUSER_WIDTH 1024, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, NUM_REA\
+(* X_INTERFACE_PARAMETER = "XIL_INTERFACENAME S_AXI, BRIDGES M_AXI, DATA_WIDTH 64, PROTOCOL AXI4, FREQ_HZ 200000000, ID_WIDTH 4, ADDR_WIDTH 32, AWUSER_WIDTH 1024, ARUSER_WIDTH 0, WUSER_WIDTH 1024, RUSER_WIDTH 0, BUSER_WIDTH 1024, READ_WRITE_MODE WRITE_ONLY, HAS_BURST 0, HAS_LOCK 0, HAS_PROT 0, HAS_CACHE 0, HAS_QOS 0, HAS_REGION 0, HAS_WSTRB 1, HAS_BRESP 1, HAS_RRESP 0, SUPPORTS_NARROW_BURST 1, NUM_READ_OUTSTANDING 2, NUM_WRITE_OUTSTANDING 2, MAX_BURST_LENGTH 256, PHASE 0.0, CLK_DOMAIN design_1_clk_wiz_0_0_clk_out1, NUM_REA\
 D_THREADS 1, NUM_WRITE_THREADS 1, RUSER_BITS_PER_BYTE 0, WUSER_BITS_PER_BYTE 0, INSERT_VIP 0" *)
 (* X_INTERFACE_INFO = "xilinx.com:interface:aximm:1.0 S_AXI BREADY" *)
 input wire s_axi_bready;
@@ -212,7 +218,7 @@ output wire m_axi_bready;
     .C_SEP_ROUTE_WIDTH(1),
     .C_RDATA_WIDTH(64),
     .C_WDATA_WIDTH(64),
-    .C_S_ID_WIDTH(0),
+    .C_S_ID_WIDTH(4),
     .C_M_ID_WIDTH(1),
     .C_ADDR_WIDTH(32),
     .C_SUPPORTS_READ_DEADLOCK(0),
@@ -227,7 +233,7 @@ output wire m_axi_bready;
     .aclk(aclk),
     .aclken(1'D1),
     .aresetn(aresetn),
-    .s_axi_awid(1'H0),
+    .s_axi_awid(s_axi_awid),
     .s_axi_awaddr(s_axi_awaddr),
     .s_axi_awlen(s_axi_awlen),
     .s_axi_awsize(s_axi_awsize),
@@ -245,12 +251,12 @@ output wire m_axi_bready;
     .s_axi_wuser(s_axi_wuser),
     .s_axi_wvalid(s_axi_wvalid),
     .s_axi_wready(s_axi_wready),
-    .s_axi_bid(),
+    .s_axi_bid(s_axi_bid),
     .s_axi_bresp(s_axi_bresp),
     .s_axi_buser(s_axi_buser),
     .s_axi_bvalid(s_axi_bvalid),
     .s_axi_bready(s_axi_bready),
-    .s_axi_arid(1'H0),
+    .s_axi_arid(4'H0),
     .s_axi_araddr(32'H00000000),
     .s_axi_arlen(8'H0),
     .s_axi_arsize(3'H0),

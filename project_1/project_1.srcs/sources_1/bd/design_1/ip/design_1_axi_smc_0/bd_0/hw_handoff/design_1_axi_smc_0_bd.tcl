@@ -391,7 +391,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
   set s00_mmu [ create_bd_cell -type ip -vlnv xilinx.com:ip:sc_mmu:1.0 s00_mmu ]
   set_property -dict [ list \
    CONFIG.ADDR_WIDTH {32} \
-   CONFIG.ID_WIDTH {0} \
+   CONFIG.ID_WIDTH {4} \
    CONFIG.IS_CASCADED {0} \
    CONFIG.MSC000_ROUTE {0b1} \
    CONFIG.MSC_ROUTE_WIDTH {1} \
@@ -401,11 +401,11 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.NUM_WRITE_OUTSTANDING {2} \
    CONFIG.RDATA_WIDTH {64} \
    CONFIG.READ_WRITE_MODE {WRITE_ONLY} \
-   CONFIG.SEG000_BASE_ADDR {0x000000001E000000} \
+   CONFIG.SEG000_BASE_ADDR {0x0000000000000000} \
    CONFIG.SEG000_SECURE_READ {0} \
    CONFIG.SEG000_SECURE_WRITE {0} \
    CONFIG.SEG000_SEP_ROUTE {0b0000000000000000000000000000000000000000000000000000000000000000} \
-   CONFIG.SEG000_SIZE {25} \
+   CONFIG.SEG000_SIZE {29} \
    CONFIG.SEG000_SUPPORTS_READ {1} \
    CONFIG.SEG000_SUPPORTS_WRITE {1} \
    CONFIG.SUPPORTS_NARROW {0} \
@@ -463,7 +463,7 @@ proc create_hier_cell_s00_entry_pipeline { parentCell nameHier } {
    CONFIG.SEP_ROUTE_WIDTH {1} \
    CONFIG.SUPPORTS_READ_DEADLOCK {0} \
    CONFIG.SUPPORTS_WRITE_DEADLOCK {0} \
-   CONFIG.S_ID_WIDTH {0} \
+   CONFIG.S_ID_WIDTH {4} \
    CONFIG.WDATA_WIDTH {64} \
  ] $s00_transaction_regulator
 

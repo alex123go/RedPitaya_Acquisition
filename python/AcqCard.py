@@ -24,14 +24,23 @@ class AcqCard(QtWidgets.QMainWindow):
 
 	fs = 125e6
 
-	# MAXPOINTS = int((0x1FFFFFFF-0x1E000000+1)/2) # Only valid if single channel (/2 cause 2 bytes per point)
-	MAXPOINTS   = int((0x1FFFFFFF-0x1E000000+0)/2) # Warning, if I put the '+1', there is an error : maybe a signal that wrap to 0 in the FPGA
+	START_ADDR        = 0x0800_0000 # Define by reserved memory in devicetree used to build Linux
+
+	MAXPOINTS   = int((0x1FFFFFFF-START_ADDR + 0)/2) # Warning, if I put the '+1', there is an error : maybe a signal that wrap to 0 in the FPGA
 
 	xadc_base_addr    = 0x0001_0000
-	N_BYTES_REG       = 0x000A_0000
-	CHANNEL_REG       = 0x000A_0008
-	START_REG         = 0x000B_0000
-	STATUS_REG        = 0x000B_0008
+
+	N_BYTES_REG       = 0x000A_0000 # 32 bits
+	CHANNEL_REG       = 0x000A_0008 # 2 bits
+
+	START_REG         = 0x000B_0000 # 1 bit : start acq on rising_edge
+	STATUS_REG        = 0x000B_0008 # 2 bits : error_ACQ (STS =! 0x80) & data_tvalid_int ('1' when data transfer is done)
+
+	START_ADDR_REG    = 0x000C_0000 # Min value is define by reserved memory in devicetree used to build Linux
+
+
+
+
 
 
 	def __init__(self, dev = None):
@@ -56,6 +65,10 @@ class AcqCard(QtWidgets.QMainWindow):
 		self.threadpool = QtCore.QThreadPool()
 		print("Multithreading with maximum %d threads" % self.threadpool.maxThreadCount())
 		self.threadRunning = False
+
+		self.dev.write_Zynq_AXI_register_uint32(self.START_ADDR_REG, self.START_ADDR)
+
+		print(hex(self.dev.read_Zynq_AXI_register_uint32(self.START_ADDR_REG)))
 
 
 		self.initUI()

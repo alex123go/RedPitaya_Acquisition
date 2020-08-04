@@ -2,42 +2,46 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Apr 21 19:32:56 2020
-# Process ID: 25052
-# Current directory: D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_axi_smc_0_synth_1
+# Start of session at: Tue Aug  4 10:21:36 2020
+# Process ID: 24128
+# Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_axi_smc_0_synth_1
 # Command line: vivado.exe -log design_1_axi_smc_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_axi_smc_0.tcl
-# Log file: D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.vds
-# Journal file: D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_axi_smc_0_synth_1\vivado.jou
+# Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.vds
+# Journal file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_axi_smc_0_synth_1\vivado.jou
 #-----------------------------------------------------------
 source design_1_axi_smc_0.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0'.
-WARNING: [IP_Flow 19-2207] Repository 'd:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0' already exists; ignoring attempt to add it again.
-INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Red_Pitaya/Acq_Card/ip_repo/oscilloscope_1.0'.
-WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Synology/SynologyDrive/RedPitaya/IP/Data_throughput_DDR_1.0'; Can't find the specified path.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/ip_repo/oscilloscope_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2207] Repository 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/ip_repo/oscilloscope_1.0' already exists; ignoring attempt to add it again.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/ip_repo/oscilloscope_1.0'; Can't find the specified path.
+If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
+WARNING: [IP_Flow 19-2248] Failed to load user IP repository 'd:/Users/Alex/Documents/GitHub/Synology/SynologyDrive/RedPitaya/IP/Data_throughput_DDR_1.0'; Can't find the specified path.
 If this directory should no longer be in your list of user repositories, go to the IP Settings dialog and remove it.
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Synology/SynologyDrive/RedPitaya/DataMover_throughput/ip_repo/DataReader_through_RAM_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Vivado/2019.1/data/ip'.
+WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
+Current IP cache path is d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.cache/ip 
 Command: synth_design -top design_1_axi_smc_0 -part xc7z010clg400-1 -mode out_of_context
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 21264 
+INFO: Helper process launched with PID 13848 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:12 . Memory (MB): peak = 726.070 ; gain = 177.824
+Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 724.977 ; gain = 176.492
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
-INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_5Y9LOC' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:461]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_one_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:57]
-INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6157] synthesizing module 'design_1_axi_smc_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
+INFO: [Synth 8-6157] synthesizing module 'clk_map_imp_5Y9LOC' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:471]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_one_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (1#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_one_0' (2#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:57]
-INFO: [Synth 8-638] synthesizing module 'bd_afc3_psr_aclk_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (1#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_one_0' (2#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_0/synth/bd_afc3_one_0.v:57]
+INFO: [Synth 8-638] synthesizing module 'bd_afc3_psr_aclk_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
@@ -47,8 +51,8 @@ INFO: [Synth 8-638] synthesizing module 'bd_afc3_psr_aclk_0' [d:/Red_Pitaya/Acq_
 	Parameter C_NUM_PERP_RST bound to: 1 - type: integer 
 	Parameter C_NUM_INTERCONNECT_ARESETN bound to: 1 - type: integer 
 	Parameter C_NUM_PERP_ARESETN bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'd:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:129]
-INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-3491] module 'proc_sys_reset' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1264' bound to instance 'U0' of component 'proc_sys_reset' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:129]
+INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
 	Parameter C_FAMILY bound to: zynq - type: string 
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
@@ -62,37 +66,37 @@ INFO: [Synth 8-638] synthesizing module 'proc_sys_reset' [d:/Red_Pitaya/Acq_Card
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
+INFO: [Synth 8-113] binding component instance 'FDRE_inst' to cell 'FDRE' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1392]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR' to cell 'FDRE' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1408]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
+INFO: [Synth 8-113] binding component instance 'FDRE_BSR_N' to cell 'FDRE' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1434]
 	Parameter INIT bound to: 1'b1 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER' to cell 'FDRE' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1457]
 	Parameter INIT bound to: 1'b0 
 	Parameter IS_C_INVERTED bound to: 1'b0 
 	Parameter IS_D_INVERTED bound to: 1'b0 
 	Parameter IS_R_INVERTED bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
-INFO: [Synth 8-638] synthesizing module 'lpf' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-113] binding component instance 'FDRE_PER_N' to cell 'FDRE' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1481]
+INFO: [Synth 8-638] synthesizing module 'lpf' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
 	Parameter C_EXT_RST_WIDTH bound to: 4 - type: integer 
 	Parameter C_AUX_RST_WIDTH bound to: 1 - type: integer 
 	Parameter C_EXT_RESET_HIGH bound to: 1'b0 
 	Parameter C_AUX_RESET_HIGH bound to: 1'b0 
-INFO: [Synth 8-3491] module 'SRL16' declared at 'D:/Programs/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684' bound to instance 'POR_SRL_I' of component 'SRL16' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
+INFO: [Synth 8-3491] module 'SRL16' declared at 'D:/Programs/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684' bound to instance 'POR_SRL_I' of component 'SRL16' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:868]
 INFO: [Synth 8-6157] synthesizing module 'SRL16' [D:/Programs/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684]
 	Parameter INIT bound to: 16'b0000000000000000 
 INFO: [Synth 8-6155] done synthesizing module 'SRL16' (3#1) [D:/Programs/Vivado/2019.1/scripts/rt/data/unisim_comp.v:77684]
-INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
 	Parameter C_CDC_TYPE bound to: 1 - type: integer 
 	Parameter C_RESET_STATE bound to: 0 - type: integer 
 	Parameter C_SINGLE_BIT bound to: 1 - type: integer 
@@ -100,48 +104,48 @@ INFO: [Synth 8-638] synthesizing module 'cdc_sync' [d:/Red_Pitaya/Acq_Card/proje
 	Parameter C_VECTOR_WIDTH bound to: 2 - type: integer 
 	Parameter C_MTBF_STAGES bound to: 4 - type: integer 
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to' to cell 'FDR' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:514]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d2' to cell 'FDR' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:545]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d3' to cell 'FDR' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:554]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d4' to cell 'FDR' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:564]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d5' to cell 'FDR' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:574]
 	Parameter INIT bound to: 1'b0 
-INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
-INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
-INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
-INFO: [Synth 8-638] synthesizing module 'sequence_psr' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-638] synthesizing module 'upcnt_n' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-113] binding component instance 'CROSS_PLEVEL_IN2SCNDRY_s_level_out_d6' to cell 'FDR' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:584]
+INFO: [Synth 8-256] done synthesizing module 'cdc_sync' (4#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/ef1e/hdl/lib_cdc_v1_0_rfs.vhd:106]
+INFO: [Synth 8-256] done synthesizing module 'lpf' (5#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:816]
+INFO: [Synth 8-638] synthesizing module 'sequence_psr' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-638] synthesizing module 'upcnt_n' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
 	Parameter C_SIZE bound to: 6 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
-INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
-INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
-INFO: [Synth 8-256] done synthesizing module 'bd_afc3_psr_aclk_0' (9#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
-WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_afc3_psr_aclk_0' has 10 connections declared, but only 6 given [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:496]
-WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_5Y9LOC does not have driver. [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:477]
-INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_5Y9LOC' (10#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:461]
-INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:505]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_m00e_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_m00e_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_m00e_0' (20#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_m00e_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' (21#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:505]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_m00s2a_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_m00s2a_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_m00s2a_0' (23#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_m00s2a_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00a2s_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_s00a2s_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00a2s_0' (25#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_s00a2s_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_USCCV8' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:721]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00mmu_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_s00mmu_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00mmu_0' (29#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_s00mmu_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00sic_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_s00sic_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00sic_0' (32#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_s00sic_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00tr_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_s00tr_0.sv:58]
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00tr_0' (35#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_s00tr_0.sv:58]
-WARNING: [Synth 8-7023] instance 's00_transaction_regulator' of module 'bd_afc3_s00tr_0' has 46 connections declared, but only 45 given [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1024]
-INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_USCCV8' (36#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:721]
-INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_Y7M43I' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1072]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sawn_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_sawn_0.sv:58]
+INFO: [Synth 8-256] done synthesizing module 'upcnt_n' (6#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:125]
+INFO: [Synth 8-256] done synthesizing module 'sequence_psr' (7#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:301]
+INFO: [Synth 8-256] done synthesizing module 'proc_sys_reset' (8#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:1323]
+INFO: [Synth 8-256] done synthesizing module 'bd_afc3_psr_aclk_0' (9#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/synth/bd_afc3_psr_aclk_0.vhd:74]
+WARNING: [Synth 8-7023] instance 'psr_aclk' of module 'bd_afc3_psr_aclk_0' has 10 connections declared, but only 6 given [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:506]
+WARNING: [Synth 8-3848] Net aresetn_out in module/entity clk_map_imp_5Y9LOC does not have driver. [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:487]
+INFO: [Synth 8-6155] done synthesizing module 'clk_map_imp_5Y9LOC' (10#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:471]
+INFO: [Synth 8-6157] synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:515]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_m00e_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_m00e_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_m00e_0' (20#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_10/synth/bd_afc3_m00e_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'm00_exit_pipeline_imp_1TZX5BB' (21#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:515]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_m00s2a_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_m00s2a_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_m00s2a_0' (23#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_9/synth/bd_afc3_m00s2a_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00a2s_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_s00a2s_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00a2s_0' (25#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_5/synth/bd_afc3_s00a2s_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 's00_entry_pipeline_imp_USCCV8' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:731]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00mmu_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_s00mmu_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00mmu_0' (29#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_2/synth/bd_afc3_s00mmu_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00sic_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_s00sic_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00sic_0' (32#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_4/synth/bd_afc3_s00sic_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_s00tr_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_s00tr_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_s00tr_0' (35#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_3/synth/bd_afc3_s00tr_0.sv:58]
+WARNING: [Synth 8-7023] instance 's00_transaction_regulator' of module 'bd_afc3_s00tr_0' has 48 connections declared, but only 47 given [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1048]
+INFO: [Synth 8-6155] done synthesizing module 's00_entry_pipeline_imp_USCCV8' (36#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:731]
+INFO: [Synth 8-6157] synthesizing module 's00_nodes_imp_Y7M43I' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1098]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sawn_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_sawn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -218,8 +222,8 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sawn_0' (51#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_sawn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sbn_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_sbn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sawn_0' (51#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_6/synth/bd_afc3_sawn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_sbn_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_sbn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized0' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized0' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -296,8 +300,8 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sbn_0' (52#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_sbn_0.sv:58]
-INFO: [Synth 8-6157] synthesizing module 'bd_afc3_swn_0' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_swn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_sbn_0' (52#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_8/synth/bd_afc3_sbn_0.sv:58]
+INFO: [Synth 8-6157] synthesizing module 'bd_afc3_swn_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_swn_0.sv:58]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_sdpram__parameterized1' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:8320]
 INFO: [Synth 8-6157] synthesizing module 'xpm_memory_base__parameterized1' [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/hdl/xpm_memory.sv:57]
 	Parameter MEMORY_TYPE bound to: 1 - type: integer 
@@ -374,19 +378,19 @@ INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM g
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_swn_0' (53#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_swn_0.sv:58]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3_swn_0' (53#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_7/synth/bd_afc3_swn_0.sv:58]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_Y7M43I' (54#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1072]
+INFO: [Synth 8-6155] done synthesizing module 's00_nodes_imp_Y7M43I' (54#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:1098]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'bd_afc3' (55#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
+INFO: [Synth 8-6155] done synthesizing module 'bd_afc3' (55#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/synth/bd_afc3.v:10]
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
 INFO: [Synth 8-5772] Detected attribute (* rw_addr_collision = "yes" *) on RAM gen_wr_a.gen_word_narrow.mem_reg 
-INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (56#1) [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_axi_smc_0' (56#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/synth/design_1_axi_smc_0.v:57]
 WARNING: [Synth 8-3331] design sc_util_v1_0_4_onehot_to_binary has unconnected port din[0]
 WARNING: [Synth 8-3331] design sc_util_v1_0_4_pipeline__parameterized0 has unconnected port aclk
 WARNING: [Synth 8-3331] design sc_util_v1_0_4_pipeline__parameterized0 has unconnected port aclken
@@ -489,7 +493,7 @@ WARNING: [Synth 8-3331] design xpm_memory_base__parameterized1 has unconnected p
 WARNING: [Synth 8-3331] design xpm_memory_base__parameterized1 has unconnected port dinb[18]
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 856.480 ; gain = 308.234
+Finished RTL Elaboration : Time (s): cpu = 00:00:20 ; elapsed = 00:00:22 . Memory (MB): peak = 857.648 ; gain = 309.164
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -502,10 +506,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 856.480 ; gain = 308.234
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 857.648 ; gain = 309.164
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:22 ; elapsed = 00:00:25 . Memory (MB): peak = 856.480 ; gain = 308.234
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:24 . Memory (MB): peak = 857.648 ; gain = 309.164
 ---------------------------------------------------------------------------------
 INFO: [Netlist 29-17] Analyzing 13 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
@@ -513,14 +517,14 @@ INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
-Finished Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
-Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Finished Parsing XDC File [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
-Parsing XDC File [D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
+Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/ooc.xdc] for cell 'inst'
+Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0_board.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_smc_0/bd_0/ip/ip_1/bd_afc3_psr_aclk_0.xdc] for cell 'inst/clk_map/psr_aclk/U0'
+Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc]
 Sourcing Tcl File [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
 WARNING: [Vivado 12-180] No cells matched 'get_cells -hier -filter {PRIMITIVE_SUBGROUP==LUTRAM || PRIMITIVE_SUBGROUP==dram || PRIMITIVE_SUBGROUP==uram || PRIMITIVE_SUBGROUP==BRAM}'. [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl:3]
 Finished Sourcing Tcl File [D:/Programs/Vivado/2019.1/data/ip/xpm/xpm_memory/tcl/xpm_memory_xdc.tcl] for cell 'inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_mem_rep[0].inst_xpm_memory'
@@ -534,34 +538,34 @@ INFO: [Project 1-236] Implementation specific constraints were found while readi
 Resolution: To avoid this warning, move constraints listed in [.Xil/design_1_axi_smc_0_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.051 . Memory (MB): peak = 1318.957 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1329.340 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 13 instances were transformed.
   FDR => FDRE: 12 instances
   SRL16 => SRL16E: 1 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1336.832 ; gain = 17.875
+Constraint Validation Runtime : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 1351.191 ; gain = 21.852
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:01:08 ; elapsed = 00:01:12 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Constraint Validation : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:01:08 ; elapsed = 00:01:12 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Loading Part and Timing Information : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property DONT_TOUCH = true for inst. (constraint file  D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc, line 61).
+Applied set_property DONT_TOUCH = true for inst. (constraint file  D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_axi_smc_0_synth_1/dont_touch.xdc, line 45).
 Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_aw_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_b_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for inst/s00_nodes/s00_w_node/inst/inst_mi_handler/\gen_normal_area.inst_fifo_node_payld /\gen_xpm_memory_fifo.inst_fifo /\gen_mem_rep[0].inst_xpm_memory . (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:08 ; elapsed = 00:01:12 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:01:04 ; elapsed = 00:01:08 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
+INFO: [Synth 8-4471] merging register 'seq_cnt_en_reg' into 'from_sys_reg' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/8842/hdl/proc_sys_reset_v5_0_vh_rfs.vhd:377]
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
@@ -570,6 +574,7 @@ INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_r
 INFO: [Synth 8-802] inferred FSM for state register 'gen_axi.gen_write.write_cs_reg' in module 'sc_mmu_v1_0_7_decerr_slave'
 INFO: [Synth 8-5545] ROM "gen_endpoint.w_state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
 INFO: [Synth 8-5545] ROM "gen_endpoint.r_state" won't be mapped to RAM because address size (32) is larger than maximum supported(25)
+INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
 INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_reg' through user attribute
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -580,7 +585,7 @@ INFO: [Synth 8-4490] FSM extraction disabled for register 'gen_pipelined.state_r
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 'gen_axi.gen_write.write_cs_reg' using encoding 'one-hot' in module 'sc_mmu_v1_0_7_decerr_slave'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:14 ; elapsed = 00:01:19 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:01:09 ; elapsed = 00:01:14 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -591,8 +596,8 @@ Report RTL Partitions:
 |2     |sc_exit_v1_0_8_axi3_conv__GC0      |           1|      4812|
 |3     |sc_exit_v1_0_8_splitter__GC0       |           1|        18|
 |4     |sc_exit_v1_0_8_top__GC0            |           1|       525|
-|5     |sc_mmu_v1_0_7_top__GC0             |           1|      2192|
-|6     |s00_entry_pipeline_imp_USCCV8__GC0 |           1|       268|
+|5     |sc_mmu_v1_0_7_top__GC0             |           1|      2211|
+|6     |s00_entry_pipeline_imp_USCCV8__GC0 |           1|       510|
 |7     |bd_afc3__GC0                       |           1|      1687|
 +------+-----------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
@@ -606,10 +611,10 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit       Adders := 2     
 	   2 Input      6 Bit       Adders := 19    
 	   2 Input      5 Bit       Adders := 5     
-	   2 Input      4 Bit       Adders := 11    
+	   2 Input      4 Bit       Adders := 13    
 	   3 Input      1 Bit       Adders := 1     
 +---XORs : 
-	   2 Input      1 Bit         XORs := 29    
+	   2 Input      1 Bit         XORs := 21    
 +---Registers : 
 	             2178 Bit    Registers := 28    
 	              512 Bit    Registers := 2     
@@ -626,8 +631,8 @@ Detailed RTL Component Info :
 	                7 Bit    Registers := 4     
 	                6 Bit    Registers := 10    
 	                5 Bit    Registers := 5     
-	                4 Bit    Registers := 15    
-	                3 Bit    Registers := 13    
+	                4 Bit    Registers := 21    
+	                3 Bit    Registers := 15    
 	                2 Bit    Registers := 2     
 	                1 Bit    Registers := 143   
 +---Muxes : 
@@ -643,18 +648,18 @@ Detailed RTL Component Info :
 	   2 Input      7 Bit        Muxes := 14    
 	   4 Input      7 Bit        Muxes := 4     
 	   2 Input      6 Bit        Muxes := 4     
-	   2 Input      4 Bit        Muxes := 4     
-	   4 Input      3 Bit        Muxes := 10    
-	  11 Input      3 Bit        Muxes := 8     
+	   2 Input      4 Bit        Muxes := 8     
+	   4 Input      3 Bit        Muxes := 12    
+	  11 Input      3 Bit        Muxes := 10    
 	   2 Input      3 Bit        Muxes := 12    
-	   2 Input      2 Bit        Muxes := 25    
+	   2 Input      2 Bit        Muxes := 27    
 	   3 Input      2 Bit        Muxes := 1     
-	   6 Input      1 Bit        Muxes := 96    
+	   6 Input      1 Bit        Muxes := 106   
 	   4 Input      1 Bit        Muxes := 32    
 	  10 Input      1 Bit        Muxes := 42    
 	   7 Input      1 Bit        Muxes := 28    
-	  12 Input      1 Bit        Muxes := 8     
-	   2 Input      1 Bit        Muxes := 80    
+	  12 Input      1 Bit        Muxes := 10    
+	   2 Input      1 Bit        Muxes := 83    
 	   3 Input      1 Bit        Muxes := 11    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
@@ -835,25 +840,18 @@ Detailed RTL Component Info :
 +---Registers : 
 	                2 Bit    Registers := 1     
 	                1 Bit    Registers := 1     
-Module sc_mmu_v1_0_7_addr_decoder__1 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 4     
-Module sc_mmu_v1_0_7_addr_decoder 
-Detailed RTL Component Info : 
-+---XORs : 
-	   2 Input      1 Bit         XORs := 4     
 Module sc_mmu_v1_0_7_decerr_slave 
 Detailed RTL Component Info : 
 +---Adders : 
 	   2 Input      8 Bit       Adders := 1     
 +---Registers : 
 	                8 Bit    Registers := 1     
-	                1 Bit    Registers := 8     
+	                4 Bit    Registers := 2     
+	                1 Bit    Registers := 6     
 +---Muxes : 
 	   2 Input      8 Bit        Muxes := 1     
 	   3 Input      1 Bit        Muxes := 9     
-	   2 Input      1 Bit        Muxes := 11    
+	   2 Input      1 Bit        Muxes := 12    
 Module sc_mmu_v1_0_7_top 
 Detailed RTL Component Info : 
 +---Adders : 
@@ -863,10 +861,11 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 4     
 +---Muxes : 
 	   2 Input     64 Bit        Muxes := 1     
+	   2 Input      4 Bit        Muxes := 2     
 	   2 Input      3 Bit        Muxes := 2     
 	   4 Input      3 Bit        Muxes := 2     
 	   2 Input      2 Bit        Muxes := 5     
-	   2 Input      1 Bit        Muxes := 22    
+	   2 Input      1 Bit        Muxes := 20    
 	   4 Input      1 Bit        Muxes := 4     
 Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized4 
 Detailed RTL Component Info : 
@@ -899,6 +898,38 @@ Detailed RTL Component Info :
 	                1 Bit    Registers := 1     
 +---Muxes : 
 	   4 Input      7 Bit        Muxes := 4     
+Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized5__1 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
+Module sc_util_v1_0_4_axic_reg_srl_fifo__parameterized5 
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input      4 Bit       Adders := 1     
++---Registers : 
+	                4 Bit    Registers := 2     
+	                3 Bit    Registers := 1     
+	                1 Bit    Registers := 1     
++---Muxes : 
+	   2 Input      4 Bit        Muxes := 1     
+	   4 Input      3 Bit        Muxes := 1     
+	  11 Input      3 Bit        Muxes := 1     
+	   2 Input      2 Bit        Muxes := 1     
+	   6 Input      1 Bit        Muxes := 5     
+	  12 Input      1 Bit        Muxes := 1     
+	   2 Input      1 Bit        Muxes := 2     
 Module sc_transaction_regulator_v1_0_8_top 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -1223,64 +1254,63 @@ INFO: [Synth 8-3886] merging instance 'inst/m00_exit_pipeline/m00_exit/inst/gen_
 INFO: [Synth 8-3886] merging instance 'inst/m00_exit_pipeline/m00_exit/inst/gen_axi3.splitter_insti_1/gen_rsplitter.arsplit_len_middle_d_reg[5]' (FDRE) to 'inst/m00_exit_pipeline/m00_exit/inst/gen_axi3.splitter_insti_1/gen_rsplitter.arsplit_len_middle_d_reg[6]'
 INFO: [Synth 8-3886] merging instance 'inst/m00_exit_pipeline/m00_exit/inst/gen_axi3.splitter_insti_1/gen_rsplitter.arsplit_len_middle_d_reg[6]' (FDRE) to 'inst/m00_exit_pipeline/m00_exit/inst/gen_axi3.splitter_insti_1/gen_rsplitter.arsplit_len_middle_d_reg[7]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\m00_exit_pipeline/m00_exit/inst /\gen_axi3.splitter_insti_1 /\gen_rsplitter.arsplit_len_middle_d_reg[7] )
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[30]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[31]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[31]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[29]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[29]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[28]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[28]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[27]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[27]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[26]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[26]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[25]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[25]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[24]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[24]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[23]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[23]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[22]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[22]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[21]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[21]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[20]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[20]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[19]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[19]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[18]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[18]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[17]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[17]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[16]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[16]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[15]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[15]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[14]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[14]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[13]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[13]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[12]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[12]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[11]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[11]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[10]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[10]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[9]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[9]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[8]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[8]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[7]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[7]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[6]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[6]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[5]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[5]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[4]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[4]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[3]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[30]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[31]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[29]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[28]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[27]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[26]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[25]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[24]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[23]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[22]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[21]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[20]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[19]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[18]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[17]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[16]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[15]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[14]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[13]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[12]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[11]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[10]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[9]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[8]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[7]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[6]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[5]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[4]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
 INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[3]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.w_state_reg[2]'
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_mmu/inst /i_0/\gen_endpoint.w_state_reg[2] )
-INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_mmu/inst /i_0/\gen_endpoint.decerr_slave_inst/gen_axi.gen_read.s_axi_rid_i_reg[0] )
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[30]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[31]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[29]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[28]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[27]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[26]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[25]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[24]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[23]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[22]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[21]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[20]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[19]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[18]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[17]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[16]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[15]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[14]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[13]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[12]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[11]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[10]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[9]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[8]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[7]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[6]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
-INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[5]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[2]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[30]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[31]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[31]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[29]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[29]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[28]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[28]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[27]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[27]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[26]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[26]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[25]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[25]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[24]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[24]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[23]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[23]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[22]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[22]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[21]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[21]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[20]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[20]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[19]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[19]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[18]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[18]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[17]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[17]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[16]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[16]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[15]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[15]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[14]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[14]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[13]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[13]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[12]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[12]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[11]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[11]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[10]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[10]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[9]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[9]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[8]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[8]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[7]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[7]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[6]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[6]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[5]'
+INFO: [Synth 8-3886] merging instance 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[5]' (FDRE) to 'inst/s00_entry_pipeline/s00_mmu/inst/i_0/gen_endpoint.r_state_reg[4]'
 INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_mmu/inst /i_0/\gen_endpoint.r_state_reg[2] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/i_0/\clk_map/psr_aclk/U0/EXT_LPF/ACTIVE_LOW_EXT.ACT_LO_EXT/GENERATE_LEVEL_P_S_CDC.SINGLE_BIT.CROSS_PLEVEL_IN2SCNDRY_IN_cdc_to )
@@ -1376,9 +1406,10 @@ INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_mmu/inst /aw_reg_stall/\skid_buffer_reg[75] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_mmu/inst /aw_reg_stall/\skid_buffer_reg[76] )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_mmu/inst /aw_reg_stall/\skid_buffer_reg[77] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (inst/\s00_entry_pipeline/s00_mmu/inst /aw_reg_stall/\skid_buffer_reg[78] )
 INFO: [Common 17-14] Message 'Synth 8-3333' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:46 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:40 ; elapsed = 00:01:46 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1405,32 +1436,32 @@ Report RTL Partitions:
 |1     |sc_util_v1_0_4_axi_reg_stall       |           1|       362|
 |2     |sc_exit_v1_0_8_axi3_conv__GC0      |           1|       643|
 |3     |sc_exit_v1_0_8_top__GC0            |           1|       171|
-|4     |sc_mmu_v1_0_7_top__GC0             |           1|       258|
-|5     |s00_entry_pipeline_imp_USCCV8__GC0 |           1|       198|
+|4     |sc_mmu_v1_0_7_top__GC0             |           1|       314|
+|5     |s00_entry_pipeline_imp_USCCV8__GC0 |           1|       292|
 |6     |bd_afc3__GC0                       |           1|      1352|
 |7     |sc_util_v1_0_4_axi_reg_stall__1    |           1|        30|
 |8     |sc_util_v1_0_4_axi_reg_stall__2    |           1|        28|
 |9     |sc_util_v1_0_4_axi_reg_stall__3    |           1|       312|
 |10    |sc_util_v1_0_4_axi_reg_stall__4    |           2|       412|
 |11    |sc_util_v1_0_4_axi_reg_stall__6    |           1|        57|
-|12    |sc_util_v1_0_4_axi_reg_stall__7    |           1|        40|
-|13    |sc_util_v1_0_4_axi_reg_stall__8    |           1|       354|
+|12    |sc_util_v1_0_4_axi_reg_stall__7    |           1|        41|
+|13    |sc_util_v1_0_4_axi_reg_stall__8    |           1|       374|
 |14    |sc_util_v1_0_4_axi_reg_stall__9    |           1|        30|
-|15    |sc_util_v1_0_4_axi_reg_stall__10   |           1|       352|
+|15    |sc_util_v1_0_4_axi_reg_stall__10   |           1|       372|
 |16    |sc_util_v1_0_4_axi_reg_stall__11   |           1|        28|
-|17    |sc_util_v1_0_4_axi_reg_stall__12   |           1|        57|
+|17    |sc_util_v1_0_4_axi_reg_stall__12   |           1|        77|
 +------+-----------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:50 ; elapsed = 00:01:56 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:50 ; elapsed = 00:01:57 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:55 ; elapsed = 00:02:02 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Timing Optimization : Time (s): cpu = 00:01:57 ; elapsed = 00:02:04 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1456,25 +1487,25 @@ Report RTL Partitions:
 |1     |sc_util_v1_0_4_axi_reg_stall     |           1|       362|
 |2     |sc_exit_v1_0_8_axi3_conv__GC0    |           1|       585|
 |3     |sc_exit_v1_0_8_top__GC0          |           1|       171|
-|4     |sc_mmu_v1_0_7_top__GC0           |           1|       258|
+|4     |sc_mmu_v1_0_7_top__GC0           |           1|       314|
 |5     |sc_util_v1_0_4_axi_reg_stall__1  |           1|        30|
 |6     |sc_util_v1_0_4_axi_reg_stall__2  |           1|        28|
 |7     |sc_util_v1_0_4_axi_reg_stall__3  |           1|       312|
 |8     |sc_util_v1_0_4_axi_reg_stall__4  |           2|       412|
 |9     |sc_util_v1_0_4_axi_reg_stall__6  |           1|        57|
-|10    |sc_util_v1_0_4_axi_reg_stall__7  |           1|        40|
-|11    |sc_util_v1_0_4_axi_reg_stall__8  |           1|       354|
+|10    |sc_util_v1_0_4_axi_reg_stall__7  |           1|        41|
+|11    |sc_util_v1_0_4_axi_reg_stall__8  |           1|       374|
 |12    |sc_util_v1_0_4_axi_reg_stall__9  |           1|        30|
-|13    |sc_util_v1_0_4_axi_reg_stall__10 |           1|       352|
+|13    |sc_util_v1_0_4_axi_reg_stall__10 |           1|       372|
 |14    |sc_util_v1_0_4_axi_reg_stall__11 |           1|        28|
-|15    |sc_util_v1_0_4_axi_reg_stall__12 |           1|        57|
-|16    |bd_afc3_GT0                      |           1|      1560|
+|15    |sc_util_v1_0_4_axi_reg_stall__12 |           1|        77|
+|16    |bd_afc3_GT0                      |           1|      1654|
 +------+---------------------------------+------------+----------+
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:57 ; elapsed = 00:02:04 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Technology Mapping : Time (s): cpu = 00:02:00 ; elapsed = 00:02:08 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1501,7 +1532,7 @@ INFO: [Synth 8-5365] Flop inst_mi_handler/gen_normal_area.inst_fifo_node_payld/g
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:02:00 ; elapsed = 00:02:06 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished IO Insertion : Time (s): cpu = 00:02:04 ; elapsed = 00:02:11 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -1514,7 +1545,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:02:00 ; elapsed = 00:02:07 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Renaming Generated Instances : Time (s): cpu = 00:02:04 ; elapsed = 00:02:11 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -1526,25 +1557,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:00 ; elapsed = 00:02:07 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:02:04 ; elapsed = 00:02:11 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:02:00 ; elapsed = 00:02:07 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Renaming Generated Ports : Time (s): cpu = 00:02:04 ; elapsed = 00:02:12 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:02:01 ; elapsed = 00:02:07 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Handling Custom Attributes : Time (s): cpu = 00:02:04 ; elapsed = 00:02:12 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:02:01 ; elapsed = 00:02:07 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Renaming Generated Nets : Time (s): cpu = 00:02:04 ; elapsed = 00:02:12 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start ROM, RAM, DSP and Shift Register Reporting
@@ -1575,26 +1606,26 @@ Report Cell Usage:
 |      |Cell   |Count |
 +------+-------+------+
 |1     |CARRY4 |    16|
-|2     |LUT1   |    39|
-|3     |LUT2   |    83|
-|4     |LUT3   |   429|
-|5     |LUT4   |   109|
-|6     |LUT5   |   144|
-|7     |LUT6   |   167|
+|2     |LUT1   |    41|
+|3     |LUT2   |    89|
+|4     |LUT3   |   437|
+|5     |LUT4   |   119|
+|6     |LUT5   |   153|
+|7     |LUT6   |   176|
 |8     |RAM32M |    49|
 |9     |SRL16  |     1|
-|10    |SRL16E |    21|
+|10    |SRL16E |    25|
 |11    |FDR    |     4|
-|12    |FDRE   |  1312|
-|13    |FDSE   |    31|
+|12    |FDRE   |  1349|
+|13    |FDSE   |    35|
 +------+-------+------+
 
 Report Instance Areas: 
 +------+------------------------------------------------------------------------------------------------+-------------------------------------------------+------+
 |      |Instance                                                                                        |Module                                           |Cells |
 +------+------------------------------------------------------------------------------------------------+-------------------------------------------------+------+
-|1     |top                                                                                             |                                                 |  2405|
-|2     |  inst                                                                                          |bd_afc3                                          |  2405|
+|1     |top                                                                                             |                                                 |  2494|
+|2     |  inst                                                                                          |bd_afc3                                          |  2494|
 |3     |    clk_map                                                                                     |clk_map_imp_5Y9LOC                               |    41|
 |4     |      psr_aclk                                                                                  |bd_afc3_psr_aclk_0                               |    41|
 |5     |        U0                                                                                      |proc_sys_reset                                   |    41|
@@ -1605,99 +1636,107 @@ Report Instance Areas:
 |10    |    m00_exit_pipeline                                                                           |m00_exit_pipeline_imp_1TZX5BB                    |   975|
 |11    |      m00_exit                                                                                  |bd_afc3_m00e_0                                   |   975|
 |12    |        inst                                                                                    |sc_exit_v1_0_8_top                               |   975|
-|13    |          aw_reg                                                                                |sc_util_v1_0_4_axi_reg_stall_25                  |   170|
-|14    |          b_reg                                                                                 |sc_util_v1_0_4_axi_reg_stall_26                  |    20|
+|13    |          aw_reg                                                                                |sc_util_v1_0_4_axi_reg_stall_29                  |   170|
+|14    |          b_reg                                                                                 |sc_util_v1_0_4_axi_reg_stall_30                  |    20|
 |15    |          exit_inst                                                                             |sc_exit_v1_0_8_exit                              |    28|
 |16    |            \gen_w_cmd_fifo.w_cmd_fifo                                                          |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized3 |    28|
-|17    |              \gen_srls[1].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_35                        |     3|
+|17    |              \gen_srls[1].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_39                        |     3|
 |18    |          splitter_inst                                                                         |sc_exit_v1_0_8_splitter                          |   516|
 |19    |            \gen_axi3.splitter_inst                                                             |sc_exit_v1_0_8_axi3_conv                         |   516|
-|20    |              aw_cmd_reg                                                                        |sc_util_v1_0_4_axi_reg_stall_28                  |   288|
+|20    |              aw_cmd_reg                                                                        |sc_util_v1_0_4_axi_reg_stall_32                  |   288|
 |21    |              \gen_wsplitter.gen_wthread_loop[0].b_split_fifo                                   |sc_util_v1_0_4_axic_reg_srl_fifo                 |    32|
-|22    |                \gen_srls[0].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_34                        |     5|
+|22    |                \gen_srls[0].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_38                        |     5|
 |23    |              \gen_wsplitter.w_split_fifo                                                       |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized0 |    57|
-|24    |                \gen_srls[0].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_29                        |     3|
-|25    |                \gen_srls[1].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_30                        |     2|
-|26    |                \gen_srls[2].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_31                        |     2|
-|27    |                \gen_srls[3].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_32                        |     2|
-|28    |                \gen_srls[4].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_33                        |     3|
-|29    |          w_reg                                                                                 |sc_util_v1_0_4_axi_reg_stall_27                  |   230|
-|30    |    s00_entry_pipeline                                                                          |s00_entry_pipeline_imp_USCCV8                    |   816|
-|31    |      s00_mmu                                                                                   |bd_afc3_s00mmu_0                                 |   705|
-|32    |        inst                                                                                    |sc_mmu_v1_0_7_top                                |   705|
-|33    |          aw_reg_stall                                                                          |sc_util_v1_0_4_axi_reg_stall                     |   196|
-|34    |          aw_sreg                                                                               |sc_util_v1_0_4_axi_reg_stall_22                  |   215|
-|35    |          b_sreg                                                                                |sc_util_v1_0_4_axi_reg_stall_23                  |    20|
-|36    |          \gen_endpoint.decerr_slave_inst                                                       |sc_mmu_v1_0_7_decerr_slave                       |    18|
-|37    |          w_sreg                                                                                |sc_util_v1_0_4_axi_reg_stall_24                  |   234|
+|24    |                \gen_srls[0].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_33                        |     3|
+|25    |                \gen_srls[1].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_34                        |     2|
+|26    |                \gen_srls[2].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_35                        |     2|
+|27    |                \gen_srls[3].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_36                        |     2|
+|28    |                \gen_srls[4].srl_nx1                                                            |sc_util_v1_0_4_srl_rtl_37                        |     3|
+|29    |          w_reg                                                                                 |sc_util_v1_0_4_axi_reg_stall_31                  |   230|
+|30    |    s00_entry_pipeline                                                                          |s00_entry_pipeline_imp_USCCV8                    |   905|
+|31    |      s00_mmu                                                                                   |bd_afc3_s00mmu_0                                 |   746|
+|32    |        inst                                                                                    |sc_mmu_v1_0_7_top                                |   746|
+|33    |          aw_reg_stall                                                                          |sc_util_v1_0_4_axi_reg_stall                     |   209|
+|34    |          aw_sreg                                                                               |sc_util_v1_0_4_axi_reg_stall_26                  |   226|
+|35    |          b_sreg                                                                                |sc_util_v1_0_4_axi_reg_stall_27                  |    32|
+|36    |          \gen_endpoint.decerr_slave_inst                                                       |sc_mmu_v1_0_7_decerr_slave                       |    24|
+|37    |          w_sreg                                                                                |sc_util_v1_0_4_axi_reg_stall_28                  |   233|
 |38    |      s00_si_converter                                                                          |bd_afc3_s00sic_0                                 |   111|
 |39    |        inst                                                                                    |sc_si_converter_v1_0_8_top                       |   111|
 |40    |          splitter_inst                                                                         |sc_si_converter_v1_0_8_splitter                  |   109|
 |41    |            \gen_no_wsplitter.gen_endpoint_woffset.gen_wbypass_offset_fifo.wbypass_offset_fifo  |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized4 |   108|
-|42    |              \gen_srls[0].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl                           |     2|
-|43    |              \gen_srls[10].srl_nx1                                                             |sc_util_v1_0_4_srl_rtl_9                         |     2|
-|44    |              \gen_srls[11].srl_nx1                                                             |sc_util_v1_0_4_srl_rtl_10                        |     2|
-|45    |              \gen_srls[12].srl_nx1                                                             |sc_util_v1_0_4_srl_rtl_11                        |     2|
-|46    |              \gen_srls[13].srl_nx1                                                             |sc_util_v1_0_4_srl_rtl_12                        |     3|
-|47    |              \gen_srls[1].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_13                        |     2|
-|48    |              \gen_srls[2].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_14                        |     2|
-|49    |              \gen_srls[3].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_15                        |     2|
-|50    |              \gen_srls[4].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_16                        |     2|
-|51    |              \gen_srls[5].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_17                        |     2|
-|52    |              \gen_srls[6].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_18                        |    18|
-|53    |              \gen_srls[7].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_19                        |     2|
-|54    |              \gen_srls[8].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_20                        |     2|
-|55    |              \gen_srls[9].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_21                        |     2|
-|56    |    s00_nodes                                                                                   |s00_nodes_imp_Y7M43I                             |   573|
-|57    |      s00_aw_node                                                                               |bd_afc3_sawn_0                                   |   264|
-|58    |        inst                                                                                    |sc_node_v1_0_10_top                              |   264|
-|59    |          inst_mi_handler                                                                       |sc_node_v1_0_10_mi_handler                       |   257|
-|60    |            \gen_normal_area.inst_fifo_node_payld                                               |sc_node_v1_0_10_fifo                             |   255|
-|61    |              \gen_xpm_memory_fifo.inst_fifo                                                    |sc_util_v1_0_4_xpm_memory_fifo                   |   255|
-|62    |                \gen_mem_rep[0].inst_xpm_memory                                                 |xpm_memory_sdpram                                |   187|
-|63    |                  xpm_memory_base_inst                                                          |xpm_memory_base                                  |   187|
-|64    |                \gen_mem_rep[0].inst_rd_addrb                                                   |sc_util_v1_0_4_counter_6                         |    14|
-|65    |                \gen_mem_rep[0].inst_wr_addra                                                   |sc_util_v1_0_4_counter_7                         |    13|
-|66    |                \gen_wr.inst_wr_addra_p1                                                        |sc_util_v1_0_4_counter__parameterized0_8         |    31|
-|67    |          inst_si_handler                                                                       |sc_node_v1_0_10_si_handler                       |     3|
-|68    |            inst_arb_stall_late                                                                 |sc_util_v1_0_4_pipeline_5                        |     3|
-|69    |      s00_b_node                                                                                |bd_afc3_sbn_0                                    |   106|
-|70    |        inst                                                                                    |sc_node_v1_0_10_top__parameterized0              |   106|
-|71    |          inst_mi_handler                                                                       |sc_node_v1_0_10_mi_handler__parameterized0       |    98|
-|72    |            \gen_normal_area.inst_fifo_node_payld                                               |sc_node_v1_0_10_fifo__parameterized0             |    96|
-|73    |              \gen_xpm_memory_fifo.inst_fifo                                                    |sc_util_v1_0_4_xpm_memory_fifo__parameterized0   |    96|
-|74    |                \gen_mem_rep[0].inst_xpm_memory                                                 |xpm_memory_sdpram__parameterized0                |    28|
-|75    |                  xpm_memory_base_inst                                                          |xpm_memory_base__parameterized0                  |    28|
-|76    |                \gen_mem_rep[0].inst_rd_addrb                                                   |sc_util_v1_0_4_counter_2                         |    14|
-|77    |                \gen_mem_rep[0].inst_wr_addra                                                   |sc_util_v1_0_4_counter_3                         |    13|
-|78    |                \gen_wr.inst_wr_addra_p1                                                        |sc_util_v1_0_4_counter__parameterized0_4         |    31|
-|79    |          inst_si_handler                                                                       |sc_node_v1_0_10_si_handler__parameterized0       |     4|
-|80    |            inst_arb_stall_late                                                                 |sc_util_v1_0_4_pipeline_1                        |     4|
-|81    |      s00_w_node                                                                                |bd_afc3_swn_0                                    |   203|
-|82    |        inst                                                                                    |sc_node_v1_0_10_top__parameterized1              |   203|
-|83    |          inst_mi_handler                                                                       |sc_node_v1_0_10_mi_handler__parameterized1       |   196|
-|84    |            \gen_normal_area.inst_fifo_node_payld                                               |sc_node_v1_0_10_fifo__parameterized1             |   194|
-|85    |              \gen_xpm_memory_fifo.inst_fifo                                                    |sc_util_v1_0_4_xpm_memory_fifo__parameterized1   |   194|
-|86    |                \gen_mem_rep[0].inst_xpm_memory                                                 |xpm_memory_sdpram__parameterized1                |   125|
-|87    |                  xpm_memory_base_inst                                                          |xpm_memory_base__parameterized1                  |   125|
-|88    |                \gen_mem_rep[0].inst_rd_addrb                                                   |sc_util_v1_0_4_counter                           |    14|
-|89    |                \gen_mem_rep[0].inst_wr_addra                                                   |sc_util_v1_0_4_counter_0                         |    13|
-|90    |                \gen_wr.inst_wr_addra_p1                                                        |sc_util_v1_0_4_counter__parameterized0           |    31|
-|91    |          inst_si_handler                                                                       |sc_node_v1_0_10_si_handler__parameterized1       |     3|
-|92    |            inst_arb_stall_late                                                                 |sc_util_v1_0_4_pipeline                          |     3|
+|42    |              \gen_srls[0].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_12                        |     2|
+|43    |              \gen_srls[10].srl_nx1                                                             |sc_util_v1_0_4_srl_rtl_13                        |     2|
+|44    |              \gen_srls[11].srl_nx1                                                             |sc_util_v1_0_4_srl_rtl_14                        |     2|
+|45    |              \gen_srls[12].srl_nx1                                                             |sc_util_v1_0_4_srl_rtl_15                        |     2|
+|46    |              \gen_srls[13].srl_nx1                                                             |sc_util_v1_0_4_srl_rtl_16                        |     3|
+|47    |              \gen_srls[1].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_17                        |     2|
+|48    |              \gen_srls[2].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_18                        |     2|
+|49    |              \gen_srls[3].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_19                        |     2|
+|50    |              \gen_srls[4].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_20                        |     2|
+|51    |              \gen_srls[5].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_21                        |     2|
+|52    |              \gen_srls[6].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_22                        |    18|
+|53    |              \gen_srls[7].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_23                        |     2|
+|54    |              \gen_srls[8].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_24                        |     2|
+|55    |              \gen_srls[9].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_25                        |     2|
+|56    |      s00_transaction_regulator                                                                 |bd_afc3_s00tr_0                                  |    48|
+|57    |        inst                                                                                    |sc_transaction_regulator_v1_0_8_top              |    48|
+|58    |          \gen_endpoint.gen_w_singleorder.w_singleorder                                         |sc_transaction_regulator_v1_0_8_singleorder      |    46|
+|59    |            \gen_id_fifo.singleorder_fifo                                                       |sc_util_v1_0_4_axic_reg_srl_fifo__parameterized5 |    46|
+|60    |              \gen_srls[0].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl                           |     2|
+|61    |              \gen_srls[1].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_9                         |     2|
+|62    |              \gen_srls[2].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_10                        |     2|
+|63    |              \gen_srls[3].srl_nx1                                                              |sc_util_v1_0_4_srl_rtl_11                        |     3|
+|64    |    s00_nodes                                                                                   |s00_nodes_imp_Y7M43I                             |   573|
+|65    |      s00_aw_node                                                                               |bd_afc3_sawn_0                                   |   264|
+|66    |        inst                                                                                    |sc_node_v1_0_10_top                              |   264|
+|67    |          inst_mi_handler                                                                       |sc_node_v1_0_10_mi_handler                       |   257|
+|68    |            \gen_normal_area.inst_fifo_node_payld                                               |sc_node_v1_0_10_fifo                             |   255|
+|69    |              \gen_xpm_memory_fifo.inst_fifo                                                    |sc_util_v1_0_4_xpm_memory_fifo                   |   255|
+|70    |                \gen_mem_rep[0].inst_xpm_memory                                                 |xpm_memory_sdpram                                |   187|
+|71    |                  xpm_memory_base_inst                                                          |xpm_memory_base                                  |   187|
+|72    |                \gen_mem_rep[0].inst_rd_addrb                                                   |sc_util_v1_0_4_counter_6                         |    14|
+|73    |                \gen_mem_rep[0].inst_wr_addra                                                   |sc_util_v1_0_4_counter_7                         |    13|
+|74    |                \gen_wr.inst_wr_addra_p1                                                        |sc_util_v1_0_4_counter__parameterized0_8         |    31|
+|75    |          inst_si_handler                                                                       |sc_node_v1_0_10_si_handler                       |     3|
+|76    |            inst_arb_stall_late                                                                 |sc_util_v1_0_4_pipeline_5                        |     3|
+|77    |      s00_b_node                                                                                |bd_afc3_sbn_0                                    |   106|
+|78    |        inst                                                                                    |sc_node_v1_0_10_top__parameterized0              |   106|
+|79    |          inst_mi_handler                                                                       |sc_node_v1_0_10_mi_handler__parameterized0       |    98|
+|80    |            \gen_normal_area.inst_fifo_node_payld                                               |sc_node_v1_0_10_fifo__parameterized0             |    96|
+|81    |              \gen_xpm_memory_fifo.inst_fifo                                                    |sc_util_v1_0_4_xpm_memory_fifo__parameterized0   |    96|
+|82    |                \gen_mem_rep[0].inst_xpm_memory                                                 |xpm_memory_sdpram__parameterized0                |    28|
+|83    |                  xpm_memory_base_inst                                                          |xpm_memory_base__parameterized0                  |    28|
+|84    |                \gen_mem_rep[0].inst_rd_addrb                                                   |sc_util_v1_0_4_counter_2                         |    14|
+|85    |                \gen_mem_rep[0].inst_wr_addra                                                   |sc_util_v1_0_4_counter_3                         |    13|
+|86    |                \gen_wr.inst_wr_addra_p1                                                        |sc_util_v1_0_4_counter__parameterized0_4         |    31|
+|87    |          inst_si_handler                                                                       |sc_node_v1_0_10_si_handler__parameterized0       |     4|
+|88    |            inst_arb_stall_late                                                                 |sc_util_v1_0_4_pipeline_1                        |     4|
+|89    |      s00_w_node                                                                                |bd_afc3_swn_0                                    |   203|
+|90    |        inst                                                                                    |sc_node_v1_0_10_top__parameterized1              |   203|
+|91    |          inst_mi_handler                                                                       |sc_node_v1_0_10_mi_handler__parameterized1       |   196|
+|92    |            \gen_normal_area.inst_fifo_node_payld                                               |sc_node_v1_0_10_fifo__parameterized1             |   194|
+|93    |              \gen_xpm_memory_fifo.inst_fifo                                                    |sc_util_v1_0_4_xpm_memory_fifo__parameterized1   |   194|
+|94    |                \gen_mem_rep[0].inst_xpm_memory                                                 |xpm_memory_sdpram__parameterized1                |   125|
+|95    |                  xpm_memory_base_inst                                                          |xpm_memory_base__parameterized1                  |   125|
+|96    |                \gen_mem_rep[0].inst_rd_addrb                                                   |sc_util_v1_0_4_counter                           |    14|
+|97    |                \gen_mem_rep[0].inst_wr_addra                                                   |sc_util_v1_0_4_counter_0                         |    13|
+|98    |                \gen_wr.inst_wr_addra_p1                                                        |sc_util_v1_0_4_counter__parameterized0           |    31|
+|99    |          inst_si_handler                                                                       |sc_node_v1_0_10_si_handler__parameterized1       |     3|
+|100   |            inst_arb_stall_late                                                                 |sc_util_v1_0_4_pipeline                          |     3|
 +------+------------------------------------------------------------------------------------------------+-------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:02:01 ; elapsed = 00:02:07 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Finished Writing Synthesis Report : Time (s): cpu = 00:02:04 ; elapsed = 00:02:12 . Memory (MB): peak = 1351.191 ; gain = 802.707
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 3136 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:59 ; elapsed = 00:01:26 . Memory (MB): peak = 1336.832 ; gain = 308.234
-Synthesis Optimization Complete : Time (s): cpu = 00:02:01 ; elapsed = 00:02:07 . Memory (MB): peak = 1336.832 ; gain = 788.586
+Synthesis finished with 0 errors, 0 critical warnings and 3139 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:01:06 ; elapsed = 00:01:34 . Memory (MB): peak = 1351.191 ; gain = 309.164
+Synthesis Optimization Complete : Time (s): cpu = 00:02:05 ; elapsed = 00:02:12 . Memory (MB): peak = 1351.191 ; gain = 802.707
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 70 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1336.832 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1351.191 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
   A total of 54 instances were transformed.
   FDR => FDRE: 4 instances
@@ -1705,19 +1744,21 @@ INFO: [Project 1-111] Unisim Transformation Summary:
   SRL16 => SRL16E: 1 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-339 Infos, 108 Warnings, 0 Critical Warnings and 0 Errors encountered.
+338 Infos, 111 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:02:10 ; elapsed = 00:02:38 . Memory (MB): peak = 1336.832 ; gain = 1045.645
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1336.832 ; gain = 0.000
+synth_design: Time (s): cpu = 00:02:13 ; elapsed = 00:02:45 . Memory (MB): peak = 1351.191 ; gain = 1052.418
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1351.191 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_smc_0, cache-ID = abae2023d8d9186d
-INFO: [Coretcl 2-1174] Renamed 91 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1336.832 ; gain = 0.000
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_1_axi_smc_0, cache-ID = 0d643994f7f95bf1
+INFO: [Coretcl 2-1174] Renamed 99 cell refs.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1351.191 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
-INFO: [Common 17-1381] The checkpoint 'D:/Red_Pitaya/Acq_Card/project_1/project_1.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_axi_smc_0_synth_1/design_1_axi_smc_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_axi_smc_0_utilization_synth.rpt -pb design_1_axi_smc_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Apr 21 19:35:54 2020...
+INFO: [Common 17-206] Exiting Vivado at Tue Aug  4 10:24:34 2020...

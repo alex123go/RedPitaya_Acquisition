@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/constrs_1/new/red_pitaya_constraint.xdc rfile:../../../project_1.srcs/constrs_1/new/red_pitaya_constraint.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/constrs_1/new/red_pitaya_constraint.xdc rfile:../../../project_1.srcs/constrs_1/new/red_pitaya_constraint.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:4 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN U18 [get_ports adc_clk_p_i]
 set_property src_info {type:XDC file:1 line:5 export:INPUT save:INPUT read:READ} [current_design]

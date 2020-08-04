@@ -32,7 +32,6 @@ use IEEE.NUMERIC_STD.ALL;
 --use UNISIM.VComponents.all;
 
 entity Acquisition_top is
-    Generic( start_address : unsigned(32-1 downto 0) := x"1E000000");
     Port ( clk : in STD_LOGIC;
            resetn : in STD_LOGIC;
            start_sig : in STD_LOGIC;
@@ -40,8 +39,11 @@ entity Acquisition_top is
            channel_sel : in STD_LOGIC_VECTOR(2-1 downto 0);
            ADC1_data : in STD_LOGIC_VECTOR(16-1 downto 0);
            ADC2_data : in STD_LOGIC_VECTOR(16-1 downto 0);
-           
+                      
            FIFO_S2MM_data_count : in STD_LOGIC_VECTOR(32-1 downto 0);
+           
+           start_address : in unsigned(32-1 downto 0);
+
 
            reset_ACQ : OUT STD_LOGIC;
            status_out : OUT STD_LOGIC_VECTOR(2-1 downto 0);
@@ -92,8 +94,7 @@ COMPONENT axis_dwidth_converter_32to64
 END COMPONENT;
 
 component Acquisition_FSM_2 is
-    Generic( start_address : unsigned(32-1 downto 0) := x"1E000000";
-             bytes_per_tx : unsigned(23-1 downto 0) := "000" & x"0_0200";
+    Generic( bytes_per_tx : unsigned(23-1 downto 0) := "000" & x"0_0200";
              FIFO_THRESHOLD : integer := 100);
     
     Port ( clk : in STD_LOGIC;
@@ -104,8 +105,10 @@ component Acquisition_FSM_2 is
            data_tvalid : out STD_LOGIC;
            error_ACQ : out STD_LOGIC;
            reset_ACQ : out STD_LOGIC;
-           
+                     
            FIFO_S2MM_data_count : in STD_LOGIC_VECTOR(32-1 downto 0);
+           
+           start_address : in unsigned(32-1 downto 0);
            
            m_axis_s2mm_cmd_tdata : out STD_LOGIC_VECTOR(72-1 downto 0);
            m_axis_s2mm_cmd_tvalid : out STD_LOGIC;
@@ -126,8 +129,7 @@ signal m_axis_tdata_ADC1, m_axis_tdata_ADC2, m_axis_tdata_ADC1_2  : STD_LOGIC_VE
 begin
 
 ADC_FSM : Acquisition_FSM_2
-    Generic map(  start_address => start_address,
-                  bytes_per_tx => "000" & x"0_0200",
+    Generic map(  bytes_per_tx => "000" & x"0_0200",
                   FIFO_THRESHOLD => 100
                 )
     Port map(   clk => clk,
@@ -140,6 +142,8 @@ ADC_FSM : Acquisition_FSM_2
 	            reset_ACQ => reset_ACQ_int,
 	           
 	            FIFO_S2MM_data_count => FIFO_S2MM_data_count,
+	            
+	            start_address => start_address,
 	           
 	            m_axis_s2mm_cmd_tdata =>  m_axis_s2mm_cmd_tdata,
 	            m_axis_s2mm_cmd_tvalid => m_axis_s2mm_cmd_tvalid,
