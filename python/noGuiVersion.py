@@ -69,11 +69,13 @@ data_in = np.fromstring(data_in, dtype=np.int16)
 # data_in_volt = data_in / 2**15
 
 if channel == 3:
-    file_output = open('IN1' + fileName, 'wb')
+    fileName_split = fileName.rpartition('/')
+    
+    file_output = open(fileName_split[0] + fileName_split[1] +  'IN1_' + fileName_split[2], 'wb')
     file_output.write(data_in[1::2].tobytes())
     file_output.close()
     
-    file_output = open('IN2' + fileName, 'wb')
+    file_output = open(fileName_split[0] + fileName_split[1] +  'IN2_' + fileName_split[2], 'wb')
     file_output.write(data_in[::2].tobytes())
     file_output.close()
 else:
