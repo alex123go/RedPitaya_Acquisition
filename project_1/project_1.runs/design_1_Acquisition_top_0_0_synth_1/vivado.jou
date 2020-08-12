@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Aug  4 10:55:56 2020
-# Process ID: 22632
+# Start of session at: Tue Aug 11 14:14:31 2020
+# Process ID: 144
 # Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_Acquisition_top_0_0_synth_1
 # Command line: vivado.exe -log design_1_Acquisition_top_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Acquisition_top_0_0.tcl
 # Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_Acquisition_top_0_0_synth_1/design_1_Acquisition_top_0_0.vds

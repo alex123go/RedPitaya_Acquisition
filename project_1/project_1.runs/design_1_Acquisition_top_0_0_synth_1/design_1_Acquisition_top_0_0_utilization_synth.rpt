@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Tue Aug  4 10:57:01 2020
+| Date         : Tue Aug 11 14:15:45 2020
 | Host         : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_Acquisition_top_0_0_utilization_synth.rpt -pb design_1_Acquisition_top_0_0_utilization_synth.pb
 | Design       : design_1_Acquisition_top_0_0

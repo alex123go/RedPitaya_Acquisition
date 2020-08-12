@@ -21,14 +21,20 @@ from catch_exception import *
 
 
 class AcqCard(QtWidgets.QMainWindow):
-
+	# Default values
 	fs = 125e6
-
 	START_ADDR        = 0x0800_0000 # Define by reserved memory in devicetree used to build Linux
 
-	MAXPOINTS   = int((0x1FFFFFFF-START_ADDR + 0)/2) # Warning, if I put the '+1', there is an error : maybe a signal that wrap to 0 in the FPGA
+	# Warning, if I put the '+1', there is an error : maybe a signal that wrap to 0 in the FPGA
+	# Therefore, to keep a multiple of 32 bits, I substracted 3 bytes
+	MAXPOINTS   = int((0x1FFFFFFF-START_ADDR - 3)/2) # /2 because 2 bytes per points
 
+
+	# Reg addr : 
 	xadc_base_addr    = 0x0001_0000
+
+	MUX_ADC_1_REG     = 0x0009_0000 # 1 bit
+	MUX_ADC_2_REG     = 0x0009_0008 # 1 bit
 
 	N_BYTES_REG       = 0x000A_0000 # 32 bits
 	CHANNEL_REG       = 0x000A_0008 # 2 bits
@@ -36,12 +42,7 @@ class AcqCard(QtWidgets.QMainWindow):
 	START_REG         = 0x000B_0000 # 1 bit : start acq on rising_edge
 	STATUS_REG        = 0x000B_0008 # 2 bits : error_ACQ (STS =! 0x80) & data_tvalid_int ('1' when data transfer is done)
 
-	START_ADDR_REG    = 0x000C_0000 # Min value is define by reserved memory in devicetree used to build Linux
-
-
-
-
-
+	START_ADDR_REG    = 0x000C_0000 # 32 bits # Min value is define by reserved memory in devicetree used to build Linux (0x0800_0000 in this version)
 
 	def __init__(self, dev = None):
 		super(AcqCard, self).__init__()
@@ -68,7 +69,11 @@ class AcqCard(QtWidgets.QMainWindow):
 
 		self.dev.write_Zynq_AXI_register_uint32(self.START_ADDR_REG, self.START_ADDR)
 
-		print(hex(self.dev.read_Zynq_AXI_register_uint32(self.START_ADDR_REG)))
+		mux_value = 0 #0 for ADCs, 1 for counter
+
+		# set MUX
+		self.dev.write_Zynq_AXI_register_uint32(self.MUX_ADC_1_REG, mux_value)
+		self.dev.write_Zynq_AXI_register_uint32(self.MUX_ADC_2_REG, mux_value)
 
 
 		self.initUI()
@@ -114,7 +119,7 @@ class AcqCard(QtWidgets.QMainWindow):
 
 	# This function is called in a thread (by getDataFromZynq_thread) to avoid crashing the GUI
 	def getDataFromZynq(self, progress_callback):
-		bVerbose = True
+		bVerbose = False
 		bVerboseTiming = False
 
 		ready = self.dev.read_Zynq_AXI_register_uint32(self.STATUS_REG)
@@ -125,8 +130,7 @@ class AcqCard(QtWidgets.QMainWindow):
 			ready = self.dev.read_Zynq_AXI_register_uint32(self.STATUS_REG)
 
 		if ready != 1: #ready != 0 and != 1, therefore, error on acquisition
-			if bVerbose:
-				print('Warning, there was an error the acquisition... Further debugging needed \n Possible causes : not enough points or too much')
+			print('Warning, there was an error the acquisition... Further debugging needed \n Possible causes : not enough points or too much')
 			progress_callback.emit('Error')
 		
 		else: # data ready

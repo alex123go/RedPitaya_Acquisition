@@ -1,0 +1,1 @@
+-wto "704f60f7360645ebba906a2fa0b59cea" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "xilinx_vip" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "multiplexer_2to1_behav" "xil_defaultlib.multiplexer_2to1" "xil_defaultlib.glbl" -log "elaborate.log" 
