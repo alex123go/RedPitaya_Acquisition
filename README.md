@@ -1,5 +1,7 @@
 # RedPitaya_Acquisition
-Transform the Red Pitaya in an acquisition card. This software/hardware allows writing data from the Red Pitaya's ADCs to the zynq's internal DDR3-SDRAM and then ploting/saving data in a PC.
+Transform the Red Pitaya in an acquisition card. This software/hardware allows writing data from the Red Pitaya's ADCs to the zynq's internal DDR3-SDRAM and then ploting/saving data in a PC. 
+
+Data are acquired at full speed (125 MSamples/s) and it's possible to save up to 200Mpts consecutives points (1.6s in single channel mode). It's also possible to acquire both channel in parallel.
 
 
 # Getting started

@@ -84,13 +84,12 @@ if ADC1_counter == 1 and ADC2_counter == 1:
     data_in = np.fromstring(data_in, dtype=np.uint32) # Uncomment this line if you want to read data as 32 bits (useful if both ADCs are connected to counter)
 else:
     data_in = np.fromstring(data_in, dtype=np.int16) # Uncomment this line if you want to read data as 16 bits
-
-
 print('Elapsed time for conversion = {}'.format(time.time() - timeStart))
 
 timeStart = time.time()
 if channel == 3 and not(ADC1_counter == 1 and ADC2_counter == 1):
     fileName_split = fileName.rpartition('/')
+
     file_output = open(fileName_split[0] + fileName_split[1] +  'IN1_' + fileName_split[2], 'wb')
     file_output.write(data_in[1::2].tobytes())
     file_output.close()
@@ -102,6 +101,7 @@ else:
     file_output = open(fileName, 'wb')
     file_output.write(data_in.tobytes())
     file_output.close()
-    
+   
 print('Elapsed time for writing = {}'.format(time.time() - timeStart))
 print('Done')
+
