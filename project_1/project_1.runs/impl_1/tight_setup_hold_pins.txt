@@ -4,6 +4,6 @@
 | clk_out2_design_1_clk_wiz_0_0 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_RESET/GEN_ASYNC_CMDSTAT_RESET.sig_secondary_dly2_reg/D|
 | clk_out2_design_1_clk_wiz_0_0 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_RESET/GEN_ASYNC_CMDSTAT_RESET.sig_secondary_dly1_reg/D|
 | clk_out2_design_1_clk_wiz_0_0 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_RESET/GEN_ASYNC_CMDSTAT_RESET.sig_sec_neg_edge_plus_delay_reg/D|
+| clk_out1_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_RESET/sig_cmd_stat_rst_user_reg_n_cdc_from_reg/D|
 | clk_out2_design_1_clk_wiz_0_0 |clk_out1_design_1_clk_wiz_0_0 |design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_RESET/GEN_ASYNC_CMDSTAT_RESET.sig_secondary_aresetn_reg_reg/D|
-| clk_out2_design_1_clk_wiz_0_0 |clk_out2_design_1_clk_wiz_0_0 |design_1_i/DMA/axi_smc/inst/s00_nodes/s00_b_node/inst/inst_mi_handler/gen_normal_area.inst_fifo_node_payld/gen_xpm_memory_fifo.inst_fifo/gen_wr.afull_r_reg/D|
 +--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

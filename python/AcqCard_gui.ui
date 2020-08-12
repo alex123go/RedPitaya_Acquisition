@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>928</width>
-    <height>694</height>
+    <height>801</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -39,13 +39,13 @@
     </size>
    </property>
    <property name="whatsThis">
-    <string> </string>
+    <string/>
    </property>
    <layout class="QGridLayout" name="gridLayout">
     <item row="2" column="3">
      <layout class="QGridLayout" name="gridLayout_2">
-      <item row="11" column="1">
-       <spacer name="verticalSpacer_4">
+      <item row="13" column="1">
+       <spacer name="verticalSpacer_2">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
@@ -64,15 +64,8 @@
         </property>
        </widget>
       </item>
-      <item row="5" column="1">
-       <widget class="QPushButton" name="pushButton_stopAcq">
-        <property name="text">
-         <string>Stop</string>
-        </property>
-       </widget>
-      </item>
-      <item row="13" column="1">
-       <spacer name="verticalSpacer_2">
+      <item row="11" column="1">
+       <spacer name="verticalSpacer_4">
         <property name="orientation">
          <enum>Qt::Vertical</enum>
         </property>
@@ -91,6 +84,30 @@
         </property>
        </widget>
       </item>
+      <item row="1" column="0" rowspan="14">
+       <widget class="GraphicsLayoutWidget" name="graphicsView">
+        <property name="sizePolicy">
+         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+          <horstretch>4</horstretch>
+          <verstretch>0</verstretch>
+         </sizepolicy>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="1">
+       <widget class="QPushButton" name="pushButton_stopAcq">
+        <property name="text">
+         <string>Stop</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="1">
+       <widget class="QPushButton" name="pushButton_continuousAcq">
+        <property name="text">
+         <string>Continuous</string>
+        </property>
+       </widget>
+      </item>
       <item row="2" column="1">
        <widget class="QLabel" name="label_status">
         <property name="autoFillBackground">
@@ -104,23 +121,6 @@
         </property>
         <property name="alignment">
          <set>Qt::AlignCenter</set>
-        </property>
-       </widget>
-      </item>
-      <item row="1" column="0" rowspan="14">
-       <widget class="GraphicsLayoutWidget" name="graphicsView">
-        <property name="sizePolicy">
-         <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-          <horstretch>4</horstretch>
-          <verstretch>0</verstretch>
-         </sizepolicy>
-        </property>
-       </widget>
-      </item>
-      <item row="4" column="1">
-       <widget class="QPushButton" name="pushButton_continuousAcq">
-        <property name="text">
-         <string>Continuous</string>
         </property>
        </widget>
       </item>
@@ -281,6 +281,39 @@
         </layout>
        </widget>
       </item>
+      <item row="12" column="1">
+       <widget class="QPushButton" name="pushButton_outputsParameters">
+        <property name="text">
+         <string>Outputs</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="1">
+       <spacer name="verticalSpacer_3">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item row="1" column="1">
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
       <item row="8" column="1">
        <widget class="QGroupBox" name="gridGroupBox_timeAcq">
         <property name="title">
@@ -322,39 +355,6 @@
           </widget>
          </item>
         </layout>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <spacer name="verticalSpacer">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="6" column="1">
-       <spacer name="verticalSpacer_3">
-        <property name="orientation">
-         <enum>Qt::Vertical</enum>
-        </property>
-        <property name="sizeHint" stdset="0">
-         <size>
-          <width>20</width>
-          <height>40</height>
-         </size>
-        </property>
-       </spacer>
-      </item>
-      <item row="12" column="1">
-       <widget class="QPushButton" name="pushButton_outputsParameters">
-        <property name="text">
-         <string>Outputs</string>
-        </property>
        </widget>
       </item>
      </layout>

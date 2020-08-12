@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Fri Jul 31 19:06:04 2020
+| Date         : Wed Aug 12 10:50:16 2020
 | Host         : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_xbar_0_utilization_synth.rpt -pb design_1_xbar_0_utilization_synth.pb
 | Design       : design_1_xbar_0
@@ -30,11 +30,11 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  251 |     0 |     17600 |  1.43 |
-|   LUT as Logic          |  251 |     0 |     17600 |  1.43 |
+| Slice LUTs*             |  304 |     0 |     17600 |  1.73 |
+|   LUT as Logic          |  304 |     0 |     17600 |  1.73 |
 |   LUT as Memory         |    0 |     0 |      6000 |  0.00 |
-| Slice Registers         |  136 |     0 |     35200 |  0.39 |
-|   Register as Flip Flop |  136 |     0 |     35200 |  0.39 |
+| Slice Registers         |  138 |     0 |     35200 |  0.39 |
+|   Register as Flip Flop |  138 |     0 |     35200 |  0.39 |
 |   Register as Latch     |    0 |     0 |     35200 |  0.00 |
 | F7 Muxes                |    0 |     0 |      8800 |  0.00 |
 | F8 Muxes                |    0 |     0 |      4400 |  0.00 |
@@ -57,7 +57,7 @@ Table of Contents
 | 0     |          Yes |           - |          Set |
 | 0     |          Yes |           - |        Reset |
 | 0     |          Yes |         Set |            - |
-| 136   |          Yes |       Reset |            - |
+| 138   |          Yes |       Reset |            - |
 +-------+--------------+-------------+--------------+
 
 
@@ -146,12 +146,12 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| FDRE     |  136 |        Flop & Latch |
-| LUT6     |   92 |                 LUT |
-| LUT5     |   81 |                 LUT |
-| LUT4     |   57 |                 LUT |
-| LUT3     |   50 |                 LUT |
-| LUT2     |   16 |                 LUT |
+| FDRE     |  138 |        Flop & Latch |
+| LUT6     |  114 |                 LUT |
+| LUT4     |   99 |                 LUT |
+| LUT5     |   97 |                 LUT |
+| LUT2     |   13 |                 LUT |
+| LUT3     |    9 |                 LUT |
 | LUT1     |    2 |                 LUT |
 +----------+------+---------------------+
 

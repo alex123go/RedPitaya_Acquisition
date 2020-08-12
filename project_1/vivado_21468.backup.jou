@@ -1,0 +1,98 @@
+#-----------------------------------------------------------
+# Vivado v2019.1 (64-bit)
+# SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
+# IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
+# Start of session at: Fri Jul 31 16:58:22 2020
+# Process ID: 21468
+# Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent17548 D:\Users\Alex\Documents\GitHub\RedPitaya_Acquisition\RedPitaya_Acquisition\project_1\project_1.xpr
+# Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/vivado.log
+# Journal file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+update_module_reference design_1_Acquisition_top_0_0
+open_project D:/Synology/SynologyDrive/RedPitaya/Read_Write_DDR/preCor/project_1/project_1.xpr
+open_bd_design {D:/Synology/SynologyDrive/RedPitaya/Read_Write_DDR/preCor/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+update_compile_order -fileset sources_1
+startgroup
+current_project project_1
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_3
+endgroup
+set_property location {0.5 -560 1670} [get_bd_cells xlconstant_3]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 axi_gpio_4
+endgroup
+set_property location {2 -364 1792} [get_bd_cells axi_gpio_4]
+set_property name axi_gpio_firmwareVersion [get_bd_cells axi_gpio_4]
+set_property -dict [list CONFIG.C_ALL_INPUTS {1}] [get_bd_cells axi_gpio_firmwareVersion]
+connect_bd_net [get_bd_pins xlconstant_3/dout] [get_bd_pins axi_gpio_firmwareVersion/gpio_io_i]
+current_project project_1(2)
+startgroup
+current_project project_1
+set_property -dict [list CONFIG.CONST_WIDTH {32} CONFIG.CONST_VAL {0xADC0}] [get_bd_cells xlconstant_3]
+endgroup
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {0xADC00001}] [get_bd_cells xlconstant_3]
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (125 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (125 MHz)} Master {/processing_system7_0/M_AXI_GP1} Slave {/axi_gpio_firmwareVersion/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins axi_gpio_firmwareVersion/S_AXI]
+group_bd_cells firmware_version [get_bd_cells xlconstant_3] [get_bd_cells axi_gpio_firmwareVersion]
+group_bd_cells SinWave_Output [get_bd_cells DDS_output_div_by_2_0] [get_bd_cells DDS_output_div_by_2_1] [get_bd_cells dds_compiler_0] [get_bd_cells dds_compiler_1] [get_bd_cells axi_gpio_2]
+move_bd_cells [get_bd_cells SinWave_Output] [get_bd_cells axi_gpio_3]
+move_bd_cells [get_bd_cells SinWave_Output] [get_bd_cells xlconstant_0]
+group_bd_cells DMA [get_bd_cells Acquisition_top_0] [get_bd_cells axi_datamover_0] [get_bd_cells xlconstant_1]
+move_bd_cells [get_bd_cells DMA] [get_bd_cells axi_gpio_0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+regenerate_bd_layout
+move_bd_cells [get_bd_cells DMA] [get_bd_cells axi_smc]
+move_bd_cells [get_bd_cells DMA] [get_bd_cells axi_gpio_1]
+move_bd_cells [get_bd_cells DMA] [get_bd_cells axis_data_fifo_0]
+regenerate_bd_layout
+move_bd_cells [get_bd_cells DMA] [get_bd_cells xlconstant_2]
+regenerate_bd_layout
+set_property location {4 1170 651} [get_bd_cells ADCs_wrapper_0]
+regenerate_bd_layout
+regenerate_bd_layout -routing
+save_bd_design
+startgroup
+set_property -dict [list CONFIG.start_address {0x04000000}] [get_bd_cells DMA/Acquisition_top_0]
+endgroup
+save_bd_design
+set_property offset 0x04000000 [get_bd_addr_segs {DMA/axi_datamover_0/Data_S2MM/SEG_processing_system7_0_HP0_DDR_LOWOCM}]
+set_property offset 0x00000000 [get_bd_addr_segs {DMA/axi_datamover_0/Data_S2MM/SEG_processing_system7_0_HP0_DDR_LOWOCM}]
+set_property range 512M [get_bd_addr_segs {DMA/axi_datamover_0/Data_S2MM/SEG_processing_system7_0_HP0_DDR_LOWOCM}]
+set_property range 256M [get_bd_addr_segs {DMA/axi_datamover_0/Data_S2MM/SEG_processing_system7_0_HP0_DDR_LOWOCM}]
+set_property range 512M [get_bd_addr_segs {DMA/axi_datamover_0/Data_S2MM/SEG_processing_system7_0_HP0_DDR_LOWOCM}]
+update_module_reference design_1_Acquisition_top_0_0
+reset_run synth_1
+reset_run design_1_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1
+current_project project_1(2)
+close_project
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:axi_gpio:2.0 DMA/axi_gpio_2
+endgroup
+set_property -dict [list CONFIG.C_DOUT_DEFAULT {0x1e000000} CONFIG.C_ALL_OUTPUTS {1}] [get_bd_cells DMA/axi_gpio_2]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/clk_wiz_0/clk_out1 (125 MHz)} Clk_slave {Auto} Clk_xbar {/clk_wiz_0/clk_out1 (125 MHz)} Master {/processing_system7_0/M_AXI_GP1} Slave {/DMA/axi_gpio_2/S_AXI} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins DMA/axi_gpio_2/S_AXI]
+set_property location {2 408 147} [get_bd_cells DMA/axi_gpio_2]
+update_module_reference design_1_Acquisition_top_0_0
+connect_bd_net [get_bd_pins DMA/Acquisition_top_0/start_address] [get_bd_pins DMA/axi_gpio_2/gpio_io_o]
+save_bd_design
+set_property offset 0x800C0000 [get_bd_addr_segs {processing_system7_0/Data/SEG_axi_gpio_2_Reg1}]
+set_property offset 0x800E0000 [get_bd_addr_segs {processing_system7_0/Data/SEG_axi_gpio_3_Reg}]
+set_property offset 0x800F0000 [get_bd_addr_segs {processing_system7_0/Data/SEG_axi_gpio_2_Reg}]
+set_property offset 0x800C0000 [get_bd_addr_segs {processing_system7_0/Data/SEG_axi_gpio_2_Reg1}]
+set_property offset 0x800D0000 [get_bd_addr_segs {processing_system7_0/Data/SEG_axi_gpio_2_Reg}]
+set_property offset 0x800F0000 [get_bd_addr_segs {processing_system7_0/Data/SEG_axi_gpio_firmwareVersion_Reg}]
+set_property name axi_gpio_4 [get_bd_cells SinWave_Output/axi_gpio_3]
+set_property name axi_gpio_3 [get_bd_cells SinWave_Output/axi_gpio_2]
+save_bd_design
+reset_run synth_1
+reset_run design_1_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+launch_runs impl_1 -to_step write_bitstream -jobs 4
+wait_on_run impl_1

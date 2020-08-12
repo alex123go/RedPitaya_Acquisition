@@ -1,0 +1,18 @@
+{
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
+#  -string -flagsOSRD
+preplace port S_AXI -pg 1 -lvl 0 -x 0 -y 30 -defaultsOSRD
+preplace port s_axi_aclk -pg 1 -lvl 0 -x 0 -y 60 -defaultsOSRD
+preplace port s_axi_aresetn -pg 1 -lvl 0 -x 0 -y 90 -defaultsOSRD
+preplace inst xlconstant_3 -pg 1 -lvl 1 -x 170 -y 190 -defaultsOSRD
+preplace inst axi_gpio_firmwareVersion -pg 1 -lvl 1 -x 170 -y 70 -defaultsOSRD
+preplace netloc xlconstant_3_dout 1 1 1 300 80n
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 1 20J 60n
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 1 NJ 90
+preplace netloc ps7_0_axi_periph_M05_AXI 1 0 1 20J 30n
+levelinfo -pg 1 0 170 340
+pagesize -pg 1 -db -bbox -sgen -130 -10 340 250
+"
+}
+

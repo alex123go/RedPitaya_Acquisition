@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1596552949">
+<GenRun Id="synth_1" LaunchPart="xc7z010clg400-1" LaunchTime="1597244828">
   <File Type="PA-TCL" Name="design_1_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_1_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_1_wrapper_reports.tcl"/>
@@ -52,6 +52,12 @@
       </FileInfo>
     </File>
     <File Path="$PSRCDIR/sources_1/new/DDS_output_div_by_2.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/multiplexer_2to1.vhd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
@@ -135,6 +141,9 @@
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_3_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DACs_wrapper_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DDS_output_div_by_2_0_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_c_counter_binary_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_4_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_Acquisition_top_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_multiplexer_2to1_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_multiplexer_2to1_0_1"/>
 </GenRun>

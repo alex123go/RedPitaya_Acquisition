@@ -29,7 +29,6 @@ module bd_afc3_wrapper
     S00_AXI_awaddr,
     S00_AXI_awburst,
     S00_AXI_awcache,
-    S00_AXI_awid,
     S00_AXI_awlen,
     S00_AXI_awlock,
     S00_AXI_awprot,
@@ -38,7 +37,6 @@ module bd_afc3_wrapper
     S00_AXI_awsize,
     S00_AXI_awuser,
     S00_AXI_awvalid,
-    S00_AXI_bid,
     S00_AXI_bready,
     S00_AXI_bresp,
     S00_AXI_bvalid,
@@ -71,7 +69,6 @@ module bd_afc3_wrapper
   input [31:0]S00_AXI_awaddr;
   input [1:0]S00_AXI_awburst;
   input [3:0]S00_AXI_awcache;
-  input [3:0]S00_AXI_awid;
   input [7:0]S00_AXI_awlen;
   input [0:0]S00_AXI_awlock;
   input [2:0]S00_AXI_awprot;
@@ -80,7 +77,6 @@ module bd_afc3_wrapper
   input [2:0]S00_AXI_awsize;
   input [3:0]S00_AXI_awuser;
   input S00_AXI_awvalid;
-  output [3:0]S00_AXI_bid;
   input S00_AXI_bready;
   output [1:0]S00_AXI_bresp;
   output S00_AXI_bvalid;
@@ -114,7 +110,6 @@ module bd_afc3_wrapper
   wire [31:0]S00_AXI_awaddr;
   wire [1:0]S00_AXI_awburst;
   wire [3:0]S00_AXI_awcache;
-  wire [3:0]S00_AXI_awid;
   wire [7:0]S00_AXI_awlen;
   wire [0:0]S00_AXI_awlock;
   wire [2:0]S00_AXI_awprot;
@@ -123,7 +118,6 @@ module bd_afc3_wrapper
   wire [2:0]S00_AXI_awsize;
   wire [3:0]S00_AXI_awuser;
   wire S00_AXI_awvalid;
-  wire [3:0]S00_AXI_bid;
   wire S00_AXI_bready;
   wire [1:0]S00_AXI_bresp;
   wire S00_AXI_bvalid;
@@ -158,7 +152,6 @@ module bd_afc3_wrapper
         .S00_AXI_awaddr(S00_AXI_awaddr),
         .S00_AXI_awburst(S00_AXI_awburst),
         .S00_AXI_awcache(S00_AXI_awcache),
-        .S00_AXI_awid(S00_AXI_awid),
         .S00_AXI_awlen(S00_AXI_awlen),
         .S00_AXI_awlock(S00_AXI_awlock),
         .S00_AXI_awprot(S00_AXI_awprot),
@@ -167,7 +160,6 @@ module bd_afc3_wrapper
         .S00_AXI_awsize(S00_AXI_awsize),
         .S00_AXI_awuser(S00_AXI_awuser),
         .S00_AXI_awvalid(S00_AXI_awvalid),
-        .S00_AXI_bid(S00_AXI_bid),
         .S00_AXI_bready(S00_AXI_bready),
         .S00_AXI_bresp(S00_AXI_bresp),
         .S00_AXI_bvalid(S00_AXI_bvalid),
