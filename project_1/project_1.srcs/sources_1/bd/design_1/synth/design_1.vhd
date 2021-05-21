@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Wed Aug 12 11:06:55 2020
+--Date        : Mon Mar 29 11:30:10 2021
 --Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 --Command     : generate_target design_1.bd
 --Design      : design_1
@@ -101,6 +101,7 @@ entity DMA_imp_1JYPGAM is
     S_AXI_wready : out STD_LOGIC;
     S_AXI_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
     S_AXI_wvalid : in STD_LOGIC;
+    acquisition_in_progress_out_0 : out STD_LOGIC;
     aresetn : in STD_LOGIC;
     m_axi_s2mm_aclk : in STD_LOGIC;
     m_axis_s2mm_cmdsts_awclk : in STD_LOGIC;
@@ -292,30 +293,6 @@ architecture STRUCTURE of DMA_imp_1JYPGAM is
     s_axis_s2mm_tready : out STD_LOGIC
   );
   end component design_1_axi_datamover_0_1;
-  component design_1_Acquisition_top_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    resetn : in STD_LOGIC;
-    start_sig : in STD_LOGIC;
-    number_bytes : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    channel_sel : in STD_LOGIC_VECTOR ( 1 downto 0 );
-    ADC1_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    ADC2_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    start_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    reset_ACQ : out STD_LOGIC;
-    status_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    m_axis_tvalid : out STD_LOGIC;
-    m_axis_tready : in STD_LOGIC;
-    m_axis_tdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
-    m_axis_s2mm_cmd_tdata : out STD_LOGIC_VECTOR ( 71 downto 0 );
-    m_axis_s2mm_cmd_tready : in STD_LOGIC;
-    m_axis_s2mm_cmd_tvalid : out STD_LOGIC;
-    s_axis_s2mm_sts_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    s_axis_s2mm_sts_tready : out STD_LOGIC;
-    s_axis_s2mm_sts_tvalid : in STD_LOGIC
-  );
-  end component design_1_Acquisition_top_0_0;
   component design_1_xlslice_0_1 is
   port (
     Din : in STD_LOGIC_VECTOR ( 31 downto 0 );
@@ -334,26 +311,6 @@ architecture STRUCTURE of DMA_imp_1JYPGAM is
     Dout : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component design_1_xlslice_0_0;
-  component design_1_multiplexer_2to1_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    resetn : in STD_LOGIC;
-    sel : in STD_LOGIC;
-    data_in_1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    data_in_2 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    data_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
-  );
-  end component design_1_multiplexer_2to1_0_0;
-  component design_1_multiplexer_2to1_0_1 is
-  port (
-    clk : in STD_LOGIC;
-    resetn : in STD_LOGIC;
-    sel : in STD_LOGIC;
-    data_in_1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    data_in_2 : in STD_LOGIC_VECTOR ( 15 downto 0 );
-    data_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
-  );
-  end component design_1_multiplexer_2to1_0_1;
   component design_1_axi_gpio_3_1 is
   port (
     s_axi_aclk : in STD_LOGIC;
@@ -379,6 +336,52 @@ architecture STRUCTURE of DMA_imp_1JYPGAM is
     gpio2_io_o : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
   end component design_1_axi_gpio_3_1;
+  component design_1_multiplexer_2to1_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    resetn : in STD_LOGIC;
+    sel : in STD_LOGIC;
+    data_in_1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    data_in_2 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    data_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component design_1_multiplexer_2to1_0_0;
+  component design_1_multiplexer_2to1_0_1 is
+  port (
+    clk : in STD_LOGIC;
+    resetn : in STD_LOGIC;
+    sel : in STD_LOGIC;
+    data_in_1 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    data_in_2 : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    data_out : out STD_LOGIC_VECTOR ( 15 downto 0 )
+  );
+  end component design_1_multiplexer_2to1_0_1;
+  component design_1_Acquisition_top_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    resetn : in STD_LOGIC;
+    start_sig : in STD_LOGIC;
+    number_bytes : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    channel_sel : in STD_LOGIC_VECTOR ( 1 downto 0 );
+    ADC1_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    ADC2_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    start_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    acquisition_in_progress_out : out STD_LOGIC;
+    reset_ACQ : out STD_LOGIC;
+    status_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    m_axis_tvalid : out STD_LOGIC;
+    m_axis_tready : in STD_LOGIC;
+    m_axis_tdata : out STD_LOGIC_VECTOR ( 63 downto 0 );
+    m_axis_s2mm_cmd_tdata : out STD_LOGIC_VECTOR ( 71 downto 0 );
+    m_axis_s2mm_cmd_tready : in STD_LOGIC;
+    m_axis_s2mm_cmd_tvalid : out STD_LOGIC;
+    s_axis_s2mm_sts_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    s_axis_s2mm_sts_tready : out STD_LOGIC;
+    s_axis_s2mm_sts_tvalid : in STD_LOGIC
+  );
+  end component design_1_Acquisition_top_0_0;
+  signal Acquisition_top_0_acquisition_in_progress_out : STD_LOGIC;
   signal Acquisition_top_0_m_axis_TDATA : STD_LOGIC_VECTOR ( 63 downto 0 );
   signal Acquisition_top_0_m_axis_TREADY : STD_LOGIC;
   signal Acquisition_top_0_m_axis_TVALID : STD_LOGIC;
@@ -609,6 +612,7 @@ begin
   S_AXI_rresp(1 downto 0) <= Conn1_RRESP(1 downto 0);
   S_AXI_rvalid <= Conn1_RVALID;
   S_AXI_wready <= Conn1_WREADY;
+  acquisition_in_progress_out_0 <= Acquisition_top_0_acquisition_in_progress_out;
   aresetn_1 <= aresetn;
   clk_wiz_0_clk_out2 <= m_axi_s2mm_aclk;
   data_in_1_0_1(15 downto 0) <= ADC1_data(15 downto 0);
@@ -620,6 +624,7 @@ Acquisition_top_0: component design_1_Acquisition_top_0_0
       ADC1_data(15 downto 0) => multiplexer_2to1_0_data_out(15 downto 0),
       ADC2_data(15 downto 0) => multiplexer_2to1_1_data_out(15 downto 0),
       FIFO_S2MM_data_count(31 downto 0) => axis_data_fifo_0_axis_wr_data_count(31 downto 0),
+      acquisition_in_progress_out => Acquisition_top_0_acquisition_in_progress_out,
       channel_sel(1 downto 0) => axi_gpio_0_gpio2_io_o(1 downto 0),
       clk => processing_system7_0_FCLK_CLK0,
       m_axis_s2mm_cmd_tdata(71 downto 0) => Acquisition_top_0_m_axis_s2mm_cmd_TDATA(71 downto 0),
@@ -3763,6 +3768,7 @@ entity design_1 is
     FIXED_IO_ps_clk : inout STD_LOGIC;
     FIXED_IO_ps_porb : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
+    IO7 : out STD_LOGIC;
     Vaux0_0_v_n : in STD_LOGIC;
     Vaux0_0_v_p : in STD_LOGIC;
     Vaux1_0_v_n : in STD_LOGIC;
@@ -4059,6 +4065,7 @@ architecture STRUCTURE of design_1 is
   signal DMA_M00_AXI_WREADY : STD_LOGIC;
   signal DMA_M00_AXI_WSTRB : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal DMA_M00_AXI_WVALID : STD_LOGIC;
+  signal DMA_acquisition_in_progress_out_0 : STD_LOGIC;
   signal Net : STD_LOGIC;
   signal SinWave_Output_gpio2_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
   signal SinWave_Output_gpio_io_o : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -4362,6 +4369,7 @@ architecture STRUCTURE of design_1 is
   attribute X_INTERFACE_INFO of DDR_dqs_p : signal is "xilinx.com:interface:ddrx:1.0 DDR DQS_P";
   attribute X_INTERFACE_INFO of FIXED_IO_mio : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO MIO";
 begin
+  IO7 <= DMA_acquisition_in_progress_out_0;
   Vaux0_0_1_V_N <= Vaux0_0_v_n;
   Vaux0_0_1_V_P <= Vaux0_0_v_p;
   Vaux1_0_1_V_N <= Vaux1_0_v_n;
@@ -4494,6 +4502,7 @@ DMA: entity work.DMA_imp_1JYPGAM
       S_AXI_wready => ps7_0_axi_periph_M00_AXI_WREADY,
       S_AXI_wstrb(3 downto 0) => ps7_0_axi_periph_M00_AXI_WSTRB(3 downto 0),
       S_AXI_wvalid => ps7_0_axi_periph_M00_AXI_WVALID,
+      acquisition_in_progress_out_0 => DMA_acquisition_in_progress_out_0,
       aresetn => rst_clk_wiz_0_250M_peripheral_aresetn(0),
       m_axi_s2mm_aclk => clk_wiz_0_clk_out2,
       m_axis_s2mm_cmdsts_awclk => processing_system7_0_FCLK_CLK0,

@@ -402,6 +402,7 @@ proc create_hier_cell_DMA { parentCell nameHier } {
   # Create pins
   create_bd_pin -dir I -from 15 -to 0 ADC1_data
   create_bd_pin -dir I -from 15 -to 0 ADC2_data
+  create_bd_pin -dir O acquisition_in_progress_out_0
   create_bd_pin -dir I -type rst aresetn
   create_bd_pin -dir I -type clk m_axi_s2mm_aclk
   create_bd_pin -dir I -type clk m_axis_s2mm_cmdsts_awclk
@@ -557,6 +558,7 @@ proc create_hier_cell_DMA { parentCell nameHier } {
   connect_bd_intf_net -intf_net axis_data_fifo_0_M_AXIS [get_bd_intf_pins axi_datamover_0/S_AXIS_S2MM] [get_bd_intf_pins axis_data_fifo_0/M_AXIS]
 
   # Create port connections
+  connect_bd_net -net Acquisition_top_0_acquisition_in_progress_out [get_bd_pins acquisition_in_progress_out_0] [get_bd_pins Acquisition_top_0/acquisition_in_progress_out]
   connect_bd_net -net Acquisition_top_0_reset_ACQ [get_bd_pins Acquisition_top_0/reset_ACQ] [get_bd_pins axi_datamover_0/m_axi_s2mm_aresetn] [get_bd_pins axis_data_fifo_0/s_axis_aresetn]
   connect_bd_net -net Acquisition_top_0_status_out [get_bd_pins Acquisition_top_0/status_out] [get_bd_pins axi_gpio_1/gpio2_io_i]
   connect_bd_net -net aresetn_1 [get_bd_pins aresetn] [get_bd_pins axi_datamover_0/m_axis_s2mm_cmdsts_aresetn] [get_bd_pins axi_smc/aresetn]
@@ -634,6 +636,7 @@ proc create_root_design { parentCell } {
 
 
   # Create ports
+  set IO7 [ create_bd_port -dir O IO7 ]
   set adc_cdcs_o [ create_bd_port -dir O adc_cdcs_o ]
   set adc_clk_n_i [ create_bd_port -dir I -type clk adc_clk_n_i ]
   set_property -dict [ list \
@@ -1426,6 +1429,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net DACs_wrapper_0_dac_sel_o [get_bd_ports dac_sel_o] [get_bd_pins DACs_wrapper_0/dac_sel_o]
   connect_bd_net -net DACs_wrapper_0_dac_wrt_o [get_bd_ports dac_wrt_o] [get_bd_pins DACs_wrapper_0/dac_wrt_o]
   connect_bd_net -net DDS_output_div_by_2_1_data_out [get_bd_pins DACs_wrapper_0/dac_b] [get_bd_pins SinWave_Output/data_out1]
+  connect_bd_net -net DMA_acquisition_in_progress_out_0 [get_bd_ports IO7] [get_bd_pins DMA/acquisition_in_progress_out_0]
   connect_bd_net -net Net [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_clk_wiz_0_250M/ext_reset_in] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net SinWave_Output_gpio2_io_o [get_bd_pins DACs_wrapper_0/dac_b_tvalid] [get_bd_pins SinWave_Output/gpio2_io_o]
   connect_bd_net -net SinWave_Output_gpio_io_o [get_bd_pins DACs_wrapper_0/dac_a_tvalid] [get_bd_pins SinWave_Output/gpio_io_o]

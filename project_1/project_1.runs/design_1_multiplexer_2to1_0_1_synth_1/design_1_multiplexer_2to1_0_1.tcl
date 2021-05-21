@@ -17,7 +17,6 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
-set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 create_project -in_memory -part xc7z010clg400-1
 
@@ -40,7 +39,7 @@ update_ip_catalog
 set_property ip_output_repo d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 read_vhdl -library xil_defaultlib D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/multiplexer_2to1.vhd
-read_ip -quiet d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1.xci
+read_ip -quiet D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1.xci
 
 # Mark all dcp files as not used in implementation to prevent them from being
 # stitched into the results of this synthesis run. Any black boxes in the
@@ -93,32 +92,32 @@ write_checkpoint -force -noxdef design_1_multiplexer_2to1_0_1.dcp
 create_report "design_1_multiplexer_2to1_0_1_synth_1_synth_report_utilization_0" "report_utilization -file design_1_multiplexer_2to1_0_1_utilization_synth.rpt -pb design_1_multiplexer_2to1_0_1_utilization_synth.pb"
 
 if { [catch {
-  file copy -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1.dcp d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1.dcp
+  file copy -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1.dcp D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.v
+  write_verilog -force -mode synth_stub D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.vhdl
+  write_vhdl -force -mode synth_stub D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_sim_netlist.v
+  write_verilog -force -mode funcsim D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -128,32 +127,32 @@ if { [catch {
 
 
 if { [catch {
-  file copy -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1.dcp d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1.dcp
+  file copy -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1.dcp D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  file rename -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1_stub.v d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.v
+  file rename -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1_stub.v D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1_stub.vhdl d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.vhdl
+  file rename -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1_stub.vhdl D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1_sim_netlist.v d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_sim_netlist.v
+  file rename -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1_sim_netlist.v D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  file rename -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1_sim_netlist.vhdl d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_sim_netlist.vhdl
+  file rename -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_multiplexer_2to1_0_1_synth_1/design_1_multiplexer_2to1_0_1_sim_netlist.vhdl D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
@@ -162,13 +161,13 @@ if { [catch {
 
 if {[file isdir D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.ip_user_files/ip/design_1_multiplexer_2to1_0_1]} {
   catch { 
-    file copy -force d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.v D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.ip_user_files/ip/design_1_multiplexer_2to1_0_1
+    file copy -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.v D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.ip_user_files/ip/design_1_multiplexer_2to1_0_1
   }
 }
 
 if {[file isdir D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.ip_user_files/ip/design_1_multiplexer_2to1_0_1]} {
   catch { 
-    file copy -force d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.vhdl D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.ip_user_files/ip/design_1_multiplexer_2to1_0_1
+    file copy -force D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_1/design_1_multiplexer_2to1_0_1_stub.vhdl D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.ip_user_files/ip/design_1_multiplexer_2to1_0_1
   }
 }
 file delete __synthesis_is_running__

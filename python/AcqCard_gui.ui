@@ -195,6 +195,13 @@
          <string>Save data</string>
         </property>
         <layout class="QGridLayout" name="gridLayout_6">
+         <item row="7" column="0" colspan="2">
+          <widget class="QPushButton" name="pushButton_saveWaveform">
+           <property name="text">
+            <string>Save</string>
+           </property>
+          </widget>
+         </item>
          <item row="2" column="0" colspan="2">
           <layout class="QHBoxLayout" name="horizontalLayout">
            <item>
@@ -205,7 +212,7 @@
             </widget>
            </item>
            <item>
-            <widget class="QLineEdit" name="lineEdit_numberOfWaveform">
+            <widget class="user_friendly_QLineEdit" name="lineEdit_numberOfWaveform">
              <property name="text">
               <string>1</string>
              </property>
@@ -215,13 +222,6 @@
             </widget>
            </item>
           </layout>
-         </item>
-         <item row="6" column="0" colspan="2">
-          <widget class="QPushButton" name="pushButton_saveWaveform">
-           <property name="text">
-            <string>Save</string>
-           </property>
-          </widget>
          </item>
          <item row="5" column="1">
           <widget class="QPushButton" name="pushButton_browsePath">
@@ -242,19 +242,6 @@
            </property>
           </widget>
          </item>
-         <item row="5" column="0">
-          <widget class="QLineEdit" name="lineEdit_savePath">
-           <property name="sizePolicy">
-            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
-             <horstretch>4</horstretch>
-             <verstretch>0</verstretch>
-            </sizepolicy>
-           </property>
-           <property name="text">
-            <string>data_saving</string>
-           </property>
-          </widget>
-         </item>
          <item row="0" column="0" colspan="2">
           <widget class="QCheckBox" name="checkBox_autoSaveOnAcq">
            <property name="sizePolicy">
@@ -268,7 +255,20 @@
            </property>
           </widget>
          </item>
-         <item row="3" column="0" colspan="2">
+         <item row="5" column="0">
+          <widget class="user_friendly_QLineEdit" name="lineEdit_savePath">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+             <horstretch>4</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="text">
+            <string>data_saving</string>
+           </property>
+          </widget>
+         </item>
+         <item row="6" column="0" colspan="2">
           <widget class="QLineEdit" name="lineEdit_fileName">
            <property name="statusTip">
             <string>Channel + fileName + incrementation</string>
@@ -335,7 +335,7 @@
           </widget>
          </item>
          <item row="0" column="1">
-          <widget class="QLineEdit" name="lineEdit_numberOfPoints">
+          <widget class="user_friendly_QLineEdit" name="lineEdit_numberOfPoints">
            <property name="statusTip">
             <string>write &quot;max&quot; to set to maximum number of points</string>
            </property>
@@ -345,7 +345,7 @@
           </widget>
          </item>
          <item row="1" column="1">
-          <widget class="QLineEdit" name="lineEdit_timeAcq">
+          <widget class="user_friendly_QLineEdit" name="lineEdit_timeAcq">
            <property name="statusTip">
             <string>write &quot;max&quot; to set to maximum time</string>
            </property>
@@ -374,6 +374,11 @@
   <widget class="QStatusBar" name="statusbar"/>
  </widget>
  <customwidgets>
+  <customwidget>
+   <class>user_friendly_QLineEdit</class>
+   <extends>QLineEdit</extends>
+   <header>customWidgets</header>
+  </customwidget>
   <customwidget>
    <class>GraphicsLayoutWidget</class>
    <extends>QGraphicsView</extends>

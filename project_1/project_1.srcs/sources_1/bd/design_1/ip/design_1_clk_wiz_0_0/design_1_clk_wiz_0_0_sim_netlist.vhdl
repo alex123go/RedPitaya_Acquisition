@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Thu Apr 23 16:20:20 2020
+-- Date        : Thu Apr 23 16:20:19 2020
 -- Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               D:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_clk_wiz_0_0/design_1_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_1_clk_wiz_0_0 -prefix
+--               design_1_clk_wiz_0_0_ design_1_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : design_1_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -23,8 +23,6 @@ entity design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz is
     clk_in1_p : in STD_LOGIC;
     clk_in1_n : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz : entity is "design_1_clk_wiz_0_0_clk_wiz";
 end design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of design_1_clk_wiz_0_0_design_1_clk_wiz_0_0_clk_wiz is

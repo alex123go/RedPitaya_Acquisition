@@ -44,7 +44,7 @@ entity Acquisition_top is
            
            start_address : in unsigned(32-1 downto 0);
 
-
+           acquisition_in_progress_out : OUT STD_LOGIC;
            reset_ACQ : OUT STD_LOGIC;
            status_out : OUT STD_LOGIC_VECTOR(2-1 downto 0);
 
@@ -95,7 +95,7 @@ END COMPONENT;
 
 component Acquisition_FSM_2 is
     Generic( bytes_per_tx : unsigned(23-1 downto 0) := "000" & x"0_0200";
-             FIFO_THRESHOLD : integer := 100);
+             FIFO_THRESHOLD : integer := 64);
     
     Port ( clk : in STD_LOGIC;
            resetn : in STD_LOGIC;
@@ -105,7 +105,8 @@ component Acquisition_FSM_2 is
            data_tvalid : out STD_LOGIC;
            error_ACQ : out STD_LOGIC;
            reset_ACQ : out STD_LOGIC;
-                     
+           acquisition_in_progress_out : OUT STD_LOGIC;
+
            FIFO_S2MM_data_count : in STD_LOGIC_VECTOR(32-1 downto 0);
            
            start_address : in unsigned(32-1 downto 0);
@@ -130,7 +131,7 @@ begin
 
 ADC_FSM : Acquisition_FSM_2
     Generic map(  bytes_per_tx => "000" & x"0_0200",
-                  FIFO_THRESHOLD => 100
+                  FIFO_THRESHOLD => 64
                 )
     Port map(   clk => clk,
                 resetn => resetn,
@@ -140,7 +141,8 @@ ADC_FSM : Acquisition_FSM_2
 	            data_tvalid => data_tvalid_int,
 	            error_ACQ => error_ACQ,
 	            reset_ACQ => reset_ACQ_int,
-	           
+	            acquisition_in_progress_out => acquisition_in_progress_out,
+              
 	            FIFO_S2MM_data_count => FIFO_S2MM_data_count,
 	            
 	            start_address => start_address,

@@ -114,6 +114,10 @@ set_property PACKAGE_PIN E19 [get_ports {Vaux9_0_v_n}]
 set_property PACKAGE_PIN K9  [get_ports {Vp_Vn_0_v_p}]
 set_property PACKAGE_PIN L10 [get_ports {Vp_Vn_0_v_n}]
 
+set_property IOSTANDARD LVCMOS33 [get_ports {IO7}]
+set_property PACKAGE_PIN M15 [get_ports {IO7}]
+
+
 
 # set_input_delay -max 1.000 -clock adc_clk_p_i [get_ports adc_dat_a_i[*]]
 # set_input_delay -max 1.000 -clock adc_clk_p_i [get_ports adc_dat_b_i[*]]

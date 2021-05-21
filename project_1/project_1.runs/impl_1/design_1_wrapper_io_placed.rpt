@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date                      : Wed Aug 12 11:10:58 2020
+| Date                      : Mon Mar 29 11:36:11 2021
 | Host                      : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 | Command                   : report_io -file design_1_wrapper_io_placed.rpt
 | Design                    : design_1_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           189 |
+|           190 |
 +---------------+
 
 
@@ -269,7 +269,7 @@ Table of Contents
 | M12        |                   |            | VCCINT                  | VCCINT        |                   |         |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | M13        |                   |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | M14        |                   | High Range | IO_L23P_T3_35           | User IO       |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| M15        |                   | High Range | IO_L23N_T3_35           | User IO       |                   |      35 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| M15        | IO7               | High Range | IO_L23N_T3_35           | OUTPUT        | LVCMOS33          |      35 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | M16        |                   | High Range | VCCO_35                 | VCCO          |                   |      35 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | M17        | dac_wrt_o         | High Range | IO_L8P_T1_AD10P_35      | OUTPUT        | LVCMOS33          |      35 |          8 | FAST |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | M18        | dac_clk_o         | High Range | IO_L8N_T1_AD10N_35      | OUTPUT        | LVCMOS33          |      35 |          8 | FAST |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |

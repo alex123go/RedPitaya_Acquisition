@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Tue Aug 11 14:15:45 2020
+-- Date        : Mon Mar 29 11:31:56 2021
 -- Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 --               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_Acquisition_top_0_0_sim_netlist.vhdl
@@ -17,6 +17,7 @@ use UNISIM.VCOMPONENTS.ALL;
 entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2 is
   port (
     reset_ACQ : out STD_LOGIC;
+    acquisition_in_progress_out : out STD_LOGIC;
     m_axis_s2mm_cmd_tvalid : out STD_LOGIC;
     status_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     s_axis_tvalid : out STD_LOGIC;
@@ -27,7 +28,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2 is
     number_bytes : in STD_LOGIC_VECTOR ( 23 downto 0 );
     s_axis_s2mm_sts_tvalid : in STD_LOGIC;
     s_axis_s2mm_sts_tdata : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 29 downto 0 );
+    FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 25 downto 0 );
     start_address : in STD_LOGIC_VECTOR ( 23 downto 0 )
   );
 end decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2;
@@ -37,7 +38,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal \FSM_onehot_s2mm_fsm_state[1]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[2]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[2]_i_2_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_s2mm_fsm_state[2]_i_3_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[3]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[3]_i_2_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[3]_i_3_n_0\ : STD_LOGIC;
@@ -46,7 +46,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal \FSM_onehot_s2mm_fsm_state[3]_i_6_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[3]_i_7_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[3]_i_8_n_0\ : STD_LOGIC;
-  signal \FSM_onehot_s2mm_fsm_state[3]_i_9_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[4]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[5]_i_1_n_0\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state[6]_i_1_n_0\ : STD_LOGIC;
@@ -59,6 +58,8 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal \FSM_onehot_s2mm_fsm_state_reg_n_0_[3]\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state_reg_n_0_[4]\ : STD_LOGIC;
   signal \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\ : STD_LOGIC;
+  signal acquisition_in_progress : STD_LOGIC;
+  signal acquisition_in_progress_i_2_n_0 : STD_LOGIC;
   signal bytes_sent : STD_LOGIC_VECTOR ( 31 downto 8 );
   signal \bytes_sent0_carry__0_n_0\ : STD_LOGIC;
   signal \bytes_sent0_carry__0_n_1\ : STD_LOGIC;
@@ -90,8 +91,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal data_tvalid_int_i_1_n_0 : STD_LOGIC;
   signal error_ACQ_int : STD_LOGIC;
   signal error_ACQ_int_i_1_n_0 : STD_LOGIC;
-  signal error_ACQ_int_i_2_n_0 : STD_LOGIC;
-  signal error_ACQ_int_i_3_n_0 : STD_LOGIC;
   signal \i__carry__0_i_1_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_2_n_0\ : STD_LOGIC;
   signal \i__carry__0_i_3_n_0\ : STD_LOGIC;
@@ -167,7 +166,6 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal m_axis_s2mm_cmd_tdata0_carry_n_2 : STD_LOGIC;
   signal m_axis_s2mm_cmd_tdata0_carry_n_3 : STD_LOGIC;
   signal reset_ACQ_i_1_n_0 : STD_LOGIC;
-  signal reset_ACQ_i_2_n_0 : STD_LOGIC;
   signal reset_counter : STD_LOGIC_VECTOR ( 3 downto 1 );
   signal \reset_counter[0]_i_1_n_0\ : STD_LOGIC;
   signal \reset_counter_reg_n_0_[0]\ : STD_LOGIC;
@@ -271,9 +269,11 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   signal \NLW_s2mm_fsm_state1_inferred__1/i__carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_s2mm_fsm_state2_carry__4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[2]_i_2\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[5]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[7]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of ADC1_converter_i_1 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[2]_i_2\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[4]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[5]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[7]_i_1\ : label is "soft_lutpair7";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[0]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[1]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
@@ -283,59 +283,59 @@ architecture STRUCTURE of decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[5]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[6]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[7]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
-  attribute SOFT_HLUTNM of \bytes_sent[10]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \bytes_sent[11]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \bytes_sent[12]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of acquisition_in_progress_i_1 : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \bytes_sent[10]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \bytes_sent[11]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \bytes_sent[12]_i_1\ : label is "soft_lutpair29";
   attribute SOFT_HLUTNM of \bytes_sent[13]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \bytes_sent[14]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \bytes_sent[15]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \bytes_sent[16]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \bytes_sent[17]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \bytes_sent[18]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \bytes_sent[19]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \bytes_sent[20]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \bytes_sent[21]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \bytes_sent[22]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \bytes_sent[23]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \bytes_sent[14]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \bytes_sent[15]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \bytes_sent[16]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \bytes_sent[17]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \bytes_sent[18]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \bytes_sent[19]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \bytes_sent[20]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \bytes_sent[21]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \bytes_sent[22]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \bytes_sent[23]_i_1\ : label is "soft_lutpair22";
   attribute SOFT_HLUTNM of \bytes_sent[24]_i_1\ : label is "soft_lutpair22";
   attribute SOFT_HLUTNM of \bytes_sent[25]_i_1\ : label is "soft_lutpair16";
   attribute SOFT_HLUTNM of \bytes_sent[26]_i_1\ : label is "soft_lutpair19";
   attribute SOFT_HLUTNM of \bytes_sent[27]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \bytes_sent[28]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \bytes_sent[29]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \bytes_sent[28]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \bytes_sent[29]_i_1\ : label is "soft_lutpair9";
   attribute SOFT_HLUTNM of \bytes_sent[30]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \bytes_sent[31]_i_2\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \bytes_sent[8]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \bytes_sent[9]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of data_tvalid_int_i_1 : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of error_ACQ_int_i_3 : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \reset_counter[1]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \reset_counter[2]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \reset_counter[3]_i_1\ : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \s2mm_addr[10]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \s2mm_addr[11]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \s2mm_addr[12]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \s2mm_addr[13]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \s2mm_addr[14]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \s2mm_addr[15]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \s2mm_addr[16]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \s2mm_addr[17]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \s2mm_addr[18]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \s2mm_addr[19]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \s2mm_addr[20]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \s2mm_addr[21]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \s2mm_addr[22]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \s2mm_addr[23]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \s2mm_addr[24]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \s2mm_addr[25]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \s2mm_addr[26]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \s2mm_addr[27]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \s2mm_addr[28]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \bytes_sent[31]_i_2\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \bytes_sent[8]_i_1\ : label is "soft_lutpair31";
+  attribute SOFT_HLUTNM of \bytes_sent[9]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of data_tvalid_int_i_1 : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \reset_counter[1]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \reset_counter[2]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \reset_counter[3]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \s2mm_addr[10]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \s2mm_addr[11]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \s2mm_addr[12]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \s2mm_addr[13]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \s2mm_addr[14]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \s2mm_addr[15]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \s2mm_addr[16]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \s2mm_addr[17]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \s2mm_addr[18]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \s2mm_addr[19]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \s2mm_addr[20]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \s2mm_addr[21]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \s2mm_addr[22]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \s2mm_addr[23]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \s2mm_addr[24]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \s2mm_addr[25]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \s2mm_addr[26]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \s2mm_addr[27]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \s2mm_addr[28]_i_1\ : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of \s2mm_addr[29]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \s2mm_addr[30]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \s2mm_addr[31]_i_2\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \s2mm_addr[8]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \s2mm_addr[9]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \s2mm_addr[30]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \s2mm_addr[31]_i_2\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \s2mm_addr[8]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \s2mm_addr[9]_i_1\ : label is "soft_lutpair30";
 begin
   status_out(1 downto 0) <= \^status_out\(1 downto 0);
 ADC1_converter_i_1: unisim.vcomponents.LUT1
@@ -372,15 +372,15 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
     );
 \FSM_onehot_s2mm_fsm_state[2]_i_1\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"88F888F8FFFF88F8"
+      INIT => X"F222FFFFF222F222"
     )
         port map (
-      I0 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[1]\,
-      I1 => \FSM_onehot_s2mm_fsm_state[2]_i_2_n_0\,
-      I2 => \FSM_onehot_s2mm_fsm_state[2]_i_3_n_0\,
-      I3 => \FSM_onehot_s2mm_fsm_state[3]_i_3_n_0\,
-      I4 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\,
-      I5 => in7,
+      I0 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\,
+      I1 => in7,
+      I2 => \FSM_onehot_s2mm_fsm_state[2]_i_2_n_0\,
+      I3 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[1]\,
+      I4 => \FSM_onehot_s2mm_fsm_state[3]_i_2_n_0\,
+      I5 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[2]\,
       O => \FSM_onehot_s2mm_fsm_state[2]_i_1_n_0\
     );
 \FSM_onehot_s2mm_fsm_state[2]_i_2\: unisim.vcomponents.LUT4
@@ -394,52 +394,37 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
       I3 => \reset_counter_reg_n_0_[0]\,
       O => \FSM_onehot_s2mm_fsm_state[2]_i_2_n_0\
     );
-\FSM_onehot_s2mm_fsm_state[2]_i_3\: unisim.vcomponents.LUT6
+\FSM_onehot_s2mm_fsm_state[3]_i_1\: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"7777777F00000000"
-    )
-        port map (
-      I0 => FIFO_S2MM_data_count(3),
-      I1 => FIFO_S2MM_data_count(4),
-      I2 => FIFO_S2MM_data_count(2),
-      I3 => FIFO_S2MM_data_count(1),
-      I4 => FIFO_S2MM_data_count(0),
-      I5 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[2]\,
-      O => \FSM_onehot_s2mm_fsm_state[2]_i_3_n_0\
-    );
-\FSM_onehot_s2mm_fsm_state[3]_i_1\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FF004000"
+      INIT => X"8"
     )
         port map (
       I0 => \FSM_onehot_s2mm_fsm_state[3]_i_2_n_0\,
-      I1 => FIFO_S2MM_data_count(4),
-      I2 => FIFO_S2MM_data_count(3),
-      I3 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[2]\,
-      I4 => \FSM_onehot_s2mm_fsm_state[3]_i_3_n_0\,
+      I1 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[2]\,
       O => \FSM_onehot_s2mm_fsm_state[3]_i_1_n_0\
     );
-\FSM_onehot_s2mm_fsm_state[3]_i_2\: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"01"
-    )
-        port map (
-      I0 => FIFO_S2MM_data_count(2),
-      I1 => FIFO_S2MM_data_count(1),
-      I2 => FIFO_S2MM_data_count(0),
-      O => \FSM_onehot_s2mm_fsm_state[3]_i_2_n_0\
-    );
-\FSM_onehot_s2mm_fsm_state[3]_i_3\: unisim.vcomponents.LUT6
+\FSM_onehot_s2mm_fsm_state[3]_i_2\: unisim.vcomponents.LUT6
     generic map(
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => \FSM_onehot_s2mm_fsm_state[3]_i_4_n_0\,
-      I1 => \FSM_onehot_s2mm_fsm_state[3]_i_5_n_0\,
-      I2 => \FSM_onehot_s2mm_fsm_state[3]_i_6_n_0\,
-      I3 => \FSM_onehot_s2mm_fsm_state[3]_i_7_n_0\,
-      I4 => \FSM_onehot_s2mm_fsm_state[3]_i_8_n_0\,
-      I5 => \FSM_onehot_s2mm_fsm_state[3]_i_9_n_0\,
+      I0 => \FSM_onehot_s2mm_fsm_state[3]_i_3_n_0\,
+      I1 => \FSM_onehot_s2mm_fsm_state[3]_i_4_n_0\,
+      I2 => \FSM_onehot_s2mm_fsm_state[3]_i_5_n_0\,
+      I3 => \FSM_onehot_s2mm_fsm_state[3]_i_6_n_0\,
+      I4 => \FSM_onehot_s2mm_fsm_state[3]_i_7_n_0\,
+      I5 => \FSM_onehot_s2mm_fsm_state[3]_i_8_n_0\,
+      O => \FSM_onehot_s2mm_fsm_state[3]_i_2_n_0\
+    );
+\FSM_onehot_s2mm_fsm_state[3]_i_3\: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => FIFO_S2MM_data_count(15),
+      I1 => FIFO_S2MM_data_count(14),
+      I2 => FIFO_S2MM_data_count(17),
+      I3 => FIFO_S2MM_data_count(16),
       O => \FSM_onehot_s2mm_fsm_state[3]_i_3_n_0\
     );
 \FSM_onehot_s2mm_fsm_state[3]_i_4\: unisim.vcomponents.LUT4
@@ -447,10 +432,10 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
       INIT => X"FFFE"
     )
         port map (
-      I0 => FIFO_S2MM_data_count(21),
-      I1 => FIFO_S2MM_data_count(20),
-      I2 => FIFO_S2MM_data_count(23),
-      I3 => FIFO_S2MM_data_count(22),
+      I0 => FIFO_S2MM_data_count(19),
+      I1 => FIFO_S2MM_data_count(18),
+      I2 => FIFO_S2MM_data_count(21),
+      I3 => FIFO_S2MM_data_count(20),
       O => \FSM_onehot_s2mm_fsm_state[3]_i_4_n_0\
     );
 \FSM_onehot_s2mm_fsm_state[3]_i_5\: unisim.vcomponents.LUT4
@@ -458,10 +443,10 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
       INIT => X"FFFE"
     )
         port map (
-      I0 => FIFO_S2MM_data_count(25),
-      I1 => FIFO_S2MM_data_count(24),
-      I2 => FIFO_S2MM_data_count(27),
-      I3 => FIFO_S2MM_data_count(26),
+      I0 => FIFO_S2MM_data_count(7),
+      I1 => FIFO_S2MM_data_count(6),
+      I2 => FIFO_S2MM_data_count(9),
+      I3 => FIFO_S2MM_data_count(8),
       O => \FSM_onehot_s2mm_fsm_state[3]_i_5_n_0\
     );
 \FSM_onehot_s2mm_fsm_state[3]_i_6\: unisim.vcomponents.LUT4
@@ -469,10 +454,10 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
       INIT => X"FFFE"
     )
         port map (
-      I0 => FIFO_S2MM_data_count(13),
-      I1 => FIFO_S2MM_data_count(12),
-      I2 => FIFO_S2MM_data_count(15),
-      I3 => FIFO_S2MM_data_count(14),
+      I0 => FIFO_S2MM_data_count(11),
+      I1 => FIFO_S2MM_data_count(10),
+      I2 => FIFO_S2MM_data_count(13),
+      I3 => FIFO_S2MM_data_count(12),
       O => \FSM_onehot_s2mm_fsm_state[3]_i_6_n_0\
     );
 \FSM_onehot_s2mm_fsm_state[3]_i_7\: unisim.vcomponents.LUT4
@@ -480,34 +465,24 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
       INIT => X"FFFE"
     )
         port map (
-      I0 => FIFO_S2MM_data_count(17),
-      I1 => FIFO_S2MM_data_count(16),
-      I2 => FIFO_S2MM_data_count(19),
-      I3 => FIFO_S2MM_data_count(18),
+      I0 => FIFO_S2MM_data_count(3),
+      I1 => FIFO_S2MM_data_count(2),
+      I2 => FIFO_S2MM_data_count(5),
+      I3 => FIFO_S2MM_data_count(4),
       O => \FSM_onehot_s2mm_fsm_state[3]_i_7_n_0\
     );
-\FSM_onehot_s2mm_fsm_state[3]_i_8\: unisim.vcomponents.LUT4
+\FSM_onehot_s2mm_fsm_state[3]_i_8\: unisim.vcomponents.LUT6
     generic map(
-      INIT => X"FFFE"
+      INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => FIFO_S2MM_data_count(9),
-      I1 => FIFO_S2MM_data_count(8),
-      I2 => FIFO_S2MM_data_count(11),
-      I3 => FIFO_S2MM_data_count(10),
+      I0 => FIFO_S2MM_data_count(24),
+      I1 => FIFO_S2MM_data_count(25),
+      I2 => FIFO_S2MM_data_count(22),
+      I3 => FIFO_S2MM_data_count(23),
+      I4 => FIFO_S2MM_data_count(1),
+      I5 => FIFO_S2MM_data_count(0),
       O => \FSM_onehot_s2mm_fsm_state[3]_i_8_n_0\
-    );
-\FSM_onehot_s2mm_fsm_state[3]_i_9\: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => FIFO_S2MM_data_count(5),
-      I1 => FIFO_S2MM_data_count(28),
-      I2 => FIFO_S2MM_data_count(29),
-      I3 => FIFO_S2MM_data_count(7),
-      I4 => FIFO_S2MM_data_count(6),
-      O => \FSM_onehot_s2mm_fsm_state[3]_i_9_n_0\
     );
 \FSM_onehot_s2mm_fsm_state[4]_i_1\: unisim.vcomponents.LUT3
     generic map(
@@ -579,7 +554,7 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
       C => clk,
       CE => '1',
       D => \FSM_onehot_s2mm_fsm_state[0]_i_1_n_0\,
-      PRE => reset_ACQ_i_2_n_0,
+      PRE => acquisition_in_progress_i_2_n_0,
       Q => \FSM_onehot_s2mm_fsm_state_reg_n_0_[0]\
     );
 \FSM_onehot_s2mm_fsm_state_reg[1]\: unisim.vcomponents.FDCE
@@ -589,7 +564,7 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
         port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => \FSM_onehot_s2mm_fsm_state[1]_i_1_n_0\,
       Q => \FSM_onehot_s2mm_fsm_state_reg_n_0_[1]\
     );
@@ -600,7 +575,7 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
         port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => \FSM_onehot_s2mm_fsm_state[2]_i_1_n_0\,
       Q => \FSM_onehot_s2mm_fsm_state_reg_n_0_[2]\
     );
@@ -611,7 +586,7 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
         port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => \FSM_onehot_s2mm_fsm_state[3]_i_1_n_0\,
       Q => \FSM_onehot_s2mm_fsm_state_reg_n_0_[3]\
     );
@@ -622,7 +597,7 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
         port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => \FSM_onehot_s2mm_fsm_state[4]_i_1_n_0\,
       Q => \FSM_onehot_s2mm_fsm_state_reg_n_0_[4]\
     );
@@ -633,7 +608,7 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
         port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => \FSM_onehot_s2mm_fsm_state[5]_i_1_n_0\,
       Q => \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\
     );
@@ -644,7 +619,7 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
         port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => \FSM_onehot_s2mm_fsm_state[6]_i_1_n_0\,
       Q => data_tvalid_int
     );
@@ -655,9 +630,36 @@ ADC1_converter_i_1: unisim.vcomponents.LUT1
         port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => \FSM_onehot_s2mm_fsm_state[7]_i_1_n_0\,
       Q => error_ACQ_int
+    );
+acquisition_in_progress_i_1: unisim.vcomponents.LUT4
+    generic map(
+      INIT => X"FFFE"
+    )
+        port map (
+      I0 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[3]\,
+      I1 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[2]\,
+      I2 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\,
+      I3 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[4]\,
+      O => acquisition_in_progress
+    );
+acquisition_in_progress_i_2: unisim.vcomponents.LUT1
+    generic map(
+      INIT => X"1"
+    )
+        port map (
+      I0 => resetn,
+      O => acquisition_in_progress_i_2_n_0
+    );
+acquisition_in_progress_reg: unisim.vcomponents.FDCE
+     port map (
+      C => clk,
+      CE => '1',
+      CLR => acquisition_in_progress_i_2_n_0,
+      D => acquisition_in_progress,
+      Q => acquisition_in_progress_out
     );
 bytes_sent0_carry: unisim.vcomponents.CARRY4
      port map (
@@ -972,7 +974,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(10),
       Q => bytes_sent(10)
     );
@@ -980,7 +982,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(11),
       Q => bytes_sent(11)
     );
@@ -988,7 +990,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(12),
       Q => bytes_sent(12)
     );
@@ -996,7 +998,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(13),
       Q => bytes_sent(13)
     );
@@ -1004,7 +1006,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(14),
       Q => bytes_sent(14)
     );
@@ -1012,7 +1014,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(15),
       Q => bytes_sent(15)
     );
@@ -1020,7 +1022,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(16),
       Q => bytes_sent(16)
     );
@@ -1028,7 +1030,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(17),
       Q => bytes_sent(17)
     );
@@ -1036,7 +1038,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(18),
       Q => bytes_sent(18)
     );
@@ -1044,7 +1046,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(19),
       Q => bytes_sent(19)
     );
@@ -1052,7 +1054,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(20),
       Q => bytes_sent(20)
     );
@@ -1060,7 +1062,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(21),
       Q => bytes_sent(21)
     );
@@ -1068,7 +1070,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(22),
       Q => bytes_sent(22)
     );
@@ -1076,7 +1078,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(23),
       Q => bytes_sent(23)
     );
@@ -1084,7 +1086,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(24),
       Q => bytes_sent(24)
     );
@@ -1092,7 +1094,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(25),
       Q => bytes_sent(25)
     );
@@ -1100,7 +1102,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(26),
       Q => bytes_sent(26)
     );
@@ -1108,7 +1110,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(27),
       Q => bytes_sent(27)
     );
@@ -1116,7 +1118,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(28),
       Q => bytes_sent(28)
     );
@@ -1124,7 +1126,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(29),
       Q => bytes_sent(29)
     );
@@ -1132,7 +1134,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(30),
       Q => bytes_sent(30)
     );
@@ -1140,7 +1142,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(31),
       Q => bytes_sent(31)
     );
@@ -1148,7 +1150,7 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(8),
       Q => bytes_sent(8)
     );
@@ -1156,65 +1158,47 @@ bytes_sent0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \bytes_sent[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => bytes_sent_0(9),
       Q => bytes_sent(9)
     );
-data_tvalid_int_i_1: unisim.vcomponents.LUT3
+data_tvalid_int_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B8"
+      INIT => X"AAABAAAA"
     )
         port map (
       I0 => data_tvalid_int,
-      I1 => error_ACQ_int_i_2_n_0,
-      I2 => \^status_out\(0),
+      I1 => error_ACQ_int,
+      I2 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[1]\,
+      I3 => acquisition_in_progress,
+      I4 => \^status_out\(0),
       O => data_tvalid_int_i_1_n_0
     );
 data_tvalid_int_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => data_tvalid_int_i_1_n_0,
       Q => \^status_out\(0)
     );
-error_ACQ_int_i_1: unisim.vcomponents.LUT3
+error_ACQ_int_i_1: unisim.vcomponents.LUT5
     generic map(
-      INIT => X"B8"
+      INIT => X"CCCDCCCC"
     )
         port map (
-      I0 => error_ACQ_int,
-      I1 => error_ACQ_int_i_2_n_0,
-      I2 => \^status_out\(1),
-      O => error_ACQ_int_i_1_n_0
-    );
-error_ACQ_int_i_2: unisim.vcomponents.LUT5
-    generic map(
-      INIT => X"FFFFFFFE"
-    )
-        port map (
-      I0 => error_ACQ_int_i_3_n_0,
-      I1 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[3]\,
-      I2 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[4]\,
-      I3 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[2]\,
-      I4 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[1]\,
-      O => error_ACQ_int_i_2_n_0
-    );
-error_ACQ_int_i_3: unisim.vcomponents.LUT3
-    generic map(
-      INIT => X"FE"
-    )
-        port map (
-      I0 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\,
+      I0 => data_tvalid_int,
       I1 => error_ACQ_int,
-      I2 => data_tvalid_int,
-      O => error_ACQ_int_i_3_n_0
+      I2 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[1]\,
+      I3 => acquisition_in_progress,
+      I4 => \^status_out\(1),
+      O => error_ACQ_int_i_1_n_0
     );
 error_ACQ_int_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => error_ACQ_int_i_1_n_0,
       Q => \^status_out\(1)
     );
@@ -1803,7 +1787,7 @@ m_axis_s2mm_cmd_tvalid_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => \FSM_onehot_s2mm_fsm_state_reg_n_0_[3]\,
       Q => m_axis_s2mm_cmd_tvalid
     );
@@ -1812,27 +1796,19 @@ reset_ACQ_i_1: unisim.vcomponents.LUT6
       INIT => X"FFFFFFFFFFFFFFFE"
     )
         port map (
-      I0 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[2]\,
-      I1 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[3]\,
-      I2 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[4]\,
-      I3 => data_tvalid_int,
+      I0 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[4]\,
+      I1 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\,
+      I2 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[2]\,
+      I3 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[3]\,
       I4 => error_ACQ_int,
-      I5 => \FSM_onehot_s2mm_fsm_state_reg_n_0_[5]\,
+      I5 => data_tvalid_int,
       O => reset_ACQ_i_1_n_0
-    );
-reset_ACQ_i_2: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => resetn,
-      O => reset_ACQ_i_2_n_0
     );
 reset_ACQ_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => reset_ACQ_i_1_n_0,
       Q => reset_ACQ
     );
@@ -1882,7 +1858,7 @@ reset_ACQ_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => \reset_counter[0]_i_1_n_0\,
       Q => \reset_counter_reg_n_0_[0]\
     );
@@ -1890,7 +1866,7 @@ reset_ACQ_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => reset_counter(1),
       Q => \reset_counter_reg_n_0_[1]\
     );
@@ -1898,7 +1874,7 @@ reset_ACQ_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => reset_counter(2),
       Q => \reset_counter_reg_n_0_[2]\
     );
@@ -1906,7 +1882,7 @@ reset_ACQ_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => reset_counter(3),
       Q => \reset_counter_reg_n_0_[3]\
     );
@@ -2224,7 +2200,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(10),
       Q => s2mm_addr(10)
     );
@@ -2232,7 +2208,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(11),
       Q => s2mm_addr(11)
     );
@@ -2240,7 +2216,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(12),
       Q => s2mm_addr(12)
     );
@@ -2248,7 +2224,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(13),
       Q => s2mm_addr(13)
     );
@@ -2256,7 +2232,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(14),
       Q => s2mm_addr(14)
     );
@@ -2264,7 +2240,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(15),
       Q => s2mm_addr(15)
     );
@@ -2272,7 +2248,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(16),
       Q => s2mm_addr(16)
     );
@@ -2280,7 +2256,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(17),
       Q => s2mm_addr(17)
     );
@@ -2288,7 +2264,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(18),
       Q => s2mm_addr(18)
     );
@@ -2296,7 +2272,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(19),
       Q => s2mm_addr(19)
     );
@@ -2304,7 +2280,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(20),
       Q => s2mm_addr(20)
     );
@@ -2312,7 +2288,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(21),
       Q => s2mm_addr(21)
     );
@@ -2320,7 +2296,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(22),
       Q => s2mm_addr(22)
     );
@@ -2328,7 +2304,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(23),
       Q => s2mm_addr(23)
     );
@@ -2336,7 +2312,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(24),
       Q => s2mm_addr(24)
     );
@@ -2344,7 +2320,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(25),
       Q => s2mm_addr(25)
     );
@@ -2352,7 +2328,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(26),
       Q => s2mm_addr(26)
     );
@@ -2360,7 +2336,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(27),
       Q => s2mm_addr(27)
     );
@@ -2368,7 +2344,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(28),
       Q => s2mm_addr(28)
     );
@@ -2376,7 +2352,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(29),
       Q => s2mm_addr(29)
     );
@@ -2384,7 +2360,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(30),
       Q => s2mm_addr(30)
     );
@@ -2392,7 +2368,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(31),
       Q => s2mm_addr(31)
     );
@@ -2400,7 +2376,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(8),
       Q => s2mm_addr(8)
     );
@@ -2408,7 +2384,7 @@ s2mm_addr0_carry_i_1: unisim.vcomponents.LUT1
      port map (
       C => clk,
       CE => \s2mm_addr[31]_i_1_n_0\,
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => s2mm_addr_1(9),
       Q => s2mm_addr(9)
     );
@@ -2746,7 +2722,7 @@ start_new_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => start_sig,
       Q => start_new
     );
@@ -2754,7 +2730,7 @@ start_old_reg: unisim.vcomponents.FDCE
      port map (
       C => clk,
       CE => '1',
-      CLR => reset_ACQ_i_2_n_0,
+      CLR => acquisition_in_progress_i_2_n_0,
       D => start_new,
       Q => start_old
     );
@@ -5983,6 +5959,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top is
     ADC2_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 31 downto 0 );
     start_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    acquisition_in_progress_out : out STD_LOGIC;
     reset_ACQ : out STD_LOGIC;
     status_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axis_tvalid : out STD_LOGIC;
@@ -6107,7 +6084,8 @@ ADC2_converter: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_axis_dwidt
     );
 ADC_FSM: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
      port map (
-      FIFO_S2MM_data_count(29 downto 0) => FIFO_S2MM_data_count(31 downto 2),
+      FIFO_S2MM_data_count(25 downto 0) => FIFO_S2MM_data_count(31 downto 6),
+      acquisition_in_progress_out => acquisition_in_progress_out,
       clk => clk,
       m_axis_s2mm_cmd_tdata(23 downto 0) => \^m_axis_s2mm_cmd_tdata\(63 downto 40),
       m_axis_s2mm_cmd_tvalid => m_axis_s2mm_cmd_tvalid,
@@ -6925,6 +6903,7 @@ entity decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix is
     ADC2_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 31 downto 0 );
     start_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    acquisition_in_progress_out : out STD_LOGIC;
     reset_ACQ : out STD_LOGIC;
     status_out : out STD_LOGIC_VECTOR ( 1 downto 0 );
     m_axis_tvalid : out STD_LOGIC;
@@ -6976,6 +6955,7 @@ U0: entity work.decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
       ADC1_data(15 downto 0) => ADC1_data(15 downto 0),
       ADC2_data(15 downto 0) => ADC2_data(15 downto 0),
       FIFO_S2MM_data_count(31 downto 0) => FIFO_S2MM_data_count(31 downto 0),
+      acquisition_in_progress_out => acquisition_in_progress_out,
       channel_sel(1 downto 0) => channel_sel(1 downto 0),
       clk => clk,
       m_axis_s2mm_cmd_tdata(71 downto 0) => m_axis_s2mm_cmd_tdata(71 downto 0),

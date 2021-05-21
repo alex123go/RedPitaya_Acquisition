@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Wed Aug 12 11:12:28 2020
+| Date         : Mon Mar 29 11:37:52 2021
 | Host         : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 | Command      : report_bus_skew -warn_on_violation -file design_1_wrapper_bus_skew_routed.rpt -pb design_1_wrapper_bus_skew_routed.pb -rpx design_1_wrapper_bus_skew_routed.rpx
 | Design       : design_1_wrapper
@@ -23,25 +23,25 @@ Id  Position  From                            To                              Co
 --  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
 1   11        [get_cells [list {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              5.000       0.789      4.211
+                                                                              Slow              5.000       0.907      4.093
 2   13        [get_cells [list {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              5.000       0.939      4.061
+                                                                              Slow              5.000       0.966      4.034
 3   15        [get_cells [list {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              5.000       0.949      4.051
+                                                                              Slow              5.000       1.099      3.901
 4   17        [get_cells [list {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
                                               [get_cells [list {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
-                                                                              Slow              5.000       0.967      4.033
+                                                                              Slow              5.000       0.851      4.149
 5   27        [get_cells [list {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]}]]
                                               [get_cells [list {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]}]]
-                                                                              Slow              5.000       1.028      3.972
+                                                                              Slow              5.000       0.971      4.029
 6   29        [get_cells [list {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[5]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]}]]
                                               [get_cells [list {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][5]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]}]]
-                                                                              Slow              5.000       0.984      4.016
+                                                                              Slow              5.000       1.087      3.913
 7   33        [get_cells [list {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[0]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[1]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[2]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[3]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[4]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[5]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[6]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[7]}]]
                                               [get_cells [list {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][3]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][4]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][5]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][6]} {design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][7]}]]
-                                                                              Slow              5.000       1.084      3.916
+                                                                              Slow              5.000       1.007      3.993
 
 
 2. Bus Skew Report Per Constraint
@@ -56,27 +56,27 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_design_1_clk_wiz_0_0
                       clk_out2_design_1_clk_wiz_0_0
-                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
-                                                                                                            Slow         0.789      4.211
+                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.907      4.093
 
 
-Slack (MET) :             4.211ns  (requirement - actual skew)
-  Endpoint Source:        design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+Slack (MET) :             4.093ns  (requirement - actual skew)
+  Endpoint Source:        design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
-  Endpoint Destination:   design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+  Endpoint Destination:   design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
-  Reference Source:       design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+  Reference Source:       design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
-  Reference Destination:  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  Reference Destination:  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            5.000ns
-  Endpoint Relative Delay:    1.574ns
-  Reference Relative Delay:   0.336ns
-  Relative CRPR:              0.639ns
+  Endpoint Relative Delay:    1.659ns
+  Reference Relative Delay:   0.280ns
+  Relative CRPR:              0.661ns
   Uncertainty:                0.189ns
-  Actual Bus Skew:            0.789ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.907ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -91,12 +91,12 @@ Endpoint path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.658    -1.223    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X24Y18         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                         net (fo=2811, routed)        1.656    -1.225    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X26Y22         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X24Y18         FDRE (Prop_fdre_C_Q)         0.518    -0.705 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.617    -0.088    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
-    SLICE_X23Y18         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X26Y22         FDRE (Prop_fdre_C_Q)         0.419    -0.806 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.673    -0.133    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[1]
+    SLICE_X24Y23         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out2_design_1_clk_wiz_0_0 rise edge)
@@ -109,15 +109,15 @@ Endpoint path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.485    -1.841    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X23Y18         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism              0.275    -1.566    
-    SLICE_X23Y18         FDRE (Setup_fdre_C_D)       -0.095    -1.661    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+                         net (fo=2420, routed)        1.480    -1.846    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X24Y23         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.275    -1.571    
+    SLICE_X24Y23         FDRE (Setup_fdre_C_D)       -0.220    -1.791    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                          -0.088    
-                         clock arrival                         -1.661    
+                         data arrival                          -0.133    
+                         clock arrival                         -1.791    
   -------------------------------------------------------------------
-                         relative delay                         1.574    
+                         relative delay                         1.659    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -132,12 +132,12 @@ Reference path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.484    -1.842    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X25Y19         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+                         net (fo=2811, routed)        1.485    -1.841    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X26Y22         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X25Y19         FDRE (Prop_fdre_C_Q)         0.337    -1.505 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.369    -1.136    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[1]
-    SLICE_X22Y20         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X26Y22         FDRE (Prop_fdre_C_Q)         0.367    -1.474 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.493    -0.981    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
+    SLICE_X24Y24         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out2_design_1_clk_wiz_0_0 rise edge)
@@ -150,15 +150,15 @@ Reference path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.656    -1.225    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X22Y20         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism             -0.275    -1.500    
-    SLICE_X22Y20         FDRE (Hold_fdre_C_D)         0.028    -1.472    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+                         net (fo=2420, routed)        1.649    -1.232    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X24Y24         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism             -0.275    -1.507    
+    SLICE_X24Y24         FDRE (Hold_fdre_C_D)         0.246    -1.261    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
   -------------------------------------------------------------------
-                         data arrival                          -1.136    
-                         clock arrival                         -1.472    
+                         data arrival                          -0.981    
+                         clock arrival                         -1.261    
   -------------------------------------------------------------------
-                         relative delay                         0.336    
+                         relative delay                         0.280    
 
 
 
@@ -171,27 +171,27 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_design_1_clk_wiz_0_0
                       clk_out2_design_1_clk_wiz_0_0
-                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                                                            Slow         0.939      4.061
+                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.966      4.034
 
 
-Slack (MET) :             4.061ns  (requirement - actual skew)
-  Endpoint Source:        design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+Slack (MET) :             4.034ns  (requirement - actual skew)
+  Endpoint Source:        design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
-  Endpoint Destination:   design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  Endpoint Destination:   design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
-  Reference Source:       design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+  Reference Source:       design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
-  Reference Destination:  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  Reference Destination:  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            5.000ns
-  Endpoint Relative Delay:    1.676ns
-  Reference Relative Delay:   0.281ns
-  Relative CRPR:              0.645ns
+  Endpoint Relative Delay:    1.636ns
+  Reference Relative Delay:   0.229ns
+  Relative CRPR:              0.630ns
   Uncertainty:                0.189ns
-  Actual Bus Skew:            0.939ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.966ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -206,12 +206,12 @@ Endpoint path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.715    -1.166    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X4Y29          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                         net (fo=2811, routed)        1.710    -1.171    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X3Y26          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X4Y29          FDRE (Prop_fdre_C_Q)         0.478    -0.688 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.587    -0.101    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
-    SLICE_X3Y30          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X3Y26          FDRE (Prop_fdre_C_Q)         0.419    -0.752 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.605    -0.147    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
+    SLICE_X2Y26          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out2_design_1_clk_wiz_0_0 rise edge)
@@ -224,15 +224,15 @@ Endpoint path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.540    -1.786    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X3Y30          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.275    -1.511    
-    SLICE_X3Y30          FDRE (Setup_fdre_C_D)       -0.266    -1.777    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+                         net (fo=2420, routed)        1.536    -1.790    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X2Y26          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.275    -1.515    
+    SLICE_X2Y26          FDRE (Setup_fdre_C_D)       -0.267    -1.782    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                          -0.101    
-                         clock arrival                         -1.777    
+                         data arrival                          -0.147    
+                         clock arrival                         -1.782    
   -------------------------------------------------------------------
-                         relative delay                         1.676    
+                         relative delay                         1.636    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -247,12 +247,12 @@ Reference path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.539    -1.787    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X5Y28          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                         net (fo=2811, routed)        1.536    -1.790    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X3Y26          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X5Y28          FDRE (Prop_fdre_C_Q)         0.367    -1.420 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.492    -0.928    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
-    SLICE_X4Y30          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X3Y26          FDRE (Prop_fdre_C_Q)         0.367    -1.423 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.372    -1.051    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[2]
+    SLICE_X1Y27          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out2_design_1_clk_wiz_0_0 rise edge)
@@ -265,15 +265,15 @@ Reference path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.716    -1.165    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X4Y30          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism             -0.275    -1.440    
-    SLICE_X4Y30          FDRE (Hold_fdre_C_D)         0.230    -1.210    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+                         net (fo=2420, routed)        1.706    -1.175    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X1Y27          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism             -0.275    -1.450    
+    SLICE_X1Y27          FDRE (Hold_fdre_C_D)         0.170    -1.280    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
   -------------------------------------------------------------------
-                         data arrival                          -0.928    
-                         clock arrival                         -1.210    
+                         data arrival                          -1.051    
+                         clock arrival                         -1.280    
   -------------------------------------------------------------------
-                         relative delay                         0.281    
+                         relative delay                         0.229    
 
 
 
@@ -286,15 +286,15 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out2_design_1_clk_wiz_0_0
                       clk_out1_design_1_clk_wiz_0_0
-                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
                                                                             design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
-                                                                                                            Slow         0.949      4.051
+                                                                                                            Slow         1.099      3.901
 
 
-Slack (MET) :             4.051ns  (requirement - actual skew)
-  Endpoint Source:        design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+Slack (MET) :             3.901ns  (requirement - actual skew)
+  Endpoint Source:        design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
-  Endpoint Destination:   design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+  Endpoint Destination:   design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
   Reference Source:       design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
@@ -302,11 +302,11 @@ Slack (MET) :             4.051ns  (requirement - actual skew)
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            5.000ns
-  Endpoint Relative Delay:    1.574ns
+  Endpoint Relative Delay:    1.690ns
   Reference Relative Delay:   0.175ns
-  Relative CRPR:              0.640ns
+  Relative CRPR:              0.606ns
   Uncertainty:                0.189ns
-  Actual Bus Skew:            0.949ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.099ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -322,11 +322,11 @@ Endpoint path:
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
                          net (fo=2420, routed)        1.667    -1.214    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X7Y28          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/C
+    SLICE_X6Y28          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X7Y28          FDRE (Prop_fdre_C_Q)         0.419    -0.795 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[1]/Q
-                         net (fo=1, routed)           0.593    -0.202    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[1]
-    SLICE_X8Y28          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+    SLICE_X6Y28          FDRE (Prop_fdre_C_Q)         0.518    -0.696 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[0]/Q
+                         net (fo=1, routed)           0.731     0.035    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[0]
+    SLICE_X7Y27          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
@@ -339,15 +339,15 @@ Endpoint path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.495    -1.831    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X8Y28          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
-                         clock pessimism              0.275    -1.556    
-    SLICE_X8Y28          FDRE (Setup_fdre_C_D)       -0.220    -1.776    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
+                         net (fo=2811, routed)        1.492    -1.834    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X7Y27          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
+                         clock pessimism              0.275    -1.559    
+    SLICE_X7Y27          FDRE (Setup_fdre_C_D)       -0.095    -1.654    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
   -------------------------------------------------------------------
-                         data arrival                          -0.202    
-                         clock arrival                         -1.776    
+                         data arrival                           0.035    
+                         clock arrival                         -1.654    
   -------------------------------------------------------------------
-                         relative delay                         1.574    
+                         relative delay                         1.690    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -362,12 +362,12 @@ Reference path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.492    -1.834    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X7Y27          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
+                         net (fo=2420, routed)        1.491    -1.835    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X7Y26          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X7Y27          FDRE (Prop_fdre_C_Q)         0.367    -1.467 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
-                         net (fo=1, routed)           0.380    -1.087    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
-    SLICE_X8Y27          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+    SLICE_X7Y26          FDRE (Prop_fdre_C_Q)         0.367    -1.468 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.380    -1.088    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[2]
+    SLICE_X8Y26          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
@@ -380,13 +380,13 @@ Reference path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.664    -1.217    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X8Y27          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
-                         clock pessimism             -0.275    -1.492    
-    SLICE_X8Y27          FDRE (Hold_fdre_C_D)         0.230    -1.262    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
+                         net (fo=2811, routed)        1.663    -1.218    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X8Y26          FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism             -0.275    -1.493    
+    SLICE_X8Y26          FDRE (Hold_fdre_C_D)         0.230    -1.263    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/I_CMD_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]
   -------------------------------------------------------------------
-                         data arrival                          -1.087    
-                         clock arrival                         -1.262    
+                         data arrival                          -1.088    
+                         clock arrival                         -1.263    
   -------------------------------------------------------------------
                          relative delay                         0.175    
 
@@ -402,26 +402,26 @@ From Clock            To Clock              Endpoint Pin                    Refe
 clk_out2_design_1_clk_wiz_0_0
                       clk_out1_design_1_clk_wiz_0_0
                                             design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                                                            Slow         0.967      4.033
+                                                                            design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                                                            Slow         0.851      4.149
 
 
-Slack (MET) :             4.033ns  (requirement - actual skew)
+Slack (MET) :             4.149ns  (requirement - actual skew)
   Endpoint Source:        design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
   Endpoint Destination:   design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
-  Reference Source:       design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+  Reference Source:       design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
-  Reference Destination:  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+  Reference Destination:  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            5.000ns
-  Endpoint Relative Delay:    1.555ns
-  Reference Relative Delay:   0.172ns
-  Relative CRPR:              0.605ns
+  Endpoint Relative Delay:    1.594ns
+  Reference Relative Delay:   0.304ns
+  Relative CRPR:              0.628ns
   Uncertainty:                0.189ns
-  Actual Bus Skew:            0.967ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.851ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -436,12 +436,12 @@ Endpoint path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.666    -1.215    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X26Y15         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                         net (fo=2420, routed)        1.660    -1.221    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X26Y20         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X26Y15         FDRE (Prop_fdre_C_Q)         0.456    -0.759 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.652    -0.107    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
-    SLICE_X26Y16         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X26Y20         FDRE (Prop_fdre_C_Q)         0.419    -0.802 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
+                         net (fo=1, routed)           0.567    -0.235    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
+    SLICE_X27Y20         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
@@ -454,15 +454,15 @@ Endpoint path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.492    -1.834    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X26Y16         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.275    -1.559    
-    SLICE_X26Y16         FDRE (Setup_fdre_C_D)       -0.103    -1.662    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+                         net (fo=2811, routed)        1.488    -1.838    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X27Y20         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
+                         clock pessimism              0.275    -1.563    
+    SLICE_X27Y20         FDRE (Setup_fdre_C_D)       -0.265    -1.828    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
   -------------------------------------------------------------------
-                         data arrival                          -0.107    
-                         clock arrival                         -1.662    
+                         data arrival                          -0.235    
+                         clock arrival                         -1.828    
   -------------------------------------------------------------------
-                         relative delay                         1.555    
+                         relative delay                         1.594    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -477,12 +477,12 @@ Reference path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.491    -1.835    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X27Y17         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/C
+                         net (fo=2420, routed)        1.488    -1.838    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X26Y20         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X27Y17         FDRE (Prop_fdre_C_Q)         0.367    -1.468 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.380    -1.088    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[0]
-    SLICE_X28Y17         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X26Y20         FDRE (Prop_fdre_C_Q)         0.337    -1.501 r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.400    -1.101    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[1]
+    SLICE_X28Y20         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
@@ -495,15 +495,15 @@ Reference path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.665    -1.216    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X28Y17         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism             -0.275    -1.491    
-    SLICE_X28Y17         FDRE (Hold_fdre_C_D)         0.230    -1.261    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]
+                         net (fo=2811, routed)        1.661    -1.220    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X28Y20         FDRE                                         r  design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism             -0.275    -1.495    
+    SLICE_X28Y20         FDRE (Hold_fdre_C_D)         0.089    -1.406    design_1_i/DMA/axi_datamover_0/U0/GEN_S2MM_FULL.I_S2MM_FULL_WRAPPER/I_CMD_STATUS/GEN_INCLUDE_STATUS_FIFO.I_STS_FIFO/USE_ASYNC_FIFO.I_ASYNC_FIFO/I_ASYNC_FIFOGEN_FIFO/xpm_fifo_instance.xpm_fifo_async_inst/gnuram_async_fifo.xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                          -1.088    
-                         clock arrival                         -1.261    
+                         data arrival                          -1.101    
+                         clock arrival                         -1.406    
   -------------------------------------------------------------------
-                         relative delay                         0.172    
+                         relative delay                         0.304    
 
 
 
@@ -516,27 +516,27 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out2_design_1_clk_wiz_0_0
                       clk_out1_design_1_clk_wiz_0_0
-                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
-                                                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
-                                                                                                            Slow         1.028      3.972
+                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
+                                                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                                                                                                            Slow         0.971      4.029
 
 
-Slack (MET) :             3.972ns  (requirement - actual skew)
-  Endpoint Source:        design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
+Slack (MET) :             4.029ns  (requirement - actual skew)
+  Endpoint Source:        design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
-  Endpoint Destination:   design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+  Endpoint Destination:   design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
-  Reference Source:       design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]/C
+  Reference Source:       design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
-  Reference Destination:  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+  Reference Destination:  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            5.000ns
-  Endpoint Relative Delay:    1.620ns
-  Reference Relative Delay:   0.210ns
-  Relative CRPR:              0.571ns
+  Endpoint Relative Delay:    1.633ns
+  Reference Relative Delay:   0.246ns
+  Relative CRPR:              0.605ns
   Uncertainty:                0.189ns
-  Actual Bus Skew:            1.028ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            0.971ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -551,12 +551,12 @@ Endpoint path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.671    -1.210    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X19Y11         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
+                         net (fo=2420, routed)        1.674    -1.207    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X31Y6          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X19Y11         FDRE (Prop_fdre_C_Q)         0.419    -0.791 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/Q
-                         net (fo=1, routed)           0.587    -0.203    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[6]
-    SLICE_X18Y12         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+    SLICE_X31Y6          FDRE (Prop_fdre_C_Q)         0.419    -0.788 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[5]/Q
+                         net (fo=1, routed)           0.603    -0.185    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[5]
+    SLICE_X33Y6          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
@@ -569,15 +569,15 @@ Endpoint path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.496    -1.830    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X18Y12         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
-                         clock pessimism              0.275    -1.555    
-    SLICE_X18Y12         FDRE (Setup_fdre_C_D)       -0.268    -1.823    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
+                         net (fo=2811, routed)        1.500    -1.826    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X33Y6          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]/C
+                         clock pessimism              0.275    -1.551    
+    SLICE_X33Y6          FDRE (Setup_fdre_C_D)       -0.267    -1.818    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][5]
   -------------------------------------------------------------------
-                         data arrival                          -0.203    
-                         clock arrival                         -1.823    
+                         data arrival                          -0.185    
+                         clock arrival                         -1.818    
   -------------------------------------------------------------------
-                         relative delay                         1.620    
+                         relative delay                         1.633    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -592,12 +592,12 @@ Reference path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.496    -1.830    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
-    SLICE_X21Y11         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]/C
+                         net (fo=2420, routed)        1.500    -1.826    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_clk
+    SLICE_X33Y4          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X21Y11         FDRE (Prop_fdre_C_Q)         0.367    -1.463 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[4]/Q
-                         net (fo=1, routed)           0.420    -1.043    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[4]
-    SLICE_X20Y11         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+    SLICE_X33Y4          FDRE (Prop_fdre_C_Q)         0.367    -1.459 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.393    -1.066    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/async_path[6]
+    SLICE_X33Y5          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
@@ -610,15 +610,15 @@ Reference path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.670    -1.211    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
-    SLICE_X20Y11         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
-                         clock pessimism             -0.275    -1.486    
-    SLICE_X20Y11         FDRE (Hold_fdre_C_D)         0.233    -1.253    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
+                         net (fo=2811, routed)        1.674    -1.207    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_clk
+    SLICE_X33Y5          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism             -0.275    -1.482    
+    SLICE_X33Y5          FDRE (Hold_fdre_C_D)         0.169    -1.313    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
   -------------------------------------------------------------------
-                         data arrival                          -1.043    
-                         clock arrival                         -1.253    
+                         data arrival                          -1.066    
+                         clock arrival                         -1.313    
   -------------------------------------------------------------------
-                         relative delay                         0.210    
+                         relative delay                         0.246    
 
 
 
@@ -631,27 +631,27 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out1_design_1_clk_wiz_0_0
                       clk_out2_design_1_clk_wiz_0_0
-                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
-                                                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
-                                                                                                            Slow         0.984      4.016
+                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+                                                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
+                                                                                                            Slow         1.087      3.913
 
 
-Slack (MET) :             4.016ns  (requirement - actual skew)
-  Endpoint Source:        design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+Slack (MET) :             3.913ns  (requirement - actual skew)
+  Endpoint Source:        design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
-  Endpoint Destination:   design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+  Endpoint Destination:   design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
-  Reference Source:       design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
+  Reference Source:       design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
-  Reference Destination:  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+  Reference Destination:  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            5.000ns
-  Endpoint Relative Delay:    1.761ns
-  Reference Relative Delay:   0.396ns
-  Relative CRPR:              0.571ns
+  Endpoint Relative Delay:    1.781ns
+  Reference Relative Delay:   0.217ns
+  Relative CRPR:              0.666ns
   Uncertainty:                0.189ns
-  Actual Bus Skew:            0.984ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.087ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -666,12 +666,12 @@ Endpoint path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.671    -1.210    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X26Y9          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/C
+                         net (fo=2811, routed)        1.675    -1.206    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X28Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X26Y9          FDRE (Prop_fdre_C_Q)         0.419    -0.791 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[3]/Q
-                         net (fo=1, routed)           0.730    -0.061    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[3]
-    SLICE_X27Y9          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+    SLICE_X28Y2          FDRE (Prop_fdre_C_Q)         0.518    -0.688 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/Q
+                         net (fo=1, routed)           0.808     0.120    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[6]
+    SLICE_X29Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out2_design_1_clk_wiz_0_0 rise edge)
@@ -684,15 +684,15 @@ Endpoint path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.497    -1.829    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X27Y9          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/C
-                         clock pessimism              0.275    -1.554    
-    SLICE_X27Y9          FDRE (Setup_fdre_C_D)       -0.268    -1.822    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]
+                         net (fo=2420, routed)        1.500    -1.826    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X29Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
+                         clock pessimism              0.275    -1.551    
+    SLICE_X29Y2          FDRE (Setup_fdre_C_D)       -0.109    -1.660    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
   -------------------------------------------------------------------
-                         data arrival                          -0.061    
-                         clock arrival                         -1.822    
+                         data arrival                           0.120    
+                         clock arrival                         -1.660    
   -------------------------------------------------------------------
-                         relative delay                         1.761    
+                         relative delay                         1.781    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -707,12 +707,12 @@ Reference path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.492    -1.834    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
-    SLICE_X23Y11         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/C
+                         net (fo=2811, routed)        1.500    -1.826    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_clk
+    SLICE_X28Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X23Y11         FDRE (Prop_fdre_C_Q)         0.367    -1.467 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[6]/Q
-                         net (fo=1, routed)           0.543    -0.924    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[6]
-    SLICE_X25Y11         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/D
+    SLICE_X28Y2          FDRE (Prop_fdre_C_Q)         0.418    -1.408 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/src_gray_ff_reg[4]/Q
+                         net (fo=1, routed)           0.374    -1.034    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/async_path[4]
+    SLICE_X28Y1          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out2_design_1_clk_wiz_0_0 rise edge)
@@ -725,15 +725,15 @@ Reference path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.666    -1.215    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
-    SLICE_X25Y11         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]/C
-                         clock pessimism             -0.275    -1.490    
-    SLICE_X25Y11         FDRE (Hold_fdre_C_D)         0.170    -1.320    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][6]
+                         net (fo=2420, routed)        1.675    -1.206    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_clk
+    SLICE_X28Y1          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]/C
+                         clock pessimism             -0.275    -1.481    
+    SLICE_X28Y1          FDRE (Hold_fdre_C_D)         0.230    -1.251    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.wr_pntr_cdc_inst/dest_graysync_ff_reg[0][4]
   -------------------------------------------------------------------
-                         data arrival                          -0.924    
-                         clock arrival                         -1.320    
+                         data arrival                          -1.034    
+                         clock arrival                         -1.251    
   -------------------------------------------------------------------
-                         relative delay                         0.396    
+                         relative delay                         0.217    
 
 
 
@@ -746,27 +746,27 @@ From Clock            To Clock              Endpoint Pin                    Refe
 --------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
 clk_out2_design_1_clk_wiz_0_0
                       clk_out1_design_1_clk_wiz_0_0
-                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]/D
-                                                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][7]/D
-                                                                                                            Slow         1.084      3.916
+                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         1.007      3.993
 
 
-Slack (MET) :             3.916ns  (requirement - actual skew)
-  Endpoint Source:        design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[0]/C
+Slack (MET) :             3.993ns  (requirement - actual skew)
+  Endpoint Source:        design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[1]/C
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
-  Endpoint Destination:   design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]/D
+  Endpoint Destination:   design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
-  Reference Source:       design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[7]/C
+  Reference Source:       design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[2]/C
                             (rising edge-triggered cell FDRE clocked by clk_out2_design_1_clk_wiz_0_0)
-  Reference Destination:  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][7]/D
+  Reference Destination:  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]/D
                             (rising edge-triggered cell FDRE clocked by clk_out1_design_1_clk_wiz_0_0)
   Path Type:              Bus Skew (Max at Slow Process Corner)
   Requirement:            5.000ns
-  Endpoint Relative Delay:    1.809ns
-  Reference Relative Delay:   0.309ns
-  Relative CRPR:              0.605ns
+  Endpoint Relative Delay:    1.626ns
+  Reference Relative Delay:   0.178ns
+  Relative CRPR:              0.631ns
   Uncertainty:                0.189ns
-  Actual Bus Skew:            1.084ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
+  Actual Bus Skew:            1.007ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR + Uncertainty)
 
 Endpoint path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -781,12 +781,12 @@ Endpoint path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.665    -1.216    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_clk
-    SLICE_X22Y12         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[0]/C
+                         net (fo=2420, routed)        1.675    -1.206    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_clk
+    SLICE_X29Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[1]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X22Y12         FDRE (Prop_fdre_C_Q)         0.456    -0.760 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[0]/Q
-                         net (fo=1, routed)           0.913     0.153    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/async_path[0]
-    SLICE_X25Y14         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]/D
+    SLICE_X29Y2          FDRE (Prop_fdre_C_Q)         0.419    -0.787 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[1]/Q
+                         net (fo=1, routed)           0.644    -0.143    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/async_path[1]
+    SLICE_X30Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
@@ -799,15 +799,15 @@ Endpoint path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.490    -1.836    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_clk
-    SLICE_X25Y14         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]/C
-                         clock pessimism              0.275    -1.561    
-    SLICE_X25Y14         FDRE (Setup_fdre_C_D)       -0.095    -1.656    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][0]
+                         net (fo=2811, routed)        1.500    -1.826    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_clk
+    SLICE_X30Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]/C
+                         clock pessimism              0.275    -1.551    
+    SLICE_X30Y2          FDRE (Setup_fdre_C_D)       -0.218    -1.769    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][1]
   -------------------------------------------------------------------
-                         data arrival                           0.153    
-                         clock arrival                         -1.656    
+                         data arrival                          -0.143    
+                         clock arrival                         -1.769    
   -------------------------------------------------------------------
-                         relative delay                         1.809    
+                         relative delay                         1.626    
 
 Reference path:
     Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
@@ -822,12 +822,12 @@ Reference path:
                                                      -7.118    -5.017 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT1
                          net (fo=1, routed)           1.599    -3.417    design_1_i/clk_wiz_0/inst/clk_out2_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.091    -3.326 r  design_1_i/clk_wiz_0/inst/clkout2_buf/O
-                         net (fo=2420, routed)        1.492    -1.834    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_clk
-    SLICE_X25Y11         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[7]/C
+                         net (fo=2420, routed)        1.500    -1.826    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_clk
+    SLICE_X29Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[2]/C
   -------------------------------------------------------------------    -------------------
-    SLICE_X25Y11         FDRE (Prop_fdre_C_Q)         0.367    -1.467 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[7]/Q
-                         net (fo=1, routed)           0.459    -1.008    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/async_path[7]
-    SLICE_X26Y12         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][7]/D
+    SLICE_X29Y2          FDRE (Prop_fdre_C_Q)         0.367    -1.459 r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/src_gray_ff_reg[2]/Q
+                         net (fo=1, routed)           0.386    -1.073    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/async_path[2]
+    SLICE_X32Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]/D
   -------------------------------------------------------------------    -------------------
 
                          (clock clk_out1_design_1_clk_wiz_0_0 rise edge)
@@ -840,15 +840,15 @@ Reference path:
                                                      -7.010    -4.742 r  design_1_i/clk_wiz_0/inst/mmcm_adv_inst/CLKOUT0
                          net (fo=1, routed)           1.760    -2.982    design_1_i/clk_wiz_0/inst/clk_out1_design_1_clk_wiz_0_0
     BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.101    -2.881 r  design_1_i/clk_wiz_0/inst/clkout1_buf/O
-                         net (fo=2814, routed)        1.669    -1.212    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_clk
-    SLICE_X26Y12         FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][7]/C
-                         clock pessimism             -0.275    -1.487    
-    SLICE_X26Y12         FDRE (Hold_fdre_C_D)         0.169    -1.318    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][7]
+                         net (fo=2811, routed)        1.675    -1.206    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_clk
+    SLICE_X32Y2          FDRE                                         r  design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]/C
+                         clock pessimism             -0.275    -1.481    
+    SLICE_X32Y2          FDRE (Hold_fdre_C_D)         0.230    -1.251    design_1_i/DMA/axis_data_fifo_0/inst/gen_fifo.xpm_fifo_axis_inst/xpm_fifo_base_inst/gen_cdc_pntr.rd_pntr_cdc_dc_inst/dest_graysync_ff_reg[0][2]
   -------------------------------------------------------------------
-                         data arrival                          -1.008    
-                         clock arrival                         -1.318    
+                         data arrival                          -1.073    
+                         clock arrival                         -1.251    
   -------------------------------------------------------------------
-                         relative delay                         0.309    
+                         relative delay                         0.178    
 
 
 

@@ -1,4 +1,4 @@
--- (c) Copyright 1995-2020 Xilinx, Inc. All rights reserved.
+-- (c) Copyright 1995-2021 Xilinx, Inc. All rights reserved.
 -- 
 -- This file contains confidential and proprietary information
 -- of Xilinx, Inc. and is protected under U.S. and
@@ -64,6 +64,7 @@ ENTITY design_1_Acquisition_top_0_0 IS
     ADC2_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     FIFO_S2MM_data_count : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     start_address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+    acquisition_in_progress_out : OUT STD_LOGIC;
     reset_ACQ : OUT STD_LOGIC;
     status_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
     m_axis_tvalid : OUT STD_LOGIC;
@@ -92,6 +93,7 @@ ARCHITECTURE design_1_Acquisition_top_0_0_arch OF design_1_Acquisition_top_0_0 I
       ADC2_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       FIFO_S2MM_data_count : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       start_address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
+      acquisition_in_progress_out : OUT STD_LOGIC;
       reset_ACQ : OUT STD_LOGIC;
       status_out : OUT STD_LOGIC_VECTOR(1 DOWNTO 0);
       m_axis_tvalid : OUT STD_LOGIC;
@@ -145,6 +147,7 @@ BEGIN
       ADC2_data => ADC2_data,
       FIFO_S2MM_data_count => FIFO_S2MM_data_count,
       start_address => start_address,
+      acquisition_in_progress_out => acquisition_in_progress_out,
       reset_ACQ => reset_ACQ,
       status_out => status_out,
       m_axis_tvalid => m_axis_tvalid,

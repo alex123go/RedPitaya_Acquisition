@@ -121,3 +121,5 @@ set_property src_info {type:XDC file:1 line:114 export:INPUT save:INPUT read:REA
 set_property PACKAGE_PIN K9  [get_ports {Vp_Vn_0_v_p}]
 set_property src_info {type:XDC file:1 line:115 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN L10 [get_ports {Vp_Vn_0_v_n}]
+set_property src_info {type:XDC file:1 line:118 export:INPUT save:INPUT read:READ} [current_design]
+set_property PACKAGE_PIN M15 [get_ports {IO7}]

@@ -33,7 +33,7 @@ use IEEE.NUMERIC_STD.ALL;
 
 entity Acquisition_FSM_2 is
     Generic( BYTES_PER_TX : unsigned(23-1 downto 0) := "000" & x"0_0200";
-             FIFO_THRESHOLD : integer := 100);
+             FIFO_THRESHOLD : integer := 64); -- that's the count on CDC FIFO just before DMA (8 bytes wide). Threshold 64 means 512 bytes waiting, which fit with the number of bytes per TX
     
     Port ( clk : in STD_LOGIC;
            resetn : in STD_LOGIC;
@@ -43,6 +43,8 @@ entity Acquisition_FSM_2 is
            data_tvalid : out STD_LOGIC;
            error_ACQ : out STD_LOGIC;
            reset_ACQ : out STD_LOGIC;
+
+           acquisition_in_progress_out : OUT STD_LOGIC;
            
            FIFO_S2MM_data_count : in STD_LOGIC_VECTOR(32-1 downto 0);
            
@@ -74,6 +76,9 @@ signal bytes_sent : unsigned(32-1 downto 0);
 
 signal reset_counter : unsigned(3 downto 0);
 
+signal acquisition_in_progress : std_logic;
+
+
 begin
 
 start_process : process(clk, resetn)
@@ -98,6 +103,7 @@ begin
 		error_ACQ_int <= '0';
         reset_ACQ <= '0';
 		reset_counter <= (others => '0');
+		acquisition_in_progress <= '0';
 		s2mm_fsm_state <= IDLE;
 
 
@@ -111,7 +117,7 @@ begin
 				error_ACQ_int <= error_ACQ_int;
 				reset_counter <= (others => '0');
                 reset_ACQ <= '0'; -- need to be assert for 3 clockcycles
-
+                acquisition_in_progress <= '0';
 
                 if start_old = '0' and start_new = '1' then
 					s2mm_fsm_state <= RESET_FIFO;
@@ -124,8 +130,9 @@ begin
 				error_ACQ_int <= '0';
                 s2mm_addr <= (others => '0');
                 m_axis_s2mm_cmd_tvalid <= '0';
-                
-                reset_ACQ <= '0'; -- need to be assert for 3 clockcycles
+                acquisition_in_progress <= '0';
+
+                reset_ACQ <= '0'; -- (active low) need to be assert for 3 clockcycles
                 reset_counter <= reset_counter + 1;
                 
                 if reset_counter >= 3 then
@@ -141,6 +148,7 @@ begin
 				data_tvalid_int <= '0';
 				error_ACQ_int <= '0';
 				reset_ACQ <= '1';
+				acquisition_in_progress <= '1';
 				reset_counter <= (others => '0');
 				
 				if unsigned(FIFO_S2MM_data_count) >= FIFO_THRESHOLD then
@@ -156,6 +164,7 @@ begin
 				data_tvalid_int <= '0';
 				error_ACQ_int <= '0';
 				reset_ACQ <= '1';
+				acquisition_in_progress <= '1';
 				reset_counter <= (others => '0');
 				
 				s2mm_fsm_state <= WAIT_S2MM_valid;
@@ -167,6 +176,7 @@ begin
 				data_tvalid_int <= '0';
 				error_ACQ_int <= '0';
 				reset_ACQ <= '1';
+				acquisition_in_progress <= '1';
 				reset_counter <= (others => '0');
 
 				if (s_axis_s2mm_sts_tvalid = '1')then -- enable
@@ -185,6 +195,7 @@ begin
 				reset_ACQ <= '1';
 				data_tvalid_int <= '0';
 				error_ACQ_int <= '0';
+				acquisition_in_progress <= '1';
 				
 				bytes_sent <= bytes_sent + BYTES_PER_TX;
                 s2mm_addr <= s2mm_addr + BYTES_PER_TX;
@@ -199,6 +210,7 @@ begin
                 m_axis_s2mm_cmd_tvalid <= '0';
                 bytes_sent <= bytes_sent;
                 s2mm_addr <= s2mm_addr;
+                acquisition_in_progress <= '0';
 
 				reset_counter <= (others => '0');
 				reset_ACQ <= '1';
@@ -214,12 +226,15 @@ begin
             	data_tvalid_int <= '0';
             	error_ACQ_int <= '1';
             	reset_ACQ <= '1';
+            	acquisition_in_progress <= '0';
+
             	reset_counter <= (others => '0');
 
                 s2mm_fsm_state <= IDLE;
                 
 			when OTHERS =>
 				m_axis_s2mm_cmd_tvalid <= '0';
+				acquisition_in_progress <= '1';
 				bytes_sent <= (others => '0');
 				s2mm_addr <= (others => '0');
 				data_tvalid_int <= '0';
@@ -238,6 +253,7 @@ end process;
 s_axis_s2mm_sts_tready <= '1';  
 error_ACQ <= error_ACQ_int;
 data_tvalid <= data_tvalid_int;
+acquisition_in_progress_out <= acquisition_in_progress;
 
 m_axis_s2mm_cmd_tdata <= x"00" & std_logic_vector(start_address + s2mm_addr) & "000000001" & std_logic_vector(BYTES_PER_TX);
 

@@ -143,7 +143,7 @@ class AcqCard(QtWidgets.QMainWindow):
 			self.data_in_bin = self.dev.read_Zynq_ddr(address_offset = 0, number_of_bytes=totalNumberOfPoints*2)
 
 			self.data_in_bin = np.fromstring(self.data_in_bin, dtype=np.int16)
-			self.data_in_volt = self.data_in_bin / 2**15
+			self.data_in_volt = self.data_in_bin #self.data_in_bin / 2**15
 
 			if bVerboseTiming:
 				print("transfer read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
@@ -291,6 +291,7 @@ class AcqCard(QtWidgets.QMainWindow):
 			self.timeCurve[channel].clear()
 			time_axis = np.linspace(1, len(data_in), len(data_in))/self.fs
 			self.timeCurve[channel].setData(time_axis,data_in)
+			# print('Voltage start -> end : {}'.format(data_in[0] - data_in[-1]))
 
 	def plot_frequencyDomain(self, data_in, channel = 0):
 		# Do we want to multiply data_in with a window?
@@ -336,13 +337,16 @@ class AcqCard(QtWidgets.QMainWindow):
 				self.lineEdit_numberOfPoints.setText(str(numberOfPoints))
 				self.lineEdit_timeAcq.blockSignals(False)
 
-			
-			numberOfPoints_constraint = self.constraintNumber(numberOfPoints, 0, self.MAXPOINTS/np.sum(self.channelValid))
+			#under 256 points, FPGA memory never fill
+			numberOfPoints_constraint = self.constraintNumber(numberOfPoints, 256, self.MAXPOINTS/np.sum(self.channelValid))
 			
 			if numberOfPoints_constraint != numberOfPoints:
 				# This means numberOfPoints was changed by it's limits
 				numberOfPoints = numberOfPoints_constraint
+				self.lineEdit_timeAcq.blockSignals(True)
 				self.lineEdit_numberOfPoints.setText(str(int(numberOfPoints)))
+				self.lineEdit_timeAcq.blockSignals(False)
+
 
 			
 		self.numberOfPoints = numberOfPoints		

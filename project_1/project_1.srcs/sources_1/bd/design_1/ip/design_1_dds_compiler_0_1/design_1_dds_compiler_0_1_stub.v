@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Thu Apr 23 15:11:59 2020
+// Date        : Thu Apr 23 15:11:58 2020
 // Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode synth_stub
-//               d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_dds_compiler_0_1/design_1_dds_compiler_0_1_stub.v
+// Command     : write_verilog -force -mode synth_stub -rename_top design_1_dds_compiler_0_1 -prefix
+//               design_1_dds_compiler_0_1_ design_1_dds_compiler_0_1_stub.v
 // Design      : design_1_dds_compiler_0_1
 // Purpose     : Stub declaration of top-level module interface
 // Device      : xc7z010clg400-1

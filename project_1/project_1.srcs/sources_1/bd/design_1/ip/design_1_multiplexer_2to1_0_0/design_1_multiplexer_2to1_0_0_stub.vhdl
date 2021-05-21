@@ -1,10 +1,10 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Wed Aug 12 10:49:59 2020
+-- Date        : Sun Mar 28 12:18:01 2021
 -- Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_0/design_1_multiplexer_2to1_0_0_stub.vhdl
+--               D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_multiplexer_2to1_0_0/design_1_multiplexer_2to1_0_0_stub.vhdl
 -- Design      : design_1_multiplexer_2to1_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z010clg400-1

@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Tue Aug 11 14:14:31 2020
-# Process ID: 144
+# Start of session at: Mon Mar 29 11:30:43 2021
+# Process ID: 20656
 # Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_Acquisition_top_0_0_synth_1
 # Command line: vivado.exe -log design_1_Acquisition_top_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_Acquisition_top_0_0.tcl
 # Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_Acquisition_top_0_0_synth_1/design_1_Acquisition_top_0_0.vds
@@ -30,22 +30,22 @@ Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 2748 
+INFO: Helper process launched with PID 11384 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 712.496 ; gain = 177.480
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:06 . Memory (MB): peak = 714.211 ; gain = 177.656
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_1_Acquisition_top_0_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_Acquisition_top_0_0/synth/design_1_Acquisition_top_0_0.vhd:81]
-INFO: [Synth 8-3491] module 'Acquisition_top' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:34' bound to instance 'U0' of component 'Acquisition_top' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_Acquisition_top_0_0/synth/design_1_Acquisition_top_0_0.vhd:137]
+INFO: [Synth 8-638] synthesizing module 'design_1_Acquisition_top_0_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_Acquisition_top_0_0/synth/design_1_Acquisition_top_0_0.vhd:82]
+INFO: [Synth 8-3491] module 'Acquisition_top' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:34' bound to instance 'U0' of component 'Acquisition_top' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_Acquisition_top_0_0/synth/design_1_Acquisition_top_0_0.vhd:139]
 INFO: [Synth 8-638] synthesizing module 'Acquisition_top' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:68]
 	Parameter bytes_per_tx bound to: 23'b00000000000001000000000 
-	Parameter FIFO_THRESHOLD bound to: 100 - type: integer 
-INFO: [Synth 8-3491] module 'Acquisition_FSM_2' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_FSM_2.vhd:34' bound to instance 'ADC_FSM' of component 'Acquisition_FSM_2' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:131]
-INFO: [Synth 8-638] synthesizing module 'Acquisition_FSM_2' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_FSM_2.vhd:59]
+	Parameter FIFO_THRESHOLD bound to: 64 - type: integer 
+INFO: [Synth 8-3491] module 'Acquisition_FSM_2' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_FSM_2.vhd:34' bound to instance 'ADC_FSM' of component 'Acquisition_FSM_2' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:132]
+INFO: [Synth 8-638] synthesizing module 'Acquisition_FSM_2' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_FSM_2.vhd:61]
 	Parameter BYTES_PER_TX bound to: 23'b00000000000001000000000 
-	Parameter FIFO_THRESHOLD bound to: 100 - type: integer 
-INFO: [Synth 8-226] default block is never used [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_FSM_2.vhd:105]
-INFO: [Synth 8-256] done synthesizing module 'Acquisition_FSM_2' (1#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_FSM_2.vhd:59]
-INFO: [Synth 8-3491] module 'axis_dwidth_converter_16to64' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_16to64/synth/axis_dwidth_converter_16to64.v:57' bound to instance 'ADC1_converter' of component 'axis_dwidth_converter_16to64' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:160]
+	Parameter FIFO_THRESHOLD bound to: 64 - type: integer 
+INFO: [Synth 8-226] default block is never used [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_FSM_2.vhd:111]
+INFO: [Synth 8-256] done synthesizing module 'Acquisition_FSM_2' (1#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_FSM_2.vhd:61]
+INFO: [Synth 8-3491] module 'axis_dwidth_converter_16to64' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_16to64/synth/axis_dwidth_converter_16to64.v:57' bound to instance 'ADC1_converter' of component 'axis_dwidth_converter_16to64' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:162]
 INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_16to64' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_16to64/synth/axis_dwidth_converter_16to64.v:57]
 INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_v1_1_18_axis_dwidth_converter' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_32to64/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:810]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -353,8 +353,8 @@ INFO: [Synth 8-6155] done synthesizing module 'axis_infrastructure_v1_1_0_util_v
 INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_19_axis_register_slice__parameterized0' (6#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_32to64/hdl/axis_register_slice_v1_1_vl_rfs.v:2594]
 INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_v1_1_18_axis_dwidth_converter' (7#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_32to64/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:810]
 INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_16to64' (8#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_16to64/synth/axis_dwidth_converter_16to64.v:57]
-INFO: [Synth 8-3491] module 'axis_dwidth_converter_16to64' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_16to64/synth/axis_dwidth_converter_16to64.v:57' bound to instance 'ADC2_converter' of component 'axis_dwidth_converter_16to64' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:172]
-INFO: [Synth 8-3491] module 'axis_dwidth_converter_32to64' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_32to64/synth/axis_dwidth_converter_32to64.v:57' bound to instance 'ADC1_2_converter' of component 'axis_dwidth_converter_32to64' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:184]
+INFO: [Synth 8-3491] module 'axis_dwidth_converter_16to64' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_16to64/synth/axis_dwidth_converter_16to64.v:57' bound to instance 'ADC2_converter' of component 'axis_dwidth_converter_16to64' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:174]
+INFO: [Synth 8-3491] module 'axis_dwidth_converter_32to64' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_32to64/synth/axis_dwidth_converter_32to64.v:57' bound to instance 'ADC1_2_converter' of component 'axis_dwidth_converter_32to64' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:186]
 INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_32to64' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_32to64/synth/axis_dwidth_converter_32to64.v:57]
 INFO: [Synth 8-6157] synthesizing module 'axis_dwidth_converter_v1_1_18_axis_dwidth_converter__parameterized0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_32to64/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:810]
 	Parameter C_FAMILY bound to: zynq - type: string 
@@ -552,7 +552,7 @@ INFO: [Synth 8-6155] done synthesizing module 'axis_register_slice_v1_1_19_axis_
 INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_v1_1_18_axis_dwidth_converter__parameterized0' (8#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_32to64/hdl/axis_dwidth_converter_v1_1_vl_rfs.v:810]
 INFO: [Synth 8-6155] done synthesizing module 'axis_dwidth_converter_32to64' (9#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/axis_dwidth_converter_32to64/synth/axis_dwidth_converter_32to64.v:57]
 INFO: [Synth 8-256] done synthesizing module 'Acquisition_top' (10#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd:68]
-INFO: [Synth 8-256] done synthesizing module 'design_1_Acquisition_top_0_0' (11#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_Acquisition_top_0_0/synth/design_1_Acquisition_top_0_0.vhd:81]
+INFO: [Synth 8-256] done synthesizing module 'design_1_Acquisition_top_0_0' (11#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_Acquisition_top_0_0/synth/design_1_Acquisition_top_0_0.vhd:82]
 WARNING: [Synth 8-3331] design axis_register_slice_v1_1_19_axisc_register_slice__parameterized0 has unconnected port ACLK
 WARNING: [Synth 8-3331] design axis_register_slice_v1_1_19_axisc_register_slice__parameterized0 has unconnected port ACLK2X
 WARNING: [Synth 8-3331] design axis_register_slice_v1_1_19_axisc_register_slice__parameterized0 has unconnected port ARESET
@@ -627,7 +627,7 @@ WARNING: [Synth 8-3331] design axis_dwidth_converter_v1_1_18_axis_dwidth_convert
 WARNING: [Synth 8-3331] design Acquisition_top has unconnected port m_axis_tready
 WARNING: [Synth 8-3331] design Acquisition_top has unconnected port m_axis_s2mm_cmd_tready
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 783.895 ; gain = 248.879
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 785.379 ; gain = 248.824
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -640,10 +640,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 783.895 ; gain = 248.879
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 785.379 ; gain = 248.824
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:09 . Memory (MB): peak = 783.895 ; gain = 248.879
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:08 . Memory (MB): peak = 785.379 ; gain = 248.824
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -655,20 +655,20 @@ Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya
 Finished Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_Acquisition_top_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 900.313 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 900.113 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.243 . Memory (MB): peak = 913.117 ; gain = 12.805
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.243 . Memory (MB): peak = 912.348 ; gain = 12.234
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Constraint Validation : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -678,7 +678,7 @@ Applied set_property DONT_TOUCH = true for U0/ADC1_2_converter. (constraint file
 Applied set_property DONT_TOUCH = true for U0/ADC1_converter. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for U0/ADC2_converter. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 's2mm_fsm_state_reg' in module 'Acquisition_FSM_2'
 INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through user attribute
@@ -697,7 +697,7 @@ INFO: [Synth 8-4490] FSM extraction disabled for register 'state_reg' through us
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3354] encoded FSM with state register 's2mm_fsm_state_reg' using encoding 'one-hot' in module 'Acquisition_FSM_2'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -718,7 +718,7 @@ Detailed RTL Component Info :
 	                4 Bit    Registers := 12    
 	                3 Bit    Registers := 3     
 	                2 Bit    Registers := 31    
-	                1 Bit    Registers := 33    
+	                1 Bit    Registers := 34    
 +---Muxes : 
 	   4 Input     64 Bit        Muxes := 1     
 	   8 Input     32 Bit        Muxes := 2     
@@ -729,7 +729,7 @@ Detailed RTL Component Info :
 	   2 Input      3 Bit        Muxes := 13    
 	   3 Input      3 Bit        Muxes := 6     
 	   2 Input      2 Bit        Muxes := 9     
-	   8 Input      1 Bit        Muxes := 4     
+	   8 Input      1 Bit        Muxes := 5     
 	   3 Input      1 Bit        Muxes := 2     
 	   2 Input      1 Bit        Muxes := 3     
 	   4 Input      1 Bit        Muxes := 1     
@@ -748,13 +748,13 @@ Detailed RTL Component Info :
 +---Registers : 
 	               32 Bit    Registers := 2     
 	                4 Bit    Registers := 1     
-	                1 Bit    Registers := 6     
+	                1 Bit    Registers := 7     
 +---Muxes : 
 	   8 Input     32 Bit        Muxes := 2     
 	   8 Input      8 Bit        Muxes := 1     
 	   2 Input      8 Bit        Muxes := 6     
 	   8 Input      4 Bit        Muxes := 1     
-	   8 Input      1 Bit        Muxes := 4     
+	   8 Input      1 Bit        Muxes := 5     
 Module axis_dwidth_converter_v1_1_18_axisc_upsizer 
 Detailed RTL Component Info : 
 +---Registers : 
@@ -832,7 +832,7 @@ WARNING: [Synth 8-3331] design Acquisition_top has unconnected port m_axis_s2mm_
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (axis_dwidth_converter_16to64:/\inst/gen_upsizer_conversion.axisc_upsizer_0/r0_last_reg )
 INFO: [Synth 8-3333] propagating constant 0 across sequential element (U0/ADC1_2_converter/\inst/gen_upsizer_conversion.axisc_upsizer_0/r0_last_reg )
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:22 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:16 ; elapsed = 00:00:22 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -844,13 +844,13 @@ Report RTL Partitions:
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -862,7 +862,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:27 ; elapsed = 00:00:33 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Technology Mapping : Time (s): cpu = 00:00:25 ; elapsed = 00:00:32 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -886,7 +886,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished IO Insertion : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -899,7 +899,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -911,25 +911,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -947,12 +947,12 @@ Report Cell Usage:
 +------+-------+------+
 |1     |CARRY4 |    27|
 |2     |LUT1   |    30|
-|3     |LUT2   |    79|
-|4     |LUT3   |    15|
-|5     |LUT4   |    39|
-|6     |LUT5   |    78|
+|3     |LUT2   |    80|
+|4     |LUT3   |    11|
+|5     |LUT4   |    40|
+|6     |LUT5   |    77|
 |7     |LUT6   |    23|
-|8     |FDCE   |    65|
+|8     |FDCE   |    66|
 |9     |FDPE   |     1|
 |10    |FDRE   |   278|
 +------+-------+------+
@@ -961,8 +961,8 @@ Report Instance Areas:
 +------+-------------------------------------------------+--------------------------------------------------------------------+------+
 |      |Instance                                         |Module                                                              |Cells |
 +------+-------------------------------------------------+--------------------------------------------------------------------+------+
-|1     |top                                              |                                                                    |   635|
-|2     |  U0                                             |Acquisition_top                                                     |   635|
+|1     |top                                              |                                                                    |   633|
+|2     |  U0                                             |Acquisition_top                                                     |   633|
 |3     |    ADC1_converter                               |axis_dwidth_converter_16to64__1                                     |   104|
 |4     |      inst                                       |axis_dwidth_converter_v1_1_18_axis_dwidth_converter_0               |   104|
 |5     |        \gen_upsizer_conversion.axisc_upsizer_0  |axis_dwidth_converter_v1_1_18_axisc_upsizer_1                       |   102|
@@ -972,36 +972,36 @@ Report Instance Areas:
 |9     |    ADC1_2_converter                             |axis_dwidth_converter_32to64                                        |   114|
 |10    |      inst                                       |axis_dwidth_converter_v1_1_18_axis_dwidth_converter__parameterized0 |   114|
 |11    |        \gen_upsizer_conversion.axisc_upsizer_0  |axis_dwidth_converter_v1_1_18_axisc_upsizer__parameterized0         |   112|
-|12    |    ADC_FSM                                      |Acquisition_FSM_2                                                   |   248|
+|12    |    ADC_FSM                                      |Acquisition_FSM_2                                                   |   246|
 +------+-------------------------------------------------+--------------------------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 913.117 ; gain = 378.102
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 912.348 ; gain = 375.793
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 2 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:21 ; elapsed = 00:00:31 . Memory (MB): peak = 913.117 ; gain = 248.879
-Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:00:36 . Memory (MB): peak = 913.117 ; gain = 378.102
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:29 . Memory (MB): peak = 912.348 ; gain = 248.824
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:35 . Memory (MB): peak = 912.348 ; gain = 375.793
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Netlist 29-17] Analyzing 27 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 923.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 922.188 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 73 Infos, 81 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:01:08 . Memory (MB): peak = 923.793 ; gain = 627.492
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 923.793 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:01:08 . Memory (MB): peak = 922.188 ; gain = 625.375
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 922.188 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_Acquisition_top_0_0_synth_1/design_1_Acquisition_top_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
 INFO: [Coretcl 2-1174] Renamed 11 cell refs.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 923.793 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 922.188 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/design_1_Acquisition_top_0_0_synth_1/design_1_Acquisition_top_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_Acquisition_top_0_0_utilization_synth.rpt -pb design_1_Acquisition_top_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Tue Aug 11 14:15:45 2020...
+INFO: [Common 17-206] Exiting Vivado at Mon Mar 29 11:31:57 2021...

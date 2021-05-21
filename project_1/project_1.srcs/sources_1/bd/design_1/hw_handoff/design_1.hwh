@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Aug 12 11:06:59 2020" VIVADOVERSION="2019.1">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Mon Mar 29 11:30:16 2021" VIVADOVERSION="2019.1">
 
   <SYSTEMINFO ARCH="zynq" DEVICE="7z010" NAME="design_1" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -54,84 +54,9 @@
         <CONNECTION INSTANCE="DACs_wrapper_0" PORT="dac_rst_o"/>
       </CONNECTIONS>
     </PORT>
-    <PORT DIR="I" NAME="Vaux8_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn8">
+    <PORT DIR="O" NAME="IO7" SIGIS="undef" SIGNAME="DMA_Acquisition_top_0_acquisition_in_progress_out">
       <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn8"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Vaux8_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp8">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp8"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Vaux1_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Vaux1_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp1">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp1"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Vaux0_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Vaux0_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp0">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp0"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Vaux9_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn9">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn9"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Vaux9_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp9">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp9"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Vp_Vn_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vn_in">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vn_in"/>
-      </CONNECTIONS>
-    </PORT>
-    <PORT DIR="I" NAME="Vp_Vn_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vp_in">
-      <CONNECTIONS>
-        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vp_in"/>
+        <CONNECTION INSTANCE="DMA_Acquisition_top_0" PORT="acquisition_in_progress_out"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="IO" NAME="DDR_cas_n" SIGIS="undef" SIGNAME="processing_system7_0_DDR_CAS_n">
@@ -207,6 +132,86 @@
     <PORT DIR="IO" LEFT="3" NAME="DDR_dqs_p" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_DDR_DQS">
       <CONNECTIONS>
         <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_DQS"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vaux9_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn9">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn9"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vaux9_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp9">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp9"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" LEFT="53" NAME="FIXED_IO_mio" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_MIO">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="MIO"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrn" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRN">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRN"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ddr_vrp" SIGIS="undef" SIGNAME="processing_system7_0_DDR_VRP">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="DDR_VRP"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_srstb" SIGIS="undef" SIGNAME="processing_system7_0_PS_SRSTB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_SRSTB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_clk" SIGIS="undef" SIGNAME="processing_system7_0_PS_CLK">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_CLK"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="IO" NAME="FIXED_IO_ps_porb" SIGIS="undef" SIGNAME="processing_system7_0_PS_PORB">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="processing_system7_0" PORT="PS_PORB"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vaux1_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vaux1_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp1">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp1"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vaux8_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn8">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn8"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vaux8_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp8">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp8"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vaux0_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxn0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxn0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vaux0_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vauxp0">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vauxp0"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vp_Vn_0_v_n" SIGIS="undef" SIGNAME="xadc_wiz_0_vn_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vn_in"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="Vp_Vn_0_v_p" SIGIS="undef" SIGNAME="xadc_wiz_0_vp_in">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="xadc_wiz_0" PORT="vp_in"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -449,6 +454,11 @@
         <PORT DIR="I" LEFT="31" NAME="start_address" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_2_gpio_io_o">
           <CONNECTIONS>
             <CONNECTION INSTANCE="DMA_axi_gpio_2" PORT="gpio_io_o"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="acquisition_in_progress_out" SIGIS="undef" SIGNAME="DMA_Acquisition_top_0_acquisition_in_progress_out">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="External_Ports" PORT="IO7"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="reset_ACQ" SIGIS="rst" SIGNAME="DMA_Acquisition_top_0_reset_ACQ">
@@ -4925,11 +4935,11 @@
             <CONNECTION INSTANCE="DMA_axis_data_fifo_0" PORT="s_axis_aclk"/>
             <CONNECTION INSTANCE="DMA_axi_gpio_2" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="DMA_axi_datamover_0" PORT="m_axis_s2mm_cmdsts_awclk"/>
-            <CONNECTION INSTANCE="DMA_Acquisition_top_0" PORT="clk"/>
             <CONNECTION INSTANCE="DMA_c_counter_binary_0" PORT="CLK"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_aclk"/>
             <CONNECTION INSTANCE="DMA_multiplexer_2to1_0" PORT="clk"/>
             <CONNECTION INSTANCE="DMA_multiplexer_2to1_1" PORT="clk"/>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_aclk"/>
+            <CONNECTION INSTANCE="DMA_Acquisition_top_0" PORT="clk"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ACLK"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M07_ACLK"/>
           </CONNECTIONS>
@@ -7415,91 +7425,91 @@
             <CONNECTION INSTANCE="rst_ps7_0_50M" PORT="peripheral_aresetn"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M07_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_awaddr">
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_awaddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_awaddr"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_awaddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_awvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_awvalid">
+        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_awvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_awvalid"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_awvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_awready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_awready">
+        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_awready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_awready"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_awready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M07_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_wdata">
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_wdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_wdata"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_wdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M07_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_wstrb">
+        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_wstrb">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_wstrb"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_wstrb"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_wvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_wvalid">
+        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_wvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_wvalid"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_wvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_wready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_wready">
+        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_wready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_wready"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_wready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M07_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_bresp">
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_bresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_bresp"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_bresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_bvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_bvalid">
+        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_bvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_bvalid"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_bvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_bready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_bready">
+        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_bready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_bready"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_bready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M07_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_araddr">
+        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_araddr">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_araddr"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_araddr"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M07_AXI_arvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_arvalid">
+        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_arvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_arvalid"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_arvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_arready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_arready">
+        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_arready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_arready"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_arready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M07_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_rdata">
+        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_rdata">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_rdata"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_rdata"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M07_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_rresp">
+        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_rresp">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_rresp"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_rresp"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="I" NAME="M07_AXI_rvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_rvalid">
+        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_rvalid">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_rvalid"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_rvalid"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" NAME="M07_AXI_rready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_rready">
+        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_rready">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_rready"/>
+            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" LEFT="31" NAME="M02_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="ps7_0_axi_periph_M02_AXI_awaddr">
@@ -7674,6 +7684,180 @@
         <PORT DIR="O" NAME="M03_AXI_rready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_3_s_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="SinWave_Output_axi_gpio_3" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="I" LEFT="11" NAME="S00_AXI_awid" RIGHT="0" SIGIS="undef" SIGNAME="processing_system7_0_M_AXI_GP1_AWID">
@@ -7866,93 +8050,6 @@
             <CONNECTION INSTANCE="processing_system7_0" PORT="M_AXI_GP1_RREADY"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_awvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_awready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M01_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_wvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_wready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_bvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_bready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M01_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M01_AXI_arvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_arready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M01_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M01_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M01_AXI_rvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M01_AXI_rready" SIGIS="undef" SIGNAME="DMA_axi_gpio_1_s_axi_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M00_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_0_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="DMA_axi_gpio_0" PORT="s_axi_awaddr"/>
@@ -8040,180 +8137,6 @@
             <CONNECTION INSTANCE="DMA_axi_gpio_0" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_awvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_awready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M04_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_wvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_wready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_bvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_bready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M04_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M04_AXI_arvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_arready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M04_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M04_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M04_AXI_rvalid" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M04_AXI_rready" SIGIS="undef" SIGNAME="SinWave_Output_axi_gpio_4_s_axi_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="SinWave_Output_axi_gpio_4" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_awaddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_awaddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_awprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_awvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_awvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_awvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_awready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_awready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_awready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_wdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_wdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="3" NAME="M05_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_wstrb">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_wstrb"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_wvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_wvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_wvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_wready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_wready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_wready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_bresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_bresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_bvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_bvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_bvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_bready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_bready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_bready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" LEFT="31" NAME="M05_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_araddr">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_araddr"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_arprot" SIGIS="undef"/>
-        <PORT DIR="O" NAME="M05_AXI_arvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_arvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_arvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_arready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_arready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_arready"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="31" NAME="M05_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_rdata">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_rdata"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" LEFT="1" NAME="M05_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_rresp">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_rresp"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="I" NAME="M05_AXI_rvalid" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_rvalid">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_rvalid"/>
-          </CONNECTIONS>
-        </PORT>
-        <PORT DIR="O" NAME="M05_AXI_rready" SIGIS="undef" SIGNAME="firmware_version_axi_gpio_firmwareVersion_s_axi_rready">
-          <CONNECTIONS>
-            <CONNECTION INSTANCE="firmware_version_axi_gpio_firmwareVersion" PORT="s_axi_rready"/>
-          </CONNECTIONS>
-        </PORT>
         <PORT DIR="O" LEFT="31" NAME="M06_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_2_s_axi_awaddr">
           <CONNECTIONS>
             <CONNECTION INSTANCE="DMA_axi_gpio_2" PORT="s_axi_awaddr"/>
@@ -8299,6 +8222,93 @@
         <PORT DIR="O" NAME="M06_AXI_rready" SIGIS="undef" SIGNAME="DMA_axi_gpio_2_s_axi_rready">
           <CONNECTIONS>
             <CONNECTION INSTANCE="DMA_axi_gpio_2" PORT="s_axi_rready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M07_AXI_awaddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_awaddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_awaddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M07_AXI_awprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_awvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_awvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_awvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_awready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_awready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_awready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M07_AXI_wdata" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_wdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_wdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="3" NAME="M07_AXI_wstrb" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_wstrb">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_wstrb"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M07_AXI_wvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_wvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_wvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_wready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_wready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_wready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M07_AXI_bresp" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_bresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_bresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_bvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_bvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_bvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M07_AXI_bready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_bready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_bready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" LEFT="31" NAME="M07_AXI_araddr" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_araddr">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_araddr"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M07_AXI_arprot" SIGIS="undef"/>
+        <PORT DIR="O" NAME="M07_AXI_arvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_arvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_arvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_arready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_arready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_arready"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="31" NAME="M07_AXI_rdata" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_rdata">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_rdata"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" LEFT="1" NAME="M07_AXI_rresp" RIGHT="0" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_rresp">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_rresp"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="I" NAME="M07_AXI_rvalid" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_rvalid">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_rvalid"/>
+          </CONNECTIONS>
+        </PORT>
+        <PORT DIR="O" NAME="M07_AXI_rready" SIGIS="undef" SIGNAME="DMA_axi_gpio_3_s_axi_rready">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_rready"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>
@@ -8639,10 +8649,10 @@
             <CONNECTION INSTANCE="DMA_axi_gpio_0" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="DMA_axi_gpio_1" PORT="s_axi_aresetn"/>
             <CONNECTION INSTANCE="DMA_axi_gpio_2" PORT="s_axi_aresetn"/>
-            <CONNECTION INSTANCE="DMA_Acquisition_top_0" PORT="resetn"/>
-            <CONNECTION INSTANCE="DMA_multiplexer_2to1_1" PORT="resetn"/>
-            <CONNECTION INSTANCE="DMA_multiplexer_2to1_0" PORT="resetn"/>
             <CONNECTION INSTANCE="DMA_axi_gpio_3" PORT="s_axi_aresetn"/>
+            <CONNECTION INSTANCE="DMA_multiplexer_2to1_0" PORT="resetn"/>
+            <CONNECTION INSTANCE="DMA_multiplexer_2to1_1" PORT="resetn"/>
+            <CONNECTION INSTANCE="DMA_Acquisition_top_0" PORT="resetn"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M06_ARESETN"/>
             <CONNECTION INSTANCE="ps7_0_axi_periph" PORT="M07_ARESETN"/>
           </CONNECTIONS>

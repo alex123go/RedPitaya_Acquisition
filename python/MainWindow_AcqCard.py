@@ -87,7 +87,7 @@ class controller(object):
 		devices_data = {} # Possibilité de mettre un dictionnaire avec mac address et nom du Red Pitaya (qui peut aussi faire le lien avec un fichier de config et une couleur de background du gui)
 
 		strBroadcastAddress = self.findMostLikelyLANBroadcastIPAddress()
-							
+		#strBroadcastAddress = "192.168.0.255"
 		strFPGAFirmware=r'AcqCard.bit'
 		strCPUFirmware=u'../ZynqFolder/monitor-tcp/monitor-tcp'
 		self.initial_config = initialConfiguration(self.dev, devices_data=devices_data, strBroadcastAddress=strBroadcastAddress, strFPGAFirmware=strFPGAFirmware, strCPUFirmware=strCPUFirmware)

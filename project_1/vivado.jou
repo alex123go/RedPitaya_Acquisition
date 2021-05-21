@@ -2,14 +2,25 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Fri Aug  7 14:30:42 2020
-# Process ID: 28332
+# Start of session at: Tue May 11 14:09:23 2021
+# Process ID: 13756
 # Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent7924 D:\Users\Alex\Documents\GitHub\RedPitaya_Acquisition\RedPitaya_Acquisition\project_1\project_1.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent508 D:\Users\Alex\Documents\GitHub\RedPitaya_Acquisition\RedPitaya_Acquisition\project_1\project_1.xpr
 # Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/vivado.log
 # Journal file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1\vivado.jou
 #-----------------------------------------------------------
 start_gui
 open_project D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.xpr
 update_compile_order -fileset sources_1
-update_module_reference design_1_Acquisition_top_0_0
+open_bd_design {D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd}
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:gig_ethernet_pcs_pma:16.1 gig_ethernet_pcs_pma_0
+endgroup
+delete_bd_objs [get_bd_cells gig_ethernet_pcs_pma_0]
+undo
+delete_bd_objs [get_bd_cells gig_ethernet_pcs_pma_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:tcc_encoder_3gpplte:4.0 tcc_encoder_3gpplte_0
+endgroup
+delete_bd_objs [get_bd_cells tcc_encoder_3gpplte_0]
+save_bd_design
