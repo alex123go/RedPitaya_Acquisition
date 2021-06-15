@@ -2,8 +2,8 @@
 # Vivado v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Mon Jun 14 18:55:16 2021
-# Process ID: 27692
+# Start of session at: Tue Jun 15 11:14:59 2021
+# Process ID: 25360
 # Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1
 # Command line: vivado.exe -log design_1_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_1_wrapper.tcl
 # Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/design_1_wrapper.vds
@@ -23,66 +23,70 @@ INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Synology/SynologyDrive/Red
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programs/Vivado/2019.1/data/ip'.
 WARNING: [IP_Flow 19-4995] The host OS only allows 260 characters in a normal path. The IP cache path is more than 80 characters. If you experience issues with IP caching, please consider changing the IP cache to a location with a shorter path. Alternately consider using the OS subst command to map part of the path to a drive letter. 
 Current IP cache path is d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.cache/ip 
-add_files: Time (s): cpu = 00:00:05 ; elapsed = 00:00:17 . Memory (MB): peak = 302.926 ; gain = 7.805
+add_files: Time (s): cpu = 00:00:10 ; elapsed = 00:00:22 . Memory (MB): peak = 302.746 ; gain = 7.668
 Command: synth_design -top design_1_wrapper -part xc7z010clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z010'
 INFO: [Device 21-403] Loading part xc7z010clg400-1
 INFO: Launching helper process for spawning children vivado processes
-INFO: Helper process launched with PID 23812 
+INFO: Helper process launched with PID 25368 
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 750.324 ; gain = 177.859
+Starting RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 750.473 ; gain = 176.551
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-638] synthesizing module 'design_1_wrapper' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:63]
-INFO: [Synth 8-3491] module 'design_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:4145' bound to instance 'design_1_i' of component 'design_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:113]
-INFO: [Synth 8-638] synthesizing module 'design_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:4198]
-INFO: [Synth 8-3491] module 'design_1_ADCs_wrapper_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_ADCs_wrapper_0_0_stub.vhdl:5' bound to instance 'ADCs_wrapper_0' of component 'design_1_ADCs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:4848]
-INFO: [Synth 8-638] synthesizing module 'design_1_ADCs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_ADCs_wrapper_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_DACs_wrapper_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_DACs_wrapper_0_0_stub.vhdl:5' bound to instance 'DACs_wrapper_0' of component 'design_1_DACs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:4857]
-INFO: [Synth 8-638] synthesizing module 'design_1_DACs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_DACs_wrapper_0_0_stub.vhdl:23]
-INFO: [Synth 8-638] synthesizing module 'DMA_imp_1JYPGAM' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:134]
-INFO: [Synth 8-3491] module 'design_1_Acquisition_top_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_Acquisition_top_0_0_stub.vhdl:5' bound to instance 'Acquisition_top_0' of component 'design_1_Acquisition_top_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:730]
-INFO: [Synth 8-638] synthesizing module 'design_1_Acquisition_top_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_Acquisition_top_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_acquisition_start_ex_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_acquisition_start_ex_0_0_stub.vhdl:5' bound to instance 'acquisition_start_ex_0' of component 'design_1_acquisition_start_ex_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:754]
-INFO: [Synth 8-638] synthesizing module 'design_1_acquisition_start_ex_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_acquisition_start_ex_0_0_stub.vhdl:37]
-INFO: [Synth 8-3491] module 'design_1_axi_datamover_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_datamover_0_1_stub.vhdl:5' bound to instance 'axi_datamover_0' of component 'design_1_axi_datamover_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:783]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_datamover_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_datamover_0_1_stub.vhdl:46]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:821]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_1_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:845]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_1_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_2_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_1_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_2_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:868]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_2_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_1_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_3_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_1_stub.vhdl:5' bound to instance 'axi_gpio_3' of component 'design_1_axi_gpio_3_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:891]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_3_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_1_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_axi_smc_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_1_axi_smc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:915]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_smc_0_stub.vhdl:51]
-INFO: [Synth 8-3491] module 'design_1_axis_data_fifo_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:5' bound to instance 'axis_data_fifo_0' of component 'design_1_axis_data_fifo_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:958]
-INFO: [Synth 8-638] synthesizing module 'design_1_axis_data_fifo_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:23]
-INFO: [Synth 8-3491] module 'design_1_c_counter_binary_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_0_stub.vhdl:5' bound to instance 'c_counter_binary_0' of component 'design_1_c_counter_binary_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:973]
-INFO: [Synth 8-638] synthesizing module 'design_1_c_counter_binary_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'design_1_multiplexer_2to1_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_multiplexer_2to1_0_0_stub.vhdl:5' bound to instance 'multiplexer_2to1_0' of component 'design_1_multiplexer_2to1_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:978]
-INFO: [Synth 8-638] synthesizing module 'design_1_multiplexer_2to1_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_multiplexer_2to1_0_0_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_multiplexer_2to1_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_multiplexer_2to1_0_1_stub.vhdl:5' bound to instance 'multiplexer_2to1_1' of component 'design_1_multiplexer_2to1_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:987]
-INFO: [Synth 8-638] synthesizing module 'design_1_multiplexer_2to1_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_multiplexer_2to1_0_1_stub.vhdl:17]
-INFO: [Synth 8-3491] module 'design_1_util_vector_logic_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_util_vector_logic_0_0_stub.vhdl:5' bound to instance 'util_vector_logic_0' of component 'design_1_util_vector_logic_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:996]
-INFO: [Synth 8-638] synthesizing module 'design_1_util_vector_logic_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_util_vector_logic_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_1_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1002]
+INFO: [Synth 8-3491] module 'design_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:4487' bound to instance 'design_1_i' of component 'design_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:113]
+INFO: [Synth 8-638] synthesizing module 'design_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:4540]
+INFO: [Synth 8-3491] module 'design_1_ADCs_wrapper_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_ADCs_wrapper_0_0_stub.vhdl:5' bound to instance 'ADCs_wrapper_0' of component 'design_1_ADCs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5207]
+INFO: [Synth 8-638] synthesizing module 'design_1_ADCs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_ADCs_wrapper_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_DACs_wrapper_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_DACs_wrapper_0_0_stub.vhdl:5' bound to instance 'DACs_wrapper_0' of component 'design_1_DACs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5216]
+INFO: [Synth 8-638] synthesizing module 'design_1_DACs_wrapper_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_DACs_wrapper_0_0_stub.vhdl:23]
+INFO: [Synth 8-638] synthesizing module 'DMA_imp_1JYPGAM' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:151]
+INFO: [Synth 8-3491] module 'design_1_Acquisition_top_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_Acquisition_top_0_0_stub.vhdl:5' bound to instance 'Acquisition_top_0' of component 'design_1_Acquisition_top_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:812]
+INFO: [Synth 8-638] synthesizing module 'design_1_Acquisition_top_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_Acquisition_top_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_1_acquisition_start_ex_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_acquisition_start_ex_0_0_stub.vhdl:5' bound to instance 'acquisition_start_ex_0' of component 'design_1_acquisition_start_ex_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:837]
+INFO: [Synth 8-638] synthesizing module 'design_1_acquisition_start_ex_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_acquisition_start_ex_0_0_stub.vhdl:37]
+INFO: [Synth 8-3491] module 'design_1_axi_datamover_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_datamover_0_1_stub.vhdl:5' bound to instance 'axi_datamover_0' of component 'design_1_axi_datamover_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:866]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_datamover_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_datamover_0_1_stub.vhdl:46]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_0_0_stub.vhdl:5' bound to instance 'axi_gpio_0' of component 'design_1_axi_gpio_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:904]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_1_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_1_0_stub.vhdl:5' bound to instance 'axi_gpio_1' of component 'design_1_axi_gpio_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:928]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_1_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_2_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_1_stub.vhdl:5' bound to instance 'axi_gpio_2' of component 'design_1_axi_gpio_2_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:951]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_2_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_3_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_1_stub.vhdl:5' bound to instance 'axi_gpio_3' of component 'design_1_axi_gpio_3_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:974]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_3_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_1_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_4_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_4_1_stub.vhdl:5' bound to instance 'axi_gpio_4' of component 'design_1_axi_gpio_4_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:998]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_4_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_4_1_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_axi_smc_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_smc_0_stub.vhdl:5' bound to instance 'axi_smc' of component 'design_1_axi_smc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1021]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_smc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_smc_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_1_axis_data_fifo_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:5' bound to instance 'axis_data_fifo_0' of component 'design_1_axis_data_fifo_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1064]
+INFO: [Synth 8-638] synthesizing module 'design_1_axis_data_fifo_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axis_data_fifo_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'design_1_c_counter_binary_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_0_stub.vhdl:5' bound to instance 'c_counter_binary_0' of component 'design_1_c_counter_binary_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1079]
+INFO: [Synth 8-638] synthesizing module 'design_1_c_counter_binary_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_downsample_inData_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_downsample_inData_0_0_stub.vhdl:5' bound to instance 'downsample_inData_0' of component 'design_1_downsample_inData_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1084]
+INFO: [Synth 8-638] synthesizing module 'design_1_downsample_inData_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_downsample_inData_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_1_multiplexer_2to1_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_multiplexer_2to1_0_0_stub.vhdl:5' bound to instance 'multiplexer_2to1_0' of component 'design_1_multiplexer_2to1_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1091]
+INFO: [Synth 8-638] synthesizing module 'design_1_multiplexer_2to1_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_multiplexer_2to1_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_multiplexer_2to1_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_multiplexer_2to1_0_1_stub.vhdl:5' bound to instance 'multiplexer_2to1_1' of component 'design_1_multiplexer_2to1_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1100]
+INFO: [Synth 8-638] synthesizing module 'design_1_multiplexer_2to1_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_multiplexer_2to1_0_1_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_1_util_vector_logic_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_util_vector_logic_0_0_stub.vhdl:5' bound to instance 'util_vector_logic_0' of component 'design_1_util_vector_logic_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1109]
+INFO: [Synth 8-638] synthesizing module 'design_1_util_vector_logic_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_util_vector_logic_0_0_stub.vhdl:14]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_1_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57' bound to instance 'xlconstant_1' of component 'design_1_xlconstant_1_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1115]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_1_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 255 - type: integer 
 	Parameter CONST_WIDTH bound to: 8 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant' (1#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_1_0' (2#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_1_0/synth/design_1_xlconstant_1_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_2_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57' bound to instance 'xlconstant_2' of component 'design_1_xlconstant_2_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1006]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_2_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57' bound to instance 'xlconstant_2' of component 'design_1_xlconstant_2_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1119]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_2_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 0 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized0' (2#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_2_0' (3#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_2_0/synth/design_1_xlconstant_2_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'xlslice_0' of component 'design_1_xlslice_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1010]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57' bound to instance 'xlslice_0' of component 'design_1_xlslice_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1123]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
@@ -90,7 +94,7 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice' [d:/Users/Alex
 	Parameter DIN_TO bound to: 16 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice' (4#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_0' (5#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_0/synth/design_1_xlslice_0_0.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'xlslice_1' of component 'design_1_xlslice_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1015]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_1' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57' bound to instance 'xlslice_1' of component 'design_1_xlslice_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1128]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_1' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 32 - type: integer 
@@ -98,78 +102,80 @@ INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0
 	Parameter DIN_TO bound to: 0 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized0' (5#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_1' (6#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_1/synth/design_1_xlslice_0_1.v:57]
-INFO: [Synth 8-256] done synthesizing module 'DMA_imp_1JYPGAM' (7#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:134]
-INFO: [Synth 8-638] synthesizing module 'SinWave_Output_imp_H0LIK8' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1070]
-INFO: [Synth 8-3491] module 'design_1_DDS_output_div_by_2_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_DDS_output_div_by_2_0_0_stub.vhdl:5' bound to instance 'DDS_output_div_by_2_0' of component 'design_1_DDS_output_div_by_2_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1244]
-INFO: [Synth 8-638] synthesizing module 'design_1_DDS_output_div_by_2_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_DDS_output_div_by_2_0_0_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'design_1_DDS_output_div_by_2_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_DDS_output_div_by_2_0_1_stub.vhdl:5' bound to instance 'DDS_output_div_by_2_1' of component 'design_1_DDS_output_div_by_2_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1249]
-INFO: [Synth 8-638] synthesizing module 'design_1_DDS_output_div_by_2_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_DDS_output_div_by_2_0_1_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_2_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_0_stub.vhdl:5' bound to instance 'axi_gpio_3' of component 'design_1_axi_gpio_2_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1254]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_2_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_3_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_0_stub.vhdl:5' bound to instance 'axi_gpio_4' of component 'design_1_axi_gpio_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1278]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_1_dds_compiler_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_dds_compiler_0_0_stub.vhdl:5' bound to instance 'dds_compiler_0' of component 'design_1_dds_compiler_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1302]
-INFO: [Synth 8-638] synthesizing module 'design_1_dds_compiler_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_dds_compiler_0_0_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'design_1_dds_compiler_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_dds_compiler_0_1_stub.vhdl:5' bound to instance 'dds_compiler_1' of component 'design_1_dds_compiler_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1310]
-INFO: [Synth 8-638] synthesizing module 'design_1_dds_compiler_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_dds_compiler_0_1_stub.vhdl:16]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1318]
+INFO: [Synth 8-256] done synthesizing module 'DMA_imp_1JYPGAM' (7#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:151]
+INFO: [Synth 8-638] synthesizing module 'SinWave_Output_imp_H0LIK8' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1183]
+INFO: [Synth 8-3491] module 'design_1_DDS_output_div_by_2_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_DDS_output_div_by_2_0_0_stub.vhdl:5' bound to instance 'DDS_output_div_by_2_0' of component 'design_1_DDS_output_div_by_2_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1357]
+INFO: [Synth 8-638] synthesizing module 'design_1_DDS_output_div_by_2_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_DDS_output_div_by_2_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_DDS_output_div_by_2_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_DDS_output_div_by_2_0_1_stub.vhdl:5' bound to instance 'DDS_output_div_by_2_1' of component 'design_1_DDS_output_div_by_2_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1362]
+INFO: [Synth 8-638] synthesizing module 'design_1_DDS_output_div_by_2_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_DDS_output_div_by_2_0_1_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_2_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_0_stub.vhdl:5' bound to instance 'axi_gpio_3' of component 'design_1_axi_gpio_2_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1367]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_2_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_2_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_3_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_0_stub.vhdl:5' bound to instance 'axi_gpio_4' of component 'design_1_axi_gpio_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1391]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_3_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_1_dds_compiler_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_dds_compiler_0_0_stub.vhdl:5' bound to instance 'dds_compiler_0' of component 'design_1_dds_compiler_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1415]
+INFO: [Synth 8-638] synthesizing module 'design_1_dds_compiler_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_dds_compiler_0_0_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_dds_compiler_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_dds_compiler_0_1_stub.vhdl:5' bound to instance 'dds_compiler_1' of component 'design_1_dds_compiler_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1423]
+INFO: [Synth 8-638] synthesizing module 'design_1_dds_compiler_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_dds_compiler_0_1_stub.vhdl:16]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1431]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized1' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: 1 - type: integer 
 	Parameter CONST_WIDTH bound to: 1 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized1' (7#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_0' (8#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_0/synth/design_1_xlconstant_0_0.v:57]
-INFO: [Synth 8-256] done synthesizing module 'SinWave_Output_imp_H0LIK8' (9#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1070]
-INFO: [Synth 8-3491] module 'design_1_c_counter_binary_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_1_stub.vhdl:5' bound to instance 'c_counter_binary_0' of component 'design_1_c_counter_binary_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5033]
-INFO: [Synth 8-638] synthesizing module 'design_1_c_counter_binary_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_1_stub.vhdl:13]
-INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5038]
-INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_clk_wiz_0_0_stub.vhdl:17]
-INFO: [Synth 8-638] synthesizing module 'firmware_version_imp_1X0UO88' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1351]
-INFO: [Synth 8-3491] module 'design_1_axi_gpio_4_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_4_0_stub.vhdl:5' bound to instance 'axi_gpio_firmwareVersion' of component 'design_1_axi_gpio_4_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1421]
-INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_4_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_4_0_stub.vhdl:31]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_3_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_3_0/synth/design_1_xlconstant_3_0.v:57' bound to instance 'xlconstant_3' of component 'design_1_xlconstant_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1444]
+INFO: [Synth 8-256] done synthesizing module 'SinWave_Output_imp_H0LIK8' (9#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1183]
+INFO: [Synth 8-3491] module 'design_1_c_counter_binary_0_1' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_1_stub.vhdl:5' bound to instance 'c_counter_binary_0' of component 'design_1_c_counter_binary_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5409]
+INFO: [Synth 8-638] synthesizing module 'design_1_c_counter_binary_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_c_counter_binary_0_1_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_1_clk_wiz_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_clk_wiz_0_0_stub.vhdl:5' bound to instance 'clk_wiz_0' of component 'design_1_clk_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5414]
+INFO: [Synth 8-638] synthesizing module 'design_1_clk_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_clk_wiz_0_0_stub.vhdl:17]
+INFO: [Synth 8-638] synthesizing module 'firmware_version_imp_1X0UO88' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1464]
+INFO: [Synth 8-3491] module 'design_1_axi_gpio_4_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_4_0_stub.vhdl:5' bound to instance 'axi_gpio_firmwareVersion' of component 'design_1_axi_gpio_4_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'design_1_axi_gpio_4_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_axi_gpio_4_0_stub.vhdl:31]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_3_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_3_0/synth/design_1_xlconstant_3_0.v:57' bound to instance 'xlconstant_3' of component 'design_1_xlconstant_3_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1557]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_3_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_3_0/synth/design_1_xlconstant_3_0.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized2' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 	Parameter CONST_VAL bound to: -1379926013 - type: integer 
 	Parameter CONST_WIDTH bound to: 32 - type: integer 
 INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_6_xlconstant__parameterized2' (9#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/66e7/hdl/xlconstant_v1_1_vl_rfs.v:23]
 INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_3_0' (10#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_3_0/synth/design_1_xlconstant_3_0.v:57]
-INFO: [Synth 8-256] done synthesizing module 'firmware_version_imp_1X0UO88' (11#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1351]
-INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5069]
-INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_processing_system7_0_0_stub.vhdl:138]
-INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2908]
-INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1496]
-INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (12#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1496]
-INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1601]
-INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (13#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1601]
-INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_14WQB4R' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1708]
-INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (14#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1708]
-INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_YFYJ3U' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1809]
-INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (15#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1809]
-INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_17KQ732' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1910]
-INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_17KQ732' (16#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1910]
-INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_VQEDA7' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2011]
-INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_VQEDA7' (17#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2011]
-INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_16EQN6L' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2112]
-INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_16EQN6L' (18#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2112]
-INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_X61OAK' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2213]
-INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_X61OAK' (19#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2213]
-INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_1024TAS' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2314]
-INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_1024TAS' (20#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2314]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2438]
-INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2621]
-INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_auto_pc_0_stub.vhdl:70]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (21#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2438]
-INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3957]
-INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (22#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2908]
-INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_0_250M_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_rst_clk_wiz_0_250M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_250M' of component 'design_1_rst_clk_wiz_0_250M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5417]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_0_250M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_rst_clk_wiz_0_250M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5430]
-INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_1_xadc_wiz_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_xadc_wiz_0_0_stub.vhdl:5' bound to instance 'xadc_wiz_0' of component 'design_1_xadc_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5443]
-INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-27692-DESKTOP-AUBSA4O/realtime/design_1_xadc_wiz_0_0_stub.vhdl:53]
-INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5488]
+INFO: [Synth 8-256] done synthesizing module 'firmware_version_imp_1X0UO88' (11#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1464]
+INFO: [Synth 8-3491] module 'design_1_processing_system7_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_1_processing_system7_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5445]
+INFO: [Synth 8-638] synthesizing module 'design_1_processing_system7_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_processing_system7_0_0_stub.vhdl:138]
+INFO: [Synth 8-638] synthesizing module 'design_1_ps7_0_axi_periph_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3141]
+INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_15SPJYW' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1609]
+INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_15SPJYW' (12#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1609]
+INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_XU9C55' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1714]
+INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_XU9C55' (13#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1714]
+INFO: [Synth 8-638] synthesizing module 'm02_couplers_imp_14WQB4R' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1821]
+INFO: [Synth 8-256] done synthesizing module 'm02_couplers_imp_14WQB4R' (14#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1821]
+INFO: [Synth 8-638] synthesizing module 'm03_couplers_imp_YFYJ3U' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1922]
+INFO: [Synth 8-256] done synthesizing module 'm03_couplers_imp_YFYJ3U' (15#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:1922]
+INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_17KQ732' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2023]
+INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_17KQ732' (16#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2023]
+INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_VQEDA7' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2124]
+INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_VQEDA7' (17#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2124]
+INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_16EQN6L' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2225]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_16EQN6L' (18#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2225]
+INFO: [Synth 8-638] synthesizing module 'm07_couplers_imp_X61OAK' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2326]
+INFO: [Synth 8-256] done synthesizing module 'm07_couplers_imp_X61OAK' (19#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2326]
+INFO: [Synth 8-638] synthesizing module 'm08_couplers_imp_1024TAS' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2427]
+INFO: [Synth 8-256] done synthesizing module 'm08_couplers_imp_1024TAS' (20#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2427]
+INFO: [Synth 8-638] synthesizing module 'm09_couplers_imp_UP9YUT' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2528]
+INFO: [Synth 8-256] done synthesizing module 'm09_couplers_imp_UP9YUT' (21#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2528]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_UYSKKA' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2652]
+INFO: [Synth 8-3491] module 'design_1_auto_pc_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_1_auto_pc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2835]
+INFO: [Synth 8-638] synthesizing module 'design_1_auto_pc_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_UYSKKA' (22#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:2652]
+INFO: [Synth 8-3491] module 'design_1_xbar_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_1_xbar_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:4282]
+INFO: [Synth 8-638] synthesizing module 'design_1_xbar_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_1_ps7_0_axi_periph_0' (23#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:3141]
+INFO: [Synth 8-3491] module 'design_1_rst_clk_wiz_0_250M_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_rst_clk_wiz_0_250M_0_stub.vhdl:5' bound to instance 'rst_clk_wiz_0_250M' of component 'design_1_rst_clk_wiz_0_250M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5812]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_clk_wiz_0_250M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_rst_clk_wiz_0_250M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_rst_ps7_0_50M_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_1_rst_ps7_0_50M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5825]
+INFO: [Synth 8-638] synthesizing module 'design_1_rst_ps7_0_50M_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_1_xadc_wiz_0_0' declared at 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_xadc_wiz_0_0_stub.vhdl:5' bound to instance 'xadc_wiz_0' of component 'design_1_xadc_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5838]
+INFO: [Synth 8-638] synthesizing module 'design_1_xadc_wiz_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/.Xil/Vivado-25360-DESKTOP-AUBSA4O/realtime/design_1_xadc_wiz_0_0_stub.vhdl:53]
+INFO: [Synth 8-3491] module 'design_1_xlconcat_0_0' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58' bound to instance 'xlconcat_0' of component 'design_1_xlconcat_0_0' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5883]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconcat_0_0' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
 INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
 	Parameter IN0_WIDTH bound to: 1 - type: integer 
@@ -206,21 +212,21 @@ INFO: [Synth 8-6157] synthesizing module 'xlconcat_v2_1_3_xlconcat' [d:/Users/Al
 	Parameter IN31_WIDTH bound to: 1 - type: integer 
 	Parameter dout_width bound to: 8 - type: integer 
 	Parameter NUM_PORTS bound to: 8 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (23#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (24#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
-INFO: [Synth 8-3491] module 'design_1_xlconstant_0_1' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5500]
+INFO: [Synth 8-6155] done synthesizing module 'xlconcat_v2_1_3_xlconcat' (24#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/442e/hdl/xlconcat_v2_1_vl_rfs.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconcat_0_0' (25#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconcat_0_0/synth/design_1_xlconcat_0_0.v:58]
+INFO: [Synth 8-3491] module 'design_1_xlconstant_0_1' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57' bound to instance 'xlconstant_0' of component 'design_1_xlconstant_0_1' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5895]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlconstant_0_1' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_1' (25#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57]
-INFO: [Synth 8-3491] module 'design_1_xlslice_0_2' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57' bound to instance 'xlslice_0' of component 'design_1_xlslice_0_2' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5504]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlconstant_0_1' (26#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlconstant_0_1/synth/design_1_xlconstant_0_1.v:57]
+INFO: [Synth 8-3491] module 'design_1_xlslice_0_2' declared at 'd:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57' bound to instance 'xlslice_0' of component 'design_1_xlslice_0_2' [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:5899]
 INFO: [Synth 8-6157] synthesizing module 'design_1_xlslice_0_2' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57]
 INFO: [Synth 8-6157] synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
 	Parameter DIN_WIDTH bound to: 27 - type: integer 
 	Parameter DIN_FROM bound to: 26 - type: integer 
 	Parameter DIN_TO bound to: 26 - type: integer 
-INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (25#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
-INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_2' (26#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57]
-INFO: [Synth 8-256] done synthesizing module 'design_1' (27#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:4198]
-INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (28#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:63]
+INFO: [Synth 8-6155] done synthesizing module 'xlslice_v1_0_2_xlslice__parameterized1' (26#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ipshared/f044/hdl/xlslice_v1_0_vl_rfs.v:13]
+INFO: [Synth 8-6155] done synthesizing module 'design_1_xlslice_0_2' (27#1) [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xlslice_0_2/synth/design_1_xlslice_0_2.v:57]
+INFO: [Synth 8-256] done synthesizing module 'design_1' (28#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/synth/design_1.vhd:4540]
+INFO: [Synth 8-256] done synthesizing module 'design_1_wrapper' (29#1) [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/hdl/design_1_wrapper.vhd:63]
 WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized1 has unconnected port Din[25]
 WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized1 has unconnected port Din[24]
 WARNING: [Synth 8-3331] design xlslice_v1_0_2_xlslice__parameterized1 has unconnected port Din[23]
@@ -273,6 +279,10 @@ WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In3
 WARNING: [Synth 8-3331] design xlconcat_v2_1_3_xlconcat has unconnected port In31[0]
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design s00_couplers_imp_UYSKKA has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m09_couplers_imp_UP9YUT has unconnected port M_ACLK
+WARNING: [Synth 8-3331] design m09_couplers_imp_UP9YUT has unconnected port M_ARESETN
+WARNING: [Synth 8-3331] design m09_couplers_imp_UP9YUT has unconnected port S_ACLK
+WARNING: [Synth 8-3331] design m09_couplers_imp_UP9YUT has unconnected port S_ARESETN
 WARNING: [Synth 8-3331] design m08_couplers_imp_1024TAS has unconnected port M_ACLK
 WARNING: [Synth 8-3331] design m08_couplers_imp_1024TAS has unconnected port M_ARESETN
 WARNING: [Synth 8-3331] design m08_couplers_imp_1024TAS has unconnected port S_ACLK
@@ -317,13 +327,9 @@ WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port 
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M02_ARESETN
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ACLK
 WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M03_ARESETN
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M04_ARESETN
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ACLK
-WARNING: [Synth 8-3331] design design_1_ps7_0_axi_periph_0 has unconnected port M05_ARESETN
 INFO: [Common 17-14] Message 'Synth 8-3331' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:09 . Memory (MB): peak = 827.184 ; gain = 254.719
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 827.477 ; gain = 253.555
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -336,10 +342,10 @@ Report Check Netlist:
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 827.184 ; gain = 254.719
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 827.477 ; gain = 253.555
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 827.184 ; gain = 254.719
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:09 . Memory (MB): peak = 827.477 ; gain = 253.555
 ---------------------------------------------------------------------------------
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
@@ -403,6 +409,10 @@ Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya
 Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0/design_1_util_vector_logic_0_0_in_context.xdc] for cell 'design_1_i/DMA/util_vector_logic_0'
 Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/DMA/axi_gpio_1'
 Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0/design_1_axi_gpio_1_0_in_context.xdc] for cell 'design_1_i/DMA/axi_gpio_1'
+Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_downsample_inData_0_0/design_1_downsample_inData_0_0/design_1_downsample_inData_0_0_in_context.xdc] for cell 'design_1_i/DMA/downsample_inData_0'
+Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_downsample_inData_0_0/design_1_downsample_inData_0_0/design_1_downsample_inData_0_0_in_context.xdc] for cell 'design_1_i/DMA/downsample_inData_0'
+Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_4_1/design_1_axi_gpio_4_1/design_1_axi_gpio_4_1_in_context.xdc] for cell 'design_1_i/DMA/axi_gpio_4'
+Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_axi_gpio_4_1/design_1_axi_gpio_4_1/design_1_axi_gpio_4_1_in_context.xdc] for cell 'design_1_i/DMA/axi_gpio_4'
 Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_auto_pc_0/design_1_auto_pc_0/design_1_auto_pc_0_in_context.xdc] for cell 'design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/constrs_1/new/red_pitaya_constraint.xdc]
@@ -413,29 +423,30 @@ Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya
 Finished Parsing XDC File [D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.148 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 924.887 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.037 . Memory (MB): peak = 924.148 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.066 . Memory (MB): peak = 924.887 ; gain = 0.000
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/xadc_wiz_0' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/DMA/axi_datamover_0' at clock pin 'm_axi_s2mm_aclk' is different from the actual clock period '5.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/DMA/axi_gpio_0' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/DMA/axi_gpio_1' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/DMA/axi_gpio_2' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/DMA/axi_gpio_3' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/DMA/axi_gpio_4' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/SinWave_Output/axi_gpio_3' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/SinWave_Output/axi_gpio_4' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 WARNING: [Timing 38-316] Clock period '10.000' specified during out-of-context synthesis of instance 'design_1_i/firmware_version/axi_gpio_firmwareVersion' at clock pin 's_axi_aclk' is different from the actual clock period '8.000', this can lead to different synthesis results.
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 926.355 ; gain = 353.891
+Finished Constraint Validation : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z010clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 926.355 ; gain = 353.891
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -744,12 +755,14 @@ Applied set_property DONT_TOUCH = true for design_1_i/xlslice_0. (constraint fil
 Applied set_property DONT_TOUCH = true for design_1_i/xlconstant_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/DMA/util_vector_logic_0. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/DMA/axi_gpio_1. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/DMA/downsample_inData_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_1_i/DMA/axi_gpio_4. (constraint file  auto generated constraint, line ).
 Applied set_property DONT_TOUCH = true for design_1_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 926.355 ; gain = 353.891
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 926.355 ; gain = 353.891
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -785,7 +798,7 @@ Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 Warning: Parallel synthesis criteria is not met 
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 926.355 ; gain = 353.891
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -801,13 +814,13 @@ INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/clk_
 INFO: [Synth 8-5578] Moved timing constraint from pin 'design_1_i/clk_wiz_0/clk_out3' to pin 'design_1_i/clk_wiz_0/bbstub_clk_out3/O'
 INFO: [Synth 8-5819] Moved 3 constraints on hierarchical pins to their respective driving/loading pins
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 926.355 ; gain = 353.891
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 926.355 ; gain = 353.891
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -819,7 +832,7 @@ Report RTL Partitions:
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:32 ; elapsed = 00:00:33 . Memory (MB): peak = 926.355 ; gain = 353.891
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -843,7 +856,7 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 929.121 ; gain = 356.656
+Finished IO Insertion : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 
 Report Check Netlist: 
@@ -856,7 +869,7 @@ Report Check Netlist:
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 929.121 ; gain = 356.656
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 
 Report RTL Partitions: 
@@ -868,25 +881,25 @@ Report RTL Partitions:
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 929.121 ; gain = 356.656
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 929.121 ; gain = 356.656
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 929.121 ; gain = 356.656
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 929.121 ; gain = 356.656
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -913,19 +926,21 @@ Report BlackBoxes:
 |15    |design_1_axi_gpio_1_0             |         1|
 |16    |design_1_axi_gpio_2_1             |         1|
 |17    |design_1_axi_gpio_3_1             |         1|
-|18    |design_1_axi_smc_0                |         1|
-|19    |design_1_axis_data_fifo_0_0       |         1|
-|20    |design_1_c_counter_binary_0_0     |         1|
-|21    |design_1_multiplexer_2to1_0_0     |         1|
-|22    |design_1_multiplexer_2to1_0_1     |         1|
-|23    |design_1_util_vector_logic_0_0    |         1|
-|24    |design_1_DDS_output_div_by_2_0_0  |         1|
-|25    |design_1_DDS_output_div_by_2_0_1  |         1|
-|26    |design_1_axi_gpio_2_0             |         1|
-|27    |design_1_axi_gpio_3_0             |         1|
-|28    |design_1_dds_compiler_0_0         |         1|
-|29    |design_1_dds_compiler_0_1         |         1|
-|30    |design_1_axi_gpio_4_0             |         1|
+|18    |design_1_axi_gpio_4_1             |         1|
+|19    |design_1_axi_smc_0                |         1|
+|20    |design_1_axis_data_fifo_0_0       |         1|
+|21    |design_1_c_counter_binary_0_0     |         1|
+|22    |design_1_downsample_inData_0_0    |         1|
+|23    |design_1_multiplexer_2to1_0_0     |         1|
+|24    |design_1_multiplexer_2to1_0_1     |         1|
+|25    |design_1_util_vector_logic_0_0    |         1|
+|26    |design_1_DDS_output_div_by_2_0_0  |         1|
+|27    |design_1_DDS_output_div_by_2_0_1  |         1|
+|28    |design_1_axi_gpio_2_0             |         1|
+|29    |design_1_axi_gpio_3_0             |         1|
+|30    |design_1_dds_compiler_0_0         |         1|
+|31    |design_1_dds_compiler_0_1         |         1|
+|32    |design_1_axi_gpio_4_0             |         1|
 +------+----------------------------------+----------+
 
 Report Cell Usage: 
@@ -935,49 +950,51 @@ Report Cell Usage:
 |1     |design_1_ADCs_wrapper_0_0_bbox_0         |     1|
 |2     |design_1_Acquisition_top_0_0_bbox_2      |     1|
 |3     |design_1_DACs_wrapper_0_0_bbox_1         |     1|
-|4     |design_1_DDS_output_div_by_2_0_0_bbox_15 |     1|
-|5     |design_1_DDS_output_div_by_2_0_1_bbox_16 |     1|
+|4     |design_1_DDS_output_div_by_2_0_0_bbox_17 |     1|
+|5     |design_1_DDS_output_div_by_2_0_1_bbox_18 |     1|
 |6     |design_1_acquisition_start_ex_0_0_bbox_3 |     1|
-|7     |design_1_auto_pc_0_bbox_25               |     1|
+|7     |design_1_auto_pc_0_bbox_27               |     1|
 |8     |design_1_axi_datamover_0_1_bbox_4        |     1|
 |9     |design_1_axi_gpio_0_0_bbox_5             |     1|
 |10    |design_1_axi_gpio_1_0_bbox_6             |     1|
-|11    |design_1_axi_gpio_2_0_bbox_17            |     1|
+|11    |design_1_axi_gpio_2_0_bbox_19            |     1|
 |12    |design_1_axi_gpio_2_1_bbox_7             |     1|
-|13    |design_1_axi_gpio_3_0_bbox_18            |     1|
+|13    |design_1_axi_gpio_3_0_bbox_20            |     1|
 |14    |design_1_axi_gpio_3_1_bbox_8             |     1|
-|15    |design_1_axi_gpio_4_0_bbox_23            |     1|
-|16    |design_1_axi_smc_0_bbox_9                |     1|
-|17    |design_1_axis_data_fifo_0_0_bbox_10      |     1|
-|18    |design_1_c_counter_binary_0_0_bbox_11    |     1|
-|19    |design_1_c_counter_binary_0_1_bbox_21    |     1|
-|20    |design_1_clk_wiz_0_0_bbox_22             |     1|
-|21    |design_1_dds_compiler_0_0_bbox_19        |     1|
-|22    |design_1_dds_compiler_0_1_bbox_20        |     1|
-|23    |design_1_multiplexer_2to1_0_0_bbox_12    |     1|
-|24    |design_1_multiplexer_2to1_0_1_bbox_13    |     1|
-|25    |design_1_processing_system7_0_0_bbox_24  |     1|
-|26    |design_1_rst_clk_wiz_0_250M_0_bbox_27    |     1|
-|27    |design_1_rst_ps7_0_50M_0_bbox_28         |     1|
-|28    |design_1_util_vector_logic_0_0_bbox_14   |     1|
-|29    |design_1_xadc_wiz_0_0_bbox_29            |     1|
-|30    |design_1_xbar_0_bbox_26                  |     1|
-|31    |IBUF                                     |    39|
-|32    |OBUF                                     |    28|
+|15    |design_1_axi_gpio_4_0_bbox_25            |     1|
+|16    |design_1_axi_gpio_4_1_bbox_9             |     1|
+|17    |design_1_axi_smc_0_bbox_10               |     1|
+|18    |design_1_axis_data_fifo_0_0_bbox_11      |     1|
+|19    |design_1_c_counter_binary_0_0_bbox_12    |     1|
+|20    |design_1_c_counter_binary_0_1_bbox_23    |     1|
+|21    |design_1_clk_wiz_0_0_bbox_24             |     1|
+|22    |design_1_dds_compiler_0_0_bbox_21        |     1|
+|23    |design_1_dds_compiler_0_1_bbox_22        |     1|
+|24    |design_1_downsample_inData_0_0_bbox_13   |     1|
+|25    |design_1_multiplexer_2to1_0_0_bbox_14    |     1|
+|26    |design_1_multiplexer_2to1_0_1_bbox_15    |     1|
+|27    |design_1_processing_system7_0_0_bbox_26  |     1|
+|28    |design_1_rst_clk_wiz_0_250M_0_bbox_29    |     1|
+|29    |design_1_rst_ps7_0_50M_0_bbox_30         |     1|
+|30    |design_1_util_vector_logic_0_0_bbox_16   |     1|
+|31    |design_1_xadc_wiz_0_0_bbox_31            |     1|
+|32    |design_1_xbar_0_bbox_28                  |     1|
+|33    |IBUF                                     |    39|
+|34    |OBUF                                     |    28|
 +------+-----------------------------------------+------+
 
 Report Instance Areas: 
 +------+---------------------+-----------------------------+------+
 |      |Instance             |Module                       |Cells |
 +------+---------------------+-----------------------------+------+
-|1     |top                  |                             |  3026|
-|2     |  design_1_i         |design_1                     |  2959|
-|3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0  |  1217|
+|1     |top                  |                             |  3211|
+|2     |  design_1_i         |design_1                     |  3144|
+|3     |    ps7_0_axi_periph |design_1_ps7_0_axi_periph_0  |  1328|
 |4     |      s00_couplers   |s00_couplers_imp_UYSKKA      |   177|
 |5     |    xlconcat_0       |design_1_xlconcat_0_0        |     0|
 |6     |    xlconstant_0     |design_1_xlconstant_0_1      |     0|
 |7     |    xlslice_0        |design_1_xlslice_0_2         |     0|
-|8     |    DMA              |DMA_imp_1JYPGAM              |   902|
+|8     |    DMA              |DMA_imp_1JYPGAM              |   976|
 |9     |      xlconstant_1   |design_1_xlconstant_1_0      |     0|
 |10    |      xlconstant_2   |design_1_xlconstant_2_0      |     0|
 |11    |      xlslice_0      |design_1_xlslice_0_0         |     0|
@@ -988,27 +1005,25 @@ Report Instance Areas:
 |16    |      xlconstant_3   |design_1_xlconstant_3_0      |     0|
 +------+---------------------+-----------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 929.121 ; gain = 356.656
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:38 ; elapsed = 00:00:40 . Memory (MB): peak = 927.070 ; gain = 353.148
 ---------------------------------------------------------------------------------
-Synthesis finished with 0 errors, 0 critical warnings and 78 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:36 . Memory (MB): peak = 929.121 ; gain = 257.484
-Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 929.121 ; gain = 356.656
+Synthesis finished with 0 errors, 0 critical warnings and 80 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:26 ; elapsed = 00:00:35 . Memory (MB): peak = 927.070 ; gain = 253.555
+Synthesis Optimization Complete : Time (s): cpu = 00:00:39 ; elapsed = 00:00:40 . Memory (MB): peak = 927.070 ; gain = 353.148
 INFO: [Project 1-571] Translating synthesized netlist
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 950.938 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 946.602 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-155 Infos, 114 Warnings, 0 Critical Warnings and 0 Errors encountered.
+161 Infos, 115 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:48 ; elapsed = 00:01:13 . Memory (MB): peak = 950.938 ; gain = 648.012
-INFO: [Common 17-600] The following parameters have non-default value.
-tcl.collectionResultDisplayLimit
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 950.938 ; gain = 0.000
+synth_design: Time (s): cpu = 00:00:47 ; elapsed = 00:01:13 . Memory (MB): peak = 946.602 ; gain = 643.855
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 946.602 ; gain = 0.000
 WARNING: [Constraints 18-5210] No constraints selected for write.
 Resolution: This message can indicate that there are no constraints for the design, or it can indicate that the used_in flags are set such that the constraints are ignored. This later case is used when running synth_design to not write synthesis constraints to the resulting checkpoint. Instead, project constraints are read when the synthesized design is opened.
 INFO: [Common 17-1381] The checkpoint 'D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.runs/synth_1/design_1_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon Jun 14 18:56:52 2021...
+INFO: [Common 17-206] Exiting Vivado at Tue Jun 15 11:16:41 2021...

@@ -1,7 +1,7 @@
 -- Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
--- Date        : Mon Jun 14 18:51:27 2021
+-- Date        : Tue Jun 15 11:14:31 2021
 -- Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode funcsim
 --               D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_Acquisition_top_0_0/design_1_Acquisition_top_0_0_sim_netlist.vhdl
@@ -24,6 +24,7 @@ entity design_1_Acquisition_top_0_0_Acquisition_FSM_2 is
     m_axis_s2mm_cmd_tdata : out STD_LOGIC_VECTOR ( 23 downto 0 );
     start_sig : in STD_LOGIC;
     clk : in STD_LOGIC;
+    data_in_tvalid : in STD_LOGIC;
     resetn : in STD_LOGIC;
     number_bytes : in STD_LOGIC_VECTOR ( 23 downto 0 );
     s_axis_s2mm_sts_tvalid : in STD_LOGIC;
@@ -271,11 +272,10 @@ architecture STRUCTURE of design_1_Acquisition_top_0_0_Acquisition_FSM_2 is
   signal \NLW_s2mm_fsm_state1_inferred__1/i__carry__1_O_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 downto 0 );
   signal \NLW_s2mm_fsm_state2_carry__4_CO_UNCONNECTED\ : STD_LOGIC_VECTOR ( 3 to 3 );
   attribute SOFT_HLUTNM : string;
-  attribute SOFT_HLUTNM of ADC1_converter_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[2]_i_2\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[4]_i_1\ : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[5]_i_1\ : label is "soft_lutpair7";
-  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[7]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[2]_i_2\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[4]_i_1\ : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[5]_i_1\ : label is "soft_lutpair6";
+  attribute SOFT_HLUTNM of \FSM_onehot_s2mm_fsm_state[7]_i_1\ : label is "soft_lutpair6";
   attribute FSM_ENCODED_STATES : string;
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[0]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[1]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
@@ -285,67 +285,67 @@ architecture STRUCTURE of design_1_Acquisition_top_0_0_Acquisition_FSM_2 is
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[5]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[6]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
   attribute FSM_ENCODED_STATES of \FSM_onehot_s2mm_fsm_state_reg[7]\ : label is "idle:00000001,reset_fifo:00000010,write_s2mm:00001000,wait_s2mm_valid:00010000,error_s2mm:10000000,prep_next_s2mm:00100000,fifo_fill:00000100,finish_s2mm:01000000";
-  attribute SOFT_HLUTNM of acquisition_in_progress_i_1 : label is "soft_lutpair6";
-  attribute SOFT_HLUTNM of \bytes_sent[10]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \bytes_sent[11]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \bytes_sent[12]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of \bytes_sent[13]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \bytes_sent[14]_i_1\ : label is "soft_lutpair27";
-  attribute SOFT_HLUTNM of \bytes_sent[15]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \bytes_sent[16]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \bytes_sent[17]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \bytes_sent[18]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \bytes_sent[19]_i_1\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \bytes_sent[20]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of acquisition_in_progress_i_1 : label is "soft_lutpair5";
+  attribute SOFT_HLUTNM of \bytes_sent[10]_i_1\ : label is "soft_lutpair25";
+  attribute SOFT_HLUTNM of \bytes_sent[11]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \bytes_sent[12]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \bytes_sent[13]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \bytes_sent[14]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \bytes_sent[15]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \bytes_sent[16]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \bytes_sent[17]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \bytes_sent[18]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \bytes_sent[19]_i_1\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \bytes_sent[20]_i_1\ : label is "soft_lutpair14";
   attribute SOFT_HLUTNM of \bytes_sent[21]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \bytes_sent[22]_i_1\ : label is "soft_lutpair25";
-  attribute SOFT_HLUTNM of \bytes_sent[23]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \bytes_sent[24]_i_1\ : label is "soft_lutpair22";
-  attribute SOFT_HLUTNM of \bytes_sent[25]_i_1\ : label is "soft_lutpair16";
-  attribute SOFT_HLUTNM of \bytes_sent[26]_i_1\ : label is "soft_lutpair19";
-  attribute SOFT_HLUTNM of \bytes_sent[27]_i_1\ : label is "soft_lutpair17";
-  attribute SOFT_HLUTNM of \bytes_sent[28]_i_1\ : label is "soft_lutpair15";
-  attribute SOFT_HLUTNM of \bytes_sent[29]_i_1\ : label is "soft_lutpair9";
-  attribute SOFT_HLUTNM of \bytes_sent[30]_i_1\ : label is "soft_lutpair13";
-  attribute SOFT_HLUTNM of \bytes_sent[31]_i_2\ : label is "soft_lutpair11";
-  attribute SOFT_HLUTNM of \bytes_sent[8]_i_1\ : label is "soft_lutpair31";
-  attribute SOFT_HLUTNM of \bytes_sent[9]_i_1\ : label is "soft_lutpair29";
-  attribute SOFT_HLUTNM of data_tvalid_int_i_1 : label is "soft_lutpair3";
-  attribute SOFT_HLUTNM of \reset_counter[1]_i_1\ : label is "soft_lutpair5";
-  attribute SOFT_HLUTNM of \reset_counter[2]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \reset_counter[3]_i_1\ : label is "soft_lutpair4";
-  attribute SOFT_HLUTNM of \s2mm_addr[10]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \s2mm_addr[11]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \s2mm_addr[12]_i_1\ : label is "soft_lutpair28";
-  attribute SOFT_HLUTNM of \s2mm_addr[13]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \s2mm_addr[14]_i_1\ : label is "soft_lutpair26";
-  attribute SOFT_HLUTNM of \s2mm_addr[15]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \s2mm_addr[16]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \s2mm_addr[17]_i_1\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \s2mm_addr[18]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \s2mm_addr[19]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \s2mm_addr[20]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \s2mm_addr[21]_i_1\ : label is "soft_lutpair24";
-  attribute SOFT_HLUTNM of \s2mm_addr[22]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \s2mm_addr[23]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \s2mm_addr[24]_i_1\ : label is "soft_lutpair23";
-  attribute SOFT_HLUTNM of \s2mm_addr[25]_i_1\ : label is "soft_lutpair18";
-  attribute SOFT_HLUTNM of \s2mm_addr[26]_i_1\ : label is "soft_lutpair21";
-  attribute SOFT_HLUTNM of \s2mm_addr[27]_i_1\ : label is "soft_lutpair20";
-  attribute SOFT_HLUTNM of \s2mm_addr[28]_i_1\ : label is "soft_lutpair14";
-  attribute SOFT_HLUTNM of \s2mm_addr[29]_i_1\ : label is "soft_lutpair8";
-  attribute SOFT_HLUTNM of \s2mm_addr[30]_i_1\ : label is "soft_lutpair12";
-  attribute SOFT_HLUTNM of \s2mm_addr[31]_i_2\ : label is "soft_lutpair10";
-  attribute SOFT_HLUTNM of \s2mm_addr[8]_i_1\ : label is "soft_lutpair30";
-  attribute SOFT_HLUTNM of \s2mm_addr[9]_i_1\ : label is "soft_lutpair30";
+  attribute SOFT_HLUTNM of \bytes_sent[22]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \bytes_sent[23]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \bytes_sent[24]_i_1\ : label is "soft_lutpair23";
+  attribute SOFT_HLUTNM of \bytes_sent[25]_i_1\ : label is "soft_lutpair15";
+  attribute SOFT_HLUTNM of \bytes_sent[26]_i_1\ : label is "soft_lutpair18";
+  attribute SOFT_HLUTNM of \bytes_sent[27]_i_1\ : label is "soft_lutpair16";
+  attribute SOFT_HLUTNM of \bytes_sent[28]_i_1\ : label is "soft_lutpair14";
+  attribute SOFT_HLUTNM of \bytes_sent[29]_i_1\ : label is "soft_lutpair8";
+  attribute SOFT_HLUTNM of \bytes_sent[30]_i_1\ : label is "soft_lutpair12";
+  attribute SOFT_HLUTNM of \bytes_sent[31]_i_2\ : label is "soft_lutpair10";
+  attribute SOFT_HLUTNM of \bytes_sent[8]_i_1\ : label is "soft_lutpair29";
+  attribute SOFT_HLUTNM of \bytes_sent[9]_i_1\ : label is "soft_lutpair27";
+  attribute SOFT_HLUTNM of \reset_counter[1]_i_1\ : label is "soft_lutpair4";
+  attribute SOFT_HLUTNM of \reset_counter[2]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \reset_counter[3]_i_1\ : label is "soft_lutpair3";
+  attribute SOFT_HLUTNM of \s2mm_addr[10]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \s2mm_addr[11]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \s2mm_addr[12]_i_1\ : label is "soft_lutpair26";
+  attribute SOFT_HLUTNM of \s2mm_addr[13]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \s2mm_addr[14]_i_1\ : label is "soft_lutpair24";
+  attribute SOFT_HLUTNM of \s2mm_addr[15]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \s2mm_addr[16]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \s2mm_addr[17]_i_1\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \s2mm_addr[18]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \s2mm_addr[19]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \s2mm_addr[20]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \s2mm_addr[21]_i_1\ : label is "soft_lutpair22";
+  attribute SOFT_HLUTNM of \s2mm_addr[22]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \s2mm_addr[23]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \s2mm_addr[24]_i_1\ : label is "soft_lutpair21";
+  attribute SOFT_HLUTNM of \s2mm_addr[25]_i_1\ : label is "soft_lutpair17";
+  attribute SOFT_HLUTNM of \s2mm_addr[26]_i_1\ : label is "soft_lutpair20";
+  attribute SOFT_HLUTNM of \s2mm_addr[27]_i_1\ : label is "soft_lutpair19";
+  attribute SOFT_HLUTNM of \s2mm_addr[28]_i_1\ : label is "soft_lutpair13";
+  attribute SOFT_HLUTNM of \s2mm_addr[29]_i_1\ : label is "soft_lutpair7";
+  attribute SOFT_HLUTNM of \s2mm_addr[30]_i_1\ : label is "soft_lutpair11";
+  attribute SOFT_HLUTNM of \s2mm_addr[31]_i_2\ : label is "soft_lutpair9";
+  attribute SOFT_HLUTNM of \s2mm_addr[8]_i_1\ : label is "soft_lutpair28";
+  attribute SOFT_HLUTNM of \s2mm_addr[9]_i_1\ : label is "soft_lutpair28";
 begin
   status_out(1 downto 0) <= \^status_out\(1 downto 0);
-ADC1_converter_i_1: unisim.vcomponents.LUT1
+ADC1_converter_i_1: unisim.vcomponents.LUT2
     generic map(
-      INIT => X"1"
+      INIT => X"2"
     )
         port map (
-      I0 => \^status_out\(0),
+      I0 => data_in_tvalid,
+      I1 => \^status_out\(0),
       O => s_axis_tvalid
     );
 \FSM_onehot_s2mm_fsm_state[0]_i_1\: unisim.vcomponents.LUT5
@@ -5967,6 +5967,7 @@ entity design_1_Acquisition_top_0_0_Acquisition_top is
     channel_sel : in STD_LOGIC_VECTOR ( 1 downto 0 );
     ADC1_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     ADC2_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    data_in_tvalid : in STD_LOGIC;
     FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 31 downto 0 );
     start_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
     acquisition_in_progress_out : out STD_LOGIC;
@@ -6099,6 +6100,7 @@ ADC_FSM: entity work.design_1_Acquisition_top_0_0_Acquisition_FSM_2
       FIFO_S2MM_data_count(25 downto 0) => FIFO_S2MM_data_count(31 downto 6),
       acquisition_in_progress_out => acquisition_in_progress_out,
       clk => clk,
+      data_in_tvalid => data_in_tvalid,
       m_axis_s2mm_cmd_tdata(23 downto 0) => \^m_axis_s2mm_cmd_tdata\(63 downto 40),
       m_axis_s2mm_cmd_tvalid => m_axis_s2mm_cmd_tvalid,
       number_bytes(23 downto 0) => number_bytes(31 downto 8),
@@ -6913,6 +6915,7 @@ entity design_1_Acquisition_top_0_0 is
     channel_sel : in STD_LOGIC_VECTOR ( 1 downto 0 );
     ADC1_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
     ADC2_data : in STD_LOGIC_VECTOR ( 15 downto 0 );
+    data_in_tvalid : in STD_LOGIC;
     FIFO_S2MM_data_count : in STD_LOGIC_VECTOR ( 31 downto 0 );
     start_address : in STD_LOGIC_VECTOR ( 31 downto 0 );
     acquisition_in_progress_out : out STD_LOGIC;
@@ -6970,6 +6973,7 @@ U0: entity work.design_1_Acquisition_top_0_0_Acquisition_top
       acquisition_in_progress_out => acquisition_in_progress_out,
       channel_sel(1 downto 0) => channel_sel(1 downto 0),
       clk => clk,
+      data_in_tvalid => data_in_tvalid,
       m_axis_s2mm_cmd_tdata(71 downto 0) => m_axis_s2mm_cmd_tdata(71 downto 0),
       m_axis_s2mm_cmd_tready => m_axis_s2mm_cmd_tready,
       m_axis_s2mm_cmd_tvalid => m_axis_s2mm_cmd_tvalid,

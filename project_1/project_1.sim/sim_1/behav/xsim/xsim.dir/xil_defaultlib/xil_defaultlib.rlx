@@ -8,6 +8,6 @@ D:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/new/Acquisition_FMS.vh
 D:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/new/Acquisition_FSM_2.vhd,1587433522,vhdl,,,,acquisition_fsm_2,,,,,,,,
 D:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/new/Acquisition_top.vhd,1587509327,vhdl,,,,acquisition_top,,,,,,,,
 D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.sim/sim_1/behav/xsim/glbl.v,1573089660,verilog,,,,glbl,,axi_vip_v1_1_5;processing_system7_vip_v1_0_7;smartconnect_v1_0;xilinx_vip,,,,,,
-D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/start_trig/start_trig_logic.vhd,1623353954,vhdl,,,,start_trig_logic,,,,,,,,
-D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/ip/start_trig/start_trig_logic_tb.vhd,1623352848,vhdl,,,,start_trig_logic_tb,,,,,,,,
+D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sim_1/new/downsample_inData_tb.vhd,1623769402,vhdl,,,,downsample_indata_tb,,,,,,,,
+D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/downsample_inData.vhd,1623768971,vhdl,,,,downsample_indata,,,,,,,,
 D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.srcs/sources_1/new/multiplexer_2to1.vhd,1597237221,vhdl,,,,multiplexer_2to1,,,,,,,,

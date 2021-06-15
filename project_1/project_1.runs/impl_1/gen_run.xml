@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1623710977">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1623769959">
   <File Type="BITSTR-BMM" Name="design_1_wrapper_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="design_1_wrapper_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="design_1_wrapper_timing_summary_init.rpt"/>
@@ -123,6 +123,12 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PSRCDIR/sources_1/new/downsample_inData.vhd">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_1/design_1.bd">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../../../../../Synology/SynologyDrive/RedPitaya/DataMover_throughput/project_1/project_1.srcs/sources_1/bd/design_1/design_1.bd"/>
@@ -195,9 +201,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2019"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -208,13 +212,16 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_DDS_output_div_by_2_0_1"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_1_Acquisition_top_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_ADCs_wrapper_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_multiplexer_2to1_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_multiplexer_2to1_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DACs_wrapper_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_DDS_output_div_by_2_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_Acquisition_top_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_smc_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_DDS_output_div_by_2_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="design_1_acquisition_start_ex_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_axi_gpio_4_1"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_1_downsample_inData_0_0"/>
 </GenRun>

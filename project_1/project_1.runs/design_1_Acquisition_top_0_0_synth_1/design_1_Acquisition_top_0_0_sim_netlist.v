@@ -1,7 +1,7 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Mon Jun 14 18:51:26 2021
+// Date        : Tue Jun 15 11:14:30 2021
 // Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_1_Acquisition_top_0_0_sim_netlist.v
@@ -21,6 +21,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
     m_axis_s2mm_cmd_tdata,
     start_sig,
     clk,
+    data_in_tvalid,
     resetn,
     number_bytes,
     s_axis_s2mm_sts_tvalid,
@@ -35,6 +36,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
   output [23:0]m_axis_s2mm_cmd_tdata;
   input start_sig;
   input clk;
+  input data_in_tvalid;
   input resetn;
   input [23:0]number_bytes;
   input s_axis_s2mm_sts_tvalid;
@@ -98,6 +100,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
   wire \bytes_sent[31]_i_1_n_0 ;
   wire [31:8]bytes_sent_0;
   wire clk;
+  wire data_in_tvalid;
   wire data_tvalid_int;
   wire data_tvalid_int_i_1_n_0;
   wire error_ACQ_int;
@@ -290,11 +293,11 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
   wire [3:0]\NLW_s2mm_fsm_state1_inferred__1/i__carry__1_O_UNCONNECTED ;
   wire [3:3]NLW_s2mm_fsm_state2_carry__4_CO_UNCONNECTED;
 
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT1 #(
-    .INIT(2'h1)) 
+  LUT2 #(
+    .INIT(4'h2)) 
     ADC1_converter_i_1
-       (.I0(status_out[0]),
+       (.I0(data_in_tvalid),
+        .I1(status_out[0]),
         .O(s_axis_tvalid));
   LUT5 #(
     .INIT(32'hFFFFFF8A)) 
@@ -324,7 +327,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .I4(\FSM_onehot_s2mm_fsm_state[3]_i_2_n_0 ),
         .I5(\FSM_onehot_s2mm_fsm_state_reg_n_0_[2] ),
         .O(\FSM_onehot_s2mm_fsm_state[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'hFEEE)) 
     \FSM_onehot_s2mm_fsm_state[2]_i_2 
@@ -399,7 +402,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .I4(FIFO_S2MM_data_count[1]),
         .I5(FIFO_S2MM_data_count[0]),
         .O(\FSM_onehot_s2mm_fsm_state[3]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'hF4)) 
     \FSM_onehot_s2mm_fsm_state[4]_i_1 
@@ -407,7 +410,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .I1(\FSM_onehot_s2mm_fsm_state_reg_n_0_[4] ),
         .I2(\FSM_onehot_s2mm_fsm_state_reg_n_0_[3] ),
         .O(\FSM_onehot_s2mm_fsm_state[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \FSM_onehot_s2mm_fsm_state[5]_i_1 
@@ -421,7 +424,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in7),
         .O(\FSM_onehot_s2mm_fsm_state[6]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT3 #(
     .INIT(8'h80)) 
     \FSM_onehot_s2mm_fsm_state[7]_i_1 
@@ -518,7 +521,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .CLR(acquisition_in_progress_i_2_n_0),
         .D(\FSM_onehot_s2mm_fsm_state[7]_i_1_n_0 ),
         .Q(error_ACQ_int));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     acquisition_in_progress_i_1
@@ -585,77 +588,77 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
     bytes_sent0_carry_i_1
        (.I0(bytes_sent[9]),
         .O(bytes_sent0_carry_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[10]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[10]),
         .O(bytes_sent_0[10]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[11]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[11]),
         .O(bytes_sent_0[11]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[12]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[12]),
         .O(bytes_sent_0[12]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[13]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[13]),
         .O(bytes_sent_0[13]));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[14]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[14]),
         .O(bytes_sent_0[14]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[15]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[15]),
         .O(bytes_sent_0[15]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[16]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[16]),
         .O(bytes_sent_0[16]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[17]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[17]),
         .O(bytes_sent_0[17]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[18]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[18]),
         .O(bytes_sent_0[18]));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[19]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[19]),
         .O(bytes_sent_0[19]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[20]_i_1 
@@ -669,63 +672,63 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[21]),
         .O(bytes_sent_0[21]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[22]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[22]),
         .O(bytes_sent_0[22]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[23]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[23]),
         .O(bytes_sent_0[23]));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[24]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[24]),
         .O(bytes_sent_0[24]));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[25]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[25]),
         .O(bytes_sent_0[25]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[26]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[26]),
         .O(bytes_sent_0[26]));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[27]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[27]),
         .O(bytes_sent_0[27]));
-  (* SOFT_HLUTNM = "soft_lutpair15" *) 
+  (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[28]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[28]),
         .O(bytes_sent_0[28]));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[29]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[29]),
         .O(bytes_sent_0[29]));
-  (* SOFT_HLUTNM = "soft_lutpair13" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[30]_i_1 
@@ -738,21 +741,21 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[0] ),
         .I1(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .O(\bytes_sent[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair11" *) 
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[31]_i_2 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[31]),
         .O(bytes_sent_0[31]));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[8]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in8[8]),
         .O(bytes_sent_0[8]));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \bytes_sent[9]_i_1 
@@ -903,7 +906,6 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .CLR(acquisition_in_progress_i_2_n_0),
         .D(bytes_sent_0[9]),
         .Q(bytes_sent[9]));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'hAAABAAAA)) 
     data_tvalid_int_i_1
@@ -1346,7 +1348,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[1] ),
         .I1(\reset_counter_reg_n_0_[0] ),
         .O(\reset_counter[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
     .INIT(8'h48)) 
     \reset_counter[1]_i_1 
@@ -1354,7 +1356,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .I1(\FSM_onehot_s2mm_fsm_state_reg_n_0_[1] ),
         .I2(\reset_counter_reg_n_0_[1] ),
         .O(reset_counter[1]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT4 #(
     .INIT(16'h7080)) 
     \reset_counter[2]_i_1 
@@ -1363,7 +1365,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .I2(\FSM_onehot_s2mm_fsm_state_reg_n_0_[1] ),
         .I3(\reset_counter_reg_n_0_[2] ),
         .O(reset_counter[2]));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
     .INIT(32'h7F008000)) 
     \reset_counter[3]_i_1 
@@ -1444,147 +1446,147 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
     s2mm_addr0_carry_i_1
        (.I0(s2mm_addr[9]),
         .O(s2mm_addr0_carry_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[10]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[10]),
         .O(s2mm_addr_1[10]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[11]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[11]),
         .O(s2mm_addr_1[11]));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[12]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[12]),
         .O(s2mm_addr_1[12]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[13]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[13]),
         .O(s2mm_addr_1[13]));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[14]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[14]),
         .O(s2mm_addr_1[14]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[15]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[15]),
         .O(s2mm_addr_1[15]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[16]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[16]),
         .O(s2mm_addr_1[16]));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[17]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[17]),
         .O(s2mm_addr_1[17]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[18]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[18]),
         .O(s2mm_addr_1[18]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[19]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[19]),
         .O(s2mm_addr_1[19]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[20]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[20]),
         .O(s2mm_addr_1[20]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[21]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[21]),
         .O(s2mm_addr_1[21]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[22]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[22]),
         .O(s2mm_addr_1[22]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[23]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[23]),
         .O(s2mm_addr_1[23]));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[24]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[24]),
         .O(s2mm_addr_1[24]));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[25]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[25]),
         .O(s2mm_addr_1[25]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[26]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[26]),
         .O(s2mm_addr_1[26]));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[27]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[27]),
         .O(s2mm_addr_1[27]));
-  (* SOFT_HLUTNM = "soft_lutpair14" *) 
+  (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[28]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[28]),
         .O(s2mm_addr_1[28]));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[29]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[29]),
         .O(s2mm_addr_1[29]));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+  (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[30]_i_1 
@@ -1598,21 +1600,21 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_FSM_2
         .I1(\FSM_onehot_s2mm_fsm_state_reg_n_0_[1] ),
         .I2(\FSM_onehot_s2mm_fsm_state_reg_n_0_[0] ),
         .O(\s2mm_addr[31]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[31]_i_2 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[31]),
         .O(s2mm_addr_1[31]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[8]_i_1 
        (.I0(\FSM_onehot_s2mm_fsm_state_reg_n_0_[5] ),
         .I1(in9[8]),
         .O(s2mm_addr_1[8]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \s2mm_addr[9]_i_1 
@@ -1963,6 +1965,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
     channel_sel,
     ADC1_data,
     ADC2_data,
+    data_in_tvalid,
     FIFO_S2MM_data_count,
     start_address,
     acquisition_in_progress_out,
@@ -1984,6 +1987,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
   input [1:0]channel_sel;
   input [15:0]ADC1_data;
   input [15:0]ADC2_data;
+  input data_in_tvalid;
   input [31:0]FIFO_S2MM_data_count;
   input [31:0]start_address;
   output acquisition_in_progress_out;
@@ -2007,6 +2011,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
   wire acquisition_in_progress_out;
   wire [1:0]channel_sel;
   wire clk;
+  wire data_in_tvalid;
   wire [63:40]\^m_axis_s2mm_cmd_tdata ;
   wire m_axis_s2mm_cmd_tvalid;
   wire [63:0]m_axis_tdata;
@@ -2113,6 +2118,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_Acquisition_top
        (.FIFO_S2MM_data_count(FIFO_S2MM_data_count[31:6]),
         .acquisition_in_progress_out(acquisition_in_progress_out),
         .clk(clk),
+        .data_in_tvalid(data_in_tvalid),
         .m_axis_s2mm_cmd_tdata(\^m_axis_s2mm_cmd_tdata ),
         .m_axis_s2mm_cmd_tvalid(m_axis_s2mm_cmd_tvalid),
         .number_bytes(number_bytes[31:8]),
@@ -5214,6 +5220,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
     channel_sel,
     ADC1_data,
     ADC2_data,
+    data_in_tvalid,
     FIFO_S2MM_data_count,
     start_address,
     acquisition_in_progress_out,
@@ -5235,6 +5242,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   input [1:0]channel_sel;
   input [15:0]ADC1_data;
   input [15:0]ADC2_data;
+  input data_in_tvalid;
   input [31:0]FIFO_S2MM_data_count;
   input [31:0]start_address;
   output acquisition_in_progress_out;
@@ -5256,6 +5264,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
   wire acquisition_in_progress_out;
   wire [1:0]channel_sel;
   wire clk;
+  wire data_in_tvalid;
   wire [71:0]m_axis_s2mm_cmd_tdata;
   wire m_axis_s2mm_cmd_tready;
   wire m_axis_s2mm_cmd_tvalid;
@@ -5279,6 +5288,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix
         .acquisition_in_progress_out(acquisition_in_progress_out),
         .channel_sel(channel_sel),
         .clk(clk),
+        .data_in_tvalid(data_in_tvalid),
         .m_axis_s2mm_cmd_tdata(m_axis_s2mm_cmd_tdata),
         .m_axis_s2mm_cmd_tready(m_axis_s2mm_cmd_tready),
         .m_axis_s2mm_cmd_tvalid(m_axis_s2mm_cmd_tvalid),

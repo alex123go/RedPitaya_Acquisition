@@ -18,6 +18,9 @@ bUseTrig = 0
 bSave = 0
 bPlot = 1
 
+
+downsample_value = 3
+
 n_pts = 10e3 # if both channel, this is n_pts1 + n_pts2 ##If you want max, just put a large number
 channel = 3 # 1 or 2 or 3 for both
 fileName = 'data_saving/dontSave.bin'
@@ -34,6 +37,8 @@ START_ADDR        = 0x0800_0000 # Define by reserved memory in devicetree used t
 MAXPOINTS   = int((0x1FFFFFFF-START_ADDR - 3)/2) # /2 because 2 bytes per points
 
 xadc_base_addr    = 0x0001_0000
+
+DOWNSAMPLE_REG    = 0x0007_0000 #32 bits, downsample_rate-1 : 0 for 125e6, n for 125e6/n
 
 RESET_DMA_REG     = 0x0008_0000 # 1 bit
 
@@ -54,11 +59,20 @@ dev = RP_PLL.RP_PLL_device(None)
 dev.OpenTCPConnection(IP, PORT)
 
 
+# make sure n_pts is < MAXPOINTS
 n_pts = min(MAXPOINTS,n_pts)
+
+# make sure downsample_value is between 1 and 2^32
+downsample_value = min(2**32,downsample_value)
+downsample_value = max(1,downsample_value)
+
+dev.write_Zynq_AXI_register_uint32(DOWNSAMPLE_REG, downsample_value-1)
+fs = fs/downsample_value
 
 #Reset DMA FSM (active low)
 dev.write_Zynq_AXI_register_uint32(RESET_DMA_REG, 0)
 dev.write_Zynq_AXI_register_uint32(RESET_DMA_REG, 1)
+
 
 
 # set MUX
@@ -69,7 +83,9 @@ dev.write_Zynq_AXI_register_uint32(MUX_ADC_2_REG, ADC2_counter)
 dev.write_Zynq_AXI_register_uint32(START_ADDR_REG, data_addr)
 
 # set n_bytes
-dev.write_Zynq_AXI_register_uint32(N_BYTES_REG, int(2*n_pts)) # in the firmware, it rounds to 256 bytes (128 pts)
+n_bytes = int(2*n_pts)
+n_bytes = max(n_bytes, 512) # at least 1 tx
+dev.write_Zynq_AXI_register_uint32(N_BYTES_REG, n_bytes)
 
 # set chan
 dev.write_Zynq_AXI_register_uint32(CHANNEL_REG, channel)
@@ -82,6 +98,7 @@ else:
     dev.write_Zynq_AXI_register_uint32(TRIG_REG, 0) # 0 before to make sure we have a rising edge
     dev.write_Zynq_AXI_register_uint32(TRIG_REG, 1) # Start with trig need to stay high to register external trig
     dev.write_Zynq_AXI_register_uint32(TRIG_REG, 0)
+
 time.sleep(n_pts/fs) 
 
 # read status (0b10 = error // 0b01 = data_valid // 0b00 = not_ready)
@@ -96,10 +113,8 @@ data_in = dev.read_Zynq_ddr(data_addr-START_ADDR, int(2*n_pts))
 print('Elapsed time for receiving= {}'.format(time.time() - timeStart))
 
 timeStart = time.time()
-if ADC1_counter == 1 and ADC2_counter == 1:
-    data_in = np.fromstring(data_in, dtype=np.uint32) # Uncomment this line if you want to read data as 32 bits (useful if both ADCs are connected to counter)
-else:
-    data_in = np.fromstring(data_in, dtype=np.int16) # Uncomment this line if you want to read data as 16 bits
+# data_in = np.fromstring(data_in, dtype=np.uint32) # Uncomment this line if you want to read data as 32 bits (useful if both ADCs are connected to counter)
+data_in = np.fromstring(data_in, dtype=np.int16) # Uncomment this line if you want to read data as 16 bits
 print('Elapsed time for conversion = {}'.format(time.time() - timeStart))
 
 timeStart = time.time()
@@ -121,12 +136,13 @@ if bSave == 1:
 
 if bPlot == 1: 
     if channel == 3:
-        print('plotting')
         plt.plot(data_in[::2])
         plt.plot(data_in[1::2])
         plt.show()
     else:
-        pass
+        plt.plot(data_in)
+#        plt.plot(np.diff(data_in))
+        plt.show()
 
    
 print('Elapsed time for writing = {}'.format(time.time() - timeStart))

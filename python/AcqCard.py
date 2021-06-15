@@ -33,6 +33,8 @@ class AcqCard(QtWidgets.QMainWindow):
 	# Reg addr : 
 	xadc_base_addr    = 0x0001_0000
 
+	DOWNSAMPLE_REG    = 0x0007_0000 #32 bits, downsample_rate-1 : 0 for 125e6, n for 125e6/n
+
 	RESET_DMA_REG     = 0x0008_0000 # 1 bit
 
 	MUX_ADC_1_REG     = 0x0009_0000 # 1 bit
@@ -72,12 +74,19 @@ class AcqCard(QtWidgets.QMainWindow):
 
 		self.dev.write_Zynq_AXI_register_uint32(self.START_ADDR_REG, self.START_ADDR)
 
-		mux_value = 0 #0 for ADCs, 1 for counter
+		mux_value = 1 #0 for ADCs, 1 for counter
 
 		# set MUX
 		self.dev.write_Zynq_AXI_register_uint32(self.MUX_ADC_1_REG, mux_value)
 		self.dev.write_Zynq_AXI_register_uint32(self.MUX_ADC_2_REG, mux_value)
 
+		#small patch cause self.actual_fs need to be create to call the others functions:
+		downsample_value = int(float(self.lineEdit_downsampling.text()))
+		self.downsample_value = downsample_value
+		self.actual_fs = self.fs/self.downsample_value
+		self.dev.write_Zynq_AXI_register_uint32(self.DOWNSAMPLE_REG, self.downsample_value-1)
+
+		self.label_samplingRate.setText('fs = {:.3e} Hz'.format(self.actual_fs))
 
 		self.initUI()
 		self.verifyPath()
@@ -92,13 +101,12 @@ class AcqCard(QtWidgets.QMainWindow):
 			self.label_RPTemperature.setText('Zynq temperature (max 85 °C operating): Can''t update temperature while transfering ddr')
 
 	def getDataFromZynq_thread(self):
-		bVerbose = True
+		bVerbose = False
 
 		self.timerDataUpdate.stop()
 		
 		status = self.dev.read_Zynq_AXI_register_uint32(self.STATUS_REG)
-		print('status =' + str(status))
-		
+
 		if status == 0 and self.acq_active == 1:
 			if bVerbose:
 				print('Data not yet ready')
@@ -190,6 +198,7 @@ class AcqCard(QtWidgets.QMainWindow):
 			if bVerboseTiming:
 				print("saving read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
 
+
 		#Reset DMA FSM (active low)
 		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 0)
 		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 1)
@@ -197,23 +206,14 @@ class AcqCard(QtWidgets.QMainWindow):
 
 
 	def initUI(self):
-		# set QLineEdit to user_friendly:
-		#Is it clean to do it this way??
-		self.lineEdit_numberOfPoints_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_numberOfPoints)
-		self.lineEdit_timeAcq_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_timeAcq)
-		self.lineEdit_numberOfWaveform_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_numberOfWaveform)
-		self.lineEdit_savePath_userFriendly = set_to_user_friendly_QLineEdit(self.lineEdit_savePath)
-
 		# Connect function to buttons
 		self.pushButton_stopAcq.clicked.connect(self.stopAcquisition)
 		self.pushButton_singleAcq.clicked.connect(self.start_single)
 		self.pushButton_continuousAcq.clicked.connect(self.start_continuous)
 		
 
-
+		self.lineEdit_downsampling.returnPressed.connect(self.changeSamplingRate)
 		self.lineEdit_numberOfPoints.returnPressed.connect(self.changeNumberOfPoints)
-
-		# self.lineEdit_timeAcq = set_to_user_friendly_QLineEdit(self.lineEdit_timeAcq)
 		self.lineEdit_timeAcq.returnPressed.connect(self.changeTimeAcqLength)
 
 		self.radioButton_channel_in1.clicked.connect(self.changeChannel)
@@ -310,7 +310,7 @@ class AcqCard(QtWidgets.QMainWindow):
 
 		totalNumberOfPoints = self.numberOfPoints * np.sum(self.channelValid)
 
-		timeToWait_in_ms = totalNumberOfPoints/self.fs*1000
+		timeToWait_in_ms = totalNumberOfPoints/self.actual_fs*1000
 		#print('time to wait : {}ms'.format(timeToWait_in_ms))
 		
 		self.timerDataUpdate.singleShot(int(timeToWait_in_ms)+1, self.getDataFromZynq_thread)
@@ -324,11 +324,10 @@ class AcqCard(QtWidgets.QMainWindow):
 
 
 
-
 	def plot_timeDomain(self, data_in, channel = 0):
 		if self.checkBox_timeDomainDisplay.isChecked():
 			self.timeCurve[channel].clear()
-			time_axis = np.linspace(1, len(data_in), len(data_in))/self.fs
+			time_axis = np.linspace(1, len(data_in), len(data_in))/self.actual_fs
 			self.timeCurve[channel].setData(time_axis,data_in)
 			# print('Voltage start -> end : {}'.format(data_in[0] - data_in[-1]))
 
@@ -338,7 +337,7 @@ class AcqCard(QtWidgets.QMainWindow):
 		if self.checkBox_FrequencyDomainDisplay.isChecked():
 			self.freqCurve[channel].clear()
 			N_fft = 2**(int(np.ceil(np.log2(len(data_in)))))
-			frequency_axis = np.linspace(0, (N_fft-1)/float(N_fft)*self.fs, N_fft)
+			frequency_axis = np.linspace(0, (N_fft-1)/float(N_fft)*self.actual_fs, N_fft)
 			last_index_shown = int(np.round(len(frequency_axis)/2))
 			spc = np.abs(np.fft.fft(data_in, N_fft))
 			spc = 20*np.log10(spc + 1e-12) # -> dB (1e-12 to avoid log10(0))
@@ -360,6 +359,35 @@ class AcqCard(QtWidgets.QMainWindow):
 		self.changeNumberOfPoints()
 		self.changePlotLayout()
 
+	def changeSamplingRate(self):
+		#TODO : implement a logic to avoid potential error if sampling rate is changed mid-acquisition
+		try : 
+			downsample_value = int(float(self.lineEdit_downsampling.text()))
+		except ValueError:
+			downsample_value = self.downsample_value
+			self.lineEdit_downsampling.blockSignals(True)
+			self.lineEdit_downsampling.setText(str(downsample_value))
+			self.lineEdit_downsampling.blockSignals(False)
+		
+		# make sure downsample_value is between 1 and 2^32
+		downsample_value = min(2**32,downsample_value)
+		downsample_value = max(1,downsample_value)
+
+		self.downsample_value = downsample_value
+
+		self.dev.write_Zynq_AXI_register_uint32(self.DOWNSAMPLE_REG, self.downsample_value-1)
+		self.actual_fs = self.fs/self.downsample_value
+
+		#Reset DMA FSM (active low)
+		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 0)
+		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 1)
+
+		self.label_samplingRate.setText('fs = {:.3e} Hz'.format(self.actual_fs))
+
+
+		self.lineEdit_timeAcq.blockSignals(True)
+		self.lineEdit_timeAcq.setText('{:.3e}'.format(self.numberOfPoints/self.actual_fs))
+		self.lineEdit_timeAcq.blockSignals(False)
 
 	def changeNumberOfPoints(self):
 		if self.lineEdit_numberOfPoints.text().upper() == 'MAX':
@@ -372,9 +400,9 @@ class AcqCard(QtWidgets.QMainWindow):
 				numberOfPoints = int(float(self.lineEdit_numberOfPoints.text()))
 			except ValueError:
 				numberOfPoints = self.numberOfPoints
-				self.lineEdit_timeAcq.blockSignals(True)
+				self.lineEdit_numberOfPoints.blockSignals(True)
 				self.lineEdit_numberOfPoints.setText(str(numberOfPoints))
-				self.lineEdit_timeAcq.blockSignals(False)
+				self.lineEdit_numberOfPoints.blockSignals(False)
 
 			#under 256 points, FPGA memory never fill
 			numberOfPoints_constraint = self.constraintNumber(numberOfPoints, 256, self.MAXPOINTS/np.sum(self.channelValid))
@@ -391,7 +419,7 @@ class AcqCard(QtWidgets.QMainWindow):
 		self.numberOfPoints = numberOfPoints		
 		
 		self.lineEdit_timeAcq.blockSignals(True)
-		self.lineEdit_timeAcq.setText('{:.3e}'.format(numberOfPoints/self.fs))
+		self.lineEdit_timeAcq.setText('{:.3e}'.format(self.numberOfPoints/self.actual_fs))
 		self.lineEdit_timeAcq.blockSignals(False)
 
 
@@ -406,7 +434,7 @@ class AcqCard(QtWidgets.QMainWindow):
 			self.lineEdit_numberOfPoints.blockSignals(False)
 		else:
 			try:
-				numberOfPoints = round(float(self.lineEdit_timeAcq.text())*self.fs)
+				numberOfPoints = round(float(self.lineEdit_timeAcq.text())*self.actual_fs)
 			except ValueError:
 				numberOfPoints = self.numberOfPoints
 			

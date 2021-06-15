@@ -62,6 +62,7 @@ ENTITY design_1_Acquisition_top_0_0 IS
     channel_sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     ADC1_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
     ADC2_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    data_in_tvalid : IN STD_LOGIC;
     FIFO_S2MM_data_count : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     start_address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     acquisition_in_progress_out : OUT STD_LOGIC;
@@ -91,6 +92,7 @@ ARCHITECTURE design_1_Acquisition_top_0_0_arch OF design_1_Acquisition_top_0_0 I
       channel_sel : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
       ADC1_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
       ADC2_data : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      data_in_tvalid : IN STD_LOGIC;
       FIFO_S2MM_data_count : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       start_address : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       acquisition_in_progress_out : OUT STD_LOGIC;
@@ -145,6 +147,7 @@ BEGIN
       channel_sel => channel_sel,
       ADC1_data => ADC1_data,
       ADC2_data => ADC2_data,
+      data_in_tvalid => data_in_tvalid,
       FIFO_S2MM_data_count => FIFO_S2MM_data_count,
       start_address => start_address,
       acquisition_in_progress_out => acquisition_in_progress_out,

@@ -39,7 +39,7 @@ entity Acquisition_top is
            channel_sel : in STD_LOGIC_VECTOR(2-1 downto 0);
            ADC1_data : in STD_LOGIC_VECTOR(16-1 downto 0);
            ADC2_data : in STD_LOGIC_VECTOR(16-1 downto 0);
-                      
+           data_in_tvalid : in STD_LOGIC;           
            FIFO_S2MM_data_count : in STD_LOGIC_VECTOR(32-1 downto 0);
            
            start_address : in unsigned(32-1 downto 0);
@@ -157,7 +157,7 @@ ADC_FSM : Acquisition_FSM_2
 
 reset_ACQ <= reset_ACQ_int;
 status_out <= error_ACQ & data_tvalid_int;
-s_axis_tvalid <= not(data_tvalid_int);
+s_axis_tvalid <= not(data_tvalid_int) and data_in_tvalid;
 
 ADC1_converter : axis_dwidth_converter_16to64
   PORT MAP (

@@ -2,11 +2,11 @@
 # Webtalk v2019.1 (64-bit)
 # SW Build 2552052 on Fri May 24 14:49:42 MDT 2019
 # IP Build 2548770 on Fri May 24 18:01:18 MDT 2019
-# Start of session at: Thu Jun 10 16:26:04 2021
-# Process ID: 26092
+# Start of session at: Tue Jun 15 11:03:39 2021
+# Process ID: 21768
 # Current directory: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.sim/sim_1/behav/xsim
-# Command line: wbtcv.exe -mode batch -source D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/start_trig_logic_behav/webtalk/xsim_webtalk.tcl -notrace
+# Command line: wbtcv.exe -mode batch -source D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/downsample_inData_tb_behav/webtalk/xsim_webtalk.tcl -notrace
 # Log file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.sim/sim_1/behav/xsim/webtalk.log
 # Journal file: D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.sim/sim_1/behav/xsim\webtalk.jou
 #-----------------------------------------------------------
-source D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/start_trig_logic_behav/webtalk/xsim_webtalk.tcl -notrace
+source D:/Users/Alex/Documents/GitHub/RedPitaya_Acquisition/RedPitaya_Acquisition/project_1/project_1.sim/sim_1/behav/xsim/xsim.dir/downsample_inData_tb_behav/webtalk/xsim_webtalk.tcl -notrace

@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Mon Jun 14 18:48:43 2021
+--Date        : Tue Jun 15 11:12:02 2021
 --Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -76,10 +76,6 @@ architecture STRUCTURE of design_1_wrapper is
     IO7 : out STD_LOGIC;
     ext_trig : in STD_LOGIC;
     led_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    Vaux1_0_v_n : in STD_LOGIC;
-    Vaux1_0_v_p : in STD_LOGIC;
-    Vaux0_0_v_n : in STD_LOGIC;
-    Vaux0_0_v_p : in STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -95,12 +91,16 @@ architecture STRUCTURE of design_1_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    Vaux9_0_v_n : in STD_LOGIC;
-    Vaux9_0_v_p : in STD_LOGIC;
-    Vaux8_0_v_n : in STD_LOGIC;
-    Vaux8_0_v_p : in STD_LOGIC;
+    Vaux0_0_v_n : in STD_LOGIC;
+    Vaux0_0_v_p : in STD_LOGIC;
+    Vaux1_0_v_n : in STD_LOGIC;
+    Vaux1_0_v_p : in STD_LOGIC;
     Vp_Vn_0_v_n : in STD_LOGIC;
     Vp_Vn_0_v_p : in STD_LOGIC;
+    Vaux8_0_v_n : in STD_LOGIC;
+    Vaux8_0_v_p : in STD_LOGIC;
+    Vaux9_0_v_n : in STD_LOGIC;
+    Vaux9_0_v_p : in STD_LOGIC;
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ddr_vrn : inout STD_LOGIC;
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
