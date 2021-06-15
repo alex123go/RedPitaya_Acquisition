@@ -24,7 +24,7 @@ class controller(object):
 	"""docstring for controller"""
 
 	FIRMWARE_VERSION_ADDRESS  = 0x000F_0000 # offset of 0x8000_0000
-	EXPECTED_FIRMWARE_VERSION = 0xADC0_0001
+	EXPECTED_FIRMWARE_VERSION = 0xADC0_0003
 
 	def __init__(self):
 		super(controller, self).__init__()
@@ -88,7 +88,7 @@ class controller(object):
 
 		strBroadcastAddress = self.findMostLikelyLANBroadcastIPAddress()
 		#strBroadcastAddress = "192.168.0.255"
-		strFPGAFirmware=r'AcqCard.bit'
+		strFPGAFirmware=r'acq_card_trig.bit'
 		strCPUFirmware=u'../ZynqFolder/monitor-tcp/monitor-tcp'
 		self.initial_config = initialConfiguration(self.dev, devices_data=devices_data, strBroadcastAddress=strBroadcastAddress, strFPGAFirmware=strFPGAFirmware, strCPUFirmware=strCPUFirmware)
 	

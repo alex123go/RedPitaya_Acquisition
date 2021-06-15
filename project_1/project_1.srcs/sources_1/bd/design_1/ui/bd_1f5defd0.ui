@@ -5,8 +5,8 @@
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 8 -x 2530 -y 200 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 8 -x 2530 -y 230 -defaultsOSRD
+preplace port DDR -pg 1 -lvl 8 -x 2970 -y 200 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 8 -x 2970 -y 230 -defaultsOSRD
 preplace port Vp_Vn_0 -pg 1 -lvl 0 -x -100 -y 110 -defaultsOSRD
 preplace port Vaux8_0 -pg 1 -lvl 0 -x -100 -y 200 -defaultsOSRD
 preplace port Vaux0_0 -pg 1 -lvl 0 -x -100 -y 140 -defaultsOSRD
@@ -14,74 +14,88 @@ preplace port Vaux1_0 -pg 1 -lvl 0 -x -100 -y 170 -defaultsOSRD
 preplace port Vaux9_0 -pg 1 -lvl 0 -x -100 -y 230 -defaultsOSRD
 preplace port adc_clk_p_i -pg 1 -lvl 0 -x -100 -y 1040 -defaultsOSRD
 preplace port adc_clk_n_i -pg 1 -lvl 0 -x -100 -y 1010 -defaultsOSRD
-preplace port adc_cdcs_o -pg 1 -lvl 8 -x 2530 -y 1100 -defaultsOSRD
-preplace port dac_wrt_o -pg 1 -lvl 8 -x 2530 -y 870 -defaultsOSRD
-preplace port dac_sel_o -pg 1 -lvl 8 -x 2530 -y 900 -defaultsOSRD
-preplace port dac_clk_o -pg 1 -lvl 8 -x 2530 -y 930 -defaultsOSRD
-preplace port dac_rst_o -pg 1 -lvl 8 -x 2530 -y 960 -defaultsOSRD
-preplace port IO7 -pg 1 -lvl 8 -x 2530 -y 490 -defaultsOSRD
+preplace port adc_cdcs_o -pg 1 -lvl 8 -x 2970 -y 1100 -defaultsOSRD
+preplace port dac_wrt_o -pg 1 -lvl 8 -x 2970 -y 870 -defaultsOSRD
+preplace port dac_sel_o -pg 1 -lvl 8 -x 2970 -y 900 -defaultsOSRD
+preplace port dac_clk_o -pg 1 -lvl 8 -x 2970 -y 930 -defaultsOSRD
+preplace port dac_rst_o -pg 1 -lvl 8 -x 2970 -y 960 -defaultsOSRD
+preplace port IO7 -pg 1 -lvl 8 -x 2970 -y 490 -defaultsOSRD
+preplace port ext_trig -pg 1 -lvl 0 -x -100 -y 580 -defaultsOSRD
 preplace portBus adc_dat_a_i -pg 1 -lvl 0 -x -100 -y 920 -defaultsOSRD
 preplace portBus adc_dat_b_i -pg 1 -lvl 0 -x -100 -y 1100 -defaultsOSRD
-preplace portBus dac_dat_o -pg 1 -lvl 8 -x 2530 -y 840 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2280 -y 240 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 3 -x 670 -y 850 -defaultsOSRD
-preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 360 -y 1010 -defaultsOSRD
-preplace inst rst_clk_wiz_0_250M -pg 1 -lvl 5 -x 1420 -y 810 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -x 1000 -y 500 -defaultsOSRD
-preplace inst xadc_wiz_0 -pg 1 -lvl 5 -x 1420 -y 0 -defaultsOSRD
-preplace inst ADCs_wrapper_0 -pg 1 -lvl 7 -x 2280 -y 1080 -defaultsOSRD
-preplace inst DACs_wrapper_0 -pg 1 -lvl 7 -x 2280 -y 900 -defaultsOSRD
-preplace inst firmware_version -pg 1 -lvl 5 -x 1420 -y 640 -defaultsOSRD
-preplace inst SinWave_Output -pg 1 -lvl 5 -x 1420 -y 1000 -defaultsOSRD
-preplace inst DMA -pg 1 -lvl 6 -x 1840 -y 480 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 2 5 470 680 840 230 1200 470 1600 620 2060
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 3 3 850 240 1210 490 NJ
-preplace netloc clk_wiz_0_locked 1 2 5 500 960 NJ 960 1240 910 1590J 890 2070J
-preplace netloc clk_wiz_0_clk_out2 1 2 5 480J 750 840J 770 1230 510 1640 260 NJ
-preplace netloc adc_clk_n_i_1 1 0 2 NJ 1010 N
-preplace netloc adc_clk_p_i_1 1 0 2 NJ 1040 120
-preplace netloc Net 1 2 6 500 740 860J 760 1240 710 NJ 710 NJ 710 2510
-preplace netloc xadc_wiz_0_ip2intc_irpt 1 5 2 1600 170 2050J
-preplace netloc adc_dat_a_i 1 0 7 NJ 920 N 920 490J 950 850J 970 1140J 1080 NJ 1080 NJ
-preplace netloc adc_dat_b_i 1 0 7 NJ 1100 N 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ
-preplace netloc ADCs_wrapper_0_adc_cdcs_o 1 7 1 NJ 1100
-preplace netloc clk_wiz_0_clk_out3 1 2 5 480J 1110 NJ 1110 NJ 1110 1610J 880 2040
-preplace netloc DACs_wrapper_0_dac_dat_o 1 7 1 2510J 840n
-preplace netloc DACs_wrapper_0_dac_wrt_o 1 7 1 2510J 870n
-preplace netloc DACs_wrapper_0_dac_sel_o 1 7 1 NJ 900
-preplace netloc DACs_wrapper_0_dac_clk_o 1 7 1 2510J 920n
-preplace netloc DACs_wrapper_0_dac_rst_o 1 7 1 2510J 940n
-preplace netloc dds_compiler_0_m_axis_data_tdata 1 5 2 1600 900 NJ
-preplace netloc DDS_output_div_by_2_1_data_out 1 5 2 1630 940 NJ
-preplace netloc SinWave_Output_gpio_io_o 1 5 2 1620 920 NJ
-preplace netloc SinWave_Output_gpio2_io_o 1 5 2 1640 960 NJ
-preplace netloc rst_clk_wiz_0_250M_peripheral_aresetn 1 5 1 1590 530n
-preplace netloc ADCs_wrapper_0_adc_a 1 5 3 1610 640 NJ 640 2500
-preplace netloc ADCs_wrapper_0_adc_b 1 5 3 1640 650 NJ 650 2490
-preplace netloc DMA_acquisition_in_progress_out_0 1 6 2 NJ 490 NJ
+preplace portBus dac_dat_o -pg 1 -lvl 8 -x 2970 -y 840 -defaultsOSRD
+preplace portBus led_o -pg 1 -lvl 8 -x 2970 -y 740 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 7 -x 2680 -y 240 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 670 -y 850 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 360 -y 1010 -defaultsOSRD
+preplace inst rst_clk_wiz_0_250M -pg 1 -lvl 4 -x 1510 -y 810 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 1020 -y 500 -defaultsOSRD
+preplace inst xadc_wiz_0 -pg 1 -lvl 4 -x 1510 -y 0 -defaultsOSRD
+preplace inst ADCs_wrapper_0 -pg 1 -lvl 7 -x 2680 -y 1150 -defaultsOSRD
+preplace inst DACs_wrapper_0 -pg 1 -lvl 7 -x 2680 -y 970 -defaultsOSRD
+preplace inst firmware_version -pg 1 -lvl 4 -x 1510 -y 640 -defaultsOSRD
+preplace inst SinWave_Output -pg 1 -lvl 4 -x 1510 -y 1000 -defaultsOSRD
+preplace inst DMA -pg 1 -lvl 5 -x 1940 -y 480 -defaultsOSRD
+preplace inst xlconcat_0 -pg 1 -lvl 7 -x 2680 -y 740 -defaultsOSRD
+preplace inst c_counter_binary_0 -pg 1 -lvl 5 -x 1940 -y 840 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 6 -x 2320 -y 830 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 6 -x 2320 -y 730 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 6 470 700 860 210 1250 470 1700 670 N 670 2450
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 3 870 220 1260 490 NJ
+preplace netloc clk_wiz_0_locked 1 1 6 500 950 NJ 950 1290 910 NJ 910 NJ 910 2430
+preplace netloc clk_wiz_0_clk_out2 1 1 6 490J 740 880J 780 1270 510 1720 260 NJ 260 N
+preplace netloc adc_clk_n_i_1 1 0 1 NJ 1010
+preplace netloc adc_clk_p_i_1 1 0 1 -60J 1030n
+preplace netloc Net 1 1 7 500 750 840J 790 1290 710 NJ 710 2170J 610 2420 590 2890
+preplace netloc xadc_wiz_0_ip2intc_irpt 1 4 3 N -120 NJ -120 2470
+preplace netloc adc_dat_a_i 1 0 7 NJ 920 480J 980 NJ 980 1180J 1110 NJ 1110 NJ 1110 2420
+preplace netloc adc_dat_b_i 1 0 7 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 NJ 1100 2430
+preplace netloc ADCs_wrapper_0_adc_cdcs_o 1 7 1 2930J 1100n
+preplace netloc clk_wiz_0_clk_out3 1 1 6 NJ 1020 NJ 1020 1160J 1080 1690J 960 N 960 2470
+preplace netloc DACs_wrapper_0_dac_dat_o 1 7 1 2910J 840n
+preplace netloc DACs_wrapper_0_dac_wrt_o 1 7 1 2920J 870n
+preplace netloc DACs_wrapper_0_dac_sel_o 1 7 1 2930J 900n
+preplace netloc DACs_wrapper_0_dac_clk_o 1 7 1 2940J 930n
+preplace netloc DACs_wrapper_0_dac_rst_o 1 7 1 2950J 960n
+preplace netloc dds_compiler_0_m_axis_data_tdata 1 4 3 N 970 NJ 970 N
+preplace netloc DDS_output_div_by_2_1_data_out 1 4 3 N 990 NJ 990 2420
+preplace netloc SinWave_Output_gpio_io_o 1 4 3 1710 1000 NJ 1000 2470
+preplace netloc SinWave_Output_gpio2_io_o 1 4 3 N 1030 NJ 1030 N
+preplace netloc rst_clk_wiz_0_250M_peripheral_aresetn 1 4 1 1680 530n
+preplace netloc ADCs_wrapper_0_adc_a 1 4 4 1710 640 2160J 620 2430 600 2900
+preplace netloc ADCs_wrapper_0_adc_b 1 4 4 1720 650 2140J 630 2440 610 2890
+preplace netloc DMA_acquisition_in_progress_out_0 1 5 3 NJ 470 2470 490 NJ
+preplace netloc ext_trig_0_1 1 0 7 NJ 580 NJ 580 850J 800 1280J 560 1690J 660 N 660 2420
+preplace netloc xlconcat_0_dout 1 7 1 N 740
+preplace netloc DMA_start_sig 1 5 2 2180 640 2460
+preplace netloc c_counter_binary_0_Q 1 5 1 2160 830n
+preplace netloc xlslice_0_Dout 1 6 1 2420 810n
+preplace netloc xlconstant_0_dout 1 6 1 2420 730n
+preplace netloc DMA_trig_value 1 5 2 2150J 650 2440
+preplace netloc Vaux1_0_1 1 0 4 -60J -10 NJ -10 NJ -10 NJ
+preplace netloc Vaux0_0_1 1 0 4 -70J -30 NJ -30 NJ -30 NJ
 preplace netloc processing_system7_0_DDR 1 7 1 NJ 200
-preplace netloc ps7_0_axi_periph_M06_AXI 1 4 2 1170 430 NJ
-preplace netloc ps7_0_axi_periph_M07_AXI 1 4 2 1220 450 NJ
-preplace netloc Vaux9_0_1 1 0 5 NJ 230 140 30 NJ 30 NJ 30 NJ
-preplace netloc processing_system7_0_M_AXI_GP1 1 3 5 860 180 NJ 180 NJ 180 2040J 120 2490
-preplace netloc DMA_M00_AXI 1 6 1 2040 220n
-preplace netloc Vaux0_0_1 1 0 5 NJ 140 110 -30 NJ -30 NJ -30 NJ
-preplace netloc ps7_0_axi_periph_M03_AXI 1 4 1 1190 490n
-preplace netloc ps7_0_axi_periph_M04_AXI 1 4 1 1160 510n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 4 2 1160 410 NJ
-preplace netloc Vaux8_0_1 1 0 5 NJ 200 130 10 NJ 10 NJ 10 NJ
-preplace netloc ps7_0_axi_periph_M00_AXI 1 4 2 1150 390 NJ
-preplace netloc Vaux1_0_1 1 0 5 NJ 170 120 -10 NJ -10 NJ -10 NJ
-preplace netloc Vp_Vn_0_1 1 0 5 NJ 110 100 -50 NJ -50 NJ -50 NJ
-preplace netloc processing_system7_0_FIXED_IO 1 7 1 2510J 220n
-preplace netloc ps7_0_axi_periph_M02_AXI 1 4 1 1140 -70n
-preplace netloc ps7_0_axi_periph_M05_AXI 1 4 1 1180 530n
-levelinfo -pg 1 -100 80 360 670 1000 1420 1840 2280 2530
-pagesize -pg 1 -db -bbox -sgen -260 -310 2680 1190
+preplace netloc ps7_0_axi_periph_M03_AXI 1 3 1 1240 480n
+preplace netloc Vaux9_0_1 1 0 4 -40J 30 NJ 30 NJ 30 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 2 1170 370 NJ
+preplace netloc Vaux8_0_1 1 0 4 -50J 10 NJ 10 NJ 10 NJ
+preplace netloc ps7_0_axi_periph_M02_AXI 1 3 1 1160 -70n
+preplace netloc Vp_Vn_0_1 1 0 4 -80J -50 NJ -50 NJ -50 NJ
+preplace netloc ps7_0_axi_periph_M01_AXI 1 3 2 1180 390 NJ
+preplace netloc ps7_0_axi_periph_M07_AXI 1 3 2 1200 430 NJ
+preplace netloc ps7_0_axi_periph_M06_AXI 1 3 2 1190 410 NJ
+preplace netloc ps7_0_axi_periph_M08_AXI 1 3 2 1220 450 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 7 1 2900J 220n
+preplace netloc ps7_0_axi_periph_M04_AXI 1 3 1 1210 500n
+preplace netloc processing_system7_0_M_AXI_GP1 1 2 6 880 180 NJ 180 NJ 180 NJ 180 2450 120 2890
+preplace netloc ps7_0_axi_periph_M05_AXI 1 3 1 1230 520n
+preplace netloc DMA_M00_AXI 1 5 2 2180 220 N
+levelinfo -pg 1 -100 360 670 1020 1510 1940 2320 2680 2970
+pagesize -pg 1 -db -bbox -sgen -260 -360 3120 1230
 "
 }
 {
-   "da_axi4_cnt":"16",
+   "da_axi4_cnt":"17",
    "da_board_cnt":"3",
    "da_clkrst_cnt":"1",
    "da_ps7_cnt":"1"

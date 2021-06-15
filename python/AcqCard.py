@@ -33,6 +33,8 @@ class AcqCard(QtWidgets.QMainWindow):
 	# Reg addr : 
 	xadc_base_addr    = 0x0001_0000
 
+	RESET_DMA_REG     = 0x0008_0000 # 1 bit
+
 	MUX_ADC_1_REG     = 0x0009_0000 # 1 bit
 	MUX_ADC_2_REG     = 0x0009_0008 # 1 bit
 
@@ -40,6 +42,7 @@ class AcqCard(QtWidgets.QMainWindow):
 	CHANNEL_REG       = 0x000A_0008 # 2 bits
 
 	START_REG         = 0x000B_0000 # 1 bit : start acq on rising_edge
+	TRIG_REG          = 0x000B_0004 # 1 bit : allow start on rising edge of external pin
 	STATUS_REG        = 0x000B_0008 # 2 bits : error_ACQ (STS =! 0x80) & data_tvalid_int ('1' when data transfer is done)
 
 	START_ADDR_REG    = 0x000C_0000 # 32 bits # Min value is define by reserved memory in devicetree used to build Linux (0x0800_0000 in this version)
@@ -89,13 +92,32 @@ class AcqCard(QtWidgets.QMainWindow):
 			self.label_RPTemperature.setText('Zynq temperature (max 85 °C operating): Can''t update temperature while transfering ddr')
 
 	def getDataFromZynq_thread(self):
-		worker = Worker(self.getDataFromZynq) # Any other args, kwargs are passed to the run function
-		worker.signals.finished.connect(self.thread_complete)
-		worker.signals.progress.connect(self.progressStatus_update)
+		bVerbose = True
+
+		self.timerDataUpdate.stop()
 		
-		# Execute
-		self.threadRunning = True
-		self.threadpool.start(worker) 
+		status = self.dev.read_Zynq_AXI_register_uint32(self.STATUS_REG)
+		print('status =' + str(status))
+		
+		if status == 0 and self.acq_active == 1:
+			if bVerbose:
+				print('Data not yet ready')
+			self.timerDataUpdate.singleShot(1000, self.getDataFromZynq_thread)
+			return
+
+		if status > 1: #ready != 0 and != 1, therefore, error on acquisition
+			print('Warning, there was an error the acquisition... Further debugging needed \n Possible causes : not enough points or too much')
+			progress_callback.emit('Error')
+			return
+		
+		if status == 1:
+			worker = Worker(self.getDataFromZynq) # Any other args, kwargs are passed to the run function
+			worker.signals.finished.connect(self.thread_complete)
+			worker.signals.progress.connect(self.progressStatus_update)
+			
+			# Execute
+			self.threadRunning = True
+			self.threadpool.start(worker) 
 
 
 
@@ -119,67 +141,59 @@ class AcqCard(QtWidgets.QMainWindow):
 
 	# This function is called in a thread (by getDataFromZynq_thread) to avoid crashing the GUI
 	def getDataFromZynq(self, progress_callback):
-		bVerbose = False
+		bVerbose = True
 		bVerboseTiming = False
 
-		ready = self.dev.read_Zynq_AXI_register_uint32(self.STATUS_REG)
-		while ready == 0:
-			if bVerbose:
-				print('Data not yet ready')
-			time.sleep(10/1000)
-			ready = self.dev.read_Zynq_AXI_register_uint32(self.STATUS_REG)
+		##########################################################
+		#Transferring
+		progress_callback.emit('Transferring')
+		time_start = time.process_time()
+		totalNumberOfPoints = int(self.numberOfPoints * np.sum(self.channelValid))
+		self.data_in_bin = self.dev.read_Zynq_ddr(address_offset = 0, number_of_bytes=totalNumberOfPoints*2)
 
-		if ready != 1: #ready != 0 and != 1, therefore, error on acquisition
-			print('Warning, there was an error the acquisition... Further debugging needed \n Possible causes : not enough points or too much')
-			progress_callback.emit('Error')
+		self.data_in_bin = np.fromstring(self.data_in_bin, dtype=np.int16)
+		self.data_in_volt = self.data_in_bin #self.data_in_bin / 2**15
+
+		if bVerboseTiming:
+			print("transfer read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
 		
-		else: # data ready
 
-			##########################################################
-			#Transferring
-			progress_callback.emit('Transferring')
-			time_start = time.process_time()
-			totalNumberOfPoints = int(self.numberOfPoints * np.sum(self.channelValid))
-			self.data_in_bin = self.dev.read_Zynq_ddr(address_offset = 0, number_of_bytes=totalNumberOfPoints*2)
-
-			self.data_in_bin = np.fromstring(self.data_in_bin, dtype=np.int16)
-			self.data_in_volt = self.data_in_bin #self.data_in_bin / 2**15
-
-			if bVerboseTiming:
-				print("transfer read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
+		##########################################################
+		#Plotting
+		progress_callback.emit('Plotting')
+		time_start = time.process_time()
+		if np.sum(self.channelValid) == 2: 
+			#dual channel mode 
+			# odd  element => channel 0
+			# even element => channel 1
 			
+			self.plot_timeDomain(self.data_in_volt[1::2], channel = 0) # does it create a copy of data array? maybe should pass a reference
+			self.plot_timeDomain(self.data_in_volt[::2], channel = 1)
 
-			##########################################################
-			#Plotting
-			progress_callback.emit('Plotting')
+			self.plot_frequencyDomain(self.data_in_volt[1::2], channel = 0)
+			self.plot_frequencyDomain(self.data_in_volt[::2], channel = 1)
+
+		else:
+			# single channel mode
+			self.plot_timeDomain(self.data_in_volt, channel = self.channelValid.index(1))
+			self.plot_frequencyDomain(self.data_in_volt, channel = self.channelValid.index(1))
+
+		if bVerboseTiming:
+			print("plotting read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
+
+		##########################################################
+		#Saving
+		if self.checkBox_autoSaveOnAcq.isChecked():
+			progress_callback.emit('Saving')
 			time_start = time.process_time()
-			if np.sum(self.channelValid) == 2: 
-				#dual channel mode 
-				# odd  element => channel 0
-				# even element => channel 1
-				
-				self.plot_timeDomain(self.data_in_volt[1::2], channel = 0) # does it create a copy of data array? maybe should pass a reference
-				self.plot_timeDomain(self.data_in_volt[::2], channel = 1)
-
-				self.plot_frequencyDomain(self.data_in_volt[1::2], channel = 0)
-				self.plot_frequencyDomain(self.data_in_volt[::2], channel = 1)
-
-			else:
-				# single channel mode
-				self.plot_timeDomain(self.data_in_volt, channel = self.channelValid.index(1))
-				self.plot_frequencyDomain(self.data_in_volt, channel = self.channelValid.index(1))
-
+			self.saveData()
 			if bVerboseTiming:
-				print("plotting read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
+				print("saving read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
 
-			##########################################################
-			#Saving
-			if self.checkBox_autoSaveOnAcq.isChecked():
-				progress_callback.emit('Saving')
-				time_start = time.process_time()
-				self.saveData()
-				if bVerboseTiming:
-					print("saving read_Zynq_ddr {} pts : elapsed = {}".format(totalNumberOfPoints, (time.process_time()-time_start)))
+		#Reset DMA FSM (active low)
+		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 0)
+		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 1)
+
 
 
 	def initUI(self):
@@ -192,7 +206,7 @@ class AcqCard(QtWidgets.QMainWindow):
 
 		# Connect function to buttons
 		self.pushButton_stopAcq.clicked.connect(self.stopAcquisition)
-		self.pushButton_singleAcq.clicked.connect(lambda : self.start_acquisition(continuous = 0))
+		self.pushButton_singleAcq.clicked.connect(self.start_single)
 		self.pushButton_continuousAcq.clicked.connect(self.start_continuous)
 		
 
@@ -258,15 +272,40 @@ class AcqCard(QtWidgets.QMainWindow):
 
 
 	def start_continuous(self):
+		#Reset DMA FSM (active low)
+		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 0)
+		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 1)
+
 		self.start_acquisition(continuous = 1)
 		self.numberRemaining = self.numberToAcquire
+
+		
+	def start_single(self):
+		#Reset DMA FSM (active low)
+		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 0)
+		self.dev.write_Zynq_AXI_register_uint32(self.RESET_DMA_REG, 1)
+
+		self.start_acquisition(continuous = 0)
 
 	def start_acquisition(self, continuous = 0):
 		self.continuousDataAcquisition = continuous
 
+		self.acq_active = 1
+
 		# set start
-		self.dev.write_Zynq_AXI_register_uint32(self.START_REG, 1)
-		self.dev.write_Zynq_AXI_register_uint32(self.START_REG, 0)
+		if self.checkBox_useTrigger.isChecked():
+			self.dev.write_Zynq_AXI_register_uint32(self.TRIG_REG, 0) # 0 before to make sure we have a rising edge
+			self.dev.write_Zynq_AXI_register_uint32(self.TRIG_REG, 1) # Start with trig need to stay high to register external trig
+			self.dev.write_Zynq_AXI_register_uint32(self.TRIG_REG, 0)
+			
+			self.label_status.setText('Status : Waiting for trig')
+
+
+		else:
+			self.dev.write_Zynq_AXI_register_uint32(self.START_REG, 1)
+			self.dev.write_Zynq_AXI_register_uint32(self.START_REG, 0)
+			self.label_status.setText('Status : Acquisition')
+
 
 
 		totalNumberOfPoints = self.numberOfPoints * np.sum(self.channelValid)
@@ -274,13 +313,13 @@ class AcqCard(QtWidgets.QMainWindow):
 		timeToWait_in_ms = totalNumberOfPoints/self.fs*1000
 		#print('time to wait : {}ms'.format(timeToWait_in_ms))
 		
-		self.label_status.setText('Status : Acquisition')
 		self.timerDataUpdate.singleShot(int(timeToWait_in_ms)+1, self.getDataFromZynq_thread)
 
 
 	def stopAcquisition(self):
 		self.label_status.setText('Status : Idle')
 		self.continuousDataAcquisition = 0
+		self.acq_active = 0
 		self.timerDataUpdate.stop()
 
 

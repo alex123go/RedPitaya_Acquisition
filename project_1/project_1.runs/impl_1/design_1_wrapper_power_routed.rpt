@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date             : Mon Mar 29 11:37:50 2021
+| Date             : Mon Jun 14 19:01:39 2021
 | Host             : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 | Command          : report_power -file design_1_wrapper_power_routed.rpt -pb design_1_wrapper_power_summary_routed.pb -rpx design_1_wrapper_power_routed.rpx
 | Design           : design_1_wrapper
@@ -30,7 +30,7 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 2.047        |
+| Total On-Chip Power (W)  | 2.048        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
 | Dynamic (W)              | 1.915        |
@@ -52,24 +52,24 @@ Table of Contents
 +--------------------------+-----------+----------+-----------+-----------------+
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
-| Clocks                   |     0.035 |        7 |       --- |             --- |
-| Slice Logic              |     0.010 |     9518 |       --- |             --- |
-|   LUT as Logic           |     0.009 |     3009 |     17600 |           17.10 |
-|   Register               |    <0.001 |     4799 |     35200 |           13.63 |
-|   CARRY4                 |    <0.001 |      107 |      4400 |            2.43 |
+| Clocks                   |     0.034 |        7 |       --- |             --- |
+| Slice Logic              |     0.009 |     9808 |       --- |             --- |
+|   LUT as Logic           |     0.008 |     3104 |     17600 |           17.64 |
+|   Register               |    <0.001 |     4958 |     35200 |           14.09 |
+|   CARRY4                 |    <0.001 |      114 |      4400 |            2.59 |
 |   LUT as Distributed RAM |    <0.001 |      104 |      6000 |            1.73 |
 |   LUT as Shift Register  |    <0.001 |      123 |      6000 |            2.05 |
 |   F7/F8 Muxes            |    <0.001 |        5 |     17600 |            0.03 |
-|   Others                 |     0.000 |      515 |       --- |             --- |
-| Signals                  |     0.013 |     6867 |       --- |             --- |
+|   Others                 |     0.000 |      527 |       --- |             --- |
+| Signals                  |     0.011 |     7070 |       --- |             --- |
 | Block RAM                |     0.012 |      6.5 |        60 |           10.83 |
 | MMCM                     |     0.108 |        1 |         2 |           50.00 |
 | DSPs                     |     0.002 |        2 |        80 |            2.50 |
-| I/O                      |     0.451 |       58 |       100 |           58.00 |
+| I/O                      |     0.454 |       67 |       100 |           67.00 |
 | XADC                     |     0.002 |        1 |       --- |             --- |
 | PS7                      |     1.283 |        1 |       --- |             --- |
 | Static Power             |     0.132 |          |           |                 |
-| Total                    |     2.047 |          |           |                 |
+| Total                    |     2.048 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -79,9 +79,9 @@ Table of Contents
 +-----------+-------------+-----------+-------------+------------+
 | Source    | Voltage (V) | Total (A) | Dynamic (A) | Static (A) |
 +-----------+-------------+-----------+-------------+------------+
-| Vccint    |       1.000 |     0.087 |       0.078 |      0.008 |
+| Vccint    |       1.000 |     0.084 |       0.076 |      0.008 |
 | Vccaux    |       1.800 |     0.075 |       0.066 |      0.009 |
-| Vcco33    |       3.300 |     0.132 |       0.131 |      0.001 |
+| Vcco33    |       3.300 |     0.133 |       0.132 |      0.001 |
 | Vcco25    |       2.500 |     0.000 |       0.000 |      0.000 |
 | Vcco18    |       1.800 |     0.000 |       0.000 |      0.000 |
 | Vcco15    |       1.500 |     0.000 |       0.000 |      0.000 |
@@ -160,28 +160,26 @@ Table of Contents
 | Name                           | Power (W) |
 +--------------------------------+-----------+
 | design_1_wrapper               |     1.915 |
-|   design_1_i                   |     1.467 |
+|   design_1_i                   |     1.465 |
 |     DACs_wrapper_0             |     0.004 |
 |       U0                       |     0.004 |
-|     DMA                        |     0.037 |
-|       Acquisition_top_0        |     0.003 |
-|       axi_datamover_0          |     0.012 |
-|       axi_gpio_0               |     0.001 |
-|       axi_gpio_2               |     0.001 |
+|     DMA                        |     0.036 |
+|       Acquisition_top_0        |     0.002 |
+|       axi_datamover_0          |     0.011 |
 |       axi_smc                  |     0.015 |
 |       axis_data_fifo_0         |     0.004 |
 |     SinWave_Output             |     0.018 |
 |       axi_gpio_3               |     0.001 |
-|       dds_compiler_0           |     0.008 |
-|       dds_compiler_1           |     0.008 |
+|       dds_compiler_0           |     0.007 |
+|       dds_compiler_1           |     0.007 |
 |     clk_wiz_0                  |     0.109 |
 |       inst                     |     0.109 |
 |     firmware_version           |     0.002 |
 |       axi_gpio_firmwareVersion |     0.002 |
 |     processing_system7_0       |     1.284 |
 |       inst                     |     1.284 |
-|     ps7_0_axi_periph           |     0.008 |
-|       s00_couplers             |     0.006 |
+|     ps7_0_axi_periph           |     0.007 |
+|       s00_couplers             |     0.005 |
 |       xbar                     |     0.002 |
 |     xadc_wiz_0                 |     0.004 |
 |       U0                       |     0.004 |

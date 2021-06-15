@@ -1,7 +1,7 @@
 Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-| Date         : Mon Mar 29 11:33:28 2021
+| Date         : Mon Jun 14 18:56:52 2021
 | Host         : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_1_wrapper_utilization_synth.rpt -pb design_1_wrapper_utilization_synth.pb
 | Design       : design_1_wrapper
@@ -90,7 +90,7 @@ Table of Contents
 +-----------------------------+------+-------+-----------+-------+
 |          Site Type          | Used | Fixed | Available | Util% |
 +-----------------------------+------+-------+-----------+-------+
-| Bonded IOB                  |   58 |     0 |       100 | 58.00 |
+| Bonded IOB                  |   67 |     0 |       100 | 67.00 |
 | Bonded IPADs                |    0 |     0 |         2 |  0.00 |
 | Bonded IOPADs               |    0 |     0 |       130 |  0.00 |
 | PHY_CONTROL                 |    0 |     0 |         2 |  0.00 |
@@ -146,45 +146,48 @@ Table of Contents
 +----------+------+---------------------+
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
-| IBUF     |   38 |                  IO |
-| OBUF     |   20 |                  IO |
+| IBUF     |   39 |                  IO |
+| OBUF     |   28 |                  IO |
 +----------+------+---------------------+
 
 
 8. Black Boxes
 --------------
 
-+----------------------------------+------+
-|             Ref Name             | Used |
-+----------------------------------+------+
-| design_1_xbar_0                  |    1 |
-| design_1_xadc_wiz_0_0            |    1 |
-| design_1_rst_ps7_0_50M_0         |    1 |
-| design_1_rst_clk_wiz_0_250M_0    |    1 |
-| design_1_processing_system7_0_0  |    1 |
-| design_1_multiplexer_2to1_0_1    |    1 |
-| design_1_multiplexer_2to1_0_0    |    1 |
-| design_1_dds_compiler_0_1        |    1 |
-| design_1_dds_compiler_0_0        |    1 |
-| design_1_clk_wiz_0_0             |    1 |
-| design_1_c_counter_binary_0_0    |    1 |
-| design_1_axis_data_fifo_0_0      |    1 |
-| design_1_axi_smc_0               |    1 |
-| design_1_axi_gpio_4_0            |    1 |
-| design_1_axi_gpio_3_1            |    1 |
-| design_1_axi_gpio_3_0            |    1 |
-| design_1_axi_gpio_2_1            |    1 |
-| design_1_axi_gpio_2_0            |    1 |
-| design_1_axi_gpio_1_0            |    1 |
-| design_1_axi_gpio_0_0            |    1 |
-| design_1_axi_datamover_0_1       |    1 |
-| design_1_auto_pc_0               |    1 |
-| design_1_DDS_output_div_by_2_0_1 |    1 |
-| design_1_DDS_output_div_by_2_0_0 |    1 |
-| design_1_DACs_wrapper_0_0        |    1 |
-| design_1_Acquisition_top_0_0     |    1 |
-| design_1_ADCs_wrapper_0_0        |    1 |
-+----------------------------------+------+
++-----------------------------------+------+
+|              Ref Name             | Used |
++-----------------------------------+------+
+| design_1_xbar_0                   |    1 |
+| design_1_xadc_wiz_0_0             |    1 |
+| design_1_util_vector_logic_0_0    |    1 |
+| design_1_rst_ps7_0_50M_0          |    1 |
+| design_1_rst_clk_wiz_0_250M_0     |    1 |
+| design_1_processing_system7_0_0   |    1 |
+| design_1_multiplexer_2to1_0_1     |    1 |
+| design_1_multiplexer_2to1_0_0     |    1 |
+| design_1_dds_compiler_0_1         |    1 |
+| design_1_dds_compiler_0_0         |    1 |
+| design_1_clk_wiz_0_0              |    1 |
+| design_1_c_counter_binary_0_1     |    1 |
+| design_1_c_counter_binary_0_0     |    1 |
+| design_1_axis_data_fifo_0_0       |    1 |
+| design_1_axi_smc_0                |    1 |
+| design_1_axi_gpio_4_0             |    1 |
+| design_1_axi_gpio_3_1             |    1 |
+| design_1_axi_gpio_3_0             |    1 |
+| design_1_axi_gpio_2_1             |    1 |
+| design_1_axi_gpio_2_0             |    1 |
+| design_1_axi_gpio_1_0             |    1 |
+| design_1_axi_gpio_0_0             |    1 |
+| design_1_axi_datamover_0_1        |    1 |
+| design_1_auto_pc_0                |    1 |
+| design_1_acquisition_start_ex_0_0 |    1 |
+| design_1_DDS_output_div_by_2_0_1  |    1 |
+| design_1_DDS_output_div_by_2_0_0  |    1 |
+| design_1_DACs_wrapper_0_0         |    1 |
+| design_1_Acquisition_top_0_0      |    1 |
+| design_1_ADCs_wrapper_0_0         |    1 |
++-----------------------------------+------+
 
 
 9. Instantiated Netlists

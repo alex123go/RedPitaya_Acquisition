@@ -1,10 +1,10 @@
 // Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
-// Date        : Tue Apr 21 19:35:03 2020
+// Date        : Tue Apr 21 19:35:02 2020
 // Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/Red_Pitaya/Acq_Card/project_1/project_1.srcs/sources_1/bd/design_1/ip/design_1_xadc_wiz_0_0/design_1_xadc_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_1_xadc_wiz_0_0 -prefix
+//               design_1_xadc_wiz_0_0_ design_1_xadc_wiz_0_0_sim_netlist.v
 // Design      : design_1_xadc_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -191,7 +191,6 @@ module design_1_xadc_wiz_0_0
         .vp_in(vp_in));
 endmodule
 
-(* ORIG_REF_NAME = "design_1_xadc_wiz_0_0_address_decoder" *) 
 module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_address_decoder
    (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24]_0 ,
     Bus_RNW_reg_reg_0,
@@ -1709,7 +1708,6 @@ module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_address_decoder
         .O(sw_rst_cond));
 endmodule
 
-(* ORIG_REF_NAME = "design_1_xadc_wiz_0_0_axi_lite_ipif" *) 
 module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_axi_lite_ipif
    (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24] ,
     bus2ip_reset_active_high,
@@ -2133,8 +2131,7 @@ endmodule
 
 (* C_FAMILY = "virtex7" *) (* C_INCLUDE_INTR = "1" *) (* C_INSTANCE = "design_1_xadc_wiz_0_0_axi_xadc" *) 
 (* C_SIM_MONITOR_FILE = "design.txt" *) (* C_S_AXI_ADDR_WIDTH = "11" *) (* C_S_AXI_DATA_WIDTH = "32" *) 
-(* ORIG_REF_NAME = "design_1_xadc_wiz_0_0_axi_xadc" *) (* hdl = "VHDL" *) (* ip_group = "LOGICORE" *) 
-(* iptype = "PERIPHERAL" *) 
+(* hdl = "VHDL" *) (* ip_group = "LOGICORE" *) (* iptype = "PERIPHERAL" *) 
 module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_axi_xadc
    (s_axi_aclk,
     s_axi_aresetn,
@@ -2836,7 +2833,6 @@ module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_axi_xadc
         .R(reset2ip_reset));
 endmodule
 
-(* ORIG_REF_NAME = "design_1_xadc_wiz_0_0_interrupt_control" *) 
 module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_interrupt_control
    (irpt_wrack_d1,
     \GEN_IP_IRPT_STATUS_REG[0].GEN_REG_STATUS.ip_irpt_status_reg_reg[0]_0 ,
@@ -3678,7 +3674,6 @@ module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_interrupt_control
         .R(reset2ip_reset));
 endmodule
 
-(* ORIG_REF_NAME = "design_1_xadc_wiz_0_0_slave_attachment" *) 
 module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_slave_attachment
    (\GEN_BKEND_CE_REGISTERS[24].ce_out_i_reg[24] ,
     SR,
@@ -4568,7 +4563,6 @@ module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_slave_attachment
         .O(s_axi_awready));
 endmodule
 
-(* ORIG_REF_NAME = "design_1_xadc_wiz_0_0_soft_reset" *) 
 module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_soft_reset
    (sw_rst_cond_d1,
     wrack,
@@ -4998,7 +4992,6 @@ module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_soft_reset
         .R(bus2ip_reset_active_high));
 endmodule
 
-(* ORIG_REF_NAME = "design_1_xadc_wiz_0_0_xadc_core_drp" *) 
 module design_1_xadc_wiz_0_0_design_1_xadc_wiz_0_0_xadc_core_drp
    (D,
     eoc_out,

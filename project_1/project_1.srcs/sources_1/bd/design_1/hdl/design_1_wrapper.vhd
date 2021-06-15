@@ -1,7 +1,7 @@
 --Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2019.1 (win64) Build 2552052 Fri May 24 14:49:42 MDT 2019
---Date        : Mon Mar 29 11:30:10 2021
+--Date        : Mon Jun 14 18:48:43 2021
 --Host        : DESKTOP-AUBSA4O running 64-bit major release  (build 9200)
 --Command     : generate_target design_1_wrapper.bd
 --Design      : design_1_wrapper
@@ -54,7 +54,9 @@ entity design_1_wrapper is
     dac_dat_o : out STD_LOGIC_VECTOR ( 13 downto 0 );
     dac_rst_o : out STD_LOGIC;
     dac_sel_o : out STD_LOGIC;
-    dac_wrt_o : out STD_LOGIC
+    dac_wrt_o : out STD_LOGIC;
+    ext_trig : in STD_LOGIC;
+    led_o : out STD_LOGIC_VECTOR ( 7 downto 0 )
   );
 end design_1_wrapper;
 
@@ -72,6 +74,12 @@ architecture STRUCTURE of design_1_wrapper is
     dac_clk_o : out STD_LOGIC;
     dac_rst_o : out STD_LOGIC;
     IO7 : out STD_LOGIC;
+    ext_trig : in STD_LOGIC;
+    led_o : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    Vaux1_0_v_n : in STD_LOGIC;
+    Vaux1_0_v_p : in STD_LOGIC;
+    Vaux0_0_v_n : in STD_LOGIC;
+    Vaux0_0_v_p : in STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -89,20 +97,16 @@ architecture STRUCTURE of design_1_wrapper is
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     Vaux9_0_v_n : in STD_LOGIC;
     Vaux9_0_v_p : in STD_LOGIC;
+    Vaux8_0_v_n : in STD_LOGIC;
+    Vaux8_0_v_p : in STD_LOGIC;
+    Vp_Vn_0_v_n : in STD_LOGIC;
+    Vp_Vn_0_v_p : in STD_LOGIC;
     FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_ddr_vrn : inout STD_LOGIC;
     FIXED_IO_ddr_vrp : inout STD_LOGIC;
     FIXED_IO_ps_srstb : inout STD_LOGIC;
     FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    Vaux1_0_v_n : in STD_LOGIC;
-    Vaux1_0_v_p : in STD_LOGIC;
-    Vaux8_0_v_n : in STD_LOGIC;
-    Vaux8_0_v_p : in STD_LOGIC;
-    Vaux0_0_v_n : in STD_LOGIC;
-    Vaux0_0_v_p : in STD_LOGIC;
-    Vp_Vn_0_v_n : in STD_LOGIC;
-    Vp_Vn_0_v_p : in STD_LOGIC
+    FIXED_IO_ps_porb : inout STD_LOGIC
   );
   end component design_1;
 begin
@@ -149,6 +153,8 @@ design_1_i: component design_1
       dac_dat_o(13 downto 0) => dac_dat_o(13 downto 0),
       dac_rst_o => dac_rst_o,
       dac_sel_o => dac_sel_o,
-      dac_wrt_o => dac_wrt_o
+      dac_wrt_o => dac_wrt_o,
+      ext_trig => ext_trig,
+      led_o(7 downto 0) => led_o(7 downto 0)
     );
 end STRUCTURE;

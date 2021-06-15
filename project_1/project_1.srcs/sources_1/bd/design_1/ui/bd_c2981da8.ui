@@ -3,67 +3,78 @@
    "guistr":"# # String gsaved with Nlview 7.0.19  2019-03-26 bk=1.5019 VDI=41 GEI=35 GUI=JA:9.0 non-TLS
 #  -string -flagsOSRD
 preplace port S_AXI -pg 1 -lvl 0 -x -850 -y 70 -defaultsOSRD
-preplace port M00_AXI -pg 1 -lvl 9 -x 2210 -y 560 -defaultsOSRD
+preplace port M00_AXI -pg 1 -lvl 10 -x 3080 -y 560 -defaultsOSRD
 preplace port S_AXI1 -pg 1 -lvl 0 -x -850 -y 350 -defaultsOSRD
 preplace port S_AXI2 -pg 1 -lvl 0 -x -850 -y 530 -defaultsOSRD
 preplace port S_AXI3 -pg 1 -lvl 0 -x -850 -y 100 -defaultsOSRD
+preplace port S_AXI4 -pg 1 -lvl 0 -x -850 -y -90 -defaultsOSRD
 preplace port m_axis_s2mm_cmdsts_awclk -pg 1 -lvl 0 -x -850 -y 380 -defaultsOSRD
 preplace port resetn -pg 1 -lvl 0 -x -850 -y 560 -defaultsOSRD
 preplace port m_axi_s2mm_aclk -pg 1 -lvl 0 -x -850 -y 460 -defaultsOSRD
 preplace port aresetn -pg 1 -lvl 0 -x -850 -y 630 -defaultsOSRD
-preplace port acquisition_in_progress_out_0 -pg 1 -lvl 9 -x 2210 -y 40 -defaultsOSRD
+preplace port acquisition_in_progress_out_0 -pg 1 -lvl 10 -x 3080 -y 40 -defaultsOSRD
+preplace port ext_trig_0 -pg 1 -lvl 0 -x -850 -y 490 -defaultsOSRD
+preplace port start_sig -pg 1 -lvl 10 -x 3080 -y 330 -defaultsOSRD
+preplace port trig_value -pg 1 -lvl 10 -x 3080 -y 450 -defaultsOSRD
 preplace portBus ADC1_data -pg 1 -lvl 0 -x -850 -y 140 -defaultsOSRD
 preplace portBus ADC2_data -pg 1 -lvl 0 -x -850 -y 320 -defaultsOSRD
-preplace inst xlconstant_1 -pg 1 -lvl 6 -x 1320 -y 390 -defaultsOSRD
-preplace inst axi_gpio_0 -pg 1 -lvl 4 -x 430 -y 80 -defaultsOSRD
-preplace inst axi_smc -pg 1 -lvl 8 -x 2060 -y 600 -defaultsOSRD
-preplace inst axi_gpio_1 -pg 1 -lvl 4 -x 430 -y 370 -defaultsOSRD
-preplace inst axis_data_fifo_0 -pg 1 -lvl 6 -x 1320 -y 230 -defaultsOSRD
-preplace inst xlconstant_2 -pg 1 -lvl 6 -x 1320 -y 510 -defaultsOSRD
-preplace inst axi_gpio_2 -pg 1 -lvl 4 -x 430 -y 550 -defaultsOSRD
-preplace inst axi_datamover_0 -pg 1 -lvl 7 -x 1730 -y 600 -defaultsOSRD
-preplace inst xlslice_1 -pg 1 -lvl 2 -x -230 -y 260 -defaultsOSRD
-preplace inst c_counter_binary_0 -pg 1 -lvl 1 -x -510 -y 260 -defaultsOSRD
-preplace inst xlslice_0 -pg 1 -lvl 2 -x -230 -y 160 -defaultsOSRD
-preplace inst axi_gpio_3 -pg 1 -lvl 1 -x -510 -y 100 -defaultsOSRD
-preplace inst multiplexer_2to1_0 -pg 1 -lvl 3 -x 100 -y 50 -defaultsOSRD
-preplace inst multiplexer_2to1_1 -pg 1 -lvl 3 -x 100 -y 330 -defaultsOSRD
-preplace inst Acquisition_top_0 -pg 1 -lvl 5 -x 890 -y 40 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 7 -820 0 N 0 -70 170 250 180 610 200 1120 330 1480J
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 5 -810 10 N 10 -80 160 260 170 590J
-preplace netloc Acquisition_top_0_reset_ACQ 1 5 2 1130 130 1500
-preplace netloc clk_wiz_0_clk_out2 1 0 8 NJ 460 N 460 N 460 N 460 NJ 460 1130 450 1470 470 1930J
-preplace netloc axi_gpio_0_gpio_io_o 1 4 1 570 30n
-preplace netloc axi_gpio_0_gpio2_io_o 1 4 1 600 50n
-preplace netloc aresetn_1 1 0 8 NJ 630 N 630 N 630 N 630 NJ 630 NJ 630 1470 730 1920J
-preplace netloc axi_gpio_1_gpio_io_o 1 4 1 620 10n
-preplace netloc Acquisition_top_0_status_out 1 4 2 NJ 400 1110
-preplace netloc axis_data_fifo_0_axis_wr_data_count 1 4 3 650 190 1120J 140 1470
-preplace netloc axi_gpio_2_gpio_io_o 1 4 1 640 130n
-preplace netloc xlconstant_1_dout 1 6 1 1510J 390n
-preplace netloc xlconstant_2_dout 1 6 1 1490J 510n
+preplace inst xlconstant_1 -pg 1 -lvl 7 -x 2190 -y 390 -defaultsOSRD
+preplace inst axi_gpio_0 -pg 1 -lvl 4 -x 710 -y 120 -defaultsOSRD
+preplace inst axi_smc -pg 1 -lvl 9 -x 2930 -y 600 -defaultsOSRD
+preplace inst axis_data_fifo_0 -pg 1 -lvl 7 -x 2190 -y 230 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 7 -x 2190 -y 510 -defaultsOSRD
+preplace inst axi_gpio_2 -pg 1 -lvl 4 -x 710 -y 590 -defaultsOSRD
+preplace inst axi_datamover_0 -pg 1 -lvl 8 -x 2590 -y 600 -defaultsOSRD
+preplace inst xlslice_1 -pg 1 -lvl 2 -x -210 -y 260 -defaultsOSRD
+preplace inst c_counter_binary_0 -pg 1 -lvl 1 -x -497 -y 260 -defaultsOSRD
+preplace inst xlslice_0 -pg 1 -lvl 2 -x -210 -y 160 -defaultsOSRD
+preplace inst axi_gpio_3 -pg 1 -lvl 1 -x -497 -y 100 -defaultsOSRD
+preplace inst multiplexer_2to1_0 -pg 1 -lvl 3 -x 353 -y 50 -defaultsOSRD
+preplace inst multiplexer_2to1_1 -pg 1 -lvl 3 -x 353 -y 330 -defaultsOSRD
+preplace inst Acquisition_top_0 -pg 1 -lvl 6 -x 1740 -y 40 -defaultsOSRD
+preplace inst util_vector_logic_0 -pg 1 -lvl 5 -x 1300 -y -30 -defaultsOSRD
+preplace inst axi_gpio_1 -pg 1 -lvl 4 -x 710 -y -70 -defaultsOSRD
+preplace inst acquisition_start_ex_0 -pg 1 -lvl 5 -x 1300 -y 280 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 8 -800 370 N 370 -100 170 540 450 930 380 1450 240 1990 650 NJ
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 0 5 -790 320 N 320 -80 160 520 -150 890J
+preplace netloc Acquisition_top_0_reset_ACQ 1 6 2 1990 130 2360
+preplace netloc clk_wiz_0_clk_out2 1 0 9 NJ 460 N 460 N 460 N 460 NJ 460 N 460 2000 570 2340 730 2800J
+preplace netloc axi_gpio_0_gpio_io_o 1 4 2 850 40 1460
+preplace netloc axi_gpio_0_gpio2_io_o 1 4 2 860 50 N
+preplace netloc aresetn_1 1 0 9 NJ 630 N 630 N 630 520 670 NJ 670 N 670 NJ 670 2370 470 2790J
+preplace netloc axis_data_fifo_0_axis_wr_data_count 1 5 3 1490 200 1980J 140 2350
+preplace netloc axi_gpio_2_gpio_io_o 1 4 2 910 130 N
+preplace netloc xlconstant_1_dout 1 7 1 2380J 390n
+preplace netloc xlconstant_2_dout 1 7 1 2350J 510n
 preplace netloc c_counter_binary_0_Q 1 1 1 -350 160n
-preplace netloc data_in_1_0_1 1 0 3 -830 190 -360 70 N
-preplace netloc data_in_1_1_1 1 0 3 N 320 N 320 -120
-preplace netloc xlslice_0_Dout 1 2 1 -90 90n
-preplace netloc xlslice_1_Dout 1 2 1 -110 260n
-preplace netloc multiplexer_2to1_1_data_out 1 3 2 240 190 630J
-preplace netloc multiplexer_2to1_0_data_out 1 3 2 240 -10 580J
-preplace netloc axi_gpio_3_gpio_io_o 1 1 2 -370 50 NJ
-preplace netloc axi_gpio_3_gpio2_io_o 1 1 2 -350J 100 -100
-preplace netloc Acquisition_top_0_acquisition_in_progress_out 1 5 4 NJ 40 NJ 40 NJ 40 NJ
-preplace netloc Conn3 1 0 4 NJ 350 N 350 -130 430 270
-preplace netloc Conn4 1 0 4 NJ 530 N 530 N 530 N
-preplace netloc axis_data_fifo_0_M_AXIS 1 6 1 1530 200n
-preplace netloc Conn1 1 0 4 -830J -10 N -10 -60 150 240
-preplace netloc Conn5 1 0 1 -830 80n
-preplace netloc Acquisition_top_0_m_axis_s2mm_cmd 1 5 2 NJ 20 1520J
-preplace netloc axi_datamover_0_M_AXI_S2MM 1 7 1 N 580
-preplace netloc Conn2 1 8 1 2190 560n
-preplace netloc Acquisition_top_0_m_axis 1 5 1 1140 0n
-preplace netloc axi_datamover_0_M_AXIS_S2MM_STS 1 4 4 570 -110 NJ -110 NJ -110 1920
-levelinfo -pg 1 -850 -510 -230 100 430 890 1320 1730 2060 2210
-pagesize -pg 1 -db -bbox -sgen -1080 -260 2450 740
+preplace netloc data_in_1_0_1 1 0 3 -820 10 N 10 -110
+preplace netloc data_in_1_1_1 1 0 3 -820 360 N 360 -70
+preplace netloc xlslice_0_Dout 1 2 1 -110 90n
+preplace netloc xlslice_1_Dout 1 2 1 -90 260n
+preplace netloc multiplexer_2to1_1_data_out 1 3 3 510 20 880J 90 N
+preplace netloc multiplexer_2to1_0_data_out 1 3 3 500 30 870J 70 N
+preplace netloc axi_gpio_3_gpio_io_o 1 1 2 -350 50 NJ
+preplace netloc axi_gpio_3_gpio2_io_o 1 1 2 -350J 100 -70
+preplace netloc Acquisition_top_0_acquisition_in_progress_out 1 6 4 NJ 40 NJ 40 NJ 40 NJ
+preplace netloc acquisition_start_ex_0_start_sig 1 5 5 1470 270 1980 330 N 330 N 330 N
+preplace netloc Acquisition_top_0_status_out 1 4 3 930 180 1440 190 1970
+preplace netloc ext_trig_0_1 1 0 5 NJ 490 NJ 490 NJ 490 550J 440 920J
+preplace netloc acquisition_start_ex_0_trig_value 1 5 5 NJ 280 1970J 450 NJ 450 NJ 450 NJ
+preplace netloc util_vector_logic_0_Res 1 5 1 1440 -30n
+preplace netloc axi_gpio_1_gpio_io_o 1 4 1 910 -60n
+preplace netloc Conn3 1 0 4 NJ -90 NJ -90 NJ -90 NJ
+preplace netloc axi_datamover_0_M_AXIS_S2MM_STS 1 5 4 1480 320 NJ 320 NJ 320 2780
+preplace netloc axis_data_fifo_0_M_AXIS 1 7 1 2400 200n
+preplace netloc Conn4 1 0 4 NJ 530 N 530 N 530 530
+preplace netloc Conn2 1 9 1 3060 560n
+preplace netloc axi_datamover_0_M_AXI_S2MM 1 8 1 N 580
+preplace netloc Acquisition_top_0_m_axis_s2mm_cmd 1 6 2 NJ 20 2390J
+preplace netloc Conn1 1 0 4 -830J 0 N 0 -60 150 530
+preplace netloc Acquisition_top_0_m_axis 1 6 1 2000 0n
+preplace netloc S_AXI1_1 1 0 5 NJ 350 NJ 350 -110J 430 NJ 430 900
+preplace netloc Conn5 1 0 1 -810 80n
+levelinfo -pg 1 -850 -497 -210 353 710 1300 1740 2190 2590 2930 3080
+pagesize -pg 1 -db -bbox -sgen -1080 -260 3320 740
 "
 }
 0

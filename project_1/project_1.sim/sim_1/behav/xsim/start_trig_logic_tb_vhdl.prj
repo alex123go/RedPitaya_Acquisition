@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_1.srcs/sources_1/ip/start_trig/start_trig_logic.vhd" \
+"../../../../project_1.srcs/sources_1/ip/start_trig/start_trig_logic_tb.vhd" \
+
+# Do not sort compile order
+nosort
